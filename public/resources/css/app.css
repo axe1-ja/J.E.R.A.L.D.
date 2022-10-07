@@ -19,6 +19,7 @@ a {
 .background-image {
     position:fixed;
     z-index:-50;
+    filter: opacity(50%) ;
 }
 
 
@@ -42,6 +43,16 @@ a {
     width: 500px;
 }
 
+.logo-navbar {
+    width: 150px;
+    margin-top: -10px;
+}
+
+.montre {
+    width: 150px;
+    margin-top: 20px;
+    filter:contrast(75%);
+}
 .logo-container {
     width:125px;
     height:125px;
@@ -72,15 +83,6 @@ a {
     font-size:25px;
     margin-left:10px;
 }
-/* barre blanche deuxième page */
-body{
-margin:0px;
-padding: 0px;
-}
-#header{
-height:90px;
-margin-top : -110px;
-margin-left: -100px;
-width: 1500px;
-background : white;
+.navbar navbar-expand-lg bg-light {
+    margin-top: 30px;
 }

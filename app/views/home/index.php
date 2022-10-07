@@ -17,8 +17,10 @@
 </head>
 <body>
 
-    <img src="../public/resources/storage/Images/waves.jpg" class="w-100 background-image" alt="">
+    <img src="../public/resources/storage/Images/fond-home.jpg" class="w-100 background-image" alt="">
+
     
+
     <div class="container text-center p-4">
         <div class="row">
             <div class="col">
