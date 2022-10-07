@@ -39,15 +39,17 @@ a {
 
 /* App logo */
 .logo {
-    width:125px;
+    width: 500px;
 }
 
 .logo-container {
     width:125px;
     height:125px;
     border-radius: 50%;
-    background: none;
-    padding:9px;
+    background: none !important;
+    padding:1px;
+    margin-top: -100px;
+    margin-left: -70px;
 }
 
 
@@ -69,4 +71,16 @@ a {
 #homelink-right:hover {
     font-size:25px;
     margin-left:10px;
+}
+/* barre blanche deuxième page */
+body{
+margin:0px;
+padding: 0px;
+}
+#header{
+height:90px;
+margin-top : -110px;
+margin-left: -100px;
+width: 1500px;
+background : white;
 }
