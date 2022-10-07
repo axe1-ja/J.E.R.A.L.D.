@@ -9,5 +9,14 @@ class Home extends Controller
         $this->view('home/index', ['name'=>$user->name]);
     }
 
+    public function members()
+    {
+        $this->view('members/index');
+    }
+    public function visiteurs()
+    {
+        $this->view('visiteurs/index');
+
+    }
 
 }
