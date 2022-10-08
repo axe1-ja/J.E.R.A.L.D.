@@ -1,7 +1,16 @@
+/* External fonts imports */
+@font-face {
+    font-family: BonheurRoyale;
+    src: url(../fonts/BonheurRoyale-Regular.ttf);
+}
+@font-face {
+    font-family: Buda;
+    src: url(../fonts/Buda-Light.ttf);
+}
 
 /* css of the body of the page (affects all) */
 body {
-    font-family: "Brush Script MT", cursive !important	;
+    font-family: Buda, cursive !important	;
     margin:0;
     padding:0;
 }
