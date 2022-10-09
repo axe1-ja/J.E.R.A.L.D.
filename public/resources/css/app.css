@@ -27,6 +27,7 @@ a {
 /* css for the background image */
 .background-image {
     position:fixed;
+    min-height: 100%;
     z-index:-50;
     filter: opacity(50%) ;
 }
@@ -44,17 +45,17 @@ a {
 }
 /* elements in the second row of the home page */
 .home-elements {
-    padding-top:110px;
+    padding-top:90px;
 }
 
 /* App logo */
 .logo {
-    width: 500px;
+    width: 190px;
+    margin-bottom: -70px;
 }
 
 .logo-navbar {
-    width: 150px;
-    margin-top: -10px;
+    width: 75px;
 }
 
 .montre {
@@ -84,12 +85,12 @@ a {
 }
 
 #homelink-left:hover {
-    font-size:25px;
+    font-size:37px;
     margin-left:-10px;
 }
 
 #homelink-right:hover {
-    font-size:25px;
+    font-size:37px;
     margin-left:10px;
 }
 .navbar navbar-expand-lg bg-light {
