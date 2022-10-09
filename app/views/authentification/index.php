@@ -11,7 +11,7 @@ include '../app/views/layouts/header.php';
 
     <div class="row">
         <div class="col"> 
-            <a href="/public">
+            <a href="/public/?url=home/index">
                 <img src="../public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
         </div>
@@ -52,7 +52,7 @@ include '../app/views/layouts/header.php';
     </div>
     <div class="row pt-3">
         <div class="col">
-            <a href="/public/?url=authentification/create/" class="card-link">
+            <a href="/public/?url=authentification/create" class="card-link">
                 <h4>Vous n'avez pas de compte ? Créez-en un!</h4>
             </a>
         </div>
