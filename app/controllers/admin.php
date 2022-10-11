@@ -22,7 +22,7 @@ class Admin extends Controller
                 ['7','Elena','Charpentier','06XXXXX','echarpentier@gmail.com','06XXXXX'],
                 ['8','Diane','Dinh','06XXXXX','ddinh@gmail.com','06XXXXX'],
                 ['9','Leonard','Gendrel','06XXXXX','lgendr@gmail.com','06XXXXX'],
-                ['10','Romain','Parriera','06XXXXX','r.parrieragonz@gmail.com','06XXXXX'],
+                ['10','Romain','Parreira','06XXXXX','r.parreiragonc@gmail.com','06XXXXX'],
             ];
         } elseif($model=='product'){
             $data=[
