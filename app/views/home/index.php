@@ -17,7 +17,7 @@ include '../app/views/layouts/header.php';
     </div>
     <div class="row home-elements">
         <div class="col-md">
-            <a href="/public/?url=home/visiteurs">
+            <a href="/public/?url=user/index">
                 <h5 class="access" id="homelink-left" class="text-white">
                     <i class="bi bi-caret-left"></i>
                     Accès Clients 
@@ -31,7 +31,7 @@ include '../app/views/layouts/header.php';
         <div class="col-md">
             <a href="/public/?url=home/members">
                 <h5 class="access" id="homelink-left" class="text-white">
-                    Découvrir le projet
+                    Découvrir le produit
                     <i class="bi bi-caret-right"></i>
                 </h5>
             </a>
