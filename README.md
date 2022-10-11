@@ -20,8 +20,8 @@ git pull origin main
 
 Ouvrir un terminal dans le folder du projet et lancer la commande:
 ```
-php -S localhost:8888
-```
+*php -S localhost:8888
+*```
 
 Puis aller sur 'http://localhost:8888/public/home/index'
 

@@ -67,8 +67,10 @@ include '../app/views/layouts/header.php';
     </div>
     <div class="row pt-3">
         <div class="col">
-            <a href="/public/?url=authentification/index" class="card-link">
-                <h4>J'ai déjà un compte.</h4>
+            <a href="/public/?url=authentification/index" class="card-link" class="lien_compte">
+                <h4 class="text-white">
+                    J'ai déjà un compte.
+                </h4>
             </a>
         </div>
     </div>
