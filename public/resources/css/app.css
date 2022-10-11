@@ -19,6 +19,13 @@ a {
     text-decoration: none !important;
 }
 
+/* make a button look like a link */
+.btnLookLikeLink {
+    background: none!important;
+    border: none;
+    cursor: pointer;
+}
+
 /* to center the elements horizontally */
 .center {
     margin:0 auto;
@@ -99,4 +106,14 @@ a {
 }
 .navbar navbar-expand-lg bg-light {
     margin-top: 30px;
+}
+
+
+/* classes of user profile */
+.user_profile_tabs {
+    transition: 1.5s;
+}
+button.user_profile_tabs.active {
+    color: black !important;
+    text-decoration: underline !important;
 }

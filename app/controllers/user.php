@@ -6,5 +6,10 @@ class User extends Controller
     {
         $this->view('user/index');
     }
+    
+    public function profile()
+    {
+        $this->view('user/profile');
+    }
 
 }
