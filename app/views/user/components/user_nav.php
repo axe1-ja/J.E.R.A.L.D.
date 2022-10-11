@@ -11,13 +11,13 @@
                     
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
-                <a class="nav-link active" aria-current="page" href="#">Santé</a>
+                <a class="nav-link active" aria-current="page" href="/public/?url=user/index">Santé</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
-                <a class="nav-link active" href="#">Profil</a>
+                <a class="nav-link active" href="/public/?url=user/profile">Profil</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2  ">
-                <a class="nav-link active" href="#">Contacter</a>
+                <a class="nav-link active" href="/public/?url=user/contact">Contacter</a>
             </li>
         </ul>   
         <div class="d-flex">
