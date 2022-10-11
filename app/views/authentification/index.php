@@ -53,7 +53,9 @@ include '../app/views/layouts/header.php';
     <div class="row pt-3">
         <div class="col">
             <a href="/public/?url=authentification/create" class="card-link">
-                <h4>Vous n'avez pas de compte ? Créez-en un!</h4>
+                <h4 class="text-white">
+                Vous n'avez pas de compte ? Créez-en un!
+                </h4>
             </a>
         </div>
     </div>

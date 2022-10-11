@@ -11,16 +11,13 @@
                     
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
-                <a class="nav-link active" aria-current="page" href="#">Produit</a>
+                <a class="nav-link active" aria-current="page" href="#">Santé</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
-                <a class="nav-link active" href="#">Histoire</a>
+                <a class="nav-link active" href="#">Profil</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2  ">
-                <a class="nav-link active" href="#">Equipe</a>
-            </li>
-            <li class="nav-item px-4 fs-3 mt-2  ">
-                <a class="nav-link active" href="/public/?url=admin/index">Admin</a>
+                <a class="nav-link active" href="#">Contacter</a>
             </li>
         </ul>   
         <div class="d-flex">

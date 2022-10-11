@@ -29,7 +29,9 @@ a {
     position:fixed;
     min-height: 100%;
     z-index:-50;
-    filter: opacity(50%) ;
+    filter: opacity(100%) ;
+    filter:contrast(100%);
+    
 }
 
 
@@ -61,7 +63,7 @@ a {
 .montre {
     width: 150px;
     margin-top: 20px;
-    filter:contrast(75%);
+    filter:contrast(150%);
 }
 .logo-container {
     width:125px;
@@ -72,7 +74,9 @@ a {
     margin-top: -100px;
     margin-left: -70px;
 }
-
+.lien_compte {
+    color: white;
+}
 
 /* Home links next to the app logo */
 #homelink-left {

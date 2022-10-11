@@ -5,7 +5,7 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
-<img src="../public/resources/storage/Images/fond-home.jpg" class="w-100 background-image" alt="">
+<img src="../public/resources/storage/Images/plage.jpg" class="w-100 background-image" alt="">
 
 
 
@@ -20,7 +20,7 @@ include '../app/views/layouts/header.php';
             <a href="/public/?url=home/visiteurs">
                 <h5 class="access" id="homelink-left" class="text-white">
                     <i class="bi bi-caret-left"></i>
-                    Accès Visiteurs 
+                    Accès Clients 
                 
                 </h5>  
             </a>   
@@ -31,7 +31,7 @@ include '../app/views/layouts/header.php';
         <div class="col-md">
             <a href="/public/?url=home/members">
                 <h5 class="access" id="homelink-left" class="text-white">
-                    Accès Membres
+                    Découvrir le projet
                     <i class="bi bi-caret-right"></i>
                 </h5>
             </a>
