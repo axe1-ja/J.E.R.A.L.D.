@@ -42,15 +42,16 @@ a {
 }
 
 
+
 /* css pour un titre (page d'accueil) */
 .titre {
-    font-size: 65px;
+    font-size: 40px;
     color: white;
 }
 /* css pour accès (page d'accueil) */
 .access {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
 }
 /* elements in the second row of the home page */
 .home-elements {
@@ -72,6 +73,27 @@ a {
     margin-top: 20px;
     filter:contrast(150%);
 }
+
+/* tableau de bord */
+.coeur {
+    width: 125px;
+}
+.chute {
+    width: 110px;
+}
+.db {
+    width: 125px;
+    margin-top: -5px;
+}
+
+.temp {
+    width: 150px;
+}
+ 
+.envi {
+    width: 175px;
+}
+
 .logo-container {
     width:125px;
     height:125px;
