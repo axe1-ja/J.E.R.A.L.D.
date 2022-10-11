@@ -25,27 +25,41 @@ include '../app/views/layouts/header.php';
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label">Nom Prénom</label>
-                    <input type="text" class="form-control" id="exampleInputName">
+                    <input type="text" class="form-control" id="exampleInputName" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputTelephone" class="form-label">Téléphone</label>
-                    <input type="tel" class="form-control" id="exampleInputTelephone">
+                    <input type="tel" class="form-control" id="exampleInputTelephone" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputAdress" class="form-label">Adresse postale</label>
-                    <input type="text" class="form-control" id="exampleInputAdress">
+                    <input type="text" class="form-control" id="exampleInputAdress" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="exampleInputPassword1" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputConfirmPassword1" class="form-label">Confirmer le mot de passe</label>
-                    <input type="password" class="form-control" id="exampleInputConfirmPassword1">
+                    <input type="password" class="form-control" id="exampleConfirmationPassword1" id="validationCostum03" required>
+                    <script>
+                        var password = document.getElementById("exampleInputPassword1"), confirm_password = document.getElementById("exampleConfirmationPassword1");
+
+                        function validatePassword(){
+                          if(exampleInputPassword1.value != exampleConfirmationPassword1.value) {
+                        confirm_password.setCustomValidity("Passwords Don't Match");
+                          } else {
+                        confirm_password.setCustomValidity('');
+                          }
+                        }
+
+                        password.onchange = validatePassword;
+                        confirm_password.onkeyup = validatePassword;
+                    </script>
                 </div>
                 <div class="row">
                     <div class="col">

@@ -11,7 +11,7 @@
                     
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
-                <a class="nav-link active" aria-current="page" href="#">Produit</a>
+                <a class="nav-link active" aria-current="page" href="/public/?url=product/index">Produit</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
                 <a class="nav-link active" href="#">Histoire</a>
