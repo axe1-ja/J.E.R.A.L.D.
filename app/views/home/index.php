@@ -21,7 +21,6 @@ include '../app/views/layouts/header.php';
                 <h5 class="access" id="homelink-left" class="text-white">
                     <i class="bi bi-caret-left"></i>
                     Accès Clients 
-                
                 </h5>  
             </a>   
         </div>
