@@ -5,14 +5,14 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
-<img src="../public/resources/storage/Images/fond-home.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/fond-home.jpg" class="w-100 background-image" alt="">
 
 <div class="container text-center py-4">
     
     <div class="row">
         <div class="col"> 
-            <a href="/public/?url=home/index">
-                <img src="../public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
+            <a href="/public/home">
+                <img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
         </div>
     </div>
@@ -82,7 +82,7 @@ include '../app/views/layouts/header.php';
     </div>
     <div class="row pt-3">
         <div class="col">
-            <a href="/public/?url=authentification/index" class="card-link" class="lien_compte">
+            <a href="/public/login" class="card-link" class="lien_compte">
                 <h4 class="text-white">
                     J'ai déjà un compte.
                 </h4>
