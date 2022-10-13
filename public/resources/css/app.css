@@ -33,7 +33,7 @@ a {
 
 /* css for the background image */
 .background-image {
-    position:fixed;
+    position: fixed;
     min-height: 100%;
     z-index:-50;
     filter: opacity(100%) ;
@@ -72,6 +72,7 @@ a {
     width: 150px;
     margin-top: 20px;
     filter:contrast(150%);
+    
 }
 
 /* tableau de bord */
