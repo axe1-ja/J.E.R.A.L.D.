@@ -7,24 +7,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li>
-                <a href="/public"><img id="logo" src="../public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar"></a>
+                <a href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar"></a>
                     
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
-                <a class="nav-link active" aria-current="page" href="/public/?url=product/index">Produit</a>
+                <a class="nav-link active" aria-current="page" href="/public/product">Produit</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2">
-                <a class="nav-link active" href="/public/?url=histoire/index">Histoire</a>
+                <a class="nav-link active" href="/public/histoire">Histoire</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2  ">
-                <a class="nav-link active" href="/public/?url=contact/index">Contact</a>
+                <a class="nav-link active" href="/public/contact">Contact</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2  ">
-                <a class="nav-link active" href="/public/?url=admin/index">Admin</a>
+                <a class="nav-link active" href="/public/admin">Admin</a>
             </li>
         </ul>   
         <div class="d-flex">
-            <a class="btn btn-secondary me-3"  href="/public/?url=authentification/index"><i class="bi bi-person"></i></a>
+            <a class="btn btn-secondary me-3"  href="/public/login"><i class="bi bi-person"></i></a>
         </div>
         
         </div>

@@ -14,7 +14,11 @@ class App
     {
         $url = $this->parseUrl();
 
-        if(file_exists('../app/controllers/'.$url[0].'.php'))
+        if($url==''){
+            $url='home/index';
+        }
+
+        /*if(file_exists('../app/controllers/'.$url[0].'.php'))
         {
             $this->controller = $url[0];
             unset($url[0]);
@@ -33,7 +37,7 @@ class App
             }
         }
 
-        $this->params = $url ? array_values($url) : [];
+        $this->params = $url ? array_values($url) : [];*/
 
         call_user_func_array([$this->controller, $this->method],$this->params);
     }
@@ -44,8 +48,13 @@ class App
     // Function to parse the url into smaller bits (to be able to call the right function in the controller)
     public function parseUrl()
     {
-        if(isset($_GET['url'])){
-            return $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
+        if(isset($_SERVER['REQUEST_URI'])){ 
+
+            $url = str_replace("/public", "",filter_var(rtrim($_SERVER['REQUEST_URI'], '/'), FILTER_SANITIZE_URL));
+            //print_r($url);
+            //$url=array_slice($url,2,count($url));
+
+            return $url;
         }
     }
 }
