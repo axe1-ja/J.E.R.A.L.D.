@@ -17,7 +17,7 @@
                 <a class="nav-link active" href="/public/user/profile">Profil</a>
             </li>
             <li class="nav-item px-4 fs-3 mt-2  ">
-                <a class="nav-link active" href="/public/user/contact">Contacter</a>
+                <a class="nav-link active" href="/public/user/forum">Forum</a>
             </li>
         </ul>   
         <div class="d-flex">

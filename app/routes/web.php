@@ -80,6 +80,9 @@ Route::set('user/fall',function(){ (new user)->fall(); });
 Route::set('user/sound',function(){ (new user)->sound(); });
 Route::set('user/temperature',function(){ (new user)->temperature(); });
 Route::set('user/environment',function(){ (new user)->environment(); });
+Route::set('user/forum',function(){ (new user)->forum(); });
+Route::set('user/forum1',function(){ (new user)->forum('forum1'); });
+Route::set('user/forum2',function(){ (new user)->forum('forum2'); });
 
 // End of User routes
 // ------------------
