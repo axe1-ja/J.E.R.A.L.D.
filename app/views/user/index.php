@@ -13,9 +13,12 @@ include '../app/views/user/components/user_nav.php';
 <div class="text-center p-3">
     <div class="row">
         <div class="col-3 text-start">
-            <h5 class="access"  class="text-white">
-                Accès clients > Santé
-            </h5>
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user">
+                Accès clients >
+            </a>
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/"> 
+                Santé
+            </a>
         </div>
         <div class="col-6">
             <h1 class="titre">Tableau de Bord</h1>
