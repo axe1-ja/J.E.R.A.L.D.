@@ -8,7 +8,7 @@ include '../app/views/layouts/header.php';
 <?php
 include '../app/views/user/components/user_nav.php';
 ?>
-<img src="../public/resources/storage/Images/waves.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/waves.jpg" class="w-100 background-image" alt="">
 
 <div class="text-center p-3">
     <div class="row">
@@ -25,8 +25,8 @@ include '../app/views/user/components/user_nav.php';
         
     <div class="row pt-4" >
         <div class="col">
-            <a href="/public/?url=user/cardio">
-                <img src="../public/resources/storage/Images/coeur.png" class="coeur" alt="">
+            <a href="/public/user/cardio">
+                <img src="/public/resources/storage/Images/coeur.png" class="coeur" alt="">
             </a>
             <h3 class="text-white">
                 Rythme cardiaque 
@@ -34,8 +34,8 @@ include '../app/views/user/components/user_nav.php';
         </div>
 
         <div class="col">
-            <a href="/public/?url=user/fall">
-                <img src="../public/resources/storage/Images/chute.png" class="chute" alt="">
+            <a href="/public/user/fall">
+                <img src="/public/resources/storage/Images/chute.png" class="chute" alt="">
             </a>
             <h3 class="text-white">
                 Détection Chute
@@ -43,8 +43,8 @@ include '../app/views/user/components/user_nav.php';
         </div>
 
         <div class="col">
-            <a href="/public/?url=user/sound">
-                <img src="../public/resources/storage/Images/db.png" class="db" alt="">
+            <a href="/public/user/sound">
+                <img src="/public/resources/storage/Images/db.png" class="db" alt="">
             </a>
             <h3 class="text-white">
                 Niveau sonore
@@ -53,16 +53,16 @@ include '../app/views/user/components/user_nav.php';
     </div>
     <div class="row pt-3">
         <div class="col">
-            <a href="/public/?url=user/temperature">
-                <img src="../public/resources/storage/Images/temp.png" class="temp" alt="">
+            <a href="/public/user/temperature">
+                <img src="/public/resources/storage/Images/temp.png" class="temp" alt="">
             </a>
             <h3 class="text-white"> 
                 Température corporel
             </h3>
         </div>
         <div class="col pt-4">
-            <a href="/public/?url=user/environment">
-                <img src="../public/resources/storage/Images/envi.png" class="envi" alt="">
+            <a href="/public/user/environment">
+                <img src="/public/resources/storage/Images/envi.png" class="envi" alt="">
             </a>
             <h3 class="text-white"> 
                 Données environnantes 

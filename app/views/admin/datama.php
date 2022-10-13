@@ -15,9 +15,9 @@ include '../app/views/admin/components/admin_nav.php';
             <h5 class="fs-5">Tables</h5>
             <br>
             <ul class='navbar-nav'>
-                <li class="nav-item"><a class="nav-link" href="/public/?url=admin/datama/user"><i class="bi bi-person"></i> Users</a></li>
-                <li class="nav-item"><a class="nav-link" href="/public/?url=admin/datama/product"><i class="bi bi-watch"></i> Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="/public/?url=admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a></li>
+                <li class="nav-item"><a class="nav-link" href="/public/admin/datama/users"><i class="bi bi-person"></i> Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="/public/admin/datama/products"><i class="bi bi-watch"></i> Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="/public/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a></li>
             </ul>
         </div>
         <div class="col pt-4">

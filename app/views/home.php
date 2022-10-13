@@ -5,7 +5,7 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
-<img src="../public/resources/storage/Images/plage.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/plage.jpg" class="w-100 background-image" alt="">
 
 
 
@@ -17,7 +17,7 @@ include '../app/views/layouts/header.php';
     </div>
     <div class="row home-elements">
         <div class="col-md">
-            <a href="/public/?url=user/index">
+            <a href="/public/user">
                 <h5 class="access" id="homelink-left" class="text-white">
                     <i class="bi bi-caret-left"></i>
                     Accès Clients 
@@ -25,10 +25,10 @@ include '../app/views/layouts/header.php';
             </a>   
         </div>
         <div class="col-md"> 
-            <img src="../public/resources/storage/Images/logo-app2.png" class="logo center" alt="">
+            <img src="/public/resources/storage/Images/logo-app2.png" class="logo center" alt="">
         </div>
         <div class="col-md">
-            <a href="/public/?url=home/members">
+            <a href="/public/members">
                 <h5 class="access" id="homelink-left" class="text-white">
                     Découvrir le produit
                     <i class="bi bi-caret-right"></i>

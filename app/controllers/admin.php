@@ -4,14 +4,14 @@ class Admin extends Controller
 {
     public function index()
     {
-        $this->view('admin/index', [
+        self::view('admin/index', [
             'page'=>'dashboard'
         ]);
     }
 
-    public function datama($model='user')
+    public function datama($model='users')
     {
-        if($model=='user'){
+        if($model=='users'){
             $data=[
                 ['1','Mark','Otto','06XXXXX','markotto@gmail.com','06XXXXX'],
                 ['2','Jacob','Thornton','06XXXXX','j.thorn@gmail.com','06XXXXX'],
@@ -24,7 +24,7 @@ class Admin extends Controller
                 ['9','Leonard','Gendrel','06XXXXX','lgendr@gmail.com','06XXXXX'],
                 ['10','Romain','Parreira','06XXXXX','r.parreiragonc@gmail.com','06XXXXX'],
             ];
-        } elseif($model=='product'){
+        } elseif($model=='products'){
             $data=[
                 ['1','Mark','Otto','06XXXXX','markotto@gmail.com','06XXXXX'],
                 ['2','Jacob','Thornton','06XXXXX','j.thorn@gmail.com','06XXXXX'],
@@ -43,7 +43,7 @@ class Admin extends Controller
         }
 
 
-        $this->view('admin/datama', [
+        self::view('admin/datama', [
             'page'=>'datama',
             'model'=>$model,
             'data'=>$data
@@ -52,7 +52,7 @@ class Admin extends Controller
 
     public function notifs()
     {
-        $this->view('admin/notifs', [
+        self::view('admin/notifs', [
             'page'=>'notifs'
         ]);
     }

@@ -16,7 +16,7 @@ user_profile_tab_2=$('#user_profile_tab_2')
 if(user_profile_tab_1.length){
     if($('#content').length){
         $("#content").html('');
-        $("#content").load('../app/views/user/components/vos_infos.php');
+        $("#content").load('/app/views/user/components/vos_infos.php');
     }
 }
 
@@ -26,7 +26,7 @@ user_profile_tab_1.on('click',function(){
         user_profile_tab_2.removeClass('active');
         
         $("#content").html('');
-        $("#content").load('../app/views/user/components/vos_infos.php');
+        $("#content").load('/app/views/user/components/vos_infos.php');
     }
 })
 
@@ -36,7 +36,7 @@ user_profile_tab_2.on('click',function(){
         user_profile_tab_1.removeClass('active');
         
         $("#content").html('');
-        $("#content").load('../app/views/user/components/coord_proches.php');
+        $("#content").load('/app/views/user/components/coord_proches.php');
     }
 })
 

@@ -4,12 +4,12 @@ class Authentification extends Controller
 {
     public function index()
     {
-        $this->view('authentification/index', []);
+        self::view('authentification/index', []);
     }
 
     public function create()
     {
-        $this->view('authentification/create', []);
+        self::view('authentification/create', []);
     }
 
 

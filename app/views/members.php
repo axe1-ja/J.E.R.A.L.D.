@@ -5,7 +5,7 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
-<img src="../public/resources/storage/Images/goutte.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/goutte.jpg" class="w-100 background-image" alt="">
 
 <!-- Nabar  of page -->
 <?php
@@ -25,7 +25,7 @@ include '../app/views/general_components/navbar.php';
         </div>
     </div>
     <div>
-        <img src="../public/resources/storage/Images/montre.png" class="center montre" alt="">
+        <img src="/public/resources/storage/Images/montre.png" class="center montre" alt="">
     </div>
 </div>
 
