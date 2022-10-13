@@ -4,33 +4,33 @@ class User extends Controller
 {
     public function index()
     {
-        self::view('user/index');
+        $this->view('user/index');
     }
         
     public function profile()
     {
-        self::view('user/profile');
+        $this->view('user/profile');
     }
 
     public function cardio()
     {
-        self::view('user/cardio'); 
+        $this->view('user/cardio'); 
     }
     public function fall()
     {
-        self::view('user/fall'); 
+        $this->view('user/fall'); 
     }
     public function sound()
     {
-        self::view('user/sound'); 
+        $this->view('user/sound'); 
     }
     public function temperature()
     {
-        self::view('user/temperature'); 
+        $this->view('user/temperature'); 
     }
     public function environment()
     {
-        self::view('user/environment'); 
+        $this->view('user/environment'); 
     }
 
 }
