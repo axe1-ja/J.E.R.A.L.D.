@@ -4,7 +4,7 @@ class Admin extends Controller
 {
     public function index()
     {
-        self::view('admin/index', [
+        $this->view('admin/index', [
             'page'=>'dashboard'
         ]);
     }
@@ -43,7 +43,7 @@ class Admin extends Controller
         }
 
 
-        self::view('admin/datama', [
+        $this->view('admin/datama', [
             'page'=>'datama',
             'model'=>$model,
             'data'=>$data
@@ -52,7 +52,7 @@ class Admin extends Controller
 
     public function notifs()
     {
-        self::view('admin/notifs', [
+        $this->view('admin/notifs', [
             'page'=>'notifs'
         ]);
     }
