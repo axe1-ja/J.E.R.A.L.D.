@@ -8,7 +8,7 @@ include '../app/views/layouts/header.php';
 <?php
 include '../app/views/user/components/user_nav.php';
 ?>
-<img src="/public/resources/storage/Images/waves.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/crep.jpg" class="w-100 background-image" alt="">
 
 <div class="text-center p-3">
     <div class="row">
