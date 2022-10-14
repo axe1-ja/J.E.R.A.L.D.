@@ -28,7 +28,7 @@ include '../app/views/layouts/header.php';
             <img src="/public/resources/storage/Images/logo-app2.png" class="logo center" alt="">
         </div>
         <div class="col-md">
-            <a href="/public/members">
+            <a href="/public/product">
                 <h5 class="access" id="homelink-left" class="text-white">
                     Découvrir le produit
                     <i class="bi bi-caret-right"></i>
