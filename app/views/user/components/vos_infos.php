@@ -27,7 +27,7 @@
             </div>
             <div class="row mt-3 text-center">
                 <div class="col">
-                    <a href="/public/user/modif" class="card-link"> 
+                    <a href="/public/user/edit/profile" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
                     </a> 
                 </div>
