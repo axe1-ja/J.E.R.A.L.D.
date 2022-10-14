@@ -75,8 +75,8 @@ Route::set('register',function(){ (new authentification)->create(); });
 
 Route::set('user',function(){ (new user)->index(); });
 Route::set('user/profile',function(){ (new user)->profile(); });
-Route::set('user/modif',function(){ (new user)->modif(); });
-Route::set('user/modification',function(){ (new user)->modification(); });
+Route::set('user/edit/profile',function(){ (new user)->edit_profile(); });
+Route::set('user/edit/proches',function(){ (new user)->edit_proches(); });
 Route::set('user/cardio',function(){ (new user)->cardio(); });
 Route::set('user/fall',function(){ (new user)->fall(); });
 Route::set('user/sound',function(){ (new user)->sound(); });

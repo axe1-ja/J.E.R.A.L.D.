@@ -11,15 +11,15 @@ class User extends Controller
     {
         $this->view('user/profile');
     }
-
-    public function modif()
+    
+    public function edit_profile()
     {
-        $this->view('user/modif');
+        $this->view('user/edit_profile');
     }
 
-    public function modification()
+    public function edit_proches()
     {
-        $this->view('user/modification');
+        $this->view('user/edit_proches');
     }
 
     public function cardio()
