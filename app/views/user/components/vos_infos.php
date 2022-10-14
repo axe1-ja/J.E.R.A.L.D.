@@ -25,7 +25,7 @@
                 <div class="col-4">Adresse postale</div>
                 <div class="col"> 12 Rue de La plage, Rocher-sur-mer</div>
             </div>
-            <div class="row mt-3">
+            <div class="row mt-3 text-center">
                 <div class="col">
                     <a href="/public/user/modif" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
