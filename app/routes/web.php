@@ -28,7 +28,7 @@ Route::set('contact',function(){
 
 // product page
 Route::set('product',function(){
-    Controller::view('contact');
+    Controller::view('product');
 });
 
 // histoire page
