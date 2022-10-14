@@ -3,7 +3,7 @@
 include '../app/views/layouts/header.php';
 ?>
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/goutte.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/tortue3.jpg" class="w-100 background-image" alt="">
 
 <?php
 include '../app/views/general_components/navbar.php';
