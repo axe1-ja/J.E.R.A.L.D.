@@ -33,7 +33,7 @@ a {
 
 /* css for the background image */
 .background-image {
-    position:fixed;
+    position: fixed;
     min-height: 100%;
     z-index:-50;
     filter: opacity(100%) ;
@@ -72,6 +72,7 @@ a {
     width: 150px;
     margin-top: 20px;
     filter:contrast(150%);
+    
 }
 
 /* tableau de bord */
@@ -136,6 +137,15 @@ a {
     transition: 1.5s;
 }
 button.user_profile_tabs.active {
+    color: black !important;
+    text-decoration: underline !important;
+}
+
+/* classes of user modification */
+.user_modification_tabs {
+    transition: 1.5s;
+}
+button.user_modification_tabs.active {
     color: black !important;
     text-decoration: underline !important;
 }
