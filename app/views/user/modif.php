@@ -55,7 +55,7 @@ include '../app/views/user/components/user_nav.php';
                     <div class="col">
                         <div class="mb-3 text-center">
                             <a href="/public/user/profile" class="card-link">
-                                <button type="submit" class="btn btn-primary">Modifier</button>
+                                <button type="submit" class="btn btn-primary">Confirmer</button>
                             </a>    
                         </div>
                     </div>
