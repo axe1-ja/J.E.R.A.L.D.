@@ -12,6 +12,16 @@ class User extends Controller
         $this->view('user/profile');
     }
 
+    public function modif()
+    {
+        $this->view('user/modif');
+    }
+
+    public function modification()
+    {
+        $this->view('user/modification');
+    }
+
     public function cardio()
     {
         $this->view('user/cardio'); 

@@ -27,7 +27,9 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <button class="btn btn-outline-primary">Modifier</button>
+                    <a href="/public/user/modif" class="card-link"> 
+                        <button class="btn btn-outline-primary">Modifier</button>
+                    </a> 
                 </div>
             </div>
         </div>
