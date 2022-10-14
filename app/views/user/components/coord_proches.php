@@ -19,11 +19,6 @@
                         <div class="col-4">Télephone</div>
                         <div class="col">06 45 93 27 05</div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <button class="btn btn-outline-primary">Modifier</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -45,22 +40,17 @@
                         <div class="col-4">Télephone</div>
                         <div class="col">06 45 93 27 05</div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <button class="btn btn-outline-primary">Modifier</button>
-                        </div>
-                    </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
     <div class="row mt-3 text-center">
         <div class="col">
-            <h5 class="fw-bold">En cas de chute, nous appellerons vos proches.</h5>
+            <a href="/public/user/modification" class="card-link">     
+                <button class="btn btn-outline-primary">Modifier</button>
+            </a>    
+            <h5 class="mt-3 fw-bold">En cas de chute, nous appellerons vos proches.</h5>
         </div>
     </div>
-
 </div>
