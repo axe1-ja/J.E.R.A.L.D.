@@ -139,3 +139,12 @@ button.user_profile_tabs.active {
     color: black !important;
     text-decoration: underline !important;
 }
+
+/* classes of user modification */
+.user_modification_tabs {
+    transition: 1.5s;
+}
+button.user_modification_tabs.active {
+    color: black !important;
+    text-decoration: underline !important;
+}
