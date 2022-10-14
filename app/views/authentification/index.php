@@ -19,13 +19,14 @@ include '../app/views/layouts/header.php';
 
     <div class="card center" style="width: 40rem;">
         <div class="card-body">
+            <button type="button" class="btn-close" aria-label="Close" style="position:relative; left:300px; top:-8px" onclick="javascript:history.back()"></button>
             <form class="text-start">
                 <div class="mb-4 text-center">
                     <h3>Connexion</h3>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" id="validationCustom03" required>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
