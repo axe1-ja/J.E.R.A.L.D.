@@ -3,12 +3,22 @@
 include '../app/views/layouts/header.php';
 ?>
 
-<!-- Content of page -->
-<img src="/public/resources/storage/Images/goutte.jpg" class="w-100 background-image" alt="">
 
+<!-- Content of page -->
 <?php
-include '../app/views/general_components/navbar.php';
+include '../app/views/user/components/user_nav.php';
 ?>
+
+<div class="row">
+    <div class="col mx-2">
+    <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user">
+                Accès clients >
+            </a>
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/profile"> 
+                Contact
+            </a>
+    </div>
+</div>
 
 <div class="container mt-4">
     <div class="card center" style="width: 40rem; background-color:#B5D7FF">
@@ -19,13 +29,8 @@ include '../app/views/general_components/navbar.php';
                     <h3>Contactez-nous</h3>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputName" class="form-label">Nom Prénom</label>
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Person Doe" id="validationCustom03" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" id="validationCustom03" required>
-                </div>
+                    <label for="exampleInputObject" class="form-label">Objet</label>
+                    <input type="text" class="form-control" id="exampleInputObject" placeholder="Objet" id="validationCustom03" required>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="validationCustom03" required></textarea>

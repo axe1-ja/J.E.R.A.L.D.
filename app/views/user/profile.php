@@ -11,7 +11,12 @@ include '../app/views/user/components/user_nav.php';
 
 <div class="row">
     <div class="col mx-2">
-        <h5> Accès Client > Profil</h5>
+    <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user">
+                Accès clients >
+            </a>
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/profile"> 
+                Profil
+            </a>
     </div>
 </div>
 

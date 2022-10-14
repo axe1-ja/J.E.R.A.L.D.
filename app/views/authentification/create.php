@@ -65,7 +65,8 @@ include '../app/views/layouts/header.php';
                     <div class="col">
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+                            <label class="form-check-label" for="exampleCheck1" for="invalidCheck2">Accepter les termes et conditions</label>
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
                         </div>
                     </div>
                     <div class="col">
