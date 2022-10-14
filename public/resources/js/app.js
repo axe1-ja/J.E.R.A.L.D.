@@ -41,4 +41,36 @@ user_profile_tab_2.on('click',function(){
 })
 
     
+/* code for interactivity in the user modification tab */
+user_modification_tab_1=$('#user_modification_tab_1')
+user_modification_tab_2=$('#user_modification_tab_2')
+
+if(user_modification_tab_1.length){
+    if($('#content').length){
+        $("#content").html('');
+        $("#content").load('/app/views/user/components/modif_proches1.php');
+    }
+}
+
+user_modification_tab_1.on('click',function(){
+    if(!$(this).hasClass('active')){
+        $(this).addClass('active');
+        user_modification_tab_2.removeClass('active');
+        
+        $("#content").html('');
+        $("#content").load('/app/views/user/components/modif_proches1.php');
+    }
+})
+
+user_modification_tab_2.on('click',function(){
+    if(!$(this).hasClass('active')){
+        $(this).addClass('active');
+        user_modification_tab_1.removeClass('active');
+        
+        $("#content").html('');
+        $("#content").load('/app/views/user/components/modif_proches2.php');
+    }
+})
+
+
 });
