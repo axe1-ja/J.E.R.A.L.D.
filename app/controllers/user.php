@@ -11,7 +11,7 @@ class User extends Controller
     {
         $this->view('user/profile');
     }
-
+    
     public function edit_profile()
     {
         $this->view('user/edit_profile');
