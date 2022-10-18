@@ -11,14 +11,14 @@ include '../app/views/layouts/header.php';
 
 <div class="container text-center p-4">
     <div class="row">
-        <div class="col">
-            <h1 class="titre">E K A Ï</h1>
+        <div class="col mt-4">
+            <h1 class="titre" style="font-size: 32px">E K A Ï</h1>
         </div>
     </div>
     <div class="row home-elements">
         <div class="col-md">
             <a href="/public/user">
-                <h5 class="access" id="homelink-left" class="text-white">
+                <h5 class="access" id="homelink-left" class="text-white" style="font-size: 26px">
                     <i class="bi bi-caret-left"></i>
                     Accès Clients 
                 </h5>  
@@ -29,7 +29,7 @@ include '../app/views/layouts/header.php';
         </div>
         <div class="col-md">
             <a href="/public/product">
-                <h5 class="access" id="homelink-left" class="text-white">
+                <h5 class="access" id="homelink-left" class="text-white" style="font-size: 26px">
                     Découvrir le produit
                     <i class="bi bi-caret-right"></i>
                 </h5>

@@ -28,7 +28,7 @@ include '../app/views/general_components/navbar.php';
     </div>
     <div class="col-md">
             <h1 class="titre">Ékaï est né d’une volonté de créer un produit qui serait bénéfique
-à tous, permettant de contrôler sa santé.... blahblah</h1>
+à tous, permettant de contrôler sa santé... blahblah</h1>
     </div>
 </div>
 <!-- Footer of page -->
