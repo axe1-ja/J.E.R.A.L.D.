@@ -69,5 +69,5 @@ include '../app/views/general_components/navbar.php';
 </div>
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include '../app/views/general_components/footer.php';
 ?>

@@ -4,7 +4,7 @@ include '../app/views/layouts/header.php';
 ?>
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/tortue3.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
 
 <?php
 include '../app/views/general_components/navbar.php';
@@ -44,5 +44,5 @@ include '../app/views/general_components/navbar.php';
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include '../app/views/general_components/footer2.php';
 ?>
