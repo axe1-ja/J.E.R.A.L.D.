@@ -47,7 +47,32 @@ a {
 .titre {
     font-size: 40px;
     color: white;
+    
 }
+/*css pour titre histoire */
+.titre1 {
+    padding-top: 100px;
+    color: white;
+    font-weight: bold;
+}
+.titre2 {
+    color: white;
+    font-weight: bold;
+
+}
+.cadreImg {
+    border: 5px solid white;
+    background-color: white;
+    border-radius: 25% 10%;
+ }
+
+
+/* css pour texte */
+.texte {
+    font-size: 20 px;
+    color: white;
+}
+
 /* css pour accès (page d'accueil) */
 .access {
     color: white;
@@ -64,6 +89,10 @@ a {
     margin-bottom: -70px;
 }
 
+.logo-notre-projet {
+    width: 190px;
+    margin-bottom: -550px;
+}
 .logo-navbar {
     width: 75px;
 }
