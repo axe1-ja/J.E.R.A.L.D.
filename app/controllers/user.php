@@ -11,16 +11,6 @@ class User extends Controller
     {
         $this->view('user/profile');
     }
-    
-    public function edit_profile()
-    {
-        $this->view('user/edit_profile');
-    }
-
-    public function edit_proches()
-    {
-        $this->view('user/edit_proches');
-    }
 
     public function cardio()
     {
@@ -67,12 +57,19 @@ class User extends Controller
                 ['2','Elena','Charpentier','Hi Hi'],
                 ['3','Leonard','Gendrel','Find golf friend'],
             ];
-        }
+        } 
 
         $this->view('user/forum', [
             'model'=>$model,
             'data'=>$data
         ]);
     }
-
+    public function newforum(){
+        $this->view('user/forum_new');
+    }
+    public function practice()
+    {
+        $this->view('user/practice'); 
+    }
+    
 }
