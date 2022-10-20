@@ -60,7 +60,15 @@ include '../app/views/user/components/user_nav.php';
             <a class="btn btn-outline-primary" href="/public/user/forum_new" role="button">Ecrire</a>
             </div>
         </div>
-                     
+       
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="/public/user/forum">1</a></li>
+            <?php for ($i = 2; $i <= 3; $i ++) { ?>
+                <li class="page-item"><a class="page-link" href="/public/user/forum_p<?php echo $i?>" ><?php echo $i; ?></a></li>
+                <?php } ?>
+         </ul>
+</nav>
     </div>
 </div>
 
