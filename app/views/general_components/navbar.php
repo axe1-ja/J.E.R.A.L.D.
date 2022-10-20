@@ -18,14 +18,19 @@
             <li class="nav-item px-4 fs-3 mt-2  ">
                 <a class="nav-link active" href="/public/contact">Contact</a>
             </li>
-            <li class="nav-item px-4 fs-3 mt-2  ">
-                <a class="nav-link active" href="/public/admin">Admin</a>
-            </li>
         </ul>   
-        <div class="d-flex">
-            <a class="btn btn-secondary me-3"  href="/public/login"><i class="bi bi-person"></i></a>
+        
+        <div class="d-flex dropdown me-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person"></i> My Account
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/public/login">Login</a></li>
+                <li><a class="dropdown-item" href="/public/register">Register</a></li>
+                <li><a class="dropdown-item" href="/public/user">User Access</a></li>
+                <li><a class="dropdown-item" href="/public/admin">Admin access</a></li>
+            </ul>
         </div>
         
-        </div>
     </div>
 </nav>
