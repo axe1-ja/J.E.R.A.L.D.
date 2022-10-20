@@ -44,5 +44,5 @@ include '../app/views/general_components/navbar.php';
 
 <!-- Footer of page -->
 <?php
-include '../app/views/general_components/footer2.php';
+include '../app/views/general_components/footer.php';
 ?>
