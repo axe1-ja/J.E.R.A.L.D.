@@ -36,6 +36,11 @@ Route::set('histoire',function(){
     Controller::view('histoire');
 });
 
+// Privacy policy
+Route::set('privacy',function(){
+    Controller::view('privacy_policy');
+});
+
 // End of Basic routes
 // -------------------
 

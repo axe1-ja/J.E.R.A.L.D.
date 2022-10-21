@@ -64,7 +64,7 @@ include '../app/views/general_components/navbar.php';
                 <img src="/public/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
-                <h2>Romain Parreira-Goncalves<br><span>Membre 3</span></h2>
+                <h2>Romain Parreira Goncalves<br><span>Membre 3</span></h2>
             </div>
         </div>
  

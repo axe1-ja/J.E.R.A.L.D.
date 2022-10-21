@@ -40,5 +40,5 @@
 
     </ul>
 
-    <ul class="copyright">&copy;2022 JERALD | All Rights Reserved | <a href="#">Conditions d'utilisation</a></ul>
+    <ul class="copyright">&copy;2022 JERALD | All Rights Reserved | <a href="/public/privacy">Conditions d'utilisation</a></ul>
 </footer>

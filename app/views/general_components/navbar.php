@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light" style="z-index:2000">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,13 +9,13 @@
                 <a href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar"></a>
                     
             </li>
-            <li class="nav-item px-4 fs-3 mt-2">
+            <li class="nav-item px-4 fs-4 mt-2">
                 <a class="nav-link active" aria-current="page" href="/public/product">Produit</a>
             </li>
-            <li class="nav-item px-4 fs-3 mt-2">
+            <li class="nav-item px-4 fs-4 mt-2">
                 <a class="nav-link active" href="/public/histoire">Histoire</a>
             </li>
-            <li class="nav-item px-4 fs-3 mt-2  ">
+            <li class="nav-item px-4 fs-4 mt-2  ">
                 <a class="nav-link active" href="/public/contact">Contact</a>
             </li>
         </ul>   
