@@ -45,7 +45,7 @@ a {
 
 /* css pour un titre (page d'accueil) */
 .titre {
-    font-size: 40px;
+    font-size: 60px;
     color: white;
     
 }
@@ -85,12 +85,11 @@ a {
 
 /* css pour accès (page d'accueil) */
 .access {
-    color: white;
     font-size: 30px;
 }
 /* elements in the second row of the home page */
 .home-elements {
-    padding-top:90px;
+    padding-top:20px;
 }
 
 /* App logo */
@@ -104,7 +103,7 @@ a {
     margin-bottom: -550px;
 }
 .logo-navbar {
-    width: 75px;
+    width: 65px;
 }
 
 .montre {
@@ -388,7 +387,7 @@ opacity: 1;
 .card1 .details1 h2 span{
   font-weight: 500;
   font-size: 16px;
-  color: #f38695;
+  color: #181C8D;
   display: block;
   margin-top: 5px;
 } 
@@ -398,3 +397,7 @@ opacity: 1;
     padding-right: 100px;
 }
 
+h3 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

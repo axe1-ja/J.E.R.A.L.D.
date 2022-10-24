@@ -64,7 +64,7 @@ include '../app/views/general_components/navbar.php';
                 <img src="/public/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
-                <h2>Romain Parreira-Goncalves<br><span>Membre 3</span></h2>
+                <h2>Romain Parreira Goncalves<br><span>Membre 3</span></h2>
             </div>
         </div>
  
@@ -127,5 +127,5 @@ include '../app/views/general_components/navbar.php';
 </div>
 <!-- Footer of page -->
 <?php
-include '../app/views/general_components/footer.php';
+include '../app/views/layouts/footer.php';
 ?>
