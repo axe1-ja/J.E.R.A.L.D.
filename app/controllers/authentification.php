@@ -12,5 +12,8 @@ class Authentification extends Controller
         $this->view('authentification/create', []);
     }
 
-
+    public function password()
+    {
+        $this->view('authentification/password');
+    }
 }

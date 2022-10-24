@@ -63,6 +63,7 @@ Route::set('admin/notifs',function(){ (new admin)->notifs(); });
 
 Route::set('login',function(){ (new authentification)->index(); });
 Route::set('register',function(){ (new authentification)->create(); });
+Route::set('forgot_password',function(){ (new authentification)->password(); });
 
 // End of Auth routes
 // ------------------
