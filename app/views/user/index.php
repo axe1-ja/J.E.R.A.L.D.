@@ -29,7 +29,7 @@ include '../app/views/user/components/user_nav.php';
 
     
 
-    <div class="row pt-2 mb-4">
+    <div class="row mb-4">
         <div class="col-8 offset-2">
 
             <div class="card py-3 bg-transparent border border-0">
@@ -71,14 +71,16 @@ include '../app/views/user/components/user_nav.php';
                 </div>
                 <div class="row">
                     <div class="col">
-                            <img style="transform:rotate(25deg);position:absolute;width:100px;margin-left:-125px;margin-top:-75px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.downloadclipart.net%2Flarge%2F24814-left-black-arrow-skinny--clipart.png&f=1&nofb=1&ipt=6dfb7230902a12c5018aff32cb4512baf63184c4352300209afc4a1ba15f3c45&ipo=images" alt="">
+                            <!--<img style="transform:rotate(25deg);position:absolute;width:100px;margin-left:-125px;margin-top:-75px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.downloadclipart.net%2Flarge%2F24814-left-black-arrow-skinny--clipart.png&f=1&nofb=1&ipt=6dfb7230902a12c5018aff32cb4512baf63184c4352300209afc4a1ba15f3c45&ipo=images" alt="">
                             <img style="transform:rotate(90deg);position:absolute;width:100px;margin-left:-22px;margin-top:-125px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.downloadclipart.net%2Flarge%2F24814-left-black-arrow-skinny--clipart.png&f=1&nofb=1&ipt=6dfb7230902a12c5018aff32cb4512baf63184c4352300209afc4a1ba15f3c45&ipo=images" alt="">
                             <img style="transform:rotate(155deg);position:absolute;width:100px;margin-left:75px;margin-top:-75px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.downloadclipart.net%2Flarge%2F24814-left-black-arrow-skinny--clipart.png&f=1&nofb=1&ipt=6dfb7230902a12c5018aff32cb4512baf63184c4352300209afc4a1ba15f3c45&ipo=images" alt="">
+                            -->
+                            
+                            <img src="/public/resources/storage/Images/logo-app.png" class="" style="width:100px" alt="">
 
-                            <img src="/public/resources/storage/Images/logo-app.png" class="logo-navbar" alt="">
-
-                            <img style="transform:rotate(-25deg);position:absolute;width:100px;margin-left:-180px;margin-top:40px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.downloadclipart.net%2Flarge%2F24814-left-black-arrow-skinny--clipart.png&f=1&nofb=1&ipt=6dfb7230902a12c5018aff32cb4512baf63184c4352300209afc4a1ba15f3c45&ipo=images" alt="">
+                            <!--<img style="transform:rotate(-25deg);position:absolute;width:100px;margin-left:-180px;margin-top:40px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.downloadclipart.net%2Flarge%2F24814-left-black-arrow-skinny--clipart.png&f=1&nofb=1&ipt=6dfb7230902a12c5018aff32cb4512baf63184c4352300209afc4a1ba15f3c45&ipo=images" alt="">
                             <img style="transform:rotate(-155deg);position:absolute;width:100px;margin-left:15px;margin-top:40px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.downloadclipart.net%2Flarge%2F24814-left-black-arrow-skinny--clipart.png&f=1&nofb=1&ipt=6dfb7230902a12c5018aff32cb4512baf63184c4352300209afc4a1ba15f3c45&ipo=images" alt="">
+                            -->
                     </div>
                 </div>
                 <div class="row pt-3 mb-4">
