@@ -39,7 +39,7 @@ Route::set('histoire',function(){
 // conditions page
 Route::set('conditions',function(){
     Controller::view('conditions');
-
+});
 // Privacy policy
 Route::set('privacy',function(){
     Controller::view('privacy_policy');
