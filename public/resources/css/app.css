@@ -72,6 +72,16 @@ a {
     font-size: 20 px;
     color: white;
 }
+.texte1 {
+    color: grey;
+    font-size: 20 px;
+}
+
+.arriere {
+    background-color: white;
+    border-radius: 30px;
+}
+
 
 /* css pour accès (page d'accueil) */
 .access {
@@ -97,10 +107,10 @@ a {
 }
 
 .montre {
-    width: 150px;
-    margin-top: 20px;
+    width: 250px;
+    margin-top: 60px;
     filter:contrast(150%);
-    
+    padding-top: 300px;
 }
 
 /* tableau de bord */
