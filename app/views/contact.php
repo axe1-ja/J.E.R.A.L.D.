@@ -10,6 +10,13 @@ include '../app/views/layouts/header.php';
 include '../app/views/general_components/navbar.php';
 ?>
 
+<div class="row mt-4">
+    <div class="col-4 offset-4 text-center my-2">
+        <h2 class="fs-2 text-white my-2">Une question? Contactez nous.</h2>
+        <p class="text-white my-2"><em>Envoyez un ticket pour reporter un problème que vous avez renconté avec notre produit ou pour nous poser une question sur les services que nous proposons.</em></p>
+    </div>
+</div>
+
 <div class="container mt-4">
     <div class="card center" style="width: 40rem; background-color:#B5D7FF">
         <div class="card-body">
@@ -40,6 +47,14 @@ include '../app/views/general_components/navbar.php';
             </form>
         </div>
     </div>
+
+    <p><br></p>
+    <div class="row">
+        <div class="col-4 offset-4 text-center text-white">
+            <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/public/privacy">politique de confidentialité</a>.</em></p>
+        </div>
+    </div>
+
 </div>
 
 <!-- Footer of page -->
