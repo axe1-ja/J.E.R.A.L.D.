@@ -12,7 +12,6 @@ include '../app/views/user/components/user_nav.php';
 <div class="container">
     <div class="row">
         <div class="col-2 pt-4">
-            <h5 class="fs-5">Tables</h5>
             <br>
             <ul class='navbar-nav'>
                 <li class="nav-item"><a class="nav-link" href="/public/user/forum"><i class="bi bi-person"></i> Forum</a></li>
@@ -23,7 +22,6 @@ include '../app/views/user/components/user_nav.php';
         <div class="col pt-4">
             <div class="row">
                 <div class="col">
-                    <h5 class="fs-5">Users</h5>
                 </div>
                 <div class="col-4">
                     <form class="d-flex" role="search">
@@ -47,9 +45,9 @@ include '../app/views/user/components/user_nav.php';
                             <?php foreach($data['data'] as $el): ?>
                                 <tr>
                                     <th scope="row"><?php echo $el[0];?></th>
-                                    <td><?php echo $el[1];?></td>
                                     <td><?php echo $el[2];?></td>
                                     <td><?php echo $el[3];?></td>
+                                    <td><?php echo $el[4];?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -57,14 +55,22 @@ include '../app/views/user/components/user_nav.php';
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="mb-3 text-end" >
+            <a class="btn btn-outline-primary" href="/public/user/forum_new" role="button">Ecrire</a>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="/public/user/forum">1</a></li>
+            <?php for ($forumpage = 2; $forumpage <= 3; $forumpage ++) { ?>
+                <li class="page-item"><a class="page-link" href="/public/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
+                <?php } ?>
+            </ul>
+</nav>
     </div>
 </div>
-
-<!-- Footer of page -->
-<?php
-include '../app/views/layouts/footer.php';
-?>
-
 
 <!-- Footer of page -->
 <?php
