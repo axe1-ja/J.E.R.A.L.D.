@@ -1,9 +1,15 @@
 <?php 
+/*
+$config = [];
+$e=explode(" ", file_get_contents('../.env'));
+foreach($e as $f) {
+    $config[explode('=',$f)[0]]=explode('=',$f)[1];
+}
+$app = new App($config);
+*/
+
 require_once '../app/routes/web.php';
 
-// from old version
-//require_once '../app/init.php';
-// from old version
 
 
 // configurations for routes to work
@@ -15,4 +21,4 @@ function __autoload($class){
     };
 }
 
-//$app = new App;
+
