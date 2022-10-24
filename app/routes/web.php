@@ -91,12 +91,12 @@ Route::set('user/fall',function(){ (new user)->fall(); });
 Route::set('user/sound',function(){ (new user)->sound(); });
 Route::set('user/temperature',function(){ (new user)->temperature(); });
 Route::set('user/environment',function(){ (new user)->environment(); });
-Route::set('user/forum',function(){ (new user)->forum(); });
+Route::set('user/forum',function(){ (new user)->forum('forum'); });
+#Route::set('user/forum/{page}',function(){ (new user)->forum('forum',$page); });
 Route::set('user/forum1',function(){ (new user)->forum('forum1'); });
 Route::set('user/forum2',function(){ (new user)->forum('forum2'); });
 Route::set('user/forum_p2',function(){ (new user)->forum('forum_p2'); });
 Route::set('user/forum_p3',function(){ (new user)->forum('forum_p3'); });
-
 Route::set('user/forum_new',function(){ (new user)->newforum(); });
 
 Route::set('user/practice',function(){ (new user)->practice(); });
