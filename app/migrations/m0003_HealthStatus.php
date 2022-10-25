@@ -1,7 +1,7 @@
 <?php
 
 
-class m0002_HealthStatus {
+class m0003_HealthStatus {
 
     
 
