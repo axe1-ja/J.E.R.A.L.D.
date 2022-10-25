@@ -19,6 +19,7 @@ class m0001_users {
             User_height FLOAT,
             User_Weight FLOAT,
             User_HealthIssue VARCHAR(255),
+            role_id INT,
             foreign key (role_id) references roles(role_id),
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             ) 
