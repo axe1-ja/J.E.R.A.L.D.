@@ -1,7 +1,7 @@
 <?php
 
 
-class m0001_users {
+class m0002_users {
 
     
 
@@ -19,8 +19,8 @@ class m0001_users {
             User_height FLOAT,
             User_Weight FLOAT,
             User_HealthIssue VARCHAR(255),
-            foreign key (role_id) references roles(role_id),
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            role_id int,
+            FOREIGN KEY (role_id) REFERENCES roles(role_id)
             ) 
         ENGINE=INNODB;";
         $db->exec($SQL);
