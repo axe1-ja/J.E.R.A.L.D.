@@ -6,7 +6,6 @@ class m0002_users {
     
 
     public function up($pdo){
-        echo PHP_EOL.'Applying migration'.PHP_EOL;
         $db = $pdo;
         $SQL = "CREATE TABLE users(
             User_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -26,10 +25,9 @@ class m0002_users {
         $db->exec($SQL);
     }
 
-    public function down(){
-        echo 'Down migration'.PHP_EOL;
-        $db = \app\core\App::$app->db;
+    public function down($pdo){
+        $db = $pdo;
         $SQL = "DROP TABLE users;";
-        $db->pdo->exec($SQL);
+        $db->exec($SQL);
     }
 }
