@@ -1,7 +1,7 @@
 <?php
 
 
-class m0001_users {
+class m0002_HealthStatus {
 
     
 
@@ -19,6 +19,7 @@ class m0001_users {
             ) 
         ENGINE=INNODB;";
         $db->exec($SQL);
+        
     }
 
     public function down(){
