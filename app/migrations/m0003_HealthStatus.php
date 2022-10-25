@@ -6,7 +6,6 @@ class m0003_HealthStatus {
     
 
     public function up($pdo){
-        echo PHP_EOL.'Applying migration'.PHP_EOL;
         $db = $pdo;
         $SQL = "CREATE TABLE HealthStatus(
             Health_Id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -22,10 +21,9 @@ class m0003_HealthStatus {
         
     }
 
-    public function down(){
-        echo 'Down migration'.PHP_EOL;
-        $db = \app\core\App::$app->db;
+    public function down($pdo){
+        $db = $pdo;
         $SQL = "DROP TABLE HealthStatus;";
-        $db->pdo->exec($SQL);
+        $db->exec($SQL);
     }
 }
