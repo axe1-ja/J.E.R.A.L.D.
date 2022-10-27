@@ -59,6 +59,7 @@ Route::set('admin/datama',function(){ (new admin)->datama(); });
 Route::set('admin/datama/users',function(){ (new admin)->datama(); });
 Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
 Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });
+Route::set('admin/datama/roles',function(){ (new admin)->datama('roles'); });
 Route::set('admin/notifs',function(){ (new admin)->notifs(); });
 
 // End of Admin routes
