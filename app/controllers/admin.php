@@ -31,6 +31,8 @@ class Admin extends Controller
         $pdo = new \PDO($dsn, $user, $password);
 
         if($model=='users'){
+
+            // get all users
             $cols = ['Id','Name','Last Name', 'Email', 'Address', 'Role id'];
             $sql = "SELECT User_Prenom, User_nom, User_email, User_address, role_id FROM users";
             $query = $pdo->prepare($sql);
@@ -39,7 +41,9 @@ class Admin extends Controller
             foreach ($result as $row) { 
                 $data[] = [$row['role_id'],$row['role_name'],$row['created_at']];
             }
+
         } elseif($model=='products'){
+            // get all products
             $cols = ['Id','Name','Last Name', 'Phone Number', 'Email', 'Emergency Contact'];
             $data=[
                 ['1','Mark','Otto','06XXXXX','markotto@gmail.com','06XXXXX'],
@@ -47,7 +51,9 @@ class Admin extends Controller
                 ['3','Larry','Byrd','06XXXXX','lbyrdee@gmail.com','06XXXXX'],
                 ['4','Michel','Laroux','06XXXXX','mlaroue015@gmail.com','06XXXXX'],
             ];
+
         } elseif($model=='forum'){
+            // get all forums (infos)
             $cols = ['Id','Name','Last Name', 'Phone Number', 'Email', 'Emergency Contact'];
             $data=[
                 ['1','Mark','Otto','06XXXXX','markotto@gmail.com','06XXXXX'],
@@ -57,7 +63,10 @@ class Admin extends Controller
                 ['5','Axel','Ja','06XXXXX','aja@gmail.com','06XXXXX'],
                 ['6','Joon','Yoo','06XXXXX','hyjoon@gmail.com','06XXXXX'],
             ];
+
         } elseif($model=='roles'){
+
+            // get all roles
             $cols = ['id','name','created at'];
             $sql = "SELECT * FROM roles";
             $query = $pdo->prepare($sql);
@@ -66,6 +75,7 @@ class Admin extends Controller
             foreach ($result as $row) { 
                 $data[] = [$row['role_id'],$row['role_name'],$row['created_at']];
             }
+
         }
 
 
@@ -94,5 +104,5 @@ class Admin extends Controller
             'notifs'=>$notifs
         ]);
     }
-
+    
 }
