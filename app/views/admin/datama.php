@@ -18,6 +18,7 @@ include '../app/views/admin/components/admin_nav.php';
                 <li class="nav-item"><a class="nav-link" href="/public/admin/datama/users"><i class="bi bi-person"></i> Users</a></li>
                 <li class="nav-item"><a class="nav-link" href="/public/admin/datama/products"><i class="bi bi-watch"></i> Products</a></li>
                 <li class="nav-item"><a class="nav-link" href="/public/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a></li>
+                <li class="nav-item"><a class="nav-link" href="/public/admin/datama/roles"><i class="bi bi-person "></i> Roles</a></li>
             </ul>
         </div>
         <div class="col pt-4">
@@ -37,12 +38,9 @@ include '../app/views/admin/components/admin_nav.php';
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">id</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Phone number</th>
-                            <th scope="col">email</th>
-                            <th scope="col">emergency contact</th>
+                            <?php foreach($data['cols'] as $col): ?>
+                                <th scope="col"><?php echo $col;?></th>
+                            <?php endforeach; ?>
                         </tr>
                     </thead>
                         <tbody>
@@ -64,6 +62,7 @@ include '../app/views/admin/components/admin_nav.php';
     </div>
 </div>
 
+<p style='margin-bottom:300px;'><br><br></p>
 <!-- Footer of page -->
 <?php
 include '../app/views/layouts/footer.php';

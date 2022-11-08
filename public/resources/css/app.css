@@ -7,10 +7,18 @@
     font-family: Buda;
     src: url(../fonts/Buda-Light.ttf);
 }
+@font-face {
+    font-family: Clearlight;
+    src: url(../fonts/clearlight.ttf);
+}
+@font-face {
+    font-family: Watchword;
+    src: url(../fonts/Watchword.otf);
+}
 
 /* css of the body of the page (affects all) */
 body {
-    font-family: Buda, cursive !important	;
+    font-family: Watchword, cursive !important	;
     margin:0;
     padding:0;
 }
@@ -36,7 +44,7 @@ a {
     position: fixed;
     min-height: 100%;
     z-index:-50;
-    filter: opacity(50%) ;
+    filter: opacity(150%) ;
     filter:contrast(100%);
     
 }
@@ -45,7 +53,8 @@ a {
 
 /* css pour un titre (page d'accueil) */
 .titre {
-    font-size: 60px;
+    font-size: 36px;
+    font-weight: bold;
     color: white;
     
 }
@@ -85,7 +94,8 @@ a {
 
 /* css pour accès (page d'accueil) */
 .access {
-    font-size: 30px;
+    color: white;
+    font-size: 64px;
 }
 /* elements in the second row of the home page */
 .home-elements {
@@ -400,4 +410,79 @@ opacity: 1;
 h3 {
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+/* for admin private messages */
+.conversations-index {
+    list-style-type: none;
+    background-color: rgba(238, 238, 238, 0.3);
+    /*border:1px solid rgb(201, 201, 201);*/
+    margin:0;
+    padding:0;
+    left:0;
+    height:100%;
+    width:30%;
+    position:fixed;
+    overflow:auto;
+}
+.conversationTab {
+    padding:20px;
+    border-bottom:1px solid rgba(228, 228, 228, 0.5);
+    border-top:1px solid rgba(228, 228, 228, 0.5);
+    border-radius: 4px;
+    transition:0.5s;
+    background-color: rgba(238, 238, 238, 0.2);
+}
+.conversationTab:hover {
+    background-color: rgba(238, 238, 238, 0.6);
+}
+
+.conversation_container {
+    margin:30px;
+    width: auto;
+}
+
+.messageReceiver {
+    background-color: rgba(179, 179, 179, 0.9);
+    padding:15px;
+    max-width:400px;
+    border-radius: 9px;
+    margin:10px 0px;
+    float:left;
+}
+
+.messageSender {
+    background-color: rgba(73, 82, 199, 0.6);
+    padding:15px;
+    max-width:400px;
+    border-radius: 9px;
+    margin:10px 0px;
+    float:right;
+}
+
+.input_container {
+    background: white;
+    position: fixed;
+    width: 67%;
+    bottom:0;
+}
+
+.inbox_sendButton {
+    position: fixed;
+    width:5%;
+    bottom:30px;
+}
+
+.dm_input {
+    border-radius: 9px;
+    border:1px solid rgba(228, 228, 228, 0.5);
+    margin:25px 0px;
+    padding:9px;
+    font-size: 17px;
+    width:88%;
+    position:relative;
+}
+.dm_input:focus {
+    border:1px solid rgba(128, 128, 128, 0.8);
+    outline: rgba(128, 128, 128, 0.8);
 }

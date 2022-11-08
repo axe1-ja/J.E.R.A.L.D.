@@ -1,7 +1,7 @@
 <footer class="footer bg-light">
     <ul class="social-icon">
         <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
+            <a class="social-icon__link" href="https://www.facebook.com/profile.php?id=100086838558620">
                 <img id="logo" src="/public/resources/storage/Images/facebook.png" class="icon ion-social-facebook" width="35px">
             </a>
         </li>
@@ -16,7 +16,7 @@
             </a>
         </li>
         <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
+            <a class="social-icon__link" href="https://www.instagram.com/ekai.jerald/">
                 <img id="logo" src="/public/resources/storage/Images/instagram.png" class="icon ion-social-instagram" width="35px">
             </a>
         </li>

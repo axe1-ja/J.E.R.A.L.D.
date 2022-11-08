@@ -1,16 +1,4 @@
-<?php 
-/*
-$config = [];
-$e=explode(" ", file_get_contents('../.env'));
-foreach($e as $f) {
-    $config[explode('=',$f)[0]]=explode('=',$f)[1];
-}
-$app = new App($config);
-*/
-
-require_once '../app/routes/web.php';
-
-
+<?php
 
 // configurations for routes to work
 function __autoload($class){
@@ -18,7 +6,12 @@ function __autoload($class){
         require_once '../app/core/'.$class.'.php';
     } elseif (file_exists('../app/controllers/'.$class.'.php')){
         require_once '../app/controllers/'.$class.'.php';
+    } elseif (file_exists('../app/models/'.$class.'.php')){
+        require_once '../app/models/'.$class.'.php';
     };
-}
+};
 
+//$app = new App;
+
+require_once '../app/routes/web.php';
 
