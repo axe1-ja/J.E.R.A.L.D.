@@ -429,6 +429,7 @@ h3 {
 
 .conversation_container {
     margin:30px;
+    width: auto;
 }
 
 .messageReceiver {
@@ -450,9 +451,16 @@ h3 {
 }
 
 .input_container {
+    background: white;
     position: fixed;
-    width:62%;
-    bottom:15px;
+    width: 67%;
+    bottom:0;
+}
+
+.inbox_sendButton {
+    position: fixed;
+    width:5%;
+    bottom:30px;
 }
 
 .dm_input {
@@ -461,7 +469,7 @@ h3 {
     margin:25px 0px;
     padding:9px;
     font-size: 17px;
-    width:100%;
+    width:88%;
     position:relative;
 }
 .dm_input:focus {

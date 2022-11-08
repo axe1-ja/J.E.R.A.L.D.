@@ -9,189 +9,178 @@ include '../app/views/general_components/navbar.php';
 
 <div class="container bg-white mt-4">
 
-    <h2 style="margin-top:40px">Our Privacy Policy</h2>
-    <p class="text-muted">Last updated: Octrober 21, 2022</p>
+    <h2 style="margin-top:40px">politique de condidentialité</h2>
+    <p class="text-muted">dernière mise a jours: le 6 novembre 2022</p>
     <p>
         We are committed to protecting your privacy. We developed this Privacy Policy to provide you with
         information on how we process your personal data, including when you create a EKAÏ account,
         interact with our member support team.
+        Nous nous engageons a proteger vos donnés personnel. 
+        Nous avons élaboré cette politique de confidentialité pour vous fournir
+        des informations sur la manière dont nous traitons vos données personnelles, 
+        notamment lorsque vous créez un compte EKAÏ, interagissez avec notre équipe 
+        d'assistance aux membres.
     </p>
     <p>
-        All use of the websites, applications, information, services, and content distributed through or in
-        conjunction with or made available to you is subject to your acceptance of this Privacy Policy and the
-        Terms and Conditions. This policy is in accordance to country legislations, including the General Data
-        Protection Regulation 2016/79, the California Consumer Privacy Act, the APP Australia Privacy
+        Toute utilisation du site Web, des informations, des services et des contenus distribués par l'intermédiaire de
+        ou en liaison avec ceux-ci, ou mis à votre disposition, est soumise à votre acceptation de cette politique de confidentialité et des conditions générales.
+        Conditions générales. Cette politique est conforme aux législations des pays, notamment le règlement général sur la
+        Protection Regulation 2016/79, le California Consumer Privacy Act, les APP Australia Privacy Principles.
         Principles.
+
     </p>
     <hr>
-    <h5>Data Controller and Data Protection Officer</h5>
+    <h5>Contrôleur des données et délégué à la protection des données</h5>
     <hr>
     <p>
-        This website or application is operated by EKAÏ SA (“the Owner”), a technology company registered
-        in France. You can contact the Data Controller and Data Protection Officer in charge to protect your
-        privacy and rights.
+        Ce site Web est exploité(e) par EKAÏ SA ("le Propriétaire"), une société de technologie enregistrée
+        immatriculée en France. Vous pouvez contacter le responsable du traitement et le délégué à la protection des données chargé de protéger votre
+        vie privée et vos droits.
     </p>
     <p>
-        Email contact : team@ekai.com
+        Notre e-mail = jeraldekai@gmail.com
     </p>
 
     <hr>
-    <h5>Data collected</h5>
+    <h5>Données collectées</h5>
     <hr>
     <p>
-        EKAÏ collects the following list Personal Data, directly or through third parties : first name;
-        email address; Usage Data;; device information; geography/region; sessions; application usage;
-        geographic location; operating systems; Cookies
-        Details on each these Personal Data collected are provided in this Privacy Policy
+    EKAÏ collecte la liste suivante des Données Personnelles, directement ou par l'intermédiaire de tiers : nom; prénom ;
+        e-mail ; données d'utilisation; informations sur les appareils ; géographie/région ; sessions ; utilisation des applications ;
+        localisation géographique ; systèmes d'exploitation ; cookies
+        Des détails sur chacune de ces Données Personnelles collectées sont fournis dans la présente Politique de Confidentialité.
     </p>
     <p>
-        Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically
-        when using EKAÏ. The Data requested in the various sections of the websites and applications is
-        necessary to use the EKAÏ service. Whenever mandatory Data is not provided, EKAÏ may not
-        be able to, or be limited in providing the Service.
+    Les Données Personnelles peuvent être librement fournies par l'Utilisateur, ou, dans le cas des Données d'Utilisation, collectées automatiquement
+        lors de l'utilisation d'EKAÏ. Les Données demandées dans les différentes rubriques du site est
+        nécessaire à l'utilisation du service EKAÏ. Lorsque des Données obligatoires ne sont pas fournies, 
+        EKAÏ peut ne pas être en mesure de fournir le Service ou être limitée dans sa fonction.
     </p>
     <p>
-        Please contact the Data Controller if you have doubts about the requested information.
+    Veuillez contacter le contrôleur des données si vous avez des doutes sur les informations demandées.
     </p>
     <p>
-        Cookies – or of other tracking tools –by EKAÏ also serves the purpose of providing the Service to
-        you, in addition to any other purposes described in the present document and in the Cookie Policy, if
-        available.
+        Les cookies - ou d'autres outils de suivi - par EKAÏ servent également à vous fournir le Service, 
+        en plus de toute autre finalité décrite dans le présent document et dans la Politique en matière de cookies, 
+        si elle est disponible.
     </p>
     <p>
-        As a reminder. you are responsible for any third-party Personal Data obtained, published or shared
-        through EKAÏ websites and applications and confirm that they have the third party's consent to
-        provide the Data to EKAÏ.
+    Pour rappel, vous êtes responsable de toutes les Données Personnelles de tiers obtenues, publiées ou partagées
+par l'intermédiaire du site EKAÏ et confirmez qu'il a le consentement de la tierce partie pour fournir ces Données à EKAÏ.
     </p>
 
 
     <hr>
-    <h5>Security of Personal Data</h5>
+    <h5>Sécurité des données personnelles</h5>
     <hr>
     <p>
-        The Owner takes reasonable steps to prevent unauthorized access, disclosure, modification, or
-        unauthorized destruction of the Data.
+    Le Propriétaire prend des mesures raisonnables pour empêcher l'accès, la divulgation, la modification ou la destruction non autorisée des Données.
     </p>
     <p>
-        The Data processing is carried out using computers and/or IT enabled tools, following organizational
-        procedures and modes strictly related to the purposes indicated. In addition to the Owner, in some
-        cases, the Data may be accessible to certain types of persons in charge, involved with the operation of
-        EKAÏ (administration, sales, marketing, legal, system administration) or external parties (such
-        as third-party technical service providers, mail carriers, hosting providers, IT companies,
-        communications agencies) appointed, if necessary, as Data Processors by the Owner. The updated list of
-        these parties may be requested from the Owner at any time.
+    Le traitement des Données est effectué à l'aide d'ordinateurs et/ou d'outils informatiques, en suivant des procédures et des modes d'organisation
+     strictement liés aux objectifs indiqués. En plus du Titulaire, dans certains cas, les Données peuvent être accessibles à certains types de personnes 
+     en charge, impliquées dans le fonctionnement de EKAÏ (administration, vente, marketing, juridique, administration du système) ou à des parties externes 
+     (telles que comme les prestataires techniques tiers, les transporteurs de courrier, les hébergeurs, les sociétés informatiques, agences de communication) 
+     nommés, si nécessaire, en tant que Responsables du traitement des données par le Propriétaire. La liste actualisée de ces parties peut être demandée au Propriétaire à tout moment.
     </p>
 
-    <h5>Purpose and legal ground for processing your Personal Data</h5>
+    <h5>Objectif et motif juridique du traitement de vos données personnelles</h5>
     <p>
-        The Data concerning the User is collected to allow the Owner to provide its Service, comply with its
-        legal obligations, respond to enforcement requests, protect its rights and interests (or those of its
-        Users or third parties), detect any malicious or fraudulent activity, as well as the following:
-        Registration and authentication, Hosting and backend infrastructure, Contacting the User, Device
-        permissions for Personal Data access, Handling payments, Social features, Infrastructure monitoring,
-        Content performance and features testing (A/B testing), Analytics, Access to third-party accounts, User
-        database management, Managing contacts and sending messages, Beta Testing, Location-based interactions,
-        Platform services and hosting and Interaction with external social networks and platforms.
+    Les Données concernant l'Utilisateur sont collectées pour permettre au Propriétaire de fournir son Service, de respecter ses obligations légales, 
+    de répondre aux demandes d'exécution, de protéger ses droits et intérêts (ou ceux de ses Utilisateurs ou de tiers), de détecter toute activité malveillante ou frauduleuse, 
+    ainsi que les éléments suivants : Inscription et authentification, Hébergement et infrastructure backend, Contact avec l'Utilisateur, Dispositif de Permissions d'accès aux données personnelles, 
+    Traitement des paiements, Fonctions sociales, Surveillance de l'infrastructure, tests de performance et de fonctionnalités du contenu (tests A/B), analyses, accès aux comptes de tiers, 
+    gestion de la base de données des utilisateurs, gestion des contacts et envoi de messages, gestion de la base de données des utilisateurs, gestion des contacts et envoi de messages, tests bêta, 
+    interactions basées sur la localisation, Services de plateforme et hébergement et Interaction avec les réseaux sociaux et plateformes externes.
     </p>
 
     <p>
-        EKAÏ and third parties legal ground for processing Personal Data are listed below :
+    Les fondements juridiques du traitement des données personnelles par EKAÏ et les tiers sont énumérés ci-dessous :
     <ul>
-        <li>protecting the security of your account
+        <li>protéger la sécurité de votre compte
         </li>
-        <li>you have provided your consent for such processing
+        <li>vous avez donné votre consentement pour ce traitement
         </li>
-        <li>provide you with safety and other information about EKAÏ
+        <li>vous fournir des informations sur la sécurité et d'autres informations sur EKAÏ
         </li>
-        <li>target marketing emails to your needs
+        <li>cibler les e-mails de marketing en fonction de vos besoins
         </li>
-        <li>provide you with personalized quality support
+        <li>vous fournir un soutien personnalisé de qualité
         </li>
-        <li>technical support, issue resolution, speed in your use of the Service, fraud detection
+        <li>l'assistance technique, la résolution des problèmes, la rapidité de votre utilisation du service, la détection des fraudes
         </li>
-        <li>any action necessary in order to enter into an agreement relation between you and the Owner
-
+        <li>toute action nécessaire à la conclusion d'une relation contractuelle entre vous et le propriétaire
         </li>
-        <li>any action necessary for the performance of an agreement relation between you and the Owner
-
+        <li>toute action nécessaire à l'exécution d'une relation contractuelle entre vous et le Propriétaire
         </li>
-        <li>compliance to legal obligations from the Owner
-
+        <li>le respect des obligations légales du propriétaire
         </li>
-        <li>pursuit of legitimate interests of the Owner or related third parties
+        <li>la poursuite des intérêts légitimes du propriétaire ou de tiers apparentés
         </li>
-
     </ul>
-
+    </p>
+    <hr>
+    <h5>Responsables du traitement des données et lieu du traitement</h5>
+    <hr>
+    <p>
+    Le Propriétaire collecte et traite directement les données énumérées ci-dessus.
+    </p>
+    <p>
+    Nous pouvons également faire appel à des tiers pour nous aider dans les tâches techniques liées à la fourniture du service. 
+    Ces tâches sont exécutées sous la forme de services technologiques liés les uns aux autres. Ces services sont fournis par : 
+    Microsoft Corporation, Google Ireland Limited, Facebook Ireland Ltd, The Rocket Science Group Ltd, Salesforce.com Inc.
+     Veuillez-vous référer aux politiques de confidentialité de ces tiers pour trouver plus informations sur les conditions de traitement, 
+     ainsi que sur le lieu de traitement, alternativement vous contactez-nous pour accéder à ces politiques pour chaque cas spécifique.
+    </p>
+    <p>
+    Afin de clarifier le fondement juridique, le lieu, le responsable du traitement des données dans un cas spécifique de données, veuillez
+       contacter le propriétaire pour obtenir des informations détaillées sur le traitement spécifique.
     </p>
 
     <hr>
-    <h5>Data processors and place of processing</h5>
+    <h5>Conservation des données personnelles</h5>
     <hr>
     <p>
-        The Owner collects and processes directly the data listed above.
-
+    Nous conserverons vos données personnelles aussi longtemps que votre compte sera considéré comme actif. En outre, voir
+        ci-dessous sous la rubrique "Droits concernant les données personnelles" pour une description de votre droit d'effacement.
     </p>
     <p>
-        We may also use third parties to assist in the technical tasks related to providing the Service. These
-        tasks are performed in the form of technology services related to each other. These services are
-        provided by : Microsoft Corporation, Google Ireland Limited, Facebook Ireland Ltd, The Rocket Science
-        Group Ltd. Salesforce.com Inc. Please refer to the Privacy Policies of these third parties to find more
-        information about the conditions of processing, as well as the place of processing, alternatively you
-        contact us to access those policies for each specific case.
-    </p>
-    <p>
-        In order to clarify the legal ground, place, data processing party on a given Data specific case, please
-        contact the Owner to obtain detail further the specific processing information.
-    </p>
-
-    <hr>
-    <h5>Retention of Personal Data</h5>
-    <hr>
-    <p>
-        We will retain your personal data as long as your account is considered to be active. In addition, see
-        below under “Rights regarding Personal Data” for a description of your right of erasure.
-    </p>
-    <p>
-        The Owner may be allowed to retain Personal Data for a longer period whenever you have given consent to
-        such processing, as long as such consent is not withdrawn. Furthermore, the Owner may be obliged to
-        retain Personal Data for a longer period whenever required to do so for the performance of a legal
-        obligation or upon order of an authority.
+    Le Propriétaire peut être autorisé à conserver les Données personnelles pendant une période plus longue lorsque vous avez donné votre 
+    consentement à un tel traitement, tant que ce consentement n'est pas retiré. En outre, le Propriétaire peut être obligé de conserver les 
+    Données personnelles pendant une période plus longue lorsque cela est nécessaire pour l'exécution d'une obligation légale ou sur ordre d'une autorité.
     </p>
     <hr>
-    <h5>Rights regarding Personal Data</h5>
+    <h5>Droits concernant les données personnelles</h5>
     <hr>
     <p>
-        You may exercise certain rights as per the applicable legislation, including :
+    Vous pouvez exercer certains droits conformément à la législation applicable, notamment :
     <ul>
-        <li>access to and rectification or erasure of your personal data
+        <li>l'accès à vos données personnelles et leur rectification ou effacement
         </li>
-        <li>data portability
+        <li>portabilité des données
         </li>
-        <li>restriction of processing of your personal data
+        <li>la restriction du traitement de vos données personnelles
         </li>
-        <li>the right to object to processing of your personal data, with ground explanation if the data
-            processing is based on enforcement requests or the Owner legitimate interests. No ground explanation
-            is required whenever the Personal Data is processed for marketing purposes.
+        <li>le droit de s'opposer au traitement de vos données personnelles, 
+            avec une explication du motif si le traitement des données est basé sur des demandes d'exécution ou sur les intérêts légitimes du Propriétaire. 
+            Aucune explication du motif n'est requise chaque fois que les données personnelles sont traitées à des fins de marketing.
         </li>
-        <li>the right to lodge a complaint with a supervisory authority
+        <li>le droit de déposer une plainte auprès d'une autorité de surveillance
         </li>
-        <li>withdraw your consent at any time
+        <li>retirer votre consentement à tout moment
         </li>
-
     </ul>
-
     </p>
     <p>
-        All requests to exercise Rights can be directed to the Owner through the contact information provided in
-        this policy. These requests can be exercised free of charge and will be addressed by the Owner as early
-        as possible and always within one month. We may update this Privacy Policy from time to time You can
-        determine when this Privacy Policy was last revised by referring to the “Last Updated” reference
-        contained in this policy. Changes will become effective upon our posting of the revised Privacy Policy.
+    Toutes les demandes d'exercice des droits peuvent être adressées au Propriétaire par le biais des coordonnées 
+    fournies dans la présente politique. Ces demandes peuvent être exercées gratuitement et seront traitées par le 
+    Propriétaire le plus tôt possible et toujours dans un délai d'un mois. Nous pouvons mettre à jour cette politique 
+    de confidentialité de temps à autre. Vous pouvez déterminer la date de la dernière révision de cette politique de 
+    confidentialité en vous référant à la référence "Dernière mise à jour" contenue dans cette politique. Les modifications 
+    entreront en vigueur dès que nous publierons la politique de confidentialité révisée.
     </p>
     <p>
-        We will provide notice to you if these changes are material and, where required by applicable law, we
-        will obtain your consent.
+    Nous vous informerons si ces changements sont importants et, lorsque la loi applicable l'exige, nous obtiendrons votre consentement.
     </p>
 
 </div>
