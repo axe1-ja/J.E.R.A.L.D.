@@ -1,6 +1,8 @@
 <!-- Header of page -->
 <?php
 include '../app/views/layouts/header.php';
+
+include 'db.php';
 ?>
 
 
@@ -38,7 +40,8 @@ include '../app/views/layouts/header.php';
                 <div class="row g-0">
                     <div class="col">
                         <div class="start">
-                            <a href="#" class="card-link">Mot de passe oublié ?</a>
+                            <a href="/public/forgot_password" class="card-link">Mot de passe oublié ?                              
+                            </a>
                         </div>
                     </div>
                     <div class="col">
@@ -60,6 +63,29 @@ include '../app/views/layouts/header.php';
         </div>
     </div>
 </div>
+
+
+<?php
+
+if(isset($_POST['email'], $_POST['password']))
+{
+    $stmt = $db->prepare('SELECT password FROM users WHERE email = ?');
+    $stmt->execute([ $_POST['email']]);
+    $password = $stmt->fetchColumn();
+
+    if(password_verify($_POST['pasword'], $hashedPassword))
+    {
+        echo "Connexion reussie";
+    }
+    else 
+    {
+        echo "Mot de passe Incorrect";
+    }
+    
+}
+
+?>
+
 
 <!-- Footer of page -->
 <?php

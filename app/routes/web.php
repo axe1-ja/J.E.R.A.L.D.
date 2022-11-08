@@ -59,7 +59,8 @@ Route::set('admin/datama',function(){ (new admin)->datama(); });
 Route::set('admin/datama/users',function(){ (new admin)->datama(); });
 Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
 Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });
-Route::set('admin/notifs',function(){ (new admin)->notifs(); });
+Route::set('admin/datama/roles',function(){ (new admin)->datama('roles'); });
+Route::set('admin/inbox',function(){ (new ConversationController)->inbox('admin'); });
 
 // End of Admin routes
 // -------------------
@@ -72,6 +73,7 @@ Route::set('admin/notifs',function(){ (new admin)->notifs(); });
 
 Route::set('login',function(){ (new authentification)->index(); });
 Route::set('register',function(){ (new authentification)->create(); });
+Route::set('forgot_password',function(){ (new authentification)->password(); });
 
 // End of Auth routes
 // ------------------
@@ -82,24 +84,24 @@ Route::set('register',function(){ (new authentification)->create(); });
 // -----------
 // User routes
 
-Route::set('user',function(){ (new user)->index(); });
-Route::set('user/profile',function(){ (new user)->profile(); });
-Route::set('user/edit/profile',function(){ (new user)->edit_profile(); });
-Route::set('user/edit/proches',function(){ (new user)->edit_proches(); });
-Route::set('user/cardio',function(){ (new user)->cardio(); });
-Route::set('user/fall',function(){ (new user)->fall(); });
-Route::set('user/sound',function(){ (new user)->sound(); });
-Route::set('user/temperature',function(){ (new user)->temperature(); });
-Route::set('user/environment',function(){ (new user)->environment(); });
-Route::set('user/forum',function(){ (new user)->forum('forum'); });
-#Route::set('user/forum/{page}',function(){ (new user)->forum('forum',$page); });
-Route::set('user/forum1',function(){ (new user)->forum('forum1'); });
-Route::set('user/forum2',function(){ (new user)->forum('forum2'); });
-Route::set('user/forum_p2',function(){ (new user)->forum('forum_p2'); });
-Route::set('user/forum_p3',function(){ (new user)->forum('forum_p3'); });
-Route::set('user/forum_new',function(){ (new user)->newforum(); });
+Route::set('user',function(){ (new UserController)->index(); });
+Route::set('user/profile',function(){ (new UserController)->profile(); });
+Route::set('user/edit/profile',function(){ (new UserController)->edit_profile(); });
+Route::set('user/edit/proches',function(){ (new UserController)->edit_proches(); });
+Route::set('user/cardio',function(){ (new UserController)->cardio(); });
+Route::set('user/fall',function(){ (new UserController)->fall(); });
+Route::set('user/sound',function(){ (new UserController)->sound(); });
+Route::set('user/temperature',function(){ (new UserController)->temperature(); });
+Route::set('user/environment',function(){ (new UserController)->environment(); });
+Route::set('user/forum',function(){ (new UserController)->forum('forum'); });
+#Route::set('user/forum/{page}',function(){ (new UserController)->forum('forum',$page); });
+Route::set('user/forum1',function(){ (new UserController)->forum('forum1'); });
+Route::set('user/forum2',function(){ (new UserController)->forum('forum2'); });
+Route::set('user/forum_p2',function(){ (new UserController)->forum('forum_p2'); });
+Route::set('user/forum_p3',function(){ (new UserController)->forum('forum_p3'); });
+Route::set('user/forum_new',function(){ (new UserController)->newforum(); });
 
-Route::set('user/practice',function(){ (new user)->practice(); });
+Route::set('user/practice',function(){ (new UserController)->practice(); });
 
 // End of User routes
 // ------------------

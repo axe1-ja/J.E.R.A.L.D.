@@ -1,5 +1,6 @@
 <?php
 
+
 class Database {
 
     public \PDO $pdo;
@@ -107,6 +108,45 @@ class Database {
         $statement->execute();
 
 
+    }
+    
+    // function to remove migrations from the migrations table in the database 
+    public function removeMigrations()
+    {
+        $statement = $this->pdo->prepare("TRUNCATE TABLE migrations");
+        $statement->execute();
+    }
+
+    public function downAllMigrations()
+    {
+        $appliedMigrations = $this->getAppliedMigrations();
+        $downedMigrations = [];
+        // get all the files in the migrations directory
+        $files = scandir('app/migrations');
+        $toDownMigrations = array_reverse(array_intersect($files, $appliedMigrations));
+        // loop in the files of the migrations folder and DOWN those migrations
+        foreach($toDownMigrations as $migration){
+            if($migration === '.' || $migration === '..'){
+                continue;
+            } else {
+                // require the migration file in question
+                require_once 'app/migrations/'.$migration;
+                // get the file name
+                $className = pathinfo($migration, PATHINFO_FILENAME);
+                // create an instance of the class of the migration
+                $instance = new $className();
+                // call the function 'down()' of the migration
+                $this->log('Downing migration '.$migration.' ...');
+                $instance->down($this->pdo);
+                $this->log('Downing migration '.$migration.'!');
+                $downedMigrations[]=$migration;
+            }
+        }
+        if(!empty($downedMigrations)){
+            $this->removeMigrations();
+        } else {
+            $this->log('All migrations were Downed !');
+        }
     }
 
     

@@ -401,3 +401,70 @@ h3 {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+/* for admin private messages */
+.conversations-index {
+    list-style-type: none;
+    background-color: rgba(238, 238, 238, 0.3);
+    /*border:1px solid rgb(201, 201, 201);*/
+    margin:0;
+    padding:0;
+    left:0;
+    height:100%;
+    width:30%;
+    position:fixed;
+    overflow:auto;
+}
+.conversationTab {
+    padding:20px;
+    border-bottom:1px solid rgba(228, 228, 228, 0.5);
+    border-top:1px solid rgba(228, 228, 228, 0.5);
+    border-radius: 4px;
+    transition:0.5s;
+    background-color: rgba(238, 238, 238, 0.2);
+}
+.conversationTab:hover {
+    background-color: rgba(238, 238, 238, 0.6);
+}
+
+.conversation_container {
+    margin:30px;
+}
+
+.messageReceiver {
+    background-color: rgba(179, 179, 179, 0.9);
+    padding:15px;
+    max-width:400px;
+    border-radius: 9px;
+    margin:10px 0px;
+    float:left;
+}
+
+.messageSender {
+    background-color: rgba(73, 82, 199, 0.6);
+    padding:15px;
+    max-width:400px;
+    border-radius: 9px;
+    margin:10px 0px;
+    float:right;
+}
+
+.input_container {
+    position: fixed;
+    width:62%;
+    bottom:15px;
+}
+
+.dm_input {
+    border-radius: 9px;
+    border:1px solid rgba(228, 228, 228, 0.5);
+    margin:25px 0px;
+    padding:9px;
+    font-size: 17px;
+    width:100%;
+    position:relative;
+}
+.dm_input:focus {
+    border:1px solid rgba(128, 128, 128, 0.8);
+    outline: rgba(128, 128, 128, 0.8);
+}
