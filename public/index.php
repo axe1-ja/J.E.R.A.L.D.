@@ -9,7 +9,7 @@ function __autoload($class){
     } elseif (file_exists('../app/models/'.$class.'.php')){
         require_once '../app/models/'.$class.'.php';
     };
-}
+};
 
 
 require_once '../app/routes/web.php';
