@@ -53,7 +53,8 @@ a {
 
 /* css pour un titre (page d'accueil) */
 .titre {
-    font-size: 60px;
+    font-size: 36px;
+    font-weight: bold;
     color: white;
     
 }
@@ -94,7 +95,7 @@ a {
 /* css pour accès (page d'accueil) */
 .access {
     color: white;
-    font-size: 30px;
+    font-size: 64px;
 }
 /* elements in the second row of the home page */
 .home-elements {

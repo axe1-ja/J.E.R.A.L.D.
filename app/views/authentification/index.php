@@ -49,12 +49,13 @@ session_start();
 
 <?php
 include '../app/views/layouts/header.php';
-include 'db.php';
 
     if($error != "")
     {
         echo "<span style= 'color:red'>$error</span><br><br>";
     }
+
+include 'db.php';
 
 ?>
 
@@ -151,6 +152,27 @@ include 'db.php';
         return $valid;
     }
     </script>
+
+<?php
+
+if(isset($_POST['email'], $_POST['password']))
+{
+    $stmt = $db->prepare('SELECT password FROM users WHERE email = ?');
+    $stmt->execute([ $_POST['email']]);
+    $password = $stmt->fetchColumn();
+
+    if(password_verify($_POST['pasword'], $hashedPassword))
+    {
+        echo "Connexion reussie";
+    }
+    else 
+    {
+        echo "Mot de passe Incorrect";
+    }
+    
+}
+
+?>
 
 <!-- Footer of page -->
 <?php

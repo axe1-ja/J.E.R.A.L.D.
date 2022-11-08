@@ -40,19 +40,17 @@ include '../app/views/user/components/user_nav.php';
         </div>
     </div>
     <div>
-
-    <body>
-    <div>
-        <div class="dashboard">
-            <div class="member-dashboard">
-            <p>Welcome <b><?php echo $displayName; ?>!</b></p>
-            <p><?php echo $memberResult[0]["about"]; ?></p>
-            
-            <p>Click to <a href="./logout.php" class="logout-button">Logout</a></p>
-            </div>
+        
+    <div class="row pt-4" >
+        <div class="col">
+            <a href="/public/user/cardio">
+                <img src="/public/resources/storage/Images/coeur.png" class="coeur" alt="">
+            </a>
+            <h3 class="text-white">
+                Rythme cardiaque 
+            </h3>
         </div>
     </div>
-    </body>
 
     <div class="row pt-4" >
         <div class="col">

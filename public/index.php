@@ -11,6 +11,7 @@ function __autoload($class){
     };
 };
 
+//$app = new App;
 
 require_once '../app/routes/web.php';
 
