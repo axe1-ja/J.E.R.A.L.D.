@@ -5,7 +5,8 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/tortue3.jpg" class="w-100 background-image" alt="">
+
+<img src="/public/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
 
 <!-- Navbar  of page -->
 <?php

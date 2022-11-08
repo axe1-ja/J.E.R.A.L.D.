@@ -13,6 +13,7 @@ function __autoload($class){
     } elseif (file_exists('../app/controllers/'.$class.'.php')){
         require_once '../app/controllers/'.$class.'.php';
     };
-}
+};
 
 //$app = new App;
+

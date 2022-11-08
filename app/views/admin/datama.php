@@ -23,7 +23,7 @@ include '../app/views/admin/components/admin_nav.php';
         <div class="col pt-4">
             <div class="row">
                 <div class="col">
-                    <h5 class="fs-5">Users</h5>
+                    <h5 class="fs-5"><?php echo ucfirst($data['model']);?></h5>
                 </div>
                 <div class="col-4">
                     <form class="d-flex" role="search">

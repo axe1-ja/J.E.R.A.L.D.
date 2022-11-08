@@ -3,6 +3,21 @@
 include '../app/views/layouts/header.php';
 ?>
 
+<?php
+use \models\Member;
+
+if (! empty($_SESSION["userId"])) {
+    require_once __DIR__ . './../models/Member.php';
+    $member = new Member();
+    $memberResult = $member->getMemberById($_SESSION["user"]);
+    if(!empty($memberResult[0]["display_name"])) {
+        $displayName = ucwords($memberResult[0]["display_name"]);
+    } else {
+        $displayName = $memberResult[0]["name"];
+    }
+}
+?>
+
 
 <!-- Content of page -->
 <?php
@@ -25,7 +40,20 @@ include '../app/views/user/components/user_nav.php';
         </div>
     </div>
     <div>
-        
+
+    <body>
+    <div>
+        <div class="dashboard">
+            <div class="member-dashboard">
+            <p>Welcome <b><?php echo $displayName; ?>!</b></p>
+            <p><?php echo $memberResult[0]["about"]; ?></p>
+            
+            <p>Click to <a href="./logout.php" class="logout-button">Logout</a></p>
+            </div>
+        </div>
+    </div>
+    </body>
+
     <div class="row pt-4" >
         <div class="col">
             <a href="/public/user/cardio">
