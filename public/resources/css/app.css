@@ -7,10 +7,18 @@
     font-family: Buda;
     src: url(../fonts/Buda-Light.ttf);
 }
+@font-face {
+    font-family: Clearlight;
+    src: url(../fonts/clearlight.ttf);
+}
+@font-face {
+    font-family: Watchword;
+    src: url(../fonts/Watchword.otf);
+}
 
 /* css of the body of the page (affects all) */
 body {
-    font-family: Buda, cursive !important	;
+    font-family: Watchword, cursive !important	;
     margin:0;
     padding:0;
 }
@@ -85,6 +93,7 @@ a {
 
 /* css pour accès (page d'accueil) */
 .access {
+    color: white;
     font-size: 30px;
 }
 /* elements in the second row of the home page */
