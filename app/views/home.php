@@ -30,11 +30,11 @@ include '../app/views/general_components/navbar.php';
     <div class="row home-elements">
         <div class="col-md">
             <h5 class="fs-5 text-white m-0" class="text-white">
-                <span class="d-block">Powered by Infinite Solutions</span> 
+                <span class="d-block">Powered by Infinite Measures</span> 
                 Designed by J.E.R.A.L.D.
             </h5>  
             <h1 class="fs-1 access text-white mt-4">
-                On met la catchphrase ici
+                Le secret de la longévité, c'est de porter Ekaï !
             </h1>
         </div>
     </div>
@@ -45,10 +45,6 @@ include '../app/views/general_components/navbar.php';
 <p><br><br><br></p>
 
 
-<!-- Footer of page -->
-<?php
-include '../app/views/general_components/footer2.php';
-?>
 
 <!-- Footer of page -->
 <?php
