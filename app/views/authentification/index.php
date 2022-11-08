@@ -56,6 +56,7 @@ include '../app/views/layouts/header.php';
     }
 
 include 'db.php';
+
 ?>
 
 
@@ -108,8 +109,7 @@ include 'db.php';
                 <div class="row g-0">
                     <div class="col">
                         <div class="start">
-                            <a href="/public/forgot_password" class="card-link">Mot de passe oublié ?                              
-                            </a>
+                            <a class="forgot-btn" href="/public/forgot_password">Mot de passe oublié ?</a>
                         </div>
                     </div>
                     <div class="col">
