@@ -60,11 +60,23 @@ Route::set('admin/datama/users',function(){ (new admin)->datama(); });
 Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
 Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });
 Route::set('admin/datama/roles',function(){ (new admin)->datama('roles'); });
-Route::set('admin/inbox',function(){ (new ConversationController)->inbox('admin'); });
+Route::set('admin/inbox',function(){ (new MessageController)->inbox('admin'); });
 
 // End of Admin routes
 // -------------------
 
+
+
+// ------------
+// Inbox routes
+
+Route::set('admin/inbox',function(){ (new MessageController)->inbox('admin'); });
+Route::set('user/inbox',function(){ (new MessageController)->inbox('user'); });
+Route::set('inbox/send',function(){ (new MessageController)->send(); });
+
+
+// End of Inbox routes
+// -------------------
 
 
 
