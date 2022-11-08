@@ -45,9 +45,9 @@ include '../app/views/user/components/user_nav.php';
                             <?php foreach($data['data'] as $el): ?>
                                 <tr>
                                     <th scope="row"><?php echo $el[0];?></th>
-                                    <td><?php echo $el[1];?></td>
                                     <td><?php echo $el[2];?></td>
                                     <td><?php echo $el[3];?></td>
+                                    <td><?php echo $el[4];?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -60,14 +60,14 @@ include '../app/views/user/components/user_nav.php';
             <a class="btn btn-outline-primary" href="/public/user/forum_new" role="button">Ecrire</a>
             </div>
         </div>
-       
+
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
             <li class="page-item"><a class="page-link" href="/public/user/forum">1</a></li>
-            <?php for ($i = 2; $i <= 3; $i ++) { ?>
-                <li class="page-item"><a class="page-link" href="/public/user/forum_p<?php echo $i?>" ><?php echo $i; ?></a></li>
+            <?php for ($forumpage = 2; $forumpage <= 3; $forumpage ++) { ?>
+                <li class="page-item"><a class="page-link" href="/public/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
                 <?php } ?>
-         </ul>
+            </ul>
 </nav>
     </div>
 </div>

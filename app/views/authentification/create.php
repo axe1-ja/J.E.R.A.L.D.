@@ -155,7 +155,7 @@ include '../app/views/layouts/header.php';
         <div class="col">
             <a href="/public/login" class="card-link" class="lien_compte">
                 <h4 class="text-white">
-                    J'ai déjà un compte.
+                    J'ai déjà un compte !
                 </h4>
             </a>
         </div>

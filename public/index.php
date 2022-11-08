@@ -1,10 +1,4 @@
-<?php 
-require_once '../app/routes/web.php';
-
-// from old version
-//require_once '../app/init.php';
-// from old version
-
+<?php
 
 // configurations for routes to work
 function __autoload($class){
@@ -12,8 +6,12 @@ function __autoload($class){
         require_once '../app/core/'.$class.'.php';
     } elseif (file_exists('../app/controllers/'.$class.'.php')){
         require_once '../app/controllers/'.$class.'.php';
+    } elseif (file_exists('../app/models/'.$class.'.php')){
+        require_once '../app/models/'.$class.'.php';
     };
 };
 
 //$app = new App;
+
+require_once '../app/routes/web.php';
 

@@ -40,6 +40,64 @@ include '../app/views/general_components/navbar.php';
     
        
     </div>
+    <div class="box1 image-histoire">
+        <div class="card1">
+            <div class="imgBx1">
+                <img src="/public/resources/storage/Images/logo.ico" alt="">
+            </div>
+            <div class="details1">
+                <h2>Axel Joseph-Antoine<br><span>Membre 1</span></h2>
+            </div>
+        </div>
+    
+        <div class="card1">
+            <div class="imgBx1">
+                <img src="/public/resources/storage/Images/logo.ico" alt="">
+            </div>
+            <div class="details1">
+                <h2>Diane Dinh<br><span>Membre 2</span></h2>
+            </div>
+        </div>
+
+        <div class="card1">
+            <div class="imgBx1">
+                <img src="/public/resources/storage/Images/logo.ico" alt="">
+            </div>
+            <div class="details1">
+                <h2>Romain Parreira Goncalves<br><span>Membre 3</span></h2>
+            </div>
+        </div>
+ 
+    </div>
+    <div class="box1 image-histoire">
+        <div class="card1">
+            <div class="imgBx1">
+                <img src="/public/resources/storage/Images/logo.ico" alt="">
+            </div>
+            <div class="details1">
+                <h2>Léonard Gendrel<br><span>Membre 4</span></h2>
+            </div>
+        </div>
+    
+        <div class="card1">
+            <div class="imgBx1">
+                <img src="/public/resources/storage/Images/logo.ico" alt="">
+            </div>
+            <div class="details1">
+                <h2>Elena Charpentier<br><span>Membre 5</span></h2>
+            </div>
+        </div>
+
+        <div class="card1">
+            <div class="imgBx1">
+                <img src="/public/resources/storage/Images/logo.ico" alt="">
+            </div>
+            <div class="details1">
+                <h2>Hyun Joon Yoo<br><span>Membre 6</span></h2>
+            </div>
+        </div>
+ 
+    </div>
 
     <div class="col-md ">
             <h1 class="titre1" > 
@@ -56,12 +114,12 @@ include '../app/views/general_components/navbar.php';
     <div class="col "> 
         <img src="/public/resources/storage/Images/logo-app2.png" class=" logo-notre-projet center cadreImg " alt="">
     </div>
-    <div class="col-5 ">
+    <div class="col-5 col-6 col-7 col-8">
         <h1 class="titre1" > 
                 Notre Projet
         </h1>
         <h3 class="texte"> 
-                L'étude du projet initié par Infinite Measures a poussé l'équipe à créer un projet centré sur une certaine branche d'individu de la société; l'équipe s'est mise d'accord pour choisir un produit qui aidera les personnes âgées, le produit prendra la forme d'un bracelet connecté à une application qui permettra de suivre en direct de manière simple ce que les différents capteurs du bracelet détectent. Les capteurs ont été choisis de telles sorte à ce qu'ils puissent améliorer au mieux la qualité de vie de la personne âgée; le bracelet est composée de capteurs cardiaque, athmosphérique, sonore, gyroscopique et de températures.
+                L'étude du projet initié par Infinite Measures a poussé l'équipe à créer un projet centré sur une certaine branche d'individu de la société; l'équipe s'est mise d'accord pour choisir un produit qui aiderai les personnes âgées, le produit prendra la forme d'un bracelet connecté à une application qui permettra de suivre en direct de manière simple ce que les différents capteurs du bracelet détectent. Les capteurs ont été choisis de telles sorte à ce qu'ils puissent améliorer au mieux la qualité de vie de la personne âgée; le bracelet est composée de capteurs cardiaque, athmosphérique, sonore, gyroscopique et de températures.
         </h3>
     </div>
 </div>
@@ -69,5 +127,5 @@ include '../app/views/general_components/navbar.php';
 </div>
 <!-- Footer of page -->
 <?php
-include '../app/views/general_components/footer.php';
+include '../app/views/layouts/footer.php';
 ?>

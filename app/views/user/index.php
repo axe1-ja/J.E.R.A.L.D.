@@ -40,20 +40,7 @@ include '../app/views/user/components/user_nav.php';
         </div>
     </div>
     <div>
-
-    <body>
-    <div>
-        <div class="dashboard">
-            <div class="member-dashboard">
-            <p>Welcome <b><?php echo $displayName; ?>!</b></p>
-            <p><?php echo $memberResult[0]["about"]; ?></p>
-            
-            <p>Click to <a href="./logout.php" class="logout-button">Logout</a></p>
-            </div>
-        </div>
-    </div>
-    </body>
-
+        
     <div class="row pt-4" >
         <div class="col">
             <a href="/public/user/cardio">
@@ -63,32 +50,73 @@ include '../app/views/user/components/user_nav.php';
                 Rythme cardiaque 
             </h3>
         </div>
-
-        <div class="col">
-            <a href="/public/user/fall">
-                <img src="/public/resources/storage/Images/chute.png" class="chute" alt="">
-            </a>
-            <h3 class="text-white">
-                Détection Chute
-            </h3>
-        </div>
-
-        <div class="col">
-            <a href="/public/user/sound">
-                <img src="/public/resources/storage/Images/db.png" class="db" alt="">
-            </a>
-            <h3 class="text-white">
-                Niveau sonore
-            </h3>
-        </div>
     </div>
-    <div class="row pt-3">
+
+    
+    <p><br></p>
+
+
+    <div class="row my-3">
+
+        <!-- Card avec les infos de l'utilisateur connecté -->
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            <h4 class="card-title"><i class="bi bi-person-square"></i></h4>
+                        </div>
+                        <div class="col text-center">
+                            <h4 class="card-title">User</h4>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col text-start">
+                            <p class="card-text">Nom: ...</p>
+                            <p class="card-text">Addresse: 75 rue ..., ..., France</p>
+                            <p class="card-text">Date de naissance: ../../....</p>
+                            <p class="card-text">email: ...@gmail.com</p>
+                            <p class="card-text">Téléphone: +33 .. .. .. .. ..</p>
+                            <p class="card-text">Contacts d'urgence: ... et ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card avec un resumé de la santé de la peronne connectée -->
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            <h4 class="card-title"><i class="bi bi-clipboard2-pulse"></i></h4>
+                        </div>
+                        <div class="col text-center">
+                            <h4 class="card-title">Santé</h4>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col text-start">
+                            <p class="card-text">Cardio: <span class="text-success">Très bonne condition</span></p>
+                            <p class="card-text">Chute: <span class="text-success">Très bonne condition</span></p>
+                            <p class="card-text">Niveau sonore: <span class="text-success">Très bonne condition</span></p>
+                            <p class="card-text">Température: <span class="text-success">Très bonne condition</span></p>
+                            <p class="card-text">Pollution: <span class="text-success">Très bonne condition</span></p>
+                            <p class="fs-5 card-text mt-2">Général: <span class="text-success">Très bonne condition</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card avec un resumé de la santé de la peronne connectée -->
         <div class="col">
             <a href="/public/user/temperature">
                 <img src="/public/resources/storage/Images/temp.png" class="temp" alt="">
             </a>
             <h3 class="text-white"> 
-                Température corporelle
+                Température corporel
             </h3>
         </div>
         <div class="col pt-4">
@@ -99,7 +127,11 @@ include '../app/views/user/components/user_nav.php';
                 Données environnantes 
             </h3>
         </div>
+
+
     </div>
+
+
 </div>
 
 

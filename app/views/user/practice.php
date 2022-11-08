@@ -36,5 +36,21 @@ $myarray2[sizeof($myarray2)+2] = " fish";
 print_r($myarray2);
 echo sizeof($myarray2);
 
+### forum 에서 사용할 함수 
+$data=[
+    ['21','forum1','Axel','Ja','No connexion'],
+    ['22','forum2','Joon','Yoo','Find friend'],
+    ['23','forum1','Elena','Charpentier','Hi Hi'],
+    ['24','forum2','Diane','Dinh',"Don't work!!"],
+    ['25','forum1','Leonard','Gendrel','Find golf friend'],
+    ['26','forum2','Romain','Parriera',"It's really great"],
+    ['27','forum1','Axel','Ja','Metal'],
+    ['28','forum2','Joon','Yoo','Find new friend'],
+    ['29','forum1','Elena','Charpentier','Hello Hi'],
+    ['30','forum2','Diane','Dinh',"WOW!"],
+];
 
+foreach ($data as [$id_forum, $forumtype]):
+    echo $forumtype;
+endforeach;
 ?>
