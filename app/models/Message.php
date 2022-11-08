@@ -2,17 +2,17 @@
 
 class Message {
     public $id;
-    public Conversation $conversation;
+    //public Conversation $conversation;
     public $user_id;
     public $content;
     protected $dateTime;
 
 
     
-    public function __construct($id, $conversation, $user_id, $content, $created_at)
+    public function __construct($id, /*$conversation,*/ $user_id, $content, $created_at)
     {
         $this->id = $id;
-        $this->cnversation = $conversation;
+        //$this->conversation = $conversation;
         $this->user_id = $user_id;
         $this->content = $content;
         $this->created_at = $created_at;

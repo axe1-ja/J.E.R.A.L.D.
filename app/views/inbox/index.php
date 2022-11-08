@@ -17,9 +17,9 @@ include '../app/views/layouts/header.php';
     <div class="col-4 p-0 m-0">
         <ul class="conversations-index">
             <li class="title fs-4 p-3">All Conversations</li>
-            <?php foreach($data['conversations'] as $conv): ?>
+            <?php foreach($data['interlocutors'] as $interl): ?>
                 <li class="conversationTab">
-                    <h5><?php echo "Conversation with user ".$conv->user_id;?> <i class="bi bi-caret-right"></i></h5>
+                    <h5><?php echo "Conversation with user ".$interl->id;?> <i class="bi bi-caret-right"></i></h5>
                     <p><em><?php echo end($data['messages'])->content; ?> .................</em></p>
                 </li>
             <?php endforeach; ?>
@@ -45,11 +45,17 @@ include '../app/views/layouts/header.php';
                     </div>
                 </div>
             <?php endforeach; ?>
+            <p><br><br><br></p>
 
-            <div class="input_container">
-                <input class="dm_input" type="text" placeholder="Type a message..." name="sendMsg" id="">
-            </div>
         </div>
+
+        <div class="input_container">
+            <form action="/public/inbox/send" method="post">
+                <input class="dm_input" type="text" placeholder="Type a message..." name="message" id="">
+                <button class="btn btn-outline-primary ms-2 d-inline inbox_sendButton" type="submit">Send</button>
+            </form>
+        </div>
+            
     </div>
 
 </div>
