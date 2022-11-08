@@ -36,7 +36,7 @@ a {
     position: fixed;
     min-height: 100%;
     z-index:-50;
-    filter: opacity(50%) ;
+    filter: opacity(150%) ;
     filter:contrast(100%);
     
 }
