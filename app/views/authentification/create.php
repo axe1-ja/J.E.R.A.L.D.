@@ -5,7 +5,7 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-        if(!$DB = new PDO("mysql: host=localhost; dbname=ranks_db", "root",""))
+        if(!$DB = new PDO("mysql: host=localhost; dbname='jeraldb_master', 'root',"" ; "))
         {
             die("Could not connect to database");
         }

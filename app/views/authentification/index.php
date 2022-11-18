@@ -8,20 +8,20 @@ if (! empty($_POST["btnLogin"])) {
 }
 ?>
 
-<!--
+<?php
 session_start();
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-        if(!$DB = new PDO("mysql: host=localhost; dbname=ranks_db", "root",""))
+        if(!$DB = new PDO("mysql: host=localhost; dbname=jeraldb_master", "root",""))
         {
             die("Could not connect to database");
         }
 
-        $arr["email"] = $_POST["email"];
-        $arr["password"] = hash('sha1', $_POST["password"]);
+        $arr["User_email"] = $_POST["email"];
+        $arr["User_password"] = hash('sha1', $_POST["password"]);
     
-        $query = "select * from users where email = :email && password = :password limit 1";
+        $query = "select * from m0002users where email = :User_email && password = :User_password limit 1";
         $stm = $DB->prepare($query);
         if($stm)
         {
@@ -44,8 +44,7 @@ session_start();
         }
     }
 
-!-->
-
+?>
 
 <?php
 include '../app/views/layouts/header.php';
@@ -132,7 +131,9 @@ include 'db.php';
     </div>
 </div>
 
+
 <script>
+/*
     function validate() {
         var $valid = true;
         document.getElementById("password_info").innerHTML = "";
@@ -157,17 +158,17 @@ include 'db.php';
 
 if(isset($_POST['email'], $_POST['password']))
 {
-    $stmt = $db->prepare('SELECT password FROM users WHERE email = ?');
-    $stmt->execute([ $_POST['email']]);
+    $stmt = $db->prepare('SELECT User_password FROM m0002users WHERE User_email = ?');
+    $stmt->execute([$_POST['email']]);
     $password = $stmt->fetchColumn();
 
-    if(password_verify($_POST['pasword'], $hashedPassword))
+    if(password_verify($_POST['password'], $hashedPassword))
     {
-        echo "Connexion reussie";
+        echo "Connexion réussie";
     }
     else 
     {
-        echo "Mot de passe Incorrect";
+        echo "Mot de passe incorrect";
     }
     
 }
