@@ -13,7 +13,7 @@ class m0002_users {
             User_nom VARCHAR(255) NOT NULL,
             User_DOB DATE NOT NULL,
             User_password VARCHAR(255) NOT NULL,
-            User_email VARCHAR(255) NOT NULL,
+            User_email VARCHAR(255) UNIQUE NOT NULL,
             User_address VARCHAR(255) NOT NULL,
             User_height FLOAT,
             User_Weight FLOAT,
