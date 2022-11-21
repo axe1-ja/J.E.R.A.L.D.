@@ -16,7 +16,7 @@ include '../app/views/layouts/header.php';
 <div class="row g-0">
     <div class="col-4 p-0 m-0">
         <ul class="conversations-index">
-            <li class="title fs-4 p-3">All Conversations</li>
+            <li class="title f-3 p-3">All Conversations</li>
             <?php foreach($data['interlocutors'] as $interl): ?>
                 <li class="conversationTab">
                     <h5><?php echo "Conversation with user ".$interl->id;?> <i class="bi bi-caret-right"></i></h5>
@@ -26,11 +26,11 @@ include '../app/views/layouts/header.php';
         </ul>
     </div>
 
-    <div class="col p-0">
+    <div class="col-8 p-0">
         <div class="conversation_container">
             <?php foreach($data['messages'] as $msg): ?>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12">
                         <?php if($data['thisUser']->role=='admin'): ?>
                             <?php if($msg->user_id==$data['thisUser']->id): ?>
                                 <div class="messageSender">
@@ -52,7 +52,7 @@ include '../app/views/layouts/header.php';
         <div class="input_container">
             <form action="/public/inbox/send" method="post">
                 <input class="dm_input" type="text" placeholder="Type a message..." name="message" id="">
-                <button class="btn btn-outline-primary ms-2 d-inline inbox_sendButton" type="submit">Send</button>
+                <button class="btn btn-outline-primary mr-2 d-inline inbox_sendButton" type="submit">Send</button>
             </form>
         </div>
             

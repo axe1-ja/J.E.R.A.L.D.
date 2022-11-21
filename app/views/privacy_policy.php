@@ -7,9 +7,9 @@ include '../app/views/layouts/header.php';
 include '../app/views/general_components/navbar.php';
 ?>
 
-<div class="container bg-white mt-4">
+<div class="container">
 
-    <h2 style="margin-top:40px">politique de condidentialité</h2>
+    <h2 class="f-3">Politique de Confidentialité</h2>
     <p class="text-muted">dernière mise a jours: le 6 novembre 2022</p>
     <p>
         We are committed to protecting your privacy. We developed this Privacy Policy to provide you with

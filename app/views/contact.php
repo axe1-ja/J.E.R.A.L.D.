@@ -9,22 +9,29 @@ include '../app/views/layouts/header.php';
 <?php
 include '../app/views/general_components/navbar.php';
 ?>
-
-<div class="row mt-4">
-    <div class="col-4 offset-4 text-center my-2">
-        <h2 class="fs-2 text-white my-2">Une question? Contactez nous.</h2>
-        <p class="text-white my-2"><em>Envoyez un ticket pour reporter un problème que vous avez renconté avec notre produit ou pour nous poser une question sur les services que nous proposons.</em></p>
+<div class="container px-3">  
+    <div class="row mt-4">
+        <div class="col-12 offset-4 text-center my-2">
+            <h2 class="f-4 text-white my-2">Une question? Contactez nous.</h2>
+            <p class="text-white my-2"><em>Envoyez un ticket pour reporter un problème que vous avez renconté avec notre produit ou pour nous poser une question sur les services que nous proposons.</em></p>
+        </div>
     </div>
 </div>
 
 <div class="container mt-4">
     <div class="card center" style="width: 40rem; background-color:#B5D7FF">
         <div class="card-body">
-            <button type="button" class="btn-close" aria-label="Close" style="position:relative; left:588px; top:-8px" onclick="javascript:history.back()"></button>
-            <form class="text-start">
-                <div class="mb-4 text-center">
-                    <h3>Contactez-nous</h3>
+            <div class="row">
+                <div class="col-11">
+                    <div class="text-center">
+                        <h2>Contactez-nous</h2>
+                    </div>
                 </div>
+                <div class="col-1 text-right">
+                    <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
+                </div>
+            </div>
+            <form class="text-left">
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label">Nom Prénom</label>
                     <input type="text" class="form-control" id="exampleInputName" placeholder="Person Doe" id="validationCustom03" required>
@@ -38,8 +45,8 @@ include '../app/views/general_components/navbar.php';
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="validationCustom03" required></textarea>
                     </div>
                 <div class="row">
-                    <div class="col">
-                        <div class="mb-3 text-end">
+                    <div class="col-12">
+                        <div class="mb-3 text-right">
                             <button type="submit" class="btn btn-primary">Envoyer</button>
                         </div>
                     </div>
@@ -49,8 +56,10 @@ include '../app/views/general_components/navbar.php';
     </div>
 
     <p><br></p>
+
     <div class="row">
-        <div class="col-4 offset-4 text-center text-white">
+        <div class="col-4"></div>
+        <div class="col-4 text-center text-white">
             <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/public/privacy">politique de confidentialité</a>.</em></p>
         </div>
     </div>

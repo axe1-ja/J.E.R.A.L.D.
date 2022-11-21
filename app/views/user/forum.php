@@ -19,28 +19,28 @@ include '../app/views/user/components/user_nav.php';
                 <li class="nav-item"><a class="nav-link" href="/public/user/forum2"><i class="bi bi-person"></i> Forum 2</a></li>
             </ul>
         </div>
-        <div class="col pt-4">
+        <div class="col-10 pt-4">
             <div class="row">
-                <div class="col">
+                <div class="col-8">
                 </div>
                 <div class="col-4">
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" name="searchDb" id="search" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control mr-2" name="searchDb" id="search" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-primary" id="searchBtn" type="submit">Search</button>
                     </form>
                 </div>
             </div>
             <div class="row">
-                <div class="col pt-3">
-                <table class="table table-striped table-hover" role = 'button'>
-                    <thead>
-                        <tr>
-                            <th scope="col">Forum Number</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Forum objet</th>
-                        </tr>
-                    </thead>
+                <div class="col-12 pt-3">
+                    <table class="table table-striped table-hover" role = 'button'>
+                        <thead>
+                            <tr>
+                                <th>Forum Number</th>
+                                <th>Name</th>
+                                <th>Last Name</th>
+                                <th>Forum objet</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <?php foreach($data['data'] as $el): ?>
                                 <tr>
@@ -56,7 +56,7 @@ include '../app/views/user/components/user_nav.php';
             </div>
         </div>
         <div class="row">
-            <div class="mb-3 text-end" >
+            <div class="mb-3 text-right" >
             <a class="btn btn-outline-primary" href="/public/user/forum_new" role="button">Ecrire</a>
             </div>
         </div>
