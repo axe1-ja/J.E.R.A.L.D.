@@ -12,7 +12,7 @@ include '../app/views/user/components/user_nav.php';
 <div class="container">
     <div class="row">
         <div class="col-2 pt-4">
-            <h5 class="fs-5">Tables</h5>
+            <h5 class="f-2">Tables</h5>
             <br>
             <ul class='navbar-nav'>
                 <li class="nav-item"><a class="nav-link" href="/public/user/forum"><i class="bi bi-person"></i> Forum</a></li>
@@ -20,9 +20,9 @@ include '../app/views/user/components/user_nav.php';
                 <li class="nav-item"><a class="nav-link" href="/public/user/forum2"><i class="bi bi-person"></i> Forum 2</a></li>
             </ul>
         </div>
-        <div class="col pt-4">
+        <div class="col-10 pt-4">
             <div class="row">
-                <form class="text-start">
+                <form class="text-left">
                     <div class="mb-4 text-center">
                         <h3>Nouvel forum</h3>
                     </div>
@@ -46,8 +46,8 @@ include '../app/views/user/components/user_nav.php';
                         <input class="form-control form-control" id="formFileSm" type="file">
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <div class="mb-3 text-end">
+                        <div class="col-12">
+                            <div class="mb-3 text-right">
                                 <button type="submit" class="btn btn-primary">Envoyer</button>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 <div class="container text-center py-4">
     <div class="card center" style="width: 40rem;">
         <div class="card-body">
-            <form class="text-start">
+            <form class="text-left">
                 <div class="mb-4 text-center">
                     <h3>Modifier les coordonnées de votre 1er proche</h3>
                 </div>
@@ -26,7 +26,7 @@
                     <input type="password" class="form-control" id="exampleInputPassword1" id="validationCustom03" required>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12">
                         <div class="mb-3 text-center">
                             <a href="/public/user/profile" class="card-link">
                                 <button type="submit" class="btn btn-primary">Confirmer</button>
