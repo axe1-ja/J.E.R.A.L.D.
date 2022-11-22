@@ -11,21 +11,21 @@ include '../app/views/admin/components/admin_nav.php';
 
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <h4>Notifications:</h4>
         </div>
     </div>
     <div class="row">
-        <div class="col pt-4">
+        <div class="col-12 pt-4">
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Preview</th>
-                        <th scope="col">Sent by</th>
-                        <th scope="col">Catergory</th>
-                        <th scope="col">Date and Time</th>
+                        <th>id</th>
+                        <th>Title</th>
+                        <th>Preview</th>
+                        <th>Sent by</th>
+                        <th>Catergory</th>
+                        <th>Date and Time</th>
                     </tr>
                 </thead>
                 <tbody>

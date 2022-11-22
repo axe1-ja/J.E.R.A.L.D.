@@ -20,14 +20,15 @@ if (! empty($_SESSION["userId"])) {
 
 
 <!-- Content of page -->
+<img src="/public/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
+
 <?php
 include '../app/views/user/components/user_nav.php';
 ?>
-<img src="/public/resources/storage/Images/dechaine.jpg" class="w-100 background-image" alt="">
 
 <div class="text-center p-3">
     <div class="row">
-        <div class="col-3 text-start">
+        <div class="col-3 text-left">
             <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home">
                 Accueil >
             </a>
@@ -39,10 +40,9 @@ include '../app/views/user/components/user_nav.php';
             <h1 class="titre">Tableau de Bord</h1>
         </div>
     </div>
-    <div>
         
     <div class="row pt-4" >
-        <div class="col">
+        <div class="col-12">
             <a href="/public/user/cardio">
                 <img src="/public/resources/storage/Images/coeur.png" class="coeur" alt="">
             </a>
@@ -53,7 +53,7 @@ include '../app/views/user/components/user_nav.php';
     </div>
 
     <div class="row pt-4" >
-        <div class="col">
+        <div class="col-4">
             <a href="/public/user/cardio">
                 <img src="/public/resources/storage/Images/coeur.png" class="coeur" alt="">
             </a>
@@ -62,7 +62,7 @@ include '../app/views/user/components/user_nav.php';
             </h3>
         </div>
 
-        <div class="col">
+        <div class="col-4">
             <a href="/public/user/fall">
                 <img src="/public/resources/storage/Images/chute.png" class="chute" alt="">
             </a>
@@ -71,7 +71,7 @@ include '../app/views/user/components/user_nav.php';
             </h3>
         </div>
 
-        <div class="col">
+        <div class="col-4">
             <a href="/public/user/sound">
                 <img src="/public/resources/storage/Images/db.png" class="db" alt="">
             </a>
@@ -80,8 +80,9 @@ include '../app/views/user/components/user_nav.php';
             </h3>
         </div>
     </div>
+
     <div class="row pt-3">
-        <div class="col">
+        <div class="col-6">
             <a href="/public/user/temperature">
                 <img src="/public/resources/storage/Images/temp.png" class="temp" alt="">
             </a>
@@ -89,7 +90,7 @@ include '../app/views/user/components/user_nav.php';
                 Température corporelle
             </h3>
         </div>
-        <div class="col pt-4">
+        <div class="col-6 pt-4">
             <a href="/public/user/environment">
                 <img src="/public/resources/storage/Images/envi.png" class="envi" alt="">
             </a>
@@ -97,8 +98,6 @@ include '../app/views/user/components/user_nav.php';
                 Données environnantes 
             </h3>
         </div>
-
-
     </div>
 
 
