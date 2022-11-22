@@ -1,11 +1,11 @@
 <!-- Header of page -->
 <?php
 
-    $error = "";
+    /*$error = "";*/
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-        if(!$DB = new PDO("mysql: host=localhost; dbname='jeraldb_master', 'root',"" ; "))
+        if(!$DB = new PDO("mysql: host=localhost; port=3306; dbname=jeraldb_master", "root",""));
         {
             die("Could not connect to database");
         }
@@ -17,7 +17,7 @@
 
     function EmailExists($email)
     {
-        $query = 'SELECT * FROM users where email = ?';
+        $query = 'SELECT * FROM users where User_email = ?';
         $paramType = 's';
         $paramValue = array(
             $email
@@ -34,29 +34,34 @@
         }
         return $result;
     }
-        //save to database
-        $arr["name"] = $_POST["name"];
+    //save to database
+    if (EmailExists($_POST["email"]) == false){
+        $arr["nom"] = $_POST["nom"];
+        $arr["prenom"] = $_POST["prenom"];
         $arr["email"] = $_POST["email"];
         $arr["phone"] = $_POST["phone"];
         $arr["adress"] = $_POST["adress"];
         $arr["password"] = hash('sha1', $_POST["password"]);
-        $arr["rank"] = "user";
-    
-        $query = "insert into users (name, email, phone, adress, password, rank) values (:name, :email, :phone, :adress, :password, :rank)";
-        $stm = $DB->prepare($query);
-        if($stm)
+    } else {
+        echo('Email already exists');
+    }
+        
+
+    $query = "insert into users (User_nom, User_Prenom, User_email, User_phone, User_adress, User_password) values (:nom, :prenom, :email, :phone, :adress, :password)";
+    $stm = $DB->prepare($query);
+    if($stm)
+    {
+        $check = $stm->execute($arr);
+        if(!$check)
         {
-            $check = $stm->execute($arr);
-            if(!$check)
-            {
-                $error = "Could not save to the database";
-            }
-            if($error == "")
-            {
-                header("location: /public/user");
-                die;
-            }
+            $error = "Could not save to the database";
         }
+        if($error == "")
+        {
+            header("location: /public/user");
+            die;
+        }
+    }
     }
 
 
@@ -81,7 +86,7 @@ include '../app/views/layouts/header.php';
     
     <div class="row">
         <div class="col"> 
-            <a href="/public/home">
+            <a href="">
                 <img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
         </div>
@@ -95,8 +100,12 @@ include '../app/views/layouts/header.php';
                     <h3>Inscription</h3>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputName" class="form-label">Nom Prénom</label>
-                    <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Person Doe" required>
+                    <label for="exampleInputNom" class="form-label">Nom</label>
+                    <input type="text" name="nom" class="form-control" id="exampleInputNom" placeholder="Doe" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPrenom" class="form-label">Prénom</label>
+                    <input type="text" name="prenom" class="form-control" id="exampleInputPrenom" placeholder="Person" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
@@ -161,7 +170,8 @@ include '../app/views/layouts/header.php';
         </div>
     </div>
 </div>
-<script>
+
+<--script>
     function validate() {
         var $valid = true;
         document.getElementById("email").innerHTML = "";
@@ -181,7 +191,7 @@ include '../app/views/layouts/header.php';
         }
         return $valid;
     }
-    </script>
+    <--/script>
 </body>
 </html>
 

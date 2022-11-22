@@ -21,7 +21,7 @@ session_start();
         $arr["User_email"] = $_POST["email"];
         $arr["User_password"] = hash('sha1', $_POST["password"]);
     
-        $query = "select * from m0002users where email = :User_email && password = :User_password limit 1";
+        $query = "select * from users where email = :User_email && password = :User_password limit 1";
         $stm = $DB->prepare($query);
         if($stm)
         {
@@ -32,7 +32,7 @@ session_start();
                 {
                     $_SESSION["user"] = $data[0]["id"] ;
                 } else{
-                    $error = "Wrong username or password";
+                    $error = "Wrong email or password";
                 }
             }
             
@@ -95,7 +95,7 @@ include 'db.php';
                 </div>
                 <div class="mb-3">
                     <div>
-                        <label for="password" class="form-label">Mot de passe</label><span id="password_info"
+                        <label for="password" class="form-label">Mot de passe</label><span id="password "
                             class="error-info"></span>
                     </div>
                     <div>
@@ -158,7 +158,7 @@ include 'db.php';
 
 if(isset($_POST['email'], $_POST['password']))
 {
-    $stmt = $db->prepare('SELECT User_password FROM m0002users WHERE User_email = ?');
+    $stmt = $db->prepare('SELECT User_password FROM users WHERE User_email = ?');
     $stmt->execute([$_POST['email']]);
     $password = $stmt->fetchColumn();
 
