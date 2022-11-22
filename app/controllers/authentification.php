@@ -28,6 +28,11 @@ class Authentification extends Controller
         $this->view('authentification/forgot_password', []);
     }
 
+    public function sendEmail() 
+    {
+        $this->view('authentification/verify', []);
+    }
+
     public function reset()
     {
         $this->view('authentification/reset_password', []);

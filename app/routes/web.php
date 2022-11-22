@@ -88,8 +88,9 @@ Route::set('register',function(){ (new authentification)->create(); });
 Route::set('login-action',function(){ (new authentification)->loginaction(); });
 Route::set('logout',function(){ (new authentification)->logout(); });
 Route::set('forgot_password',function(){ (new authentification)->forgot(); });
+Route::set('email_send',function(){ (new authentification)->sendEmail(); });
 Route::set('reset_password',function(){ (new authentification)->reset(); });
-Route::set('forgot_password',function(){ (new authentification)->password(); });
+//Route::set('forgot_password',function(){ (new authentification)->password(); });
 
 // End of Auth routes
 // ------------------
