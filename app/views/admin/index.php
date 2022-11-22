@@ -10,10 +10,10 @@ include '../app/views/admin/components/admin_nav.php';
 ?>
 
 <div class="container">
-    <div class="row py-5">
+    <div class="row">
 
         <!-- Card avec les infos de l'Admin connecté -->
-        <div class="col-3">
+        <div class="col-3 p-2">
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-2">
@@ -36,7 +36,7 @@ include '../app/views/admin/components/admin_nav.php';
         </div>
 
         <!-- Card avec des stats generales -->
-        <div class="col-3">
+        <div class="col-3 p-2">
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-2">
@@ -61,7 +61,7 @@ include '../app/views/admin/components/admin_nav.php';
         </div>
 
         <!-- Card avec les denieres notifications -->
-        <div class="col-3">
+        <div class="col-3 p-2">
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-2">
@@ -88,7 +88,7 @@ include '../app/views/admin/components/admin_nav.php';
         </div>
 
         <!-- Card avec les denieres notifications -->
-        <div class="col-3">
+        <div class="col-3 p-2">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">....</h4>
@@ -100,10 +100,10 @@ include '../app/views/admin/components/admin_nav.php';
 
     </div>
 
-    <div class="row py-5">
+    <div class="row">
 
         <!-- Card pour gérer les données -->
-        <div class="col-6">
+        <div class="col-6 p-2">
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-2">
@@ -127,7 +127,7 @@ include '../app/views/admin/components/admin_nav.php';
         </div>
 
         <!-- Card pour ... -->
-        <div class="col-6">
+        <div class="col-6 p-2">
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">Lorem Ipsum </h4>
