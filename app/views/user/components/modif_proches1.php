@@ -17,14 +17,6 @@
                     <label for="exampleInputTelephone" class="form-label">Téléphone</label>
                     <input type="tel" class="form-control" id="exampleInputTelephone" id="validationCustom03" required>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputAdress" class="form-label">Adresse postale</label>
-                    <input type="text" class="form-control" id="exampleInputAdress" id="validationCustom03" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" id="validationCustom03" required>
-                </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3 text-center">

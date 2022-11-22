@@ -7,10 +7,20 @@ class UserController extends Controller
     {
         $this->view('user/index');
     }
-        
+
     public function profile()
     {
         $this->view('user/profile');
+    }
+
+    public function edit_profile()
+    {
+        $this->view('user/edit_profile');
+    }
+
+    public function edit_proches()
+    {
+        $this->view('user/edit_proches');
     }
 
     public function cardio()
