@@ -6,14 +6,14 @@ include '../app/views/layouts/header.php';
 <?php
 use \models\Member;
 
-if (! empty($_SESSION["userId"])) {
+if (! empty($_SESSION["user"])) {
     require_once __DIR__ . './../models/Member.php';
     $member = new Member();
     $memberResult = $member->getMemberById($_SESSION["user"]);
     if(!empty($memberResult[0]["display_name"])) {
-        $displayName = ucwords($memberResult[0]["display_name"]);
+        $displayName = ucwords($memberResult[0]["User_prenom"]);
     } else {
-        $displayName = $memberResult[0]["name"];
+        $displayName = $memberResult[0]["prenom"];
     }
 }
 ?>

@@ -11,6 +11,23 @@ class Authentification extends Controller
     {
         $this->view('authentification/create', []);
     }
+    
+    public function store()
+    {
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $db = new Database([]);
+        }
+        $user = new User($_POST["nom"], $_POST["prenom"], "utilisateur", $_POST["phone"], $_POST["email"], hash('sha1', $_POST["password"]), $_POST["adress"]);
+        $query = "INSERT INTO users (User_nom, User_Prenom, User_email, User_phone, User_address, User_password) VALUES ('".$user->nom."', '".$user->prenom."', '".$user->email."', '".$user->phone."', '".$user->adress."', '".$user->password."')";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $db->pdo;
+
+        $this->view('home', []);
+
+    }
+
 
     public function loginaction()
     {

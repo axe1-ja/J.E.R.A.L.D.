@@ -1,3 +1,9 @@
+
+<?php
+use \models\User;
+
+
+
 <div class="container mt-3">
     <div class="card center" style="width: 35rem;">
         <div class="card-body">
@@ -7,7 +13,8 @@
             </div>
             <div class="row">
                 <div class="col-4">Nom Prénom</div>
-                <div class="col-8">Gerald Latortue</div>
+                <!-- div class="col-8">Gerald Latortue</div> !-->
+                <div class="col-8">$nom</div>
             </div>
             <div class="row">
                 <div class="col-4">Adresse e-mail</div>

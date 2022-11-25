@@ -2,7 +2,7 @@
 <?php
 
     /*$error = "";*/
-
+/*
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         if(!$DB = new PDO("mysql: host=localhost; port=3306; dbname=jeraldb_master", "root",""));
@@ -12,7 +12,7 @@
 
         /*echo "<pre>";
         print_r($_POST);
-        echo "</pre>";*/
+        echo "</pre>";
 
 
     function EmailExists($email)
@@ -63,7 +63,7 @@
         }
     }
     }
-
+*/
 
 include '../app/views/layouts/header.php';
 ?>
@@ -110,7 +110,7 @@ include '../app/views/general_components/navbar.php';
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
-            <form class="text-left" method="post">
+            <form class="text-left" action="/public/create-user" method="post">
                 <div class="mb-2">
                     <label for="exampleInputNom" class="form-label">Nom</label>
                     <input type="text" name="nom" class="form-control" id="exampleInputNom" placeholder="Doe" required>
@@ -176,7 +176,7 @@ include '../app/views/general_components/navbar.php';
     </div>
 </div>
 
-<--script>
+<!--script>
     function validate() {
         var $valid = true;
         document.getElementById("email").innerHTML = "";
@@ -196,7 +196,7 @@ include '../app/views/general_components/navbar.php';
         }
         return $valid;
     }
-    <--/script>
+    </script> -->
 </body>
 </html>
 

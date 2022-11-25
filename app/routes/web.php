@@ -85,6 +85,7 @@ Route::set('inbox/send',function(){ (new MessageController)->send(); });
 
 Route::set('login',function(){ (new authentification)->index(); });
 Route::set('register',function(){ (new authentification)->create(); });
+Route::set('create-user',function(){ (new authentification)->store(); });
 Route::set('login-action',function(){ (new authentification)->loginaction(); });
 Route::set('logout',function(){ (new authentification)->logout(); });
 Route::set('forgot_password',function(){ (new authentification)->forgot(); });
