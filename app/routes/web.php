@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+if(!array_key_exists('user',$_SESSION)){
+    session_start();
+    $_SESSION['user']='guest';
+    $_SESSION['user_id']=0;
+}
 // ------------
 // Basic routes
 
