@@ -31,7 +31,33 @@ class Authentification extends Controller
 
     public function loginaction()
     {
-        $this->view('authentification/login-action', []);
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $db = new Database([]);
+        }
+
+        $password = hash('sha1', $_POST["password"]);
+        
+        $query = "SELECT * FROM `users` WHERE User_email = '".$_POST["email"]."';";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $result[0];
+        $hash = $result["User_password"];
+
+        if ($password == $hash) {
+            if (isset($result["User_role"])) {
+                $role = $result["User_role"];
+            } else {
+                $role= "utilisateur";
+            }
+            $user = new User($result["User_nom"], $result["User_prenom"], $role, $result["User_phone"], $result["User_email"], hash('sha1', $result["User_password"]), $result["User_adress"]);
+            $this->view('home', []);
+
+        } else {
+
+            return $this->view('authentification/index', []);
+
+        }
 
     }
     
