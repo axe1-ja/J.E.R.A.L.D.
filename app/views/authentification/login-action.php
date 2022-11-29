@@ -7,7 +7,6 @@ include '../app/views/layouts/header.php';
 
 <?php
 
-
 use \models\Member;
 if (! empty($_POST["login"])) {
     session_start();
