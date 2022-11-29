@@ -55,7 +55,10 @@ class Authentification extends Controller
 
         } else {
 
-            return $this->view('authentification/index', []);
+            return $this->view('authentification/index', [
+                'erreur' => "Votre email ou votre mot de passe est incorrect !",
+            ]);
+            
 
         }
 
