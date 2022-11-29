@@ -76,6 +76,7 @@ if($_SESSION['loggedin']==1) {
         // Admin routes
         Route::set('admin',function(){ (new admin)->index(); });
         Route::set('admin/datama',function(){ (new admin)->datama(); });
+        Route::set('admin/notifs',function(){ (new admin)->notifs(); });
         Route::set('admin/datama/users',function(){ (new admin)->datama(); });
         Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
         Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });

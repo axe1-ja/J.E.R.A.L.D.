@@ -22,9 +22,6 @@ include '../app/views/admin/components/admin_nav.php';
             <li class="sidebar-item">
                 <a class="sidebar-link <?php if($data['model']=='forum'): ?>active<?php endif; ?>" href="/public/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a>
             </li>
-            <li class="sidebar-item">
-                <a class="sidebar-link <?php if($data['model']=='roles'): ?>active<?php endif; ?>" href="/public/admin/datama/roles"><i class="bi bi-person "></i> Roles</a>
-            </li>
         </ul>
     </div> 
     <div class="row pl-5">
