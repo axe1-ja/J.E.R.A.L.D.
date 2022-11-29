@@ -17,8 +17,10 @@
             <i class="bi bi-person"></i> Admin User <i class="bi bi-caret-down"></i>
         </button>
         <ul class="dropdown-content">
+            <li><a class="dropdown-item" href="/public/home">Home</a></li>
+            <li><a class="dropdown-item" href="/public/user">User Access</a></li>
             <li><a class="dropdown-item" href="/public/admin/inbox">Inbox</a></li>
-            <li><a class="dropdown-item" href="/public/signout">Sign out</a></li>
+            <li><a class="dropdown-item" href="/public/logout">Log out</a></li>
         </ul>
     </div>
 </nav>

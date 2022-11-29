@@ -16,6 +16,10 @@
             <i class="bi bi-person"></i> Joon <i class="bi bi-caret-down"></i>
         </button>
         <ul class="dropdown-content">
+            <li><a class="dropdown-item" href="/public/home">Home</a></li>
+            <?php if($_SESSION['user']->role =='admin') : ?>
+                <li><a class="dropdown-item" href="/public/admin">Admin Access</a></li>
+            <?php endif; ?>
             <li><a class="dropdown-item" href="/public/user">Dashboard</a></li>
             <li><a class="dropdown-item" href="/public/user/inbox">Inbox</a></li>
             <li><a class="dropdown-item" href="/public/user/profile">Profile</a></li>

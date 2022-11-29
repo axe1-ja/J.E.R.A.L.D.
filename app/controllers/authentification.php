@@ -48,7 +48,7 @@ class Authentification extends Controller
             } else {
                 $role= "client";
             }
-            $user = new User($result["User_nom"], $result["User_prenom"], $role, $result["User_phone"], $result["User_email"], hash('sha1', $result["User_password"]), $result["User_adress"]);
+            $user = new User($result["User_nom"], $result["User_Prenom"], $role, $result["User_phone"], $result["User_email"], hash('sha1', $result["User_password"]), $result["User_adress"]);
             
             $_SESSION['user']=$user;
             $_SESSION['user_id']=$result['User_id'];
