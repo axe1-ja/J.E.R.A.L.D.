@@ -38,6 +38,11 @@ include '../app/views/general_components/navbar.php';
                     <div class="text-center">
                         <h2>Connexion</h2>
                     </div>
+                    <p>
+                    <span id="info" class="error-info">
+                        <?php echo $data['erreur'];?>
+                    </span>
+                </p>
                 </div>
                 <div class="col-1 text-right">
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
@@ -57,7 +62,7 @@ include '../app/views/general_components/navbar.php';
                 <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
                 <input type="email" class="form-control" name="email" id="email_info" aria-describedby="emailHelp" placeholder="name@example.com" required>
                 
-                <label for="password" class="form-label">Mot de passe</label><span id="password_info" class="error-info"></span>
+                <label for="password" class="form-label">Mot de passe</label>
                 <input type="password" class="form-control" name ="password" id="password" required>
                 
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
