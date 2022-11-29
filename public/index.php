@@ -12,6 +12,14 @@ function __autoload($class){
 };
 
 //$app = new App;
+session_start();
+//print_r($_SESSION);
+//exit;
+if(!array_key_exists('user',$_SESSION)){
+    $_SESSION['user']='guest';
+    $_SESSION['user_id']=0;
+    $_SESSION['loggedin']=0;
+}
 
 require_once '../app/routes/web.php';
 
