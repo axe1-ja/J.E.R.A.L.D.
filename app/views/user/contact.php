@@ -10,7 +10,7 @@ include '../app/views/user/components/user_nav.php';
 ?>
 
 <div class="row">
-    <div class="col mx-2">
+    <div class="col-12 mx-2">
     <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user">
                 Accès clients >
             </a>
@@ -24,7 +24,7 @@ include '../app/views/user/components/user_nav.php';
     <div class="card center" style="width: 40rem; background-color:#B5D7FF">
         <div class="card-body">
             <button type="button" class="btn-close" aria-label="Close" style="position:relative; left:588px; top:-8px" onclick="javascript:history.back()"></button>
-            <form class="text-start">
+            <form class="text-left">
                 <div class="mb-4 text-center">
                     <h3>Contactez-nous</h3>
                 </div>
@@ -36,8 +36,8 @@ include '../app/views/user/components/user_nav.php';
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="validationCustom03" required></textarea>
                     </div>
                 <div class="row">
-                    <div class="col">
-                        <div class="mb-3 text-end">
+                    <div class="col-12">
+                        <div class="mb-3 text-right">
                             <button type="submit" class="btn btn-primary">Envoyer</button>
                         </div>
                     </div>

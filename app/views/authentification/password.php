@@ -10,7 +10,7 @@ include 'db.php';
 
 <div class="container text-center py-4">
     <div class="row">
-        <div class="col"> 
+        <div class="col-12"> 
             <a href="/public/home">
                 <img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
@@ -19,7 +19,7 @@ include 'db.php';
 
     <div class="card center" style="width: 40rem;">
         <div class="card-body">
-            <form class="text-start">
+            <form class="text-left">
                 <div class="mb-4 text-center">
                     <h3>Mot de passe oublié </h3>
                 </div>
@@ -28,7 +28,7 @@ include 'db.php';
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" id="validationCustom03" required>
                 </div>
                 <div class="row g-0">
-                    <div class="col">
+                    <div class="col-12">
                         <div class="mb-3 text-center">
                             <button type="submit" class="btn btn-primary">M'envoyer un token</button>
                         </div>

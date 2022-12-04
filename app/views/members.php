@@ -15,7 +15,7 @@ include '../app/views/general_components/navbar.php';
 
 <div class="text-center p-3">
     <div class="row">
-        <div class="col-3 text-start">
+        <div class="col-3 text-left">
             <h5 class="access"  class="text-white">
                 Accueil > Visiteurs
             </h5>

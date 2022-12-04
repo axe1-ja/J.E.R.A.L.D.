@@ -1,4 +1,4 @@
-<footer class="footer bg-light">
+<footer class="footer bg-white">
     <ul class="social-icon">
         <li class="social-icon__item">
             <a class="social-icon__link" href="https://www.facebook.com/profile.php?id=100086838558620">

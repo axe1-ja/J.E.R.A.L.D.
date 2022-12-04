@@ -13,7 +13,7 @@ include '../app/views/general_components/navbar.php';
 
 <div class="container text-center p-4">
     <div class="row">
-        <div class="col">
+        <div class="col-12">
             <h1 class="titre"></h1>
         </div>
     </div>

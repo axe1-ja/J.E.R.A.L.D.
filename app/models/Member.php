@@ -27,12 +27,12 @@ class Member
     }
     
     public function processLogin($email, $password) {
-        $query = "select * FROM users WHERE email = ?";
+        $query = "select * FROM users WHERE User_email = ?";
         $paramType = "ss";
         $paramArray = array($username, $username);
         $memberResult = $this->ds->select($query, $paramType, $paramArray);
         if(!empty($memberResult)) {
-            $hashedPassword = $memberResult[0]["password"];
+            $hashedPassword = $memberResult[0]["User_password"];
             if (password_verify($password, $hashedPassword)) {
                 $_SESSION["user"] = $memberResult[0]["id"];
                 return true;
@@ -51,7 +51,7 @@ class Member
      */
     public function getMember($email)
     {
-        $query = 'SELECT * FROM users where email = ?';
+        $query = 'SELECT * FROM users where User_email = ?';
         $paramType = 's';
         $paramValue = array(
             $username

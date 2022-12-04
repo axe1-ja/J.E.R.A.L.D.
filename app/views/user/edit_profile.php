@@ -10,7 +10,7 @@ include '../app/views/user/components/user_nav.php';
 ?>
 
 <div class="row">
-    <div class="col mx-2">
+    <div class="col-12 mx-2">
         <h5> Accès Client > Profil > Modifier vos informations</h5>
     </div>
 </div>
@@ -18,7 +18,7 @@ include '../app/views/user/components/user_nav.php';
 <div class="container text-center py-4">
     
     <div class="row">
-        <div class="col"> 
+        <div class="col-12"> 
             <a href="/public/home">
                 <img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
@@ -27,7 +27,7 @@ include '../app/views/user/components/user_nav.php';
 
     <div class="card center" style="width: 40rem;">
         <div class="card-body">
-            <form class="text-start">
+            <form class="text-left">
                 <div class="mb-4 text-center">
                     <h3>Modifier vos informations</h3>
                 </div>
@@ -47,12 +47,8 @@ include '../app/views/user/components/user_nav.php';
                     <label for="exampleInputAdress" class="form-label">Adresse postale</label>
                     <input type="text" class="form-control" id="exampleInputAdress" id="validationCustom03" required>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" id="validationCustom03" required>
-                </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12">
                         <div class="mb-3 text-center">
                             <a href="/public/user/profile" class="card-link">
                                 <button type="submit" class="btn btn-primary">Confirmer</button>

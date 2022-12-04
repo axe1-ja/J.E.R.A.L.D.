@@ -4,7 +4,7 @@ class Admin extends Controller
 {
     public function index()
     {
-        $user='... ...';
+        $user= $_SESSION['user']->prenom." ".$_SESSION['user']->nom;
         $stats=[];
         $stats['users']=1000;
         $stats['products']=634;
@@ -23,23 +23,19 @@ class Admin extends Controller
     
     public function datama($model='users')
     {
-        // connect to database
-        $dsn = 'mysql:host=localhost;port=3306;dbname=jeraldb_master';
-        $user = 'root';
-        $password = '';
-        // create an instance of the PDO (to connect to the database)
-        $pdo = new \PDO($dsn, $user, $password);
+        
+        $db = new Database([]);
 
         if($model=='users'){
 
             // get all users
-            $cols = ['Id','Name','Last Name', 'Email', 'Address', 'Role id'];
-            $sql = "SELECT User_Prenom, User_nom, User_email, User_address, role_id FROM users";
-            $query = $pdo->prepare($sql);
-            $query->execute();
-            $result = $query->fetchAll(PDO::FETCH_ASSOC);  
+            $cols = ['Id','Name','Last Name', 'Email', 'Address', 'Role'];
+            $query = "SELECT User_Prenom, User_nom, User_email, User_address, user_role FROM users;";
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+            $result=$statement->fetchAll(PDO::FETCH_ASSOC);
             foreach ($result as $row) { 
-                $data[] = [$row['role_id'],$row['role_name'],$row['created_at']];
+                $data[] = [$row['User_Prenom'],$row['User_nom'],$row['User_email'],$row['User_address'],$row['user_role']];
             }
 
         } elseif($model=='products'){
@@ -64,20 +60,7 @@ class Admin extends Controller
                 ['6','Joon','Yoo','06XXXXX','hyjoon@gmail.com','06XXXXX'],
             ];
 
-        } elseif($model=='roles'){
-
-            // get all roles
-            $cols = ['id','name','created at'];
-            $sql = "SELECT * FROM roles";
-            $query = $pdo->prepare($sql);
-            $query->execute();
-            $result = $query->fetchAll(PDO::FETCH_ASSOC);  
-            foreach ($result as $row) { 
-                $data[] = [$row['role_id'],$row['role_name'],$row['created_at']];
-            }
-
         }
-
 
         $this->view('admin/datama', [
             'cols'=>$cols,
