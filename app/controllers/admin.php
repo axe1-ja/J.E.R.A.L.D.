@@ -4,9 +4,20 @@ class Admin extends Controller
 {
     public function index()
     {
+        $db = new Database([]);
+
         $user= $_SESSION['user']->prenom." ".$_SESSION['user']->nom;
         $stats=[];
-        $stats['users']=1000;
+        
+        $query = "SELECT COUNT(User_id) AS 'value' FROM users;";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($result as $row) { 
+            $data[] = $row['value'];
+        }
+        
+        $stats['users']=$data[0];
         $stats['products']=634;
         $notifs = ['forum: *....*', 'private message from .... : *....*', 'error report on .... page : *....*'];
 
