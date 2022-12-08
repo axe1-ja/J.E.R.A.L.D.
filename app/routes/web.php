@@ -24,6 +24,7 @@ Route::set('visiteurs',function(){
 Route::set('contact',function(){
     Controller::view('contact');
 });
+Route::set('report', function(){(new ContactController)->report(); });
 
 // product page
 Route::set('product',function(){
@@ -52,12 +53,20 @@ Route::set('privacy',function(){
 // -----------------------
 // Authentification routes
 
-Route::set('login',function(){ (new authentification)->index(); });
-Route::set('register',function(){ (new authentification)->create(); });
-Route::set('create-user',function(){ (new authentification)->store(); });
-Route::set('login-action',function(){ (new authentification)->loginaction(); });
+if($_SESSION['loggedin']==0) {
+    Route::set('login',function(){ (new authentification)->index(); });
+    Route::set('register',function(){ (new authentification)->create(); });
+    Route::set('create-user',function(){ (new authentification)->store(); });
+    Route::set('login-action',function(){ (new authentification)->loginaction(); });
+    Route::set('forgot_password',function(){ (new authentification)->forgot(); });
+} else {
+    Route::set('login',function(){ Controller::view('home'); });
+    Route::set('register',function(){ Controller::view('home'); });
+    Route::set('create-user',function(){ Controller::view('home'); });
+    Route::set('login-action',function(){ Controller::view('home'); });
+    Route::set('forgot_password',function(){ Controller::view('home'); });
+}
 Route::set('logout',function(){ (new authentification)->logout(); });
-Route::set('forgot_password',function(){ (new authentification)->forgot(); });
 Route::set('email_send',function(){ (new authentification)->sendEmail(); });
 Route::set('reset_password',function(){ (new authentification)->reset(); });
 //Route::set('forgot_password',function(){ (new authentification)->password(); });

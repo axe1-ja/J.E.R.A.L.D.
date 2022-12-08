@@ -31,18 +31,18 @@ include '../app/views/general_components/navbar.php';
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
-            <form class="text-left">
+            <form class="text-left" action="report" method="post">
                 <div class="mb-3">
-                    <label for="exampleInputName" class="form-label">Nom Prénom</label>
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Person Doe" id="validationCustom03" required>
+                    <label for="nomprenom" class="form-label">Nom Prénom</label>
+                    <input type="text" class="form-control" name="nomprenom" placeholder="Person Doe" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" id="validationCustom03" required>
+                    <label for="email" class="form-label">Adresse e-mail</label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="name@example.com" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" id="validationCustom03" required></textarea>
+                    <label for="message" class="form-label">Votre message</label>
+                    <textarea class="form-control" name="message" rows="3" id="validationCustom03" required></textarea>
                     </div>
                 <div class="row">
                     <div class="col-12">
