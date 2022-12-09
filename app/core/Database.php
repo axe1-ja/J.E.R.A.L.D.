@@ -12,7 +12,7 @@ class Database {
             //$dsn = $config['DB_DSN']."=".$config['DB_HOST'].";port=".$config['DB_PORT'].";dbname=".$config['DB_NAME'] ?? '';
             //$user = $config['DB_USER'] ?? '';
             //$password = $config['DB_PASSWORD'] ?? '';
-            $dsn = 'mysql:host=localhost;port=3306;dbname=jeraldb_master';
+            $dsn = 'mysql:host=127.0.0.1;port=3306;dbname=jeraldb_master';// pour le mac, host = 127.0.0.1
             $user = 'root';
             $password = '';
             
@@ -27,6 +27,11 @@ class Database {
 
         // set attributes of the pdo to return the potential errors (with their details, to debug more easily)
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+    }
+
+    public function pdo()
+    {
+        return $this->pdo;
     }
 
 

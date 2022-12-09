@@ -12,9 +12,9 @@ include '../app/views/user/components/user_nav.php';
 
 <div class="text-center p-3">
     <div class="row">
-        <div class="col-3 text-start">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user">
-                Accès clients >
+        <div class="col-3 text-left">
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home">
+                Accueil >
             </a>
             <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/"> 
                 Santé >

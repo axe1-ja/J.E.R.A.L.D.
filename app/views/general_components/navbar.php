@@ -1,36 +1,47 @@
-<nav class="navbar navbar-expand-lg bg-light" style="z-index:2000">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<nav class="navbar bg-white w-100" style="z-index:2000">
+    <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
+    <ul class="d-inline-block navbar-ul m-2">
+        <li class="nav-item p-2 f-4">
+            <a class="active" aria-current="page" href="/public/product">Produit</a>
+        </li>
+        <li class="nav-item p-2 f-4">
+            <a class="active" href="/public/histoire">Histoire</a>
+        </li>
+        <li class="nav-item p-2 f-3">
+            <a class="active" href="/public/contact">Contact</a>
+        </li>
+    </ul>   
+    
+    <div class="navbar-dropdown dropdown ml-3">
+        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            
+            <?php if($_SESSION['loggedin']==1) : ?>
+                <i class="bi bi-person"></i> <?php echo $_SESSION['user']->prenom." ".$_SESSION['user']->nom;?> <i class="bi bi-caret-down"></i>
+            <?php else : ?>
+                <i class="bi bi-person"></i> My Account <i class="bi bi-caret-down"></i>
+            <?php endif; ?>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li>
-                <a href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar"></a>
-                    
-            </li>
-            <li class="nav-item px-4 fs-4 mt-2">
-                <a class="nav-link active" aria-current="page" href="/public/product">Produit</a>
-            </li>
-            <li class="nav-item px-4 fs-4 mt-2">
-                <a class="nav-link active" href="/public/histoire">Histoire</a>
-            </li>
-            <li class="nav-item px-4 fs-4 mt-2  ">
-                <a class="nav-link active" href="/public/contact">Contact</a>
-            </li>
-        </ul>   
-        
-        <div class="d-flex dropdown me-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person"></i> My Account
-            </button>
-            <ul class="dropdown-menu">
+        <ul class="dropdown-content">
+            <?php if($_SESSION['loggedin']==0) : ?>
                 <li><a class="dropdown-item" href="/public/login">Login</a></li>
                 <li><a class="dropdown-item" href="/public/register">Register</a></li>
-                <li><a class="dropdown-item" href="/public/user">User Access</a></li>
-                <li><a class="dropdown-item" href="/public/admin">Admin access</a></li>
-            </ul>
-        </div>
-        
+            
+            <?php endif; ?>
+
+            <?php if($_SESSION['loggedin']==1) : ?>
+
+                <?php if($_SESSION['user']->role =='client' || $_SESSION['user']->role =='admin') : ?>
+                    <li><a class="dropdown-item" href="/public/user">User Access</a></li>
+                <?php endif; ?>
+
+                <?php if($_SESSION['user']->role =='admin') : ?>
+                    <li><a class="dropdown-item" href="/public/admin">Admin Access</a></li>
+                <?php endif; ?>
+
+                <li><a class="dropdown-item" href="/public/logout">Logout</a></li>
+
+            <?php endif; ?>
+
+        </ul>
     </div>
 </nav>
