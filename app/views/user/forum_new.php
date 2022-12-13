@@ -10,20 +10,8 @@ include '../app/views/user/components/user_nav.php';
 ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col-2 pt-4">
-            <h5 class="f-2">Tables</h5>
-            <br>
-            <ul class='navbar-nav'>
-                <li class="nav-item"><a class="nav-link" href="/public/user/forum"><i class="bi bi-person"></i> Forum</a></li>
-                <li class="nav-item"><a class="nav-link" href="/public/user/forum1"><i class="bi bi-person"></i> Forum 1</a></li>
-                <li class="nav-item"><a class="nav-link" href="/public/user/forum2"><i class="bi bi-person"></i> Forum 2</a></li>
-            </ul>
-        </div>
-        <div class="col-10 pt-4">
-            <div class="row">
-                <form class="text-left">
-                    <div class="mb-4 text-center">
+        <form class="text-center">
+                    <div class="text-center">
                         <h3>Nouvel forum</h3>
                     </div>
                     <div class="mb-3">
@@ -53,11 +41,9 @@ include '../app/views/user/components/user_nav.php';
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>           
-    </div>
-</div>
 
+
+</div>
 <!-- Footer of page -->
 <?php
 include '../app/views/layouts/footer.php';
