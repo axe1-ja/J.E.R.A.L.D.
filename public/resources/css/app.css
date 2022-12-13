@@ -25,7 +25,31 @@
     --green:#2B6140;
     --black:#222222;
     --red:#F44336;
+    --navIcon: inline-block;
+    --navItems: block;
+    --navUl:none;
 }
+
+/* Breakpoints */
+
+@media (min-width: 600px) {
+}
+
+@media (min-width: 768px) {
+	:root {
+        --navIcon: none;
+        --navItems: inline-block;
+        --navUl:inline-block;
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+
 
 /* general (container, rows, columns, buttons, text, background) */
 .container {
@@ -34,7 +58,7 @@
 }
 
 * {
-    transition:0.5s;
+    transition:0.4s;
     box-sizing: border-box;
 }
 
@@ -368,74 +392,6 @@ label .form-label { font-size: 35px!important; }
     filter:contrast(100%);
     
 }
-
-/* navbar classes */
-.navbar {
-    position:sticky;
-    top:0;
-    left:0;
-    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
-    background: rgba(255, 255, 255, 0.2);
-    display:inline-block;
-    z-index:2000;
-}
-.navbarback{
-    height: 14%;
-    width: 100%;
-    position:fixed;
-    top:0;
-    left:0;
-    background-image: "public\resources\storage\Images\fond.jpg";
-    z-index: 1999;
-    display:inline-block;
-}
-.navbar .navbar-ul {
-    list-style-type: none;
-    margin: 25px;
-    padding: 0;
-    position:absolute;
-}
-.navbar .navbar-ul li{
-    font-size: x-large;
-    display: inline;
-    margin: 0 auto;
-}
-
-/* dropdown */
-.navbar-dropdown {
-    position: absolute;
-    right:60px;
-    top:20px;
-}
-.dropdown {
-    display: inline-block;
-}
-.dropdown-content {
-    margin: 0;
-    list-style-type: none;
-    display: none;
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.2);
-    /*background-color: #f9f9f9;*/
-    width: 140px;
-    padding:0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 7px;
-}
-.dropdown-content li a{
-    display:block;
-    padding: 10px;
-    border-radius: 7px;
-}
-.dropdown-content li a:hover {
-    background-color: rgba(128, 128, 128, 0.2);
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* sidebar*/
 .sidebar-container {
     border-radius: 7px;
@@ -551,9 +507,6 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
 .logo-notre-projet {
     width: 200px;
 }
-.logo-navbar {
-    width: 65px;
-}
 
 .montre {
     width: 250px;
@@ -614,10 +567,6 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     font-size:37px;
     margin-left:10px;
 }
-.navbar navbar-expand-lg bg-light {
-    margin-top: 20px;
-}
-
 
 /* classes of user profile */
 .user_profile_tabs {
