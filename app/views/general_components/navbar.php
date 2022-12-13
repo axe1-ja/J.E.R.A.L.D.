@@ -1,19 +1,19 @@
-<nav class="navbar bg-white w-100" style="z-index:2000">
+<nav class="navbar bg-white w-100" id="navbar" style="z-index:2000">
     <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
-    <ul class="d-inline-block navbar-ul m-2">
+    <ul id="nav-ul" class="navbar-ul">
         <li class="nav-item p-2 f-4">
             <a class="active" aria-current="page" href="/public/product">Produit</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active" href="/public/histoire">Histoire</a>
+            <a class="active" href="/public/histoire">Notre histoire</a>
         </li>
         <li class="nav-item p-2 f-3">
-            <a class="active" href="/public/contact">Contact</a>
+            <a class="active" href="/public/contact">Contactez-nous</a>
         </li>
     </ul>   
     
-    <div class="navbar-dropdown dropdown ml-3">
-        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <div id="nav-dropdown" class="navbar-dropdown dropdown ml-3">
+        <button class="btn btn-secondary" type="button">
             
             <?php if($_SESSION['loggedin']==1) : ?>
                 <i class="bi bi-person"></i> <?php echo $_SESSION['user']->prenom." ".$_SESSION['user']->nom;?> <i class="bi bi-caret-down"></i>
@@ -44,4 +44,36 @@
 
         </ul>
     </div>
+    
+    <div href="#" id="navIcon" onclick='showNav()' class="navIcon">
+        <i class="bi bi-list mx-4"></i>
+    </div>
 </nav>
+
+<script>
+    function showNav() {
+        var x = document.getElementById("nav-ul");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            x.style.position = "relative";
+        } else {
+            x.style.display = "none";
+        }
+        var y = document.getElementById("nav-dropdown");
+        if (y.style.display === "none") {
+            y.style.display = "block";
+            y.style.position = "relative";
+            y.style.margin = "0px 0px 50px 55px";
+        } else {
+            y.style.display = "none";
+        }
+    }
+    window.addEventListener("resize", function() {
+        var x = document.getElementById("nav-ul");
+        var y = document.getElementById("nav-dropdown");
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            x.setAttribute("style", "");
+            y.setAttribute("style", "");
+        }
+    })
+</script>
