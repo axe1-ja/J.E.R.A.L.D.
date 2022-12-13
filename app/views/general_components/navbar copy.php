@@ -1,19 +1,19 @@
-<nav class="navbar w-100" style="z-index:2000">
+<nav class="navbar bg-white w-100" style="z-index:2000">
     <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul class="d-inline-block navbar-ul m-2">
         <li class="nav-item p-2 f-4">
-            <a class="active" style="color:white" aria-current="page" href="/public/product">Produit</a>
+            <a class="active" aria-current="page" href="/public/product">Produit</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active" style="color:white" href="/public/histoire">Histoire</a>
+            <a class="active" href="/public/histoire">Histoire</a>
         </li>
         <li class="nav-item p-2 f-3">
-            <a class="active" style="color:white" href="/public/contact">Contact</a>
+            <a class="active" href="/public/contact">Contact</a>
         </li>
     </ul>   
     
     <div class="navbar-dropdown dropdown ml-3">
-        <button class="btn btn-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             
             <?php if($_SESSION['loggedin']==1) : ?>
                 <i class="bi bi-person"></i> <?php echo $_SESSION['user']->prenom." ".$_SESSION['user']->nom;?> <i class="bi bi-caret-down"></i>
@@ -23,8 +23,8 @@
         </button>
         <ul class="dropdown-content">
             <?php if($_SESSION['loggedin']==0) : ?>
-                <li><a class="dropdown-item" style="color:white" href="/public/login">Login</a></li>
-                <li><a class="dropdown-item" style="color:white" href="/public/register">Register</a></li>
+                <li><a class="dropdown-item" href="/public/login">Login</a></li>
+                <li><a class="dropdown-item" href="/public/register">Register</a></li>
             
             <?php endif; ?>
 
