@@ -894,3 +894,25 @@ h3 {
     color : red ;
     font-weight : bold;
 }
+
+/* pagination */
+.pagination {
+    list-style-type:none
+}
+.pagination .page-item{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: var(--primary);
+}
+.pagination .page-item:hover{
+    color: white;
+    background-color: var(--primary);
+}
+
+.page-link {
+    color:var(--primary);
+}
+.pagination .page-item:hover .page-link {
+    color:white;
+}

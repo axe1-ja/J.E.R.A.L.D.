@@ -12,9 +12,9 @@ include '../app/views/user/components/user_nav.php';
 <div>
     <div>
         <div class="row pt-4">
-            <div class="col-6 text-center">
+            <div class="col-6">
 
-                <ul class="" style='list-style-type:none'>
+                <ul class="float-left" style='list-style-type:none'>
                     <li class="nav-item d-inline-block"><a class="nav-link" href="/public/user/forum"><i class="bi bi-person"></i> Forum</a></li>
                     <li class="nav-item d-inline-block"><a class="nav-link" href="/public/user/forum1"><i class="bi bi-person"></i> Forum 1</a></li>
                     <li class="nav-item d-inline-block"><a class="nav-link" href="/public/user/forum2"><i class="bi bi-person"></i> Forum 2</a></li>
@@ -54,22 +54,21 @@ include '../app/views/user/components/user_nav.php';
             </div>
         </div>
         <div>
-            <div class="mb-3 text-right" >
-            <a class="btn btn-outline-primary" href="/public/user/forum_new" role="button">Ecrire</a>
+            <div class="mb-3 text-right pt-3" >
+            <a class="btn btn-outline-primary " href="/public/user/forum_new" role="button">Ecrire</a>
+        </div>
+        <div class='row'>
+            <div class="col-12 text-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center ">
+                    <li class='page-item'><a class="page-link" href="/public/user/forum">1</a></li>
+                    <?php for ($forumpage = 2; $forumpage <= 3; $forumpage ++) { ?>
+                        <li class="page-item"><a class="page-link" href="/public/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
+                        <?php } ?>
+                    </ul>
+                </nav>
             </div>
         </div>
-
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="/public/user/forum">1</a></li>
-            <?php for ($forumpage = 2; $forumpage <= 3; $forumpage ++) { ?>
-                <li class="page-item"><a class="page-link" href="/public/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
-                <?php } ?>
-            </ul>
-</nav>
-    </div>
-</div>
-
 <!-- Footer of page -->
 <?php
 include '../app/views/layouts/footer.php';
