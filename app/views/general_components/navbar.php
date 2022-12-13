@@ -1,19 +1,20 @@
-<nav class="navbar bg-white w-100" id="navbar" style="z-index:2000">
+<img src="/public/resources/storage/Images/fond.jpg" class="navbarback" alt="">
+<nav class="navbar w-100">
     <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul id="nav-ul" class="navbar-ul">
         <li class="nav-item p-2 f-4">
-            <a class="active" aria-current="page" href="/public/product">Produit</a>
+            <a class="active" style="color:white" aria-current="page" href="/public/product">Produit</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active" href="/public/histoire">Notre histoire</a>
+            <a class="active" style="color:white" href="/public/histoire">Histoire</a>
         </li>
         <li class="nav-item p-2 f-3">
-            <a class="active" href="/public/contact">Contactez-nous</a>
+            <a class="active" style="color:white" href="/public/contact">Contact</a>
         </li>
     </ul>   
     
     <div id="nav-dropdown" class="navbar-dropdown dropdown ml-3">
-        <button class="btn btn-secondary" type="button">
+        <button class="btn btn-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             
             <?php if($_SESSION['loggedin']==1) : ?>
                 <i class="bi bi-person"></i> <?php echo $_SESSION['user']->prenom." ".$_SESSION['user']->nom;?> <i class="bi bi-caret-down"></i>
@@ -23,8 +24,8 @@
         </button>
         <ul class="dropdown-content">
             <?php if($_SESSION['loggedin']==0) : ?>
-                <li><a class="dropdown-item" href="/public/login">Login</a></li>
-                <li><a class="dropdown-item" href="/public/register">Register</a></li>
+                <li><a class="dropdown-item" style="color:white" href="/public/login">Login</a></li>
+                <li><a class="dropdown-item" style="color:white" href="/public/register">Register</a></li>
             
             <?php endif; ?>
 
