@@ -5,7 +5,7 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/plage.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 
 <?php

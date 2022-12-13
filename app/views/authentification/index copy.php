@@ -31,8 +31,8 @@ include '../app/views/general_components/navbar.php';
         </div>
     </div>
 
-    <div class="transcontainer center" style="width: 40rem;">
-        <div class="transcard">
+    <div class="card center" style="width: 40rem;">
+        <div class="card-body">
             <div class="row">
                 <div class="col-11">
                     <div class="text-center">
@@ -71,7 +71,7 @@ include '../app/views/general_components/navbar.php';
                 <div class="row g-0 mt-2">
                     <div class="col-6">
                         <div class="start">
-                            <a class="forgot-btn" href="/public/forgot_password" style="color:white">Mot de passe oublié ?</a>
+                            <a class="forgot-btn" href="/public/forgot_password">Mot de passe oublié ?</a>
                         </div>
                     </div>
                     <div class="col-6">
