@@ -1,4 +1,5 @@
-<nav class="navbar w-100" style="z-index:2000">
+<img src="/public/resources/storage/Images/fond.jpg" class="navbarback" alt="">
+<nav class="navbar w-100">
     <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul class="d-inline-block navbar-ul m-2">
         <li class="nav-item p-2 f-4">
