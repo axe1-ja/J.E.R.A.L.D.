@@ -518,14 +518,26 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
 .logo-navbar {
     width: 65px;
 }
-
+/* Page Produit */
 .montre {
     width: 250px;
-    margin-top: 60px;
     filter:contrast(150%);
-    padding-top: 300px;
+    padding-top: 0px;
+    margin-right: 1000px;
+    background-color: rgb(177, 172, 172);
+    padding-bottom: 13px;
 }
-
+.content-container {
+    background-color: white;
+    display: block;
+    border:none;
+    padding: 0;
+    margin:0;
+    height: 200px;
+}
+.txtprod{
+    padding-right: 150px;
+}
 /* tableau de bord */
 .coeur {
     width: 125px;
