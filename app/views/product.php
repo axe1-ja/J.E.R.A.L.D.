@@ -27,8 +27,11 @@ include '../app/views/general_components/navbar.php';
             <h1 class="titre">E K A Ï</h1>
         </div>
     </div>
-    <div>
-        <img src="/public/resources/storage/Images/montre.png" class="center montre" alt="">
+    <div class ="content-container ">
+        <div class="row center">
+            <img src="/public/resources/storage/Images/Bracelet.png" class="center montre" alt="">
+            <h4 class="txtprod"> Bracelet EKAÏ </h4>
+        </div>
     </div>
 </div>
 
