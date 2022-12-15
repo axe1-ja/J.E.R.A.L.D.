@@ -20,9 +20,9 @@ include '../app/views/user/components/user_nav.php';
     </div>
 </div>
 
-<div class="container mt-4">
-    <div class="card center" style="width: 40rem; background-color:#B5D7FF">
-        <div class="card-body">
+<div class="transcontainer mt-4">
+    <div class="transcard center" style="width: 40rem; background:rgba(255, 255, 255, 0.2)">
+        <div class="transcard">
             <button type="button" class="btn-close" aria-label="Close" style="position:relative; left:588px; top:-8px" onclick="javascript:history.back()"></button>
             <form class="text-left">
                 <div class="mb-4 text-center">

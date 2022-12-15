@@ -7,6 +7,7 @@
     <title>EKAÏ</title>
     
     <link rel="stylesheet" href="/public/resources/css/app.css">
+    <link rel="stylesheet" href="/public/resources/css/navbar.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
