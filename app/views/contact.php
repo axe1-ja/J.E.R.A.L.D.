@@ -18,8 +18,8 @@ include '../app/views/general_components/navbar.php';
     </div>
 </div>
 
-<div class="transcontainer mt-4">
-    <div class="transcard center" style="width: 40rem; background-color:rgba(255, 255, 255, 0.2)">
+<div class="container mt-4">
+    <div class="card center" style="width: 40rem">
         <div class="card-body">
             <div class="row">
                 <div class="col-11">

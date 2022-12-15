@@ -94,6 +94,7 @@ if($_SESSION['loggedin']==1) {
     Route::set('user',function(){ (new UserController)->index(); });
     Route::set('user/profile',function(){ (new UserController)->profile(); });
     Route::set('user/edit/profile',function(){ (new UserController)->edit_profile(); });
+    Route::set('user/update',function(){ (new UserController)->update(); });
     Route::set('user/edit/proches',function(){ (new UserController)->edit_proches(); });
     Route::set('user/cardio',function(){ (new UserController)->cardio(); });
     Route::set('user/fall',function(){ (new UserController)->fall(); });
