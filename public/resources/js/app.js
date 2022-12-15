@@ -12,33 +12,31 @@ window.addEventListener('load',() => {
     /* code for interactivity in the user profile tab */
     user_profile_tab_1=$('#user_profile_tab_1')
     user_profile_tab_2=$('#user_profile_tab_2')
+    user_info=document.getElementById('vosInfos')
+    proches_info=document.getElementById('proches')
 
     if(user_profile_tab_1.length){
-        if($('#content').length){
-            $("#content").html('');
-            $("#content").load('/app/views/user/components/vos_infos.php');
-        }
+    
+
+        user_profile_tab_1.on('click',function(){
+            if(!$(this).hasClass('active')){
+                $(this).addClass('active');
+                user_profile_tab_2.removeClass('active');
+                user_info.style.display='block';
+                proches_info.style.display='none';
+            }
+        })
+
+        user_profile_tab_2.on('click',function(){
+            if(!$(this).hasClass('active')){
+                $(this).addClass('active');
+                user_profile_tab_1.removeClass('active');
+                user_info.style.display='none';
+                proches_info.style.display='block';
+                
+            }
+        })
     }
-
-    user_profile_tab_1.on('click',function(){
-        if(!$(this).hasClass('active')){
-            $(this).addClass('active');
-            user_profile_tab_2.removeClass('active');
-            
-            $("#content").html('');
-            $("#content").load('/app/views/user/components/vos_infos.php');
-        }
-    })
-
-    user_profile_tab_2.on('click',function(){
-        if(!$(this).hasClass('active')){
-            $(this).addClass('active');
-            user_profile_tab_1.removeClass('active');
-            
-            $("#content").html('');
-            $("#content").load('/app/views/user/components/coord_proches.php');
-        }
-    })
 
         
     /* code for interactivity in the user modification tab */
