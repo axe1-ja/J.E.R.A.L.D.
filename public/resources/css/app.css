@@ -1,5 +1,5 @@
 /* External fonts imports */
-@font-face {
+/*@font-face {
     font-family: BonheurRoyale;
     src: url(../fonts/BonheurRoyale-Regular.ttf);
 }
@@ -10,7 +10,7 @@
 @font-face {
     font-family: Clearlight;
     src: url(../fonts/clearlight.ttf);
-}
+}*/
 @font-face {
     font-family: Watchword;
     src: url(../fonts/Watchword.otf);
@@ -238,7 +238,7 @@
 
 /* css of the body of the page (affects all) */
 body {
-    font-family: Watchword, cursive !important	;
+    font-family: Watchword, sans-serif	 !important	;
     margin:0;
     padding:0;
 }
@@ -329,6 +329,12 @@ label .form-label { font-size: 35px!important; }
 .px-4 {padding:0 40px;}
 .px-5 {padding:0 50px;}
 
+.py-1 {padding:10px 0;}
+.py-2 {padding:20px 0;}
+.py-3 {padding:30px 0;}
+.py-4 {padding:40px 0;}
+.py-5 {padding:50px 0;}
+
 .m-0 {margin:0px;}
 .m-1 {margin:10px;}
 .m-2 {margin:20px;}
@@ -363,6 +369,18 @@ label .form-label { font-size: 35px!important; }
 .mr-3 {margin-right:30px;}
 .mr-4 {margin-right:40px;}
 .mr-5 {margin-right:50px;}
+
+.mx-1 {margin:0 10px;}
+.mx-2 {margin:0 20px;}
+.mx-3 {margin:0 30px;}
+.mx-4 {margin:0 40px;}
+.mx-5 {margin:0 50px;}
+
+.my-1 {margin:10px 0;}
+.my-2 {margin:20px 0;}
+.my-3 {margin:30px 0;}
+.my-4 {margin:40px 0;}
+.my-5 {margin:50px 0;}
 
 
 
@@ -511,8 +529,6 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     width: 65px;
 }
 /* Page Produit */
-
-
 .montre {
     width: 250px;
     filter:contrast(150%);
@@ -587,10 +603,11 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
 
 /* classes of user profile */
 .user_profile_tabs {
-    transition: 1.5s;
+    opacity: 0.5;
+    transition: 0.5s;
 }
 button.user_profile_tabs.active {
-    color: black !important;
+    opacity: 1 !important;
     text-decoration: underline !important;
 }
 
@@ -607,7 +624,7 @@ button.user_modification_tabs.active {
 .footer {
 margin-top: 50px;
 padding:40px 0;
-background: rgba(255, 255, 255, 0.2);
+background: rgba(255, 255, 255, 1);
 }
 
 .footer ul {
@@ -647,7 +664,7 @@ font-size:18px;
 .footer .copyright {
 text-align:center;
 padding-top:24px;
-opacity:0.8;
+/*opacity:0.8;*/
 font-size:13px;
 margin-bottom:0;
 }
@@ -668,7 +685,7 @@ list-style: none;
 
 .social-icon__link {
 font-size: 2rem;
-color: #fff;
+/*color: #fff;*/
 margin: 0 10px;
 display: inline-block;
 transition: 0.5s;
