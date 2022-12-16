@@ -4,7 +4,7 @@ include '../app/views/layouts/header.php';
 ?>
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
+<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 <?php
 include '../app/views/general_components/navbar.php';
@@ -18,8 +18,8 @@ include '../app/views/general_components/navbar.php';
     </div>
 </div>
 
-<div class="container mt-4">
-    <div class="card center" style="width: 40rem; background-color:#B5D7FF">
+<div class="transcontainer mt-4">
+    <div class="transcard center" style="width: 40rem; background-color:rgba(255, 255, 255, 0.2)">
         <div class="card-body">
             <div class="row">
                 <div class="col-11">
@@ -47,7 +47,7 @@ include '../app/views/general_components/navbar.php';
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3 text-right">
-                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                            <button type="submit" class="btn btn-outline-primary">Envoyer</button>
                         </div>
                     </div>
                 </div>
@@ -56,14 +56,12 @@ include '../app/views/general_components/navbar.php';
     </div>
 
     <p><br></p>
-
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 text-center text-white">
-            <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/public/privacy">politique de confidentialité</a>.</em></p>
-        </div>
+</div>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 text-center text-white">
+        <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/public/privacy">politique de confidentialité</a>.</em></p>
     </div>
-
 </div>
 
 <!-- Footer of page -->

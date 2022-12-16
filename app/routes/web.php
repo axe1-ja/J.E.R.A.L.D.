@@ -10,16 +10,6 @@ Route::set('home',function(){
     Controller::view('home');
 });
 
-// members page
-Route::set('members',function(){
-    Controller::view('members');
-});
-
-// visiteurs page
-Route::set('visiteurs',function(){
-    Controller::view('visiteurs');
-});
-
 // contact page
 Route::set('contact',function(){
     Controller::view('contact');

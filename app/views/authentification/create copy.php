@@ -24,8 +24,8 @@ include '../app/views/general_components/navbar.php';
         </div>
     </div>
 
-    <div class="transcontainer center" style="width: 40rem;">
-        <div class="transcard">
+    <div class="card center" style="width: 40rem;">
+        <div class="card-body">
             <div class="row">
                 <div class="col-11">
                     <div class="text-center">
