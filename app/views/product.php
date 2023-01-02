@@ -30,7 +30,18 @@ include '../app/views/general_components/navbar.php';
     <div class ="content-container ">
         <div class="row center">
             <img src="/public/resources/storage/Images/Bracelet.png" class="center montre" alt="">
-            <h4 class="txtprod"> Bracelet EKAÏ </h4>
+            <p class="txtprod "> Bracelet EKAÏ<br> 
+            <br>
+            69,99€<br>
+            <br>
+            Plus qu'un bracelet EKAÏ s'adresse à toute une génération et permet à vous, futur possesseur, d'avoir un suivi continu de votre santé ainsi qu'une étude des risques que vous pouvez rencontrer dans la vie de tout les jours.<br> 
+            <br>
+            Taille unique et réglable.<br>
+            <br>
+            <button class="favorite styled"type="button">
+            Ajouter au panier
+            </button>
+            </p>
         </div>
     </div>
 </div>
