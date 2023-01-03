@@ -9,8 +9,9 @@ include '../app/views/general_components/navbar.php';
 ?>
 
 <div class="container">
-    <h2 class="f-3">Conditions générales d'utilisation</h2>
-
+    <div style="background-image: url(/public/resources/storage/Images/fond.jpg);" >
+    <h2 class="texte2 text-center" style="color:white;">Conditions générales d'utilisation</h2>
+    </div>
     <p class="text-muted">dernière mise a jours: le 6 novembre 2022</p>
     <p>
     Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique

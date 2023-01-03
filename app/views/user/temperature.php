@@ -5,10 +5,10 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
+<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 <?php
 include '../app/views/user/components/user_nav.php';
 ?>
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 <div class="text-center p-3">
     <div class="row">
@@ -23,7 +23,27 @@ include '../app/views/user/components/user_nav.php';
             TC
             </a>
         </div>
-        
     </div>
-    
+    <br>
+    <div class="row">
+        <div class="square">
+                <h2 class="text-white"> 
+                    Bonjour, <?php echo $data['user']->prenom." ".$data['user']->nom;?>
+                </h2>
+                <h2 class="text-white"> 
+                    Votre temperature corporel est ... °C
+                </h2>
+        </div>
+    </div>
+    <div class="row">
+        <p class="text-white square"> 
+           graphique
+        </p>
+    </div>
 </div>
+
+<!-- Footer of page -->
+<?php
+include '../app/views/general_components/footer.php';
+?>
+
