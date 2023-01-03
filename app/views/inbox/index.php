@@ -1,15 +1,15 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 
 <!-- Content of page -->
 <?php
 //if($data['user']->role=='admin'){
-    include '../app/views/admin/components/admin_nav.php';
+    include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
 /*} else {
-    include '../app/views/user/components/user_nav.php';
+    include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 }*/
 ?>
 

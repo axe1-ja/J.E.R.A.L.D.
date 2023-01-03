@@ -1,6 +1,6 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 ?>
 
 
@@ -9,7 +9,7 @@ include '../app/views/layouts/header.php';
 
 
 <?php
-include '../app/views/general_components/navbar.php';
+include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 ?>
 
 
@@ -56,5 +56,5 @@ include '../app/views/general_components/navbar.php';
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include realpath(dirname(__DIR__,1) .'/views/layouts/footer.php');
 ?>

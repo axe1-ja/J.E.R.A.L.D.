@@ -1,6 +1,6 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 
@@ -8,7 +8,7 @@ include '../app/views/layouts/header.php';
 <img src="/public/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
 
 <?php
-include '../app/views/user/components/user_nav.php';
+include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 ?>
 
 <div class="text-center p-3">
@@ -92,6 +92,6 @@ include '../app/views/user/components/user_nav.php';
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include realpath(dirname(__DIR__,1) .'/layouts/footer.php');
 ?>
 

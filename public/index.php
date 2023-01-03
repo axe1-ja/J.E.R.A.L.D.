@@ -1,13 +1,14 @@
 <?php
-
+//print_r(realpath(dirname(__DIR__,1) .'/app/core/Controller.php'));
+//exit;
 // configurations for routes to work
 function __autoload($class){
-    if(file_exists('../app/core/'.$class.'.php')){
-        require_once '../app/core/'.$class.'.php';
-    } elseif (file_exists('../app/controllers/'.$class.'.php')){
-        require_once '../app/controllers/'.$class.'.php';
-    } elseif (file_exists('../app/models/'.$class.'.php')){
-        require_once '../app/models/'.$class.'.php';
+    if(file_exists(realpath(dirname(__DIR__,1) .'/app/core/'.$class.'.php'))){
+        require_once realpath(dirname(__DIR__,1) .'/app/core/'.$class.'.php');
+    } elseif (file_exists(realpath(dirname(__DIR__,1) .'/app/controllers/'.$class.'.php'))){
+        require_once realpath(dirname(__DIR__,1) .'/app/controllers/'.$class.'.php');
+    } elseif (file_exists(realpath(dirname(__DIR__,1) .'/app/models/'.$class.'.php'))){
+        require_once realpath(dirname(__DIR__,1) .'/app/models/'.$class.'.php');
     };
 };
 
@@ -21,5 +22,5 @@ if(!array_key_exists('user',$_SESSION)){
     $_SESSION['loggedin']=0;
 }
 
-require_once '../app/routes/web.php';
+require_once realpath(dirname(__DIR__,1) .'/app/routes/web.php');
 

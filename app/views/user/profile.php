@@ -1,6 +1,6 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 
@@ -10,7 +10,7 @@ include '../app/views/layouts/header.php';
 
 <!-- Content of page -->
 <?php
-include '../app/views/user/components/user_nav.php';
+include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 ?>
 
 <div class="row">
@@ -37,18 +37,18 @@ include '../app/views/user/components/user_nav.php';
 
     <div id="vosInfos" class="row" style="display:block">
         <div class="col-12">
-            <?php include '../app/views/user/components/vos_infos.php';?>
+            <?php include realpath(dirname(__DIR__,1) .'/user/components/vos_infos.php');?>
         </div>
     </div>
 
     <div id="proches" class="row" style="display:none">
         <div class="col-12">
-            <?php include '../app/views/user/components/coord_proches.php';?>
+            <?php include realpath(dirname(__DIR__,1) .'/user/components/coord_proches.php');?>
         </div>
     </div>
 </div>
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include realpath(dirname(__DIR__,1) .'/layouts/footer.php');
 ?>
