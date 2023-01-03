@@ -2,19 +2,19 @@
 
     <div class="row">
         <div class="col-6">
-
-
             <div class="card center" style="width: 50rem;">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Contact 1</h5>
+                    <h4 class="card-title text-center">Contact 1</h4>
                     <div class="row">
                         <div class="col-4">Nom Prénom</div>
                         <div class="col-8">Gerald Latortue</div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-4">Adresse e-mail</div>
                         <div class="col-8">gerald.turtle@gmail.com</div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-4">Téléphone</div>
                         <div class="col-8">06 45 93 27 05</div>
@@ -27,15 +27,17 @@
         <div class="col-6">
             <div class="card center" style="width: 25rem;">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Contact 2</h5>
+                    <h4 class="card-title text-center">Contact 2</h4>
                     <div class="row">
                         <div class="col-4">Nom Prénom</div>
                         <div class="col-8">Gerald Latortue</div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-4">Adresse e-mail</div>
                         <div class="col-8">gerald.turtle@gmail.com</div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-4">Téléphone</div>
                         <div class="col-8">06 45 93 27 05</div>

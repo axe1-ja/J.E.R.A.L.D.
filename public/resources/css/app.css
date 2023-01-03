@@ -500,6 +500,12 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     font-size: 20 px;
 }
 
+.texte2 {
+    font-size:30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 .arriere {
     background-color: white;
     border-radius: 30px;
@@ -530,12 +536,13 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
 }
 /* Page Produit */
 .montre {
-    width: 250px;
+    width: 650px;
     filter:contrast(150%);
-    padding-top: 0px;
-    margin-right: 1000px;
-    background-color: rgb(177, 172, 172);
-    padding-bottom: 13px;
+    margin-top: 60px;
+    margin-right: 300px;
+    margin-left: 50px;
+    background-color: rgb(148, 144, 144);
+
 }
 .content-container {
     background-color: white;
@@ -543,10 +550,32 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     border:none;
     padding: 0;
     margin:0;
-    height: 200px;
+    height: 700px;
 }
 .txtprod{
-    padding-right: 150px;
+    padding-right: 30px;
+    font-size: 30px;
+    margin-top: 60px;
+}
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: black;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+    background-color: grey;
+}
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 /* tableau de bord */
 .coeur {
@@ -1021,5 +1050,11 @@ h3 {
     border-radius: 100px;
     z-index: 0;
 }
-*/
 
+.square {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
