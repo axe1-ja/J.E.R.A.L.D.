@@ -43,6 +43,19 @@ include '../app/views/general_components/navbar.php';
             </button>
             </p>
         </div>
+        <HR class="ligne">
+        <p class="txtprod center "> Ce bracelet propose contient des capteurs de :</p>
+        <div class="row center">
+            <img src="/public/resources/storage/Images/chute.png" class="center img-produit" alt="">
+            <img src="/public/resources/storage/Images/coeur.png" class="center img-produit" alt="">
+            <img src="/public/resources/storage/Images/envi.png" class="center img-produit" alt="">
+        </div>
+        <div class="row center">
+            <img src="/public/resources/storage/Images/temp.png" class="center img-produit" alt="">
+            <img src="/public/resources/storage/Images/db.png" class="center img-produit" alt="">
+        </div>
+        <HR class="ligne">
+        <p class="txtprod center "> Avis : </p>
     </div>
 </div>
 

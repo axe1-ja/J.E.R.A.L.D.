@@ -544,7 +544,7 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     border:none;
     padding: 0;
     margin:0;
-    height: 700px;
+    height: 2000px;
 }
 .txtprod{
     padding-right: 30px;
@@ -571,6 +571,22 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
 .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
+.ligne{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.img-produit{
+    width: 220px;
+    margin-top: 100px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+}
+.img-produit:hover{
+    background-color: grey;
+}
+
 /* tableau de bord */
 .coeur {
     width: 125px;
