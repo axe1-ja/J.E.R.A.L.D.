@@ -24,7 +24,7 @@ include '../app/views/admin/components/admin_nav.php';
                         <th>Title</th>
                         <th>Preview</th>
                         <th>Sent by</th>
-                        <th>Catergory</th>
+                        <th>Category</th>
                         <th>Date and Time</th>
                     </tr>
                 </thead>

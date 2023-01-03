@@ -22,7 +22,7 @@ include '../app/views/user/components/user_nav.php';
             <button id="user_modification_tab_1" class="btnLookLikeLink text-muted user_modification_tabs active"><h4>1er proche</h4></button>
         </div>
         <div class="col-6">
-            <button id="user_modification_tab_2" class="btnLookLikeLink text-muted user_modification_tabs"><h4>2eme proche</h4></button>
+            <button id="user_modification_tab_2" class="btnLookLikeLink text-muted user_modification_tabs"><h4>2ème proche</h4></button>
         </div>
     </div>
 
