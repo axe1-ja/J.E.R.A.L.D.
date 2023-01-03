@@ -71,7 +71,7 @@ include '../app/views/general_components/navbar.php';
                 <div class="row g-0 mt-2">
                     <div class="col-6">
                         <div class="start">
-                            <a class="forgot-btn" href="/public/forgot_password" style="color:white">Mot de passe oublié ?</a>
+                            <a class="forgot-btn" href="/public/forgot_password" style="color:black">Mot de passe oublié ?</a>
                         </div>
                     </div>
                     <div class="col-6">

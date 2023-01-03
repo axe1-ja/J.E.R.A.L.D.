@@ -5,10 +5,10 @@ include '../app/views/layouts/header.php';
 
 
 <!-- Content of page -->
+<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 <?php
 include '../app/views/user/components/user_nav.php';
 ?>
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 <div class="text-center p-3">
     <div class="row">
@@ -23,7 +23,21 @@ include '../app/views/user/components/user_nav.php';
             DE
             </a>
         </div>
-        
     </div>
-    
+    <div class="row">
+        <h2 class="text-white square">
+            Voici les données environnantes
+        </h2>
+    </div>
+    <div class="row">
+        <h2 class="text-white square">
+            graphique
+        </h2>
+    </div>
 </div>
+
+<!-- Footer of page -->
+<?php
+include '../app/views/general_components/footer.php';
+?>
+
