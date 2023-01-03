@@ -4,5 +4,5 @@
 
 <!-- Footer of page -->
 <?php
-include '../app/views/general_components/footer.php';
+include realpath(dirname(__DIR__,1) .'/general_components/footer.php');
 ?>
