@@ -1,16 +1,15 @@
 <?php
 
 
-class m0007_EmergencyContact {
+class m0005_bracelet {
 
     
 
     public function up($pdo){
         $db = $pdo;
-        $SQL = "CREATE TABLE EmergencyContact(
-            Emergency_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-            Emergency_Name VARCHAR(255) NOT NULL,
-            Emergency_Number INT(10) NOT NULL,
+        $SQL = "CREATE TABLE bracelet(
+            bracelet_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+            bracelet_startDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             User_id INT,
             foreign key (User_id) references users(User_id)
             ) 
@@ -21,7 +20,7 @@ class m0007_EmergencyContact {
 
     public function down($pdo){
         $db = $pdo;
-        $SQL = "DROP TABLE EmergencyContact;";
+        $SQL = "DROP TABLE bracelet;";
         $db->exec($SQL);
     }
 }

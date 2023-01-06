@@ -1,7 +1,7 @@
 <?php
 
 
-class m0005_messages {
+class m0002_messages {
 
     
 

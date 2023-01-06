@@ -1,6 +1,6 @@
 <?php
 
-class m0006_RecoveryCode {
+class m0004_RecoveryCode {
     public function up($pdo){
         $db = $pdo;
         $SQL = "CREATE TABLE RecoveryCode(
