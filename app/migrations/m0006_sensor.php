@@ -9,9 +9,9 @@ class m0006_sensor {
         $db = $pdo;
         $SQL = "CREATE TABLE sensor(
             Sensor_Id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-            Sensor_Name VARCHAR(255) NOT NULL,
-            bracelet_Id INT,
-            foreign key (bracelet_Id) references bracelet(bracelet_Id)
+            Sensor_name VARCHAR(255) NOT NULL,
+            bracelet_id INT,
+            foreign key (bracelet_id) references bracelet(bracelet_id)
             ) 
         ENGINE=INNODB;";
         $db->exec($SQL);
