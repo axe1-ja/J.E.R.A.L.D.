@@ -10,8 +10,8 @@ class m0002_messages_type2 {
             User_Id_receive INT NOT NULL,
             message_Content VARCHAR(300) NOT NULL,
             message_Datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            foreign key (User_Id_send) references users(User_Id),
-            foreign key (User_Id_receive) references users(User_Id),
+            foreign key (User_Id_send) references users(User_id),
+            foreign key (User_Id_receive) references users(User_id),
             primary key (User_Id_send,User_Id_receive)
             ) 
         ENGINE=INNODB;";
