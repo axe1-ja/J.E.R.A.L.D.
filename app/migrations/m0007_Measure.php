@@ -1,7 +1,7 @@
 <?php
 
 
-class m0008_Measure {
+class m0007_Measure {
 
     
 

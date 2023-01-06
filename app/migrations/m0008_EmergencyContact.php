@@ -8,11 +8,11 @@ class m0007_EmergencyContact {
     public function up($pdo){
         $db = $pdo;
         $SQL = "CREATE TABLE EmergencyContact(
-            Emergency_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+            Emergency_Id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
             Emergency_Name VARCHAR(255) NOT NULL,
             Emergency_Number INT(10) NOT NULL,
-            User_id INT,
-            foreign key (User_id) references users(User_id)
+            User_Id INT,
+            foreign key (User_Id) references users(User_Id)
             ) 
         ENGINE=INNODB;";
         $db->exec($SQL);
