@@ -73,7 +73,7 @@ class UserController extends Controller
     
     public function forum($model='forum') # $page 추가하기
     {
-
+        $Forums = Forum::getforumAll();
         if($model=='forum'){
             $data=[
                 ['1','forum1','Axel','Ja','No connexion'],
