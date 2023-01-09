@@ -1,18 +1,18 @@
 <?php
 
 
-class m0002_messages {
-
-    
+class m0002_messages{
 
     public function up($pdo){
         $db = $pdo;
         $SQL = "CREATE TABLE messages(
             message_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-            content VARCHAR(300) NOT NULL,
-            User_id INT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            foreign key (User_id) references users(User_id)
+            User_Id_send INT Not NULL,
+            User_Id_receive INT NOT NULL,
+            message_Content VARCHAR(300) NOT NULL,
+            message_Datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            foreign key (User_Id_send) references users(User_id),
+            foreign key (User_Id_receive) references users(User_id)
             ) 
         ENGINE=INNODB;";
         $db->exec($SQL);
