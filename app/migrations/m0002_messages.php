@@ -1,7 +1,7 @@
 <?php
 
 
-class m0002_messages_type2 {
+class m0002_messages{
 
     public function up($pdo){
         $db = $pdo;
