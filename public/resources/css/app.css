@@ -1018,7 +1018,7 @@ h3 {
     text-align: center;
     height: 265px;
     width: 265px;
-    z-index: 100000;
+    z-index: 1000;
 }
 
 .profile-pic:hover{

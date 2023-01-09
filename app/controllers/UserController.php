@@ -13,7 +13,13 @@ class UserController extends Controller
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $db = new Database([]);
         }
-        $query="UPDATE `users` SET `User_Prenom`='".$_POST['prenom']."',`User_nom`='".$_POST['nom']."',`User_DOB`='".$_POST['dob']."',`User_phone`='".$_POST['phone']."',`User_email`='".$_POST['email']."',`User_address`='".$_POST['adress']."',`User_height`='".$_POST['height']."',`User_Weight`='".$_POST['weight']."' WHERE `User_email`='".$_SESSION["user"]->email."';";
+        $user_id=4;
+        $query='';
+        if(isset($_POST['bracelet'])){
+            $query="INSERT INTO `bracelet`(`bracelet_id`, `User_id`) VALUES ('".$_POST['bracelet']."','".$user_id."');";
+        }
+
+        $query=$query."UPDATE `users` SET `User_Prenom`='".$_POST['prenom']."',`User_nom`='".$_POST['nom']."',`User_DOB`='".$_POST['dob']."',`User_phone`='".$_POST['phone']."',`User_email`='".$_POST['email']."',`User_address`='".$_POST['adress']."',`User_height`='".$_POST['height']."',`User_Weight`='".$_POST['weight']."' WHERE `User_email`='".$_SESSION["user"]->email."';";
         
         //Debugger::dd($query);
         $statement = $db->pdo->prepare($query);
@@ -40,8 +46,17 @@ class UserController extends Controller
     {
         $user = User::getUser($_SESSION["user"]->email);
 
+        
+        $db = new Database([]);
+        $query = "SELECT * FROM `bracelet` WHERE User_id = '".$_SESSION["user"]->id."';";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $result[0];
+        $bracelet = $result['bracelet_id'];
         $this->view('user/edit_profile', [
             'user'=>$user,
+            'bracelet'=>$bracelet,
         ]);
     }
 

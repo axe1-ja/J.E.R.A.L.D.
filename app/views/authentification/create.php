@@ -68,6 +68,17 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                           } else {
                         confirm_password.setCustomValidity('');
                           }
+                            var msg; 
+                            var str = document.getElementById("mdp").value; 
+                            if (str.match( /[0-9]/g) && 
+                                    str.match( /[A-Z]/g) && 
+                                    str.match(/[a-z]/g) && 
+                                    str.match( /[^a-zA-Z\d]/g) &&
+                                    str.length >= 8) 
+                                msg = "<p style='color:green'>Mot de passe fort.</p>"; 
+                            else 
+                                msg = "<p style='color:red'>Mot de passe faible.</p>"; 
+                            document.getElementById("msg").innerHTML= msg;
                         }
 
                         password.onchange = validatePassword;
@@ -82,7 +93,8 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                 <div class="row mt-2 mb-1">
                     <div class="col-12">
                         <div class="text-right">
-                            <button type="submit" name="login" value="login" class="btn btn-outline-primary">S'inscrire</button>
+                            <button type="#" name="login" value="login" class="btn btn-outline-primary" onclick="validatePassword()">S'inscrire</button>
+                        <span id="msg"></span> 
                         </div>
                     </div>
                 </div>
