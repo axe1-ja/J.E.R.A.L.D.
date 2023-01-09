@@ -5,7 +5,7 @@ class m0002_messages{
 
     public function up($pdo){
         $db = $pdo;
-        $SQL = "CREATE TABLE messages_type2(
+        $SQL = "CREATE TABLE messages(
             message_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
             User_Id_send INT Not NULL,
             User_Id_receive INT NOT NULL,
@@ -21,7 +21,7 @@ class m0002_messages{
 
     public function down($pdo){
         $db = $pdo;
-        $SQL = "DROP TABLE messages_type2;";
+        $SQL = "DROP TABLE messages;";
         $db->exec($SQL);
     }
 }
