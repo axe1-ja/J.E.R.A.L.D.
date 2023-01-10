@@ -91,23 +91,23 @@ class UserController extends Controller
 
         if($model=='forum'){
             $data = Forum::getforumAll();
+            $data= array_slice($data,0,10);
             $page = [Forum::getforumPageAll()];
         
-        }elseif($page >= 2){
-            for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) {
-                if($model =='forum_p'+$forumpage){
-                    $data = Forum::getforumAll();
-                    $page = [Forum::getforumPageAll()];
-                }
-                }
         }elseif($model=='forum1'){
             $data = Forum::getforumType1();
             $page = [Forum::getforumPageType1()];
-        } 
-        elseif($model=='forum2'){
+        }elseif($model=='forum2'){
             $data = Forum::getforumType2();
             $page = [Forum::getforumPageType2()];
-        } 
+        }else{
+            $model = substr($model, 7);
+            $data = Forum::getforumAll();
+            $data= array_slice($data,($model-1)*10,($model-1)*10+10);
+            $page = [Forum::getforumPageAll()];
+        }
+                    
+    
         $this->view('user/forum', [
             'model'=>$model,
             'data'=>$data,

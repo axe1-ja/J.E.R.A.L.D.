@@ -51,8 +51,8 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             <div class="col-12 text-center">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center ">
-                    <li class='page-item'><a class="page-link" href="/public/user/forum">1</a></li>
-                    <?php for ($forumpage = 2; $forumpage <= ceil($data['page'][0]/10); $forumpage ++) { ?>
+                    <li class='page-item'><a class="page-link" href="/public/user/forum">1</a></li> <!-- 아래 10+3-> 3으로 바꾸기 -->
+                    <?php for ($forumpage = 2; $forumpage <= ceil($data['page'][0]/10+3); $forumpage ++) { ?>
                         <li class="page-item"><a class="page-link" href="/public/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
                         <?php } ?>
                     </ul>
