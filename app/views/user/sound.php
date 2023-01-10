@@ -1,13 +1,13 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 
 <!-- Content of page -->
 <img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 <?php
-include '../app/views/user/components/user_nav.php';
+include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 ?>
 
 

@@ -10,8 +10,8 @@ class m0006_sensor {
         $SQL = "CREATE TABLE sensor(
             Sensor_Id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
             Sensor_name VARCHAR(255) NOT NULL,
-            User_id INT,
-            foreign key (User_id) references users(User_id)
+            bracelet_id INT,
+            foreign key (bracelet_id) references bracelet(bracelet_id)
             ) 
         ENGINE=INNODB;";
         $db->exec($SQL);

@@ -1,12 +1,12 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 
 <!-- Content of page -->
 <?php
-include '../app/views/admin/components/admin_nav.php';
+include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
 ?>
 
 <div class="container">
@@ -24,7 +24,7 @@ include '../app/views/admin/components/admin_nav.php';
                         <th>Title</th>
                         <th>Preview</th>
                         <th>Sent by</th>
-                        <th>Catergory</th>
+                        <th>Category</th>
                         <th>Date and Time</th>
                     </tr>
                 </thead>
@@ -47,5 +47,5 @@ include '../app/views/admin/components/admin_nav.php';
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include realpath(dirname(__DIR__,1) .'/layouts/footer.php');
 ?>

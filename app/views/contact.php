@@ -1,13 +1,13 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 ?>
 
 <!-- Content of page -->
 <img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 <?php
-include '../app/views/general_components/navbar.php';
+include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 ?>
 <div class="container px-3">  
     <div class="row mt-4">
@@ -34,11 +34,11 @@ include '../app/views/general_components/navbar.php';
             <form class="text-left" action="report" method="post">
                 <div class="mb-3">
                     <label for="nomprenom" class="form-label">Nom Prénom</label>
-                    <input type="text" class="form-control" name="nomprenom" placeholder="Person Doe" id="validationCustom03" required>
+                    <input type="text" class="form-control" name="nomprenom" placeholder="Dupond Durant" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="name@example.com" id="validationCustom03" required>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="nom@exemple.com" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Votre message</label>
@@ -66,5 +66,5 @@ include '../app/views/general_components/navbar.php';
 
 <!-- Footer of page -->
 <?php
-include '../app/views/general_components/footer.php';
+include realpath(dirname(__DIR__,1) .'/views/general_components/footer.php');
 ?>

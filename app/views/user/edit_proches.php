@@ -1,13 +1,13 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 
 <!-- Content of page -->
 <img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 <?php
-include '../app/views/user/components/user_nav.php';
+include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 ?>
 
 <div class="text-center p-3">
@@ -34,6 +34,7 @@ include '../app/views/user/components/user_nav.php';
         </div>
         <div class="col-6">
             <button id="user_modification_tab_2" class="btnLookLikeLink text-white user_modification_tabs"><h4 class="f-2">2eme proche</h4></button>
+
         </div>
     </div>
 
@@ -45,5 +46,5 @@ include '../app/views/user/components/user_nav.php';
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include realpath(dirname(__DIR__,1) .'/layouts/footer.php');
 ?>

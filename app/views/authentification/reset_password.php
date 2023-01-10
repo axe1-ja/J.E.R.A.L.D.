@@ -32,7 +32,7 @@ if (! empty($_POST["reset-btn"])) {
 <HEAD>
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 <TITLE>Réinitialisation du Mot de Passe</TITLE>

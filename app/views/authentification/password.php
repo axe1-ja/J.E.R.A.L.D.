@@ -1,6 +1,6 @@
 <!-- Header of page -->
 <?php
-include '../app/views/layouts/header.php';
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 include 'db.php';
 ?>
 
@@ -68,6 +68,6 @@ if(isset($_POST['email']))
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include realpath(dirname(__DIR__,1) .'/layouts/footer.php');
 
 ?>

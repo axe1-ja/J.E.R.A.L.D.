@@ -1,15 +1,7 @@
 <!-- Header of page -->
 
 <?php
-include '../app/views/layouts/header.php';
-
-    if($error != "")
-    {
-        echo "<span style= 'color:red'>$error</span><br><br>";
-    }
-
-include 'db.php';
-
+include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
 
@@ -18,7 +10,7 @@ include 'db.php';
 
 
 <?php
-include '../app/views/general_components/navbar.php';
+include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
 ?>
 
 <div class="container text-center py-4">
@@ -140,5 +132,5 @@ if(isset($_POST['email'], $_POST['password']))
 
 <!-- Footer of page -->
 <?php
-include '../app/views/layouts/footer.php';
+include realpath(dirname(__DIR__,1) .'/layouts/footer.php');
 ?>

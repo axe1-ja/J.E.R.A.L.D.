@@ -1,10 +1,7 @@
 <?php
 
 
-class m0002_users {
-
-    
-
+class m0001_users {
     public function up($pdo){
         $db = $pdo;
         $SQL = "CREATE TABLE users(
