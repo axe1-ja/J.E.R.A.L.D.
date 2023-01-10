@@ -36,7 +36,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
-            <form class="text-left" action="/public/create-user" method="post">
+            <form class="text-left" action="#" method="post">
                 <div class="mb-2">
                     <label for="exampleInputNom" class="form-label">Nom</label>
                     <input type="text" name="nom" class="form-control" id="exampleInputNom" placeholder="Doe" required>
@@ -49,38 +49,42 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     
                     <!-- ajouter le déroulant des indicatifs téléphonique ? -->
                     <label for="exampleInputTelephone" class="form-label">Téléphone</label>
-                    <input type="tel" name="phone" class="form-control" id="exampleInputTelephone" placeholder="0123456789" required>
-                    
+                    <input type="tel" name="phone" class="form-control" id="exampleInputTelephone" placeholder="0123456789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
                     <label for="exampleInputAdress" class="form-label">Adresse postale</label>
                     <input type="text" name="adress" class="form-control" id="exampleInputAdress" required>
 
                     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" required>
-
+                    <span id="msg"></span>
                     <label for="exampleInputConfirmPassword1" class="form-label">Confirmer le mot de passe</label>
                     <input type="password" name="password" class="form-control" id="exampleConfirmationPassword1" required>
                     <script>
                         var password = document.getElementById("exampleInputPassword1"), confirm_password = document.getElementById("exampleConfirmationPassword1");
 
                         function validatePassword(){
-                          if(exampleInputPassword1.value != exampleConfirmationPassword1.value) {
-                        confirm_password.setCustomValidity("Passwords Don't Match");
-                          } else {
+                            if(exampleInputPassword1.value != exampleConfirmationPassword1.value) {
+                        confirm_password.setCustomValidity("Les mots de passe ne correspondent pas");
+                            } else {
                         confirm_password.setCustomValidity('');
-                          }
+                            }
                             var msg; 
-                            var str = document.getElementById("mdp").value; 
+                            var str = document.getElementById("exampleInputPassword1").value; 
                             if (str.match( /[0-9]/g) && 
                                     str.match( /[A-Z]/g) && 
                                     str.match(/[a-z]/g) && 
                                     str.match( /[^a-zA-Z\d]/g) &&
                                     str.length >= 8) 
-                                msg = "<p style='color:green'>Mot de passe fort.</p>"; 
+                                msg = "<p style='color:green'>Mot de passe fort</p>"; 
                             else 
                                 msg = "<p style='color:red'>Mot de passe faible.</p>"; 
                             document.getElementById("msg").innerHTML= msg;
+                            if(msg != "<p style='color:green'>Mot de passe fort</p>") {
+                        password.setCustomValidity("Un mot de passe comportant au moins 8 caractères, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial est demandé.");
+                            } else {
+                        password.setCustomValidity('');
+                            }
                         }
-
                         password.onchange = validatePassword;
                         confirm_password.onkeyup = validatePassword;
                     </script>
@@ -92,9 +96,8 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                 </div>
                 <div class="row mt-2 mb-1">
                     <div class="col-12">
-                        <div class="text-right">
-                            <button type="#" name="login" value="login" class="btn btn-outline-primary" onclick="validatePassword()">S'inscrire</button>
-                        <span id="msg"></span> 
+                        <div class="text-right"> 
+                            <button type="submit" name="login" value="login" class="btn btn-outline-primary">S'inscrire</button>
                         </div>
                     </div>
                 </div>
