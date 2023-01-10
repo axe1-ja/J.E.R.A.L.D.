@@ -34,11 +34,11 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
             <form class="text-left" action="report" method="post">
                 <div class="mb-3">
                     <label for="nomprenom" class="form-label">Nom Prénom</label>
-                    <input type="text" class="form-control" name="nomprenom" placeholder="Person Doe" id="validationCustom03" required>
+                    <input type="text" class="form-control" name="nomprenom" placeholder="Dupond Durant" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Adresse e-mail</label>
-                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="name@example.com" id="validationCustom03" required>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="nom@exemple.com" id="validationCustom03" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Votre message</label>
