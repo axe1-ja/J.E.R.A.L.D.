@@ -41,7 +41,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-4">Télephone</div>
+                        <div class="col-4">Téléphone</div>
                         <div class="col-8">06 45 93 27 05</div>
                     </div>
                 </div>
