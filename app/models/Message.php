@@ -2,20 +2,20 @@
 
 class Message {
     public $id;
-    //public Conversation $conversation;
-    public $user_id;
-    public $content;
-    protected $dateTime;
+    public $user_id_send;
+    public $user_id_receive;
+    public $message_content;
+    public $message_datetime;
 
 
     
-    public function __construct($id, /*$conversation,*/ $user_id, $content, $created_at)
+    public function __construct($id, $user_id_send, $user_id_receive, $message_content, $message_datetime)
     {
         $this->id = $id;
-        //$this->conversation = $conversation;
-        $this->user_id = $user_id;
-        $this->content = $content;
-        $this->created_at = $created_at;
+        $this->user_id_send = $user_id_send;
+        $this->user_id_receive = $user_id_receive;
+        $this->message_content = $message_content;
+        $this->message_datetime = $message_datetime;
         
         return $this;
     }

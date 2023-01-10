@@ -11,6 +11,12 @@ class Authentification extends Controller
     {
         $this->view('authentification/create', []);
     }
+    public function create_failed()
+    {
+        $this->view('authentification/create', [
+            'error'=>'An account already exists with that email',
+        ]);
+    }
     
     public function store()
     {
@@ -18,12 +24,21 @@ class Authentification extends Controller
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $db = new Database([]);
         }
-        $user = new User($_POST["nom"], $_POST["prenom"], "client", $_POST["phone"], $_POST["email"], hash('sha1', $_POST["password"]), $_POST["adress"]);
-        $query = "INSERT INTO users (User_nom, User_Prenom, User_email, User_phone, User_address, User_password, User_role) VALUES ('".$user->nom."', '".$user->prenom."', '".$user->email."', '".$user->phone."', '".$user->adress."', '".$user->password."','".$user->role."')";
-        $statement = $db->pdo->prepare($query);
-        $statement->execute();
 
-        header("Location: login");
+        $exsistingUser = User::findUser('User_email',$_POST['email']);
+        if(!isset($exsistingUser->email)){
+            $user = new User(0,$_POST["nom"], $_POST["prenom"], "client", $_POST["phone"], $_POST["email"], hash('sha1', $_POST["password"]), $_POST["adress"]);
+            $query = "INSERT INTO users (User_nom, User_Prenom, User_email, User_phone, User_address, User_password, User_role) VALUES ('".$user->nom."', '".$user->prenom."', '".$user->email."', '".$user->phone."', '".$user->adress."', '".$user->password."','".$user->role."')";
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+
+            header("Location: login");
+
+        } else {
+
+            header("Location: register_failed");
+
+        }
 
     }
 
@@ -48,7 +63,7 @@ class Authentification extends Controller
             } else {
                 $role= "client";
             }
-            $user = new User($result["User_nom"], $result["User_Prenom"], $role, $result["User_phone"], $result["User_email"], hash('sha1', $result["User_password"]), $result["User_address"]);
+            $user = new User($result["User_id"], $result["User_nom"], $result["User_Prenom"], $role, $result["User_phone"], $result["User_email"], hash('sha1', $result["User_password"]), $result["User_address"]);
             
             $_SESSION['user']=$user;
             $_SESSION['user_id']=$result['User_id'];

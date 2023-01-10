@@ -233,7 +233,7 @@
 .bg-grey { background-color: var(--grey); }
 .bg-green { background-color: var(--green); }
 .bg-black { background-color: var(--black); }
-.bg-red { background-color: var(--red); }
+.bg-red { background-color: var(--red)!important; }
 
 
 /* css of the body of the page (affects all) */
