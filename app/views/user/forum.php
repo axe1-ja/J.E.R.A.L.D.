@@ -46,36 +46,13 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             <?php endforeach; ?>
         </tbody>
     </table>
-</div>
-    <div>
-        <div>
-            <table class="table table-striped table-hover" role = 'button'>
-                <thead>
-                    <tr>
-                        <th>Nombre de Forum</th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Sujet</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach($data['data'] as $el): ?>
-                        <tr>
-                            <th scope="row"><?php echo $el[0];?></th>
-                            <td><?php echo $el[2];?></td>
-                            <td><?php echo $el[3];?></td>
-                            <td><?php echo $el[4];?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
+
         <div class='row'>
             <div class="col-12 text-center">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center ">
                     <li class='page-item'><a class="page-link" href="/public/user/forum">1</a></li>
-                    <?php for ($forumpage = 1; $forumpage <= ceil($data['page'][0]/10); $forumpage ++) { ?>
+                    <?php for ($forumpage = 2; $forumpage <= ceil($data['page'][0]/10); $forumpage ++) { ?>
                         <li class="page-item"><a class="page-link" href="/public/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
                         <?php } ?>
                     </ul>
