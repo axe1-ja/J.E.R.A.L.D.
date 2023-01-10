@@ -73,21 +73,22 @@ class UserController extends Controller
     
     public function forum($model='forum')
     {
-        
 
         if($model=='forum'){
             $data = Forum::getforumAll();
             $page = [Forum::getforumPageAll()];
-            // Debugger::dd($data);
-            
-        }elseif($model=='forum_p2'){
-            
-        }elseif($model=='forum_p3'){
-
+        
+        }elseif($page >= 2){
+            for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) {
+                $model =='forum_p'+$forumpage;
+                $data = Forum::getforumAll();
+                $page = [Forum::getforumPageAll()];
+            }
         }elseif($model=='forum1'){
             $data = Forum::getforumType1();
             $page = [Forum::getforumPageType1()];
-        } elseif($model=='forum2'){
+        } 
+        elseif($model=='forum2'){
             $data = Forum::getforumType2();
             $page = [Forum::getforumPageType2()];
         } 
