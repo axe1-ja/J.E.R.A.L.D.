@@ -83,11 +83,13 @@ class UserController extends Controller
         }elseif($model=='forum_p2'){
             
         }elseif($model=='forum_p3'){
-            $ForumsPage = Forum::getforumPageType1();
+
         }elseif($model=='forum1'){
-            $ForumsType1 = Forum::getforumType1();
+            $data = Forum::getforumType1();
+            $page = [Forum::getforumPageType1()];
         } elseif($model=='forum2'){
-            $ForumsType2 = Forum::getforumType2();
+            $data = Forum::getforumType2();
+            $page = [Forum::getforumPageType2()];
         } 
         $this->view('user/forum', [
             'model'=>$model,

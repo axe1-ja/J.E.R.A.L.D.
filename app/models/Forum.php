@@ -41,9 +41,6 @@ class Forum {
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-        $result = $result[0];
-
-        Debugger::dd($result);
         return $result;
     }
     public static function getforumType2() {
@@ -54,7 +51,6 @@ class Forum {
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-        Debugger::dd($result);
         return $result;
     }
 
@@ -78,7 +74,7 @@ class Forum {
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
         $result = $result['count(*)'];
-        Debugger::dd($result);
+
         return $result;
     }
     public static function getforumPageType2() {
@@ -90,7 +86,7 @@ class Forum {
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
         $result = $result['count(*)'];
-        Debugger::dd($result);
+
         return $result;
     }
 }
