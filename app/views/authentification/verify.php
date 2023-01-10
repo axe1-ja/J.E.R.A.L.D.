@@ -22,7 +22,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
             <div class="col-6">
                 <div class="card center p-3">
                     <h3>
-                        Nous vous avons envoyé un e-mail de vérification, merci de regarder vos e-mail et de clicker sur le lien de vérification
+                        Nous vous avons envoyé un mail de vérification ; merci de vérifer vos mails et de cliquer sur le lien de vérification !
                     </h3>
                     <br>
                     <a class="btn btn-outline-primary" href="login">Connexion</a>

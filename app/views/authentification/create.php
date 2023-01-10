@@ -49,7 +49,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     
                     <!-- ajouter le déroulant des indicatifs téléphonique ? -->
                     <label for="exampleInputTelephone" class="form-label">Téléphone</label>
-                    <input type="tel" name="phone" class="form-control" id="exampleInputTelephone" placeholder="0123456789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <input type="tel" name="phone" class="form-control" id="exampleInputTelephone" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
 
                     <label for="exampleInputAdress" class="form-label">Adresse postale</label>
                     <input type="text" name="adress" class="form-control" id="exampleInputAdress" required>
@@ -101,8 +101,6 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                         </div>
                     </div>
                 </div>
-                
-                
             </form>
         </div>
     </div>
