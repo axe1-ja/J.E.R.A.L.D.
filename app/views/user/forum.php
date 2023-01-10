@@ -26,27 +26,6 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         </form>
     </div>
 </div>
-<div>
-    <table class="table table-striped table-hover" role = 'button'>
-        <thead>
-            <tr>
-                <th>Forum Number</th>
-                <th>Forum objet</th>
-                <th>Forum Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach($data['data'] as $el):   ?>
-
-                <tr>
-                    <th scope="row"><?php echo $el['Forum_id'];?></th>
-                    <td><?php echo $el['Forum_object'];?></td>
-                    <td><?php echo $el['Forum_datetime'];?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
     <div>
         <div>
             <table class="table table-striped table-hover" role = 'button'>
