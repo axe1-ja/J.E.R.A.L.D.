@@ -80,10 +80,11 @@ class UserController extends Controller
         
         }elseif($page >= 2){
             for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) {
-                $model =='forum_p'+$forumpage;
-                $data = Forum::getforumAll();
-                $page = [Forum::getforumPageAll()];
-            }
+                if($model =='forum_p'+$forumpage){
+                    $data = Forum::getforumAll();
+                    $page = [Forum::getforumPageAll()];
+                }
+                }
         }elseif($model=='forum1'){
             $data = Forum::getforumType1();
             $page = [Forum::getforumPageType1()];
