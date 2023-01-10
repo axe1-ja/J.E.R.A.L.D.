@@ -31,8 +31,6 @@ class Forum {
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-
-        Debugger::dd($result);
         return $result;
     }
     public static function getforumType1() {
@@ -69,7 +67,6 @@ class Forum {
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
         $result = $result['count(*)'];
-        Debugger::dd($result);
         return $result;
     }
     public static function getforumPageType1() {

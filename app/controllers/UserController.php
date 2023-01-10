@@ -71,27 +71,28 @@ class UserController extends Controller
         $this->view('user/environment'); 
     }
     
-    public function forum($model='forum') # $page 추가하기
+    public function forum($model='forum')
     {
         
 
         if($model=='forum'){
-            $Forums = Forum::getforumAll();
+            $data = Forum::getforumAll();
+            $page = [Forum::getforumPageAll()];
+            // Debugger::dd($data);
+            
         }elseif($model=='forum_p2'){
-            $ForumsPage = Forum::getforumPageAll();
+            
         }elseif($model=='forum_p3'){
             $ForumsPage = Forum::getforumPageType1();
-            $ForumsPage = Forum::getforumPageType2();
-
         }elseif($model=='forum1'){
             $ForumsType1 = Forum::getforumType1();
         } elseif($model=='forum2'){
             $ForumsType2 = Forum::getforumType2();
         } 
-
         $this->view('user/forum', [
             'model'=>$model,
-            'data'=>$data
+            'data'=>$data,
+            'page'=>$page
         ]);
     }
     public function newforum(){
