@@ -10,6 +10,9 @@
         <li class="nav-item p-2 f-3">
             <a class="active" href="/public/contact">Contact</a>
         </li>
+        <li class="nav-item p-2 f-3">
+            <a class="active" href="/public/faq">F.A.Q</a>
+        </li>
     </ul>   
     
     <div class="navbar-dropdown dropdown ml-3">

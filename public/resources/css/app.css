@@ -612,6 +612,48 @@ img:hover + #texte {
     font-size: 30px;
     margin-top: -80px;
 }
+
+/* FAQ */
+.box2{
+    width: 2220px;
+    height: 1100px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 1px 2px 4px rgb(0,0,0,.3);
+    margin-top: 30px;
+}
+.box2 .heading{
+    background: rgb(31, 92, 197);
+    border-radius: 7px 7px 0px 0px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: "Rubik";
+    font-size: 24px;
+    margin-top: 0px;
+}
+ 
+.faqs{
+    padding: 0px 20px 20px;
+}
+ 
+::-webkit-details-marker{
+    float: right;
+    margin-top: 3px;
+}
+ 
+details{
+    background: lightgrey;
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-family: "Rubik";
+    font-size: 24px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+details summary{
+    outline: none;
+}
   
 
 /* tableau de bord */
