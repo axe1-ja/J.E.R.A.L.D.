@@ -35,6 +35,11 @@ Route::set('privacy',function(){
     Controller::view('privacy_policy');
 });
 
+// FAQ
+Route::set('faq',function(){
+    Controller::view('faq');
+});
+
 // End of Basic routes
 // -------------------
 
