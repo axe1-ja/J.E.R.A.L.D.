@@ -38,8 +38,8 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
     <div class="row home-elements">
         <div class="col-12">
             <h5 class="f-2 text-white m-0" class="text-white">
-                <span class="d-block">Powered by Infinite Measures</span> 
-                Designed by J.E.R.A.L.D.
+                <span class="d-block">Propulsé par Infinite Measures</span> 
+                créé par J.E.R.A.L.D.
             </h5>  
             <h1 class="access text-white mt-4 f-3">
                 Le secret de la longévité, c'est de porter Ekaï !

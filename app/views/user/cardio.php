@@ -49,9 +49,72 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         </div>
     </div>
     <div class="row">
-        <p class="text-white square"> 
-            graphique
-        </p>
+            <div class="graph">
+                <canvas id="lineChart" style="background:white;"></canvas>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>  
+                
+                const labels = [
+                    '0',
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                    '6',
+                    '7',
+                    '8',
+                    '9',
+                    '10',
+                    '11',
+                    '12',
+                    '13',
+                    '14',
+                    '15',
+                    '16',
+                    '17',
+                    '18',
+                    '19',
+                    '20',
+                    '21',
+                    '22',
+                    '23',
+                    '0'
+                ];
+
+                const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'Evolution de votre fréquence cardiaque',
+                    data: [65, 59, 80, 81, 56, 55, 40, 55, 68, 75, 59, 52, 64, 76, 83, 86, 85, 84, 85, 80, 73, 67, 61, 59 ],
+                    fill: false,
+                    borderColor: '#181C8D',
+                    backgroundColor: 'aliceblue',
+                    tension: 0.1 
+                    }]
+                };
+
+                const config = {
+                type: 'line',
+                data: data,
+                options: {
+                    scales: 
+                    {x: { title: { display: true, text: 'heure de la journée' }},
+                    y: {suggestedMin: 30, suggestedMax: 180, title: { display: true, text: 'fréquence cardiaque' }}},
+
+                    plugins: 
+                    {title: {display: true, text: 'Evolution de votre temprature cardiaque'}},
+                    }
+                };
+                
+
+                const myChart = new Chart(
+                document.getElementById('lineChart'),
+                config
+                );
+
+                </script>
+            </div>
     </div>
 </div>
 

@@ -25,17 +25,6 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             <h1 class="titre">Tableau de Bord</h1>
         </div>
     </div>
-        
-    <div class="row pt-4" >
-        <div class="col-12">
-            <a href="/public/user/cardio">
-                <img src="/public/resources/storage/Images/coeur.png" class="coeur" alt="">
-            </a>
-            <h3 class="text-white">
-                Rythme cardiaque 
-            </h3>
-        </div>
-    </div>
 
     <div class="row pt-4" >
         <div class="col-4">

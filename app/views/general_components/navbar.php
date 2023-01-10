@@ -23,22 +23,22 @@
         </button>
         <ul class="dropdown-content">
             <?php if($_SESSION['loggedin']==0) : ?>
-                <li><a class="dropdown-item"  href="/public/login">Login</a></li>
-                <li><a class="dropdown-item"  href="/public/register">Register</a></li>
+                <li><a class="dropdown-item"  href="/public/login">Connexion</a></li>
+                <li><a class="dropdown-item"  href="/public/register">Inscription</a></li>
             
             <?php endif; ?>
 
             <?php if($_SESSION['loggedin']==1) : ?>
 
                 <?php if($_SESSION['user']->role =='client' || $_SESSION['user']->role =='admin') : ?>
-                    <li><a class="dropdown-item" href="/public/user">User Access</a></li>
+                    <li><a class="dropdown-item" href="/public/user">Accès utilisateur</a></li>
                 <?php endif; ?>
 
                 <?php if($_SESSION['user']->role =='admin') : ?>
-                    <li><a class="dropdown-item" href="/public/admin">Admin Access</a></li>
+                    <li><a class="dropdown-item" href="/public/admin">Accès admin</a></li>
                 <?php endif; ?>
 
-                <li><a class="dropdown-item" href="/public/logout">Logout</a></li>
+                <li><a class="dropdown-item" href="/public/logout">Déconnexion</a></li>
 
             <?php endif; ?>
 
