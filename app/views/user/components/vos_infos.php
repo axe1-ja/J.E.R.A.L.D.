@@ -57,7 +57,7 @@
 </div>
 <ul>
 </ul>
-<!--div class="mt-4">
+<div class="mt-4">
     <div class="card center" style="width: 50rem;">
         <div class="card-body px-3">
             <div class="row">
@@ -65,12 +65,12 @@
                     <img src="public\resources\storage\Images\Bracelet.png" width="200"/>
                 </div>
                 <div class="col-6">
-                    <h3 class="text-center" style="text-black">
-                        <!?php echo $data['user']->devices.;?> 
-                    </h3>
+                    <!--h3 class="text-center" style="text-black">
+                        <div class="col-8"><!?php echo $data['bracelet']->bracelet_id;?></div>
+                    </h3-->
                     <div class="row my-2">
                         <div class="col-4">Identifiant appareil&nbsp</div>
-                        <div class="col-8"><!?php echo $data['user']->devices;?></div>
+                        <div class="col-8"><?php echo $data['bracelet']->bracelet_id ?? 'NA';?></div>
                     </div>
                 </div>
             </div>    
