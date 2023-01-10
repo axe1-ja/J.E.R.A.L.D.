@@ -2,14 +2,6 @@
 
 <?php
 include realpath(dirname(__DIR__,1) .'/layouts/header.php');
-
-    if($error != "")
-    {
-        echo "<span style= 'color:red'>$error</span><br><br>";
-    }
-
-include 'db.php';
-
 ?>
 
 

@@ -57,6 +57,10 @@
     padding:60px 75px;
 }
 
+.hide {
+    display:none;
+}
+
 * {
     transition:0.4s;
     box-sizing: border-box;
