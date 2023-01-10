@@ -88,24 +88,27 @@ class UserController extends Controller
     
     public function forum($model='forum')
     {
-        
 
         if($model=='forum'){
             $data = Forum::getforumAll();
+            $data= array_slice($data,0,10);
             $page = [Forum::getforumPageAll()];
-            // Debugger::dd($data);
-            
-        }elseif($model=='forum_p2'){
-            
-        }elseif($model=='forum_p3'){
-
+        
         }elseif($model=='forum1'){
             $data = Forum::getforumType1();
             $page = [Forum::getforumPageType1()];
-        } elseif($model=='forum2'){
+        }elseif($model=='forum2'){
             $data = Forum::getforumType2();
             $page = [Forum::getforumPageType2()];
-        } 
+        }else{
+            $model = substr($model, 7);
+            $data = Forum::getforumAll();
+            $data= array_slice($data,($model-1)*10,($model-1)*10+10);
+            $page = [Forum::getforumPageAll()];
+
+        }
+                    
+    
         $this->view('user/forum', [
             'model'=>$model,
             'data'=>$data,
