@@ -31,17 +31,69 @@ class Forum {
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+
         Debugger::dd($result);
+        return $result;
+    }
+    public static function getforumType1() {
+        
+        $db = new Database([]);
+        
+        $query = "SELECT * FROM `Forum` WHERE Forum_type = '1';";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
-        $Forum = new Forum(
-            $result["Forum_id"], 
-            $result["Forum_type"], 
-            $result["Forum_object"], 
-            $result["Forum_content"], 
-            $result["Forum_datetime"], 
-            $result["User_id"],
-        );
-        Debugger::dd($Forum);
-        return $Forum;
+
+        Debugger::dd($result);
+        return $result;
+    }
+    public static function getforumType2() {
+        
+        $db = new Database([]);
+        
+        $query = "SELECT * FROM `Forum` WHERE Forum_type = '2';";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        Debugger::dd($result);
+        return $result;
+    }
+
+    public static function getforumPageAll() {
+        
+        $db = new Database([]);
+        $query = "SELECT count(*) FROM `Forum`;";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $result[0];
+        $result = $result['count(*)'];
+        Debugger::dd($result);
+        return $result;
+    }
+    public static function getforumPageType1() {
+        
+        $db = new Database([]);
+        $query = "SELECT count(*) FROM `Forum` WHERE Forum_type = '1';";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $result[0];
+        $result = $result['count(*)'];
+        Debugger::dd($result);
+        return $result;
+    }
+    public static function getforumPageType2() {
+        
+        $db = new Database([]);
+        $query = "SELECT count(*) FROM `Forum` WHERE Forum_type = '2';";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $result[0];
+        $result = $result['count(*)'];
+        Debugger::dd($result);
+        return $result;
     }
 }
