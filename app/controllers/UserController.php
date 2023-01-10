@@ -105,6 +105,7 @@ class UserController extends Controller
             $data = Forum::getforumAll();
             $data= array_slice($data,($model-1)*10,($model-1)*10+10);
             $page = [Forum::getforumPageAll()];
+
         }
                     
     
