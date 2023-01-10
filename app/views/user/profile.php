@@ -12,18 +12,18 @@ include '../app/views/layouts/header.php';
 <?php
 include '../app/views/user/components/user_nav.php';
 ?>
-
-<div class="row">
-    <div class="col-12 mx-2">
-        <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home">
-            Accueil >
-        </a>
-        <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/profile"> 
-            Profil
-        </a>
+<div class="text-center p-3">
+    <div class="row">
+        <div class="col-3 text-left">
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home">
+                Accueil >
+            </a>
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/profile"> 
+                Profil
+            </a>
+        </div>
     </div>
 </div>
-
 <div class="container">
     
     <div class="row text-center">

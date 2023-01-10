@@ -6,12 +6,12 @@
             </a>
         </li>
         <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
+            <a class="social-icon__link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                 <img id="logo" src="/public/resources/storage/Images/twitter.png" class="icon ion-social-twitter" width="35px">
             </a>
         </li>
         <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
+            <a class="social-icon__link" href="https://www.linkedin.com/in/jerald-ekai-2a56a5254/">
                 <img id="logo" src="/public/resources/storage/Images/linkedin.png" class="icon ion-social-linkedin" width="35px">
             </a>
         </li>
@@ -23,7 +23,7 @@
     </ul>
     <ul class="menu">
         <li class="menu__item">
-            <a class="menu__link"  href="home">Home</a>
+            <a class="menu__link"  href="home">Accueil</a>
         </li>
         <li class="menu__item">
             <a class="menu__link"  href="product">Produit</a>
@@ -40,5 +40,5 @@
 
     </ul>
 
-    <ul class="copyright" >&copy;2022 JERALD | All Rights Reserved | <a href="conditions" >Conditions d'utilisation</a> | <a href="/public/privacy" >Politique de confidentialité</a></ul>
+    <ul class="copyright" >&copy;2023 JERALD | All Rights Reserved | <a href="conditions" >Conditions d'utilisation</a> | <a href="/public/privacy" >Politique de confidentialité</a></ul>
 </footer>

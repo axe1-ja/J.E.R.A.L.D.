@@ -1,5 +1,4 @@
 <div class="container mt-3">
-
     <div class="row">
         <div class="col-6">
             <div class="card center" style="width: 25rem;">
@@ -22,7 +21,7 @@
                 </div>
             </div>
         </div>
-
+        
 
         <div class="col-6">
             <div class="card center" style="width: 25rem;">
@@ -49,11 +48,10 @@
 
     <div class="row mt-3 text-center">
         <div class="col-12">
+            <h3 class="text-white fw-bold">En cas de chute, nous appellerons vos deux proches ci-dessus.</h3>
             <a href="/public/user/edit/proches" class="card-link">     
-
                 <button class="btn btn-outline-primary">Modifier</button>
-            </a>    
-            <h5 class="mt-3 fw-bold">En cas de chute, nous appellerons vos proches.</h5>
+            </a>
         </div>
     </div>
 </div>
