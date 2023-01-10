@@ -51,6 +51,7 @@ Route::set('faq',function(){
 if($_SESSION['loggedin']==0) {
     Route::set('login',function(){ (new authentification)->index(); });
     Route::set('register',function(){ (new authentification)->create(); });
+    Route::set('register_failed',function(){ (new authentification)->create_failed(); });
     Route::set('create-user',function(){ (new authentification)->store(); });
     Route::set('login-action',function(){ (new authentification)->loginaction(); });
     Route::set('forgot_password',function(){ (new authentification)->forgot(); });
