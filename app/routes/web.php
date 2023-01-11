@@ -86,9 +86,11 @@ if($_SESSION['loggedin']==1) {
         Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
         Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });
         Route::set('admin/datama/roles',function(){ (new admin)->datama('roles'); });
-        Route::set('admin/inbox',function(){ (new MessageController)->inbox('admin'); });
 
-        Route::set('admin/inbox',function(){ (new MessageController)->inbox('admin'); });
+        // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
+        Route::set('admin/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
+        Route::set('admin/inbox',function(){ (new MessageController)->inbox(null); });
+
         // End of Admin routes
         // -------------------
     }
