@@ -3,11 +3,11 @@
 class MessageController extends Controller
 {
     
-    public function inbox($from)
+    public function inbox($interlocutorId)
     {
+        //Debugger::dd($interlocutorId);
         $user = User::getUser();
         $messages = User::getUser()->getUserMessages();
-        //Debugger::dd($messages);
         $conv=[];
         $interlocutors=[];
         foreach ($messages as $message) {
@@ -23,11 +23,16 @@ class MessageController extends Controller
                 }
             }
         }
+        if(!isset($interlocutorId) || $interlocutorId==null || $interlocutorId==''){
+            $interlocutorId= reset($interlocutors)->id;
+        }
+
         // get the id of the interlocutor in the conv variable
         $this->view('inbox/index', [
             'page'=>'inbox',
             'thisUser'=>$user,
             'interlocutors'=>$interlocutors,
+            'interlocutorId'=>$interlocutorId,
             'conv'=>$conv
         ]);
     }
