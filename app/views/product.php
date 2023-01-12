@@ -30,9 +30,9 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
     <div class ="content-container ">
         <div class="row center">
             <img src="/public/resources/storage/Images/Bracelet.png" class="center montre" alt="">
-            <p class="txtprod "> Bracelet EKAÏ<br> 
+            <p class="txtprod"> Bracelet EKAÏ<br> 
             <br>
-            xx,xx€<br>
+            69,96€<br>
             <br>
             Plus qu'un bracelet EKAÏ s'adresse à toute une génération et permet à vous, futur possesseur, d'avoir un suivi continu de votre santé ainsi qu'une étude des risques que vous pouvez rencontrer dans la vie de tout les jours.<br> 
             <br>
