@@ -557,8 +557,8 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     height: 2300px;
 }
 .txtprod{
-    padding-right: 30px;
-    font-size: 30px;
+    padding-right: 120px;
+    font-size: 18px;
     margin-top: 60px;
 }
 .ligne{

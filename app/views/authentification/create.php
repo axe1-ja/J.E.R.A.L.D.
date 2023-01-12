@@ -40,7 +40,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
-            <form class="text-left" action="#" method="post">
+            <form class="text-left" action="/public/create-user" method="post">
                 <div class="mb-2">
                     <label for="exampleInputNom" class="form-label">Nom</label>
                     <input type="text" name="nom" class="form-control" id="exampleInputNom" placeholder="Doe" required>
@@ -94,7 +94,6 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     </script>
                 </div>
                 <div class="form-check">
-                    <!--<input type="checkbox" class="form-check-input" id="exampleCheck1">-->
                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
                     <label class="form-check-label" for="exampleCheck1" for="invalidCheck2">Accepter les termes et conditions</label>
                 </div>
