@@ -78,4 +78,21 @@ var loadFile = function (event) {
     image.src = URL.createObjectURL(event.target.files[0]);
 };
 
+document.addEventListener('click', function(e) {
+    var node = e.target;
+    var clickedId = node.id;
+    var inside = false;
+    while (node) {
+        if (node.classList.contains('modal')) {
+            inside = true;
+            break;
+        }
+        node = node.parentElement;
+    }
+   if (!inside) {
+        if(document.getElementById("searchUser").style.display!='none' && clickedId=='searchUser'){
+            document.getElementById("searchUser").style.display='none';
+        }
+    }
+});
 

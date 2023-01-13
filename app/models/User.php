@@ -34,6 +34,21 @@ class User {
         return $user;
     }
 
+    public static function getallUsers() {
+        $db = new Database([]);
+
+        $query = "SELECT * FROM `users`;";
+        $users = [];
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        foreach($result as $r) {
+            $users[] = new User($r["User_id"], $r["User_nom"], $r["User_Prenom"], $r['role'], $r["User_phone"], $r["User_email"], '', $r["User_address"]);
+        }
+
+        return $users;
+    }
+
     public static function findUser($from,$var) {
         $db = new Database([]);
 
@@ -43,7 +58,7 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result=$result[0];
-        $user = new User($result["User_id"], $result["User_nom"], $result["User_Prenom"], $role, $result["User_phone"], $result["User_email"], '', $result["User_address"]);
+        $user = new User($result["User_id"], $result["User_nom"], $result["User_Prenom"], $r['role'], $result["User_phone"], $result["User_email"], '', $result["User_address"]);
 
         return $user;
     }
@@ -59,6 +74,24 @@ class User {
         foreach($result as $r){
             $messages[]=new Message($r['message_id'], $r['User_Id_send'], $r['User_Id_receive'], $r['message_Content'], $r['message_Datetime']);
         }
+        
+        //dd($messages);
+        return $messages;
+
+    }
+
+    public static function conversationWith($interlocId) {
+        $db = new Database([]);
+        $user = User::getUser();
+
+        $query = "SELECT * FROM `messages` WHERE (User_Id_send=".$user->id." AND User_Id_receive=".$interlocId.") OR (User_Id_receive=".$user->id." AND User_Id_send=".$interlocId.");";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        foreach($result as $r){
+            $messages[]=new Message($r['message_id'], $r['User_Id_send'], $r['User_Id_receive'], $r['message_Content'], $r['message_Datetime']);
+        }
+
         return $messages;
 
     }

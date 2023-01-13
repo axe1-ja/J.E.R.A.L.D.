@@ -21,7 +21,6 @@ class UserController extends Controller
 
         $query=$query."UPDATE `users` SET `User_Prenom`='".$_POST['prenom']."',`User_nom`='".$_POST['nom']."',`User_DOB`='".$_POST['dob']."',`User_phone`='".$_POST['phone']."',`User_email`='".$_POST['email']."',`User_address`='".$_POST['adress']."',`User_height`='".$_POST['height']."',`User_Weight`='".$_POST['weight']."' WHERE `User_email`='".$_SESSION["user"]->email."';";
         
-        //Debugger::dd($query);
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $user = User::getUser($_SESSION["user"]->email);
