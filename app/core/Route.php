@@ -21,7 +21,6 @@ class Route {
                     $end = strpos($route, '}');
                     $length = strlen($url) - $pos;
                     $param = substr($url, $pos, $length);
-                    //Debugger::dd($param);
                 }
             }
         }

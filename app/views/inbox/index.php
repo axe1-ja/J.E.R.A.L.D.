@@ -3,6 +3,32 @@
 include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
 
+<div id="searchUser" class="w-100 h-100" style="background-color:rgba(0,0,0,0.4);position:fixed;z-index:2100;display:none">
+    <div class="center modal" style="background-color:white;width:250px;margin-top:50px;border-radius:6px">
+        <div class="row p-2">
+            <div class="col-8">Send a message to</div>
+            <div class="col-4 text-right"><i class="bi bi-x-lg"  onclick="document.getElementById('searchUser').style.display='none';"></i></div>
+        </div>
+
+        <div class="row p-2">
+            <div class="col-12">
+                <form action="/public/admin/inbox" method="post">
+                    <select class="form-control mb-2" name="userChosen" id="userChosen">
+                            <option value="" disabled selected>Selectionner un utilisateur</option>
+                        <?php foreach($data['allUsers'] as $u) : ?>
+                            <option value="<?php echo $u->id; ?>"><?php echo $u->prenom.' '.$u->nom; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <label for="msg">Message</label>
+                    <input type="text" name="msg" id="msg" placeholder="Type a message...">
+                    <div class="w-100 text-center mt-2">
+                        <button type="submit" class="btn btn-outline-green"> Start a conversation </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Content of page -->
 <?php
@@ -20,23 +46,37 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
             <li class="title f-3 p-3 text-center">All Conversations</li>
 
             <?php foreach($data['interlocutors'] as $interl): ?>
-                <li class="conversationTab">
+                <li class="conversationTab <?php if($data['interlocutorId']==$interl->id):?>active<?php endif;?>">
                     <a href="/public/admin/inbox/<?php echo $interl->id?>">
-                        <h5><?php echo "Conversation with ".$interl->nom.' '.$interl->prenom;?> <i class="bi bi-caret-right"></i></h5>
-                        <p><em>
-                            <?php if($interl->id==end($data['conv'][$interl->id])->user_id_send):?>
-                                <?php echo $interl->prenom?> : <?php echo substr(end($data['conv'][$interl->id])->message_content,0,12); ?>
-                                <?php if(strlen(end($data['conv'][$interl->id])->message_content)>12):?>...<?php endif;?>
-                            <?php else:?>
-                                You : <?php echo substr(end($data['conv'][$interl->id])->message_content,0,12); ?>
-                                <?php if(strlen(end($data['conv'][$interl->id])->message_content)>12):?>...<?php endif;?>
-                            <?php endif;?>
-                        </em></p>
+                        <h5><?php echo "".$interl->prenom.' '.$interl->nom;?> <i class="bi bi-caret-right"></i></h5>
+                        <?php $lastmsg = end($data['conv'][$interl->id]) ?>
+                        <div class="row">
+                            <div class="col-6 f-1">
+                                <em>
+                                    <?php if($interl->id==$lastmsg->user_id_send):?>
+                                        <?php echo $interl->prenom?> : <?php echo substr($lastmsg->message_content,0,12); ?>
+                                        <?php if(strlen($lastmsg->message_content)>12):?>...<?php endif;?>
+                                    <?php else:?>
+                                        You : <?php echo substr($lastmsg->message_content,0,12); ?>
+                                        <?php if(strlen($lastmsg->message_content)>12):?>...<?php endif;?>
+                                    <?php endif;?>
+                                </em>
+                            </div>
+                            <div class="col-6 f-1 text-right">
+                                <em>
+                                    <?php echo $lastmsg->message_datetime?>
+                                </em>
+                            </div>
+                        </div>
                     </a>
                 </li>
             <?php endforeach; ?>
 
-            <li class="title p-3 text-center"> <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i> Add conversation </button> </li>
+            <li class="title p-3 text-center"> 
+                <button class="btn btn-outline-primary" onclick="document.getElementById('searchUser').style.display='block';">
+                    <i class="bi bi-plus-lg"></i> Add conversation 
+                </button> 
+            </li>
 
         </ul>
     </div>
@@ -80,5 +120,4 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
 <script type='text/JavaScript'>
     window.scrollTo(0, document.body.scrollHeight);
-
 </script>

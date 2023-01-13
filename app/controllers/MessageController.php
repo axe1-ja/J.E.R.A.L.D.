@@ -5,11 +5,25 @@ class MessageController extends Controller
     
     public function inbox($interlocutorId)
     {
-        //Debugger::dd($interlocutorId);
+        if( $_SERVER['REQUEST_METHOD'] == 'POST' && count(User::conversationWith($_POST['userChosen']))==0 ){ 
+            $interlocutorId = $this->add();
+        }
+
         $user = User::getUser();
         $messages = User::getUser()->getUserMessages();
+        
+        if(!isset($interlocutorId) || $interlocutorId==null || $interlocutorId==''){
+            $interlocutorId= reset($interlocutors)->id;
+        }
+
+        foreach(User::getAllUsers() as $u) {
+            if($u->id!=$user->id && $u->id!=$interlocutorId){
+                $allUsers[] = $u;
+            }
+        }
+
         $conv=[];
-        $interlocutors=[];
+        $interlocutors=[]; 
         foreach ($messages as $message) {
             if($message->user_id_send==$user->id) {
                 $conv[$message->user_id_receive][]=$message;
@@ -23,9 +37,8 @@ class MessageController extends Controller
                 }
             }
         }
-        if(!isset($interlocutorId) || $interlocutorId==null || $interlocutorId==''){
-            $interlocutorId= reset($interlocutors)->id;
-        }
+
+        
 
         // get the id of the interlocutor in the conv variable
         $this->view('inbox/index', [
@@ -33,7 +46,8 @@ class MessageController extends Controller
             'thisUser'=>$user,
             'interlocutors'=>$interlocutors,
             'interlocutorId'=>$interlocutorId,
-            'conv'=>$conv
+            'conv'=>$conv,
+            'allUsers'=>$allUsers,
         ]);
     }
 
@@ -52,5 +66,20 @@ class MessageController extends Controller
         header('Location: http://localhost:8888/public/admin/inbox');
     }
 
+    public function add() {
+        $user = User::getUser();
+        $interlocutor= User::findUser('User_id',$_POST['userChosen']);
+        $date = date('y-m-d h:i:s');
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $db = new Database([]);
+        }
+
+        $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ('".$user->id."','".$interlocutor->id."','".$_POST['msg']."','".$date."');";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+
+        return $interlocutor->id;
+    }
 
 }
