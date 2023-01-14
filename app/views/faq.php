@@ -19,8 +19,8 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
             <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home"> 
             Accueil > 
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/product"> 
-            Produit
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/faq"> 
+            FAQ
             </a>
         </div>
     </div>
@@ -37,22 +37,23 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                     </details>
                     <details>
                         <summary>Comment recharger la batterie de mon bracelet ?</summary>
-                        <p class="text"><strong>Comme pour votre smartphone ou d'autres appareils éléctronique, vous pouvez charger votre bracelet à l'aide d'un câble fourni avec celui-ci.</strong></p>
+                        <p class="text"><strong>Comme pour votre smartphone ou d'autres appareils électroniques, vous pouvez charger votre bracelet à l'aide d'un câble fourni avec celui-ci.</strong></p>
                     </details>
                     <details>
                         <summary>Comment suivre mon activité à l'aide du bracelet ?</summary>
-                        <p class="text"><strong>Le suivi du bracelet se fait directement depuis le site dans le tableau de bord de l'utilisateur après vous être login.</strong></p>
+                        <p class="text"><strong>Le suivi du bracelet se fait directement depuis le site dans le tableau de bord de l'utilisateur après vous être connecté.</strong></p>
                     </details>
                     <details>
-                        <summary>Que faire si les données ne s'affiche plus sur le site ?</summary>
-                        <p class="text"><strong>Si ceci vous arrive allez sur le site internet, descendez en bas de la page et allez dans la rubrique contact afin de nous envoyer un message pour qu'on puisse régler le problème.</strong></p>
+                        <summary>Que faire si les données ne s'affichent plus sur le site ?</summary>
+                        <p class="text"><strong>Si ceci vous arrive, allez sur le site internet, descendez en bas de la page et allez dans la rubrique contact afin de nous envoyer un message pour que nous puissions régler le problème.</strong></p>
                     </details>
                     <details>
                         <summary>Y a-t-il une garantie pour mon bracelet connecté?</summary>
-                        <p class="text"><strong>Le bracelet est garantie pendant 3 ans.</strong></p>
+                        <p class="text"><strong>Le bracelet est garanti pendant 3 ans.</strong></p>
                     </details>
             </div>
         </div>
+</div>
 </div>
 
 <!-- Footer of page -->

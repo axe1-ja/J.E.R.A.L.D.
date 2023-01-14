@@ -622,15 +622,13 @@ img:hover + #texte {
 
 /* FAQ */
 .box2{
-    width: 2220px;
-    height: 1100px;
+    width: 95%;
     background-color: white;
     border-radius: 7px;
-    box-shadow: 1px 2px 4px rgb(0,0,0,.3);
     margin-top: 30px;
 }
 .box2 .heading{
-    background: rgb(31, 92, 197);
+    background: #181C8D;
     border-radius: 7px 7px 0px 0px;
     padding: 10px;
     color: #fff;
@@ -650,13 +648,14 @@ img:hover + #texte {
 }
  
 details{
-    background: lightgrey;
+    background: aliceblue;
     padding: 10px 20px;
     margin-top: 40px;
     font-family: "Rubik";
     font-size: 24px;
     letter-spacing: 1px;
     cursor: pointer;
+    border-radius: 5px;
 }
 details summary{
     outline: none;
@@ -1115,7 +1114,7 @@ h3 {
     height: 2em;
 }
 
-/*bracelet pic
+/*bracelet pic*/
 .bracelet-pic{
     color: transparent;
     display: flex;
