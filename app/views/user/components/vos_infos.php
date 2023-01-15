@@ -1,13 +1,9 @@
 
 <div class="mt-3">
-    <div class="card center" style="width: 50rem;">
+    <div class="card center" style="width: 50rem;max-width:90%">
         <div class="card-body px-3">
-            <!-- <div class="row">
-                <div class="col-4">Identifiant de votre appareil</div>
-                <div class="col-8">123132123132132</div>
-            </div>-->
             <div class="row">
-                <!--! div class="col-8">Gerald Latortue</div> -->
+                
                 <div class="col-6 profile-pic">
                     <label class="mt-4 -label" for="file">
                         <span style="color:#181C8D">Change Image</span>
