@@ -18,18 +18,18 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
     </div>
 </div>
 
-<div class="container mt-4">
-    <div class="card center" style="width: 40rem">
+<div class="container">
+    <div class="card center" style="width: 40rem;max-width:90%">
         <div class="card-body">
             <div class="row">
-                <div class="col-11">
+                <div class="col-12">
                     <div class="text-center">
                         <h2>Contactez-nous</h2>
                     </div>
                 </div>
-                <div class="col-1 text-right">
+                <!--<div class="col-1 text-right">
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
-                </div>
+                </div>-->
             </div>
             <form class="text-left" action="report" method="post">
                 <div class="mb-3">

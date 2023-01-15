@@ -27,46 +27,43 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     </div>
 
     <div class="row pt-4" >
-        <div class="col-4">
+        <div class="capteurs col-12">
             <a href="/public/user/cardio">
-                <img src="/public/resources/storage/Images/coeur.png" class="coeur" alt="">
+                <img src="/public/resources/storage/Images/coeur.png" class="userImg coeur" alt="">
             </a>
             <h3 class="text-white">
                 Rythme cardiaque 
             </h3>
         </div>
 
-        <div class="col-4">
+        <div class="capteurs col-12">
             <a href="/public/user/fall">
-                <img src="/public/resources/storage/Images/chute.png" class="chute" alt="">
+                <img src="/public/resources/storage/Images/chute.png" class="userImg chute" alt="">
             </a>
             <h3 class="text-white">
                 Détection Chute
             </h3>
         </div>
 
-        <div class="col-4">
+        <div class="capteurs col-12">
             <a href="/public/user/sound">
-                <img src="/public/resources/storage/Images/db.png" class="db" alt="">
+                <img src="/public/resources/storage/Images/db.png" class="userImg db" alt="">
             </a>
             <h3 class="text-white">
                 Niveau sonore
             </h3>
         </div>
-    </div>
-
-    <div class="row pt-3">
-        <div class="col-6">
+        <div class="capteurs col-12">
             <a href="/public/user/temperature">
-                <img src="/public/resources/storage/Images/temp.png" class="temp" alt="">
+                <img src="/public/resources/storage/Images/temp.png" class="userImg temp" alt="">
             </a>
             <h3 class="text-white"> 
                 Température corporelle
             </h3>
         </div>
-        <div class="col-6 pt-4">
+        <div class="capteurs col-12">
             <a href="/public/user/environment">
-                <img src="/public/resources/storage/Images/envi.png" class="envi" alt="">
+                <img src="/public/resources/storage/Images/envi.png" class="userImg envi" alt="">
             </a>
             <h3 class="text-white"> 
                 Données environnantes 
