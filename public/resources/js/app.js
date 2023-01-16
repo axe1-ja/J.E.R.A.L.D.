@@ -146,16 +146,29 @@ window.addEventListener('load',() => {
             toggleClassOnBreakpoint('remove', e, breakpoints['md'], 'col-4');
         });
 
-        // get the d-*breakpoint*-*block/none* elements (to make display breakpoints)
-        var breakCol = Array.prototype.slice.call($(".d-xxs-none.d-md-block"));
+        // get the col-2 + break-lg elements (to make breakpoint)
+        var breakCol = Array.prototype.slice.call($(".break-col-2-lg"));
         breakCol.forEach(e => {
+            toggleClassOnBreakpoint('add', e, breakpoints['lg'], 'col-12');
+            toggleClassOnBreakpoint('remove', e, breakpoints['lg'], 'col-2');
+        });
+        // get the col-10 + break-lg elements (to make breakpoint)
+        var breakCol = Array.prototype.slice.call($(".break-col-10-lg"));
+        breakCol.forEach(e => {
+            toggleClassOnBreakpoint('add', e, breakpoints['lg'], 'col-12');
+            toggleClassOnBreakpoint('remove', e, breakpoints['lg'], 'col-10');
+        });
+
+        // get the d-*breakpoint*-*block/none* elements (to make display breakpoints)
+        var breakDisp = Array.prototype.slice.call($(".d-xxs-none.d-md-block"));
+        breakDisp.forEach(e => {
             toggleClassOnBreakpoint('add', e, breakpoints['md'], 'd-none');
             toggleClassOnBreakpoint('remove', e, breakpoints['md'], 'd-block');
         });
 
         // get the d-*breakpoint*-*block/none* elements (to make display breakpoints)
-        var breakCol = Array.prototype.slice.call($(".d-xxs-none.d-lg-block"));
-        breakCol.forEach(e => {
+        var breakDisp = Array.prototype.slice.call($(".d-xxs-none.d-lg-block"));
+        breakDisp.forEach(e => {
             toggleClassOnBreakpoint('add', e, breakpoints['lg'], 'd-none');
             toggleClassOnBreakpoint('remove', e, breakpoints['lg'], 'd-block');
         });

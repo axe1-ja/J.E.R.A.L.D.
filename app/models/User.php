@@ -43,7 +43,7 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($result as $r) {
-            $users[] = new User($r["User_id"], $r["User_nom"], $r["User_Prenom"], $r['role'], $r["User_phone"], $r["User_email"], '', $r["User_address"]);
+            $users[] = new User($r["User_id"], $r["User_nom"], $r["User_Prenom"], $r['user_role'], $r["User_phone"], $r["User_email"], '', $r["User_address"]);
         }
 
         return $users;
@@ -93,6 +93,23 @@ class User {
         }
 
         return $messages;
+
+    }
+
+    
+    public function getEmergencyContacts() {
+        $db = new Database([]);
+
+        $query = "SELECT * FROM `emergencycontact` WHERE User_id=".$this->id.";";
+
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        foreach($result as $r){
+            $eC[]=new EmergencyContact($r['Emergency_id'], $r['Emergency_Name'], $r['Emergency_Number']);
+        }
+        
+        return $eC;
 
     }
 

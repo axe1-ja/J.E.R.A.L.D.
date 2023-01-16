@@ -109,6 +109,11 @@ if($_SESSION['loggedin']==1) {
     Route::set('user/sound',function(){ (new UserController)->sound(); });
     Route::set('user/temperature',function(){ (new UserController)->temperature(); });
     Route::set('user/environment',function(){ (new UserController)->environment(); });
+
+    // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
+    Route::set('forum',function(){ (new ForumController)->index(); });
+    Route::set('forum/details',function(){ (new ForumController)->details(); });
+
     Route::set('user/forum',function(){ (new UserController)->forum('forum'); });
     #Route::set('user/forum/{page}',function(){ (new UserController)->forum('forum',$page); });
     Route::set('user/forum1',function(){ (new UserController)->forum('forum1'); });

@@ -15,3 +15,26 @@ function sortObjects($array, $attribute, $order) {
 
     }
 }
+
+function paginate($array,$nbItems) {
+    
+}
+
+function getDateAndTimeDisplay($dt) {
+    $dt = explode(' ', $dt);
+    $date=explode('-',$dt[0]);
+    $date=$date[2].'/'.$date[1].'/'.$date[0];
+    $time=$dt[1];
+    $result = 'Le '.$date.', à '.$time;
+    return $result;
+}
+
+function getUserColor($user) {
+    
+    // colors for custom display
+    $colors = ['primary','secondary','grey','green','red','purple','pink','cyan','skyblue','bloodred'];
+
+    $color = $colors[$user%count($colors)];
+
+    return $color;
+}

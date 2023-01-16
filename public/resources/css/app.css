@@ -25,6 +25,11 @@
     --green:#2B6140;
     --black:#222222;
     --red:#F44336;
+    --purple:#a508cc;
+    --pink:#df2e9b;
+    --cyan:#06ffde;
+    --skyblue:#069bff;
+    --bloodred:#af0000;
     --navIcon: inline-block;
     --navItems: block;
     --navUl:none;
@@ -108,7 +113,7 @@
     opacity:1;
 }
 
-/*test transparent card*/
+/*test transparent break-col-3-md py-2*/
 .transcontainer{
     width : 100%;
     background-image : "public\resources\storage\Images\fond.jpg";
@@ -239,6 +244,11 @@
 .bg-grey { background-color: var(--grey); }
 .bg-green { background-color: var(--green); }
 .bg-black { background-color: var(--black); }
+.bg-purple { background-color: var(--purple); }
+.bg-pink { background-color: var(--pink); }
+.bg-cyan { background-color: var(--cyan); }
+.bg-skyblue { background-color: var(--skyblue); }
+.bg-bloodred { background-color: var(--bloodred); }
 .bg-red { background-color: var(--red)!important; }
 
 
@@ -406,6 +416,8 @@ label .form-label { font-size: 35px!important; }
 .f-4 {font-size:40px;}
 .f-5 {font-size:50px;}
 
+.bold { font-weight: bold;}
+
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left; }
@@ -477,6 +489,10 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     border-radius: 7px;
     background-color: aliceblue;
     padding: 10px;
+}
+.card.card-primary {
+    background-color: var(--primary)!important;
+    color: white;
 }
 
 
@@ -1111,6 +1127,7 @@ h3 {
     border-radius: 5px;
 }
 
+
 .graph {
     padding-top: 50px;
     padding-bottom: 10px;
@@ -1124,4 +1141,25 @@ h3 {
 canvas {
     background-color: white;
     border-radius: 5px;
+}
+
+
+.profile-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forum-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
