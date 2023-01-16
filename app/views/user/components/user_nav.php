@@ -9,7 +9,7 @@
             <a class="active" href="/public/user/profile">Profil</a>
         </li>
         <li class="nav-item p-2 f-4  ">
-            <a class="active" href="/public/user/forum">Forum</a>
+            <a class="active" href="/public/forum">Forum</a>
         </li>
     </ul>   
     

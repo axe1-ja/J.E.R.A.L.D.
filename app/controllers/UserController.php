@@ -36,8 +36,11 @@ class UserController extends Controller
     {
         $user = User::getUser($_SESSION["user"]->email);
 
+        $eC = $user->getEmergencyContacts();
+
         $this->view('user/profile', [
             'user'=>$user,
+            'eC'=>$eC,
         ]);
     }
 
@@ -53,6 +56,7 @@ class UserController extends Controller
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
         $bracelet = $result['bracelet_id'];
+
         $this->view('user/edit_profile', [
             'user'=>$user,
             'bracelet'=>$bracelet,
