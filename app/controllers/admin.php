@@ -41,12 +41,12 @@ class Admin extends Controller
 
             // get all users
             $cols = ['Id','Name','Last Name', 'Email', 'Address', 'Role'];
-            $query = "SELECT User_Prenom, User_nom, User_email, User_address, user_role FROM users;";
+            $query = "SELECT User_id, User_Prenom, User_nom, User_email, User_address, user_role FROM users;";
             $statement = $db->pdo->prepare($query);
             $statement->execute();
             $result=$statement->fetchAll(PDO::FETCH_ASSOC);
             foreach ($result as $row) { 
-                $data[] = [$row['User_Prenom'],$row['User_nom'],$row['User_email'],$row['User_address'],$row['user_role']];
+                $data[] = [$row['User_id'],$row['User_Prenom'],$row['User_nom'],$row['User_email'],$row['User_address'],$row['user_role']];
             }
 
         } elseif($model=='products'){

@@ -6,7 +6,7 @@ include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 
 <!-- Content of page -->
 
-<img src="/public/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
 
 <!-- Navbar  of page -->
 <?php
@@ -16,10 +16,10 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 <div class="container   text-center p-3">
     <div class="row">
         <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home"> 
             Accueil > 
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/product"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/product"> 
             Produit
             </a>
         </div>
@@ -30,7 +30,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
     <div class="card">
         <div class="row">
             <div class="break-col-6-md">
-                <img src="/public/resources/storage/Images/Bracelet.png" id='montre' class="center montre-md mt-5" alt="">
+                <img src="/resources/storage/Images/Bracelet.png" id='montre' class="center montre-md mt-5" alt="">
             </div>
             <div class="break-col-6-md">
                 <p class="f-3 p-2"> 
@@ -45,7 +45,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                 <p class="f-2 p-2"> 
                     Taille unique et réglable.
                 </p>
-                <img src="/public/resources/storage/Images/drapeau.jpg" class="center drapeau" alt="">
+                <img src="/resources/storage/Images/drapeau.jpg" class="center drapeau" alt="">
                 <p class="f-2 p-2"> 
                     100% français 
                 </p>
@@ -62,7 +62,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
                 <div class="row px-5">
                     <div class="capteurs col-12">
-                        <img src="/public/resources/storage/Images/chute.png" class="center img-produit box" alt="">
+                        <img src="/resources/storage/Images/chute.png" class="center img-produit box" alt="">
                         <div class='tooltip' id="texte">
                             Detection de chute : 
                             <br> 
@@ -76,7 +76,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                         </div>
                     </div>
                     <div class="capteurs col-12">
-                        <img src="/public/resources/storage/Images/coeur.png" class="center img-produit box" alt="">
+                        <img src="/resources/storage/Images/coeur.png" class="center img-produit box" alt="">
                         <div class='tooltip' id="texte">Capteur cardiaque : 
                             <br> 
                             Le bracelet EKAÏ est muni d'un électrocardiogramme 
@@ -89,7 +89,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                         </div>
                     </div>
                     <div class="capteurs col-12">
-                        <img src="/public/resources/storage/Images/envi.png" class="center img-produit box" alt="">
+                        <img src="/resources/storage/Images/envi.png" class="center img-produit box" alt="">
                         <div class='tooltip' id="texte">Capteur GPS : 
                             <br> 
                             Le bracelet EKAÏ étant muni d'une puce GPS 
@@ -109,7 +109,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                     </div>
 
                     <div class="capteurs col-12">
-                        <img src="/public/resources/storage/Images/temp.png" class="center img-produit box" alt="">
+                        <img src="/resources/storage/Images/temp.png" class="center img-produit box" alt="">
                         <div class='tooltip' id="texte"> Capteur de température corporelle : 
                             <br> 
                             Le bracelet EKAÏ est muni d'un thermomètre qui 
@@ -124,7 +124,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                         </div>
                     </div>
                     <div class="capteurs col-12">
-                        <img src="/public/resources/storage/Images/db.png" class="center img-produit box " alt="">
+                        <img src="/resources/storage/Images/db.png" class="center img-produit box " alt="">
                         <div class='tooltip' id="texte">Capteur sonore : 
                             <br> 
                             Le bracelet EKAÏ est muni d'un capteur sonore

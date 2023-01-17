@@ -11,10 +11,10 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 
 <div class="row">
     <div class="col-12 mx-2">
-    <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user">
+    <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user">
                 Accès clients >
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/profile"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/profile"> 
                 Contact
             </a>
     </div>

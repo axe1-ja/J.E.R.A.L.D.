@@ -4,4 +4,4 @@ session_unset();
 session_write_close();
 $_SESSION["user"] = "";
 session_destroy();
-header("Location: public/index/.php");
+header("Location: index/.php");

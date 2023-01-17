@@ -3,7 +3,7 @@
 <?php
 include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 ?>
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 <?php
 include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
@@ -11,8 +11,8 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
 <div class="container text-center py-4">
 	<div class="row">
 		<div class="col-12"> 
-			<a href="/public/home">
-				<img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
+			<a href="/home">
+				<img src="/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
 			</a>
 		</div>
 	</div>

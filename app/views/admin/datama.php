@@ -14,13 +14,13 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
         <h3 class="f-4">Tables</h3>
         <ul class='sidebar'>
             <li class="sidebar-item">
-                <a class="sidebar-link <?php if($data['model']=='users'): ?>active<?php endif; ?>" href="/public/admin/datama/users"><i class="bi bi-person"></i> Users</a>
+                <a class="sidebar-link <?php if($data['model']=='users'): ?>active<?php endif; ?>" href="/admin/datama/users"><i class="bi bi-person"></i> Users</a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link <?php if($data['model']=='products'): ?>active<?php endif; ?>" href="/public/admin/datama/products"><i class="bi bi-watch"></i> Products</a>
+                <a class="sidebar-link <?php if($data['model']=='products'): ?>active<?php endif; ?>" href="/admin/datama/products"><i class="bi bi-watch"></i> Products</a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link <?php if($data['model']=='forum'): ?>active<?php endif; ?>" href="/public/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a>
+                <a class="sidebar-link <?php if($data['model']=='forum'): ?>active<?php endif; ?>" href="/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a>
             </li>
         </ul>
     </div> 
