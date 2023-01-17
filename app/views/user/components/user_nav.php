@@ -1,15 +1,15 @@
-<!--<img src="/public/resources/storage/Images/fond.jpg" class="navbarback" alt="">-->
+<!--<img src="/resources/storage/Images/fond.jpg" class="navbarback" alt="">-->
 <nav class="navbar w-100">
-    <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
+    <a class="d-inline-block pt-1 ml-2" href="/home"><img id="logo" src="/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul id="nav-ul" class="navbar-ul">
         <li class="nav-item p-2 f-4">
-            <a class="active" aria-current="page" href="/public/user">Santé</a>
+            <a class="active" aria-current="page" href="/user">Santé</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active" href="/public/user/profile">Profil</a>
+            <a class="active" href="/user/profile">Profil</a>
         </li>
         <li class="nav-item p-2 f-4  ">
-            <a class="active" href="/public/forum">Forum</a>
+            <a class="active" href="/forum">Forum</a>
         </li>
     </ul>   
     
@@ -18,14 +18,14 @@
             <i class="bi bi-person"></i> <?php echo $_SESSION['user']->prenom." ".$_SESSION['user']->nom;?> <i class="bi bi-caret-down"></i>
         </button>
         <ul class="dropdown-content">
-            <li><a class="dropdown-item" href="/public/home">Accueil</a></li>
+            <li><a class="dropdown-item" href="/home">Accueil</a></li>
             <?php if($_SESSION['user']->role =='admin') : ?>
-                <li><a class="dropdown-item" href="/public/admin">Accès Admin</a></li>
+                <li><a class="dropdown-item" href="/admin">Accès Admin</a></li>
             <?php endif; ?>
-            <li><a class="dropdown-item" href="/public/user">Tableau de bord</a></li>
-            <li><a class="dropdown-item" href="/public/user/inbox">Messagerie</a></li>
-            <li><a class="dropdown-item" href="/public/user/profile">Profil</a></li>
-            <li><a class="dropdown-item" href="/public/logout">Déconnexion</a></li>
+            <li><a class="dropdown-item" href="/user">Tableau de bord</a></li>
+            <li><a class="dropdown-item" href="/user/inbox">Messagerie</a></li>
+            <li><a class="dropdown-item" href="/user/profile">Profil</a></li>
+            <li><a class="dropdown-item" href="/logout">Déconnexion</a></li>
         </ul>
     </div>
     

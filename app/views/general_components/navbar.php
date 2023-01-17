@@ -1,18 +1,18 @@
-<!--<img src="/public/resources/storage/Images/fond.jpg" class="navbarback" alt="">-->
+<!--<img src="/resources/storage/Images/fond.jpg" class="navbarback" alt="">-->
 <nav class="navbar w-100">
-    <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
+    <a class="d-inline-block pt-1 ml-2" href="/home"><img id="logo" src="/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul id="nav-ul" class="navbar-ul">
         <li class="nav-item p-2 f-4">
-            <a class="active"  aria-current="page" href="/public/product">Produit</a>
+            <a class="active"  aria-current="page" href="/product">Produit</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active"  href="/public/histoire">Histoire</a>
+            <a class="active"  href="/histoire">Histoire</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active"  href="/public/contact">Contact</a>
+            <a class="active"  href="/contact">Contact</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active"  href="/public/faq">F.A.Q</a>
+            <a class="active"  href="/faq">F.A.Q</a>
         </li>
     </ul>   
     
@@ -26,22 +26,22 @@
         </button>
         <ul class="dropdown-content">
             <?php if($_SESSION['loggedin']==0) : ?>
-                <li><a class="dropdown-item"  href="/public/login">Connexion</a></li>
-                <li><a class="dropdown-item"  href="/public/register">Inscription</a></li>
+                <li><a class="dropdown-item"  href="/login">Connexion</a></li>
+                <li><a class="dropdown-item"  href="/register">Inscription</a></li>
             
             <?php endif; ?>
 
             <?php if($_SESSION['loggedin']==1) : ?>
 
                 <?php if($_SESSION['user']->role =='client' || $_SESSION['user']->role =='admin') : ?>
-                    <li><a class="dropdown-item" href="/public/user">Accès utilisateur</a></li>
+                    <li><a class="dropdown-item" href="/user">Accès utilisateur</a></li>
                 <?php endif; ?>
 
                 <?php if($_SESSION['user']->role =='admin') : ?>
-                    <li><a class="dropdown-item" href="/public/admin">Accès admin</a></li>
+                    <li><a class="dropdown-item" href="/admin">Accès admin</a></li>
                 <?php endif; ?>
 
-                <li><a class="dropdown-item" href="/public/logout">Déconnexion</a></li>
+                <li><a class="dropdown-item" href="/logout">Déconnexion</a></li>
 
             <?php endif; ?>
 

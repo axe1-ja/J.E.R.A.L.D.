@@ -11,11 +11,12 @@ class Route {
 
         //print_r(self::$validRoutes);
         
-        if(isset($_SERVER['REQUEST_URI'])){ 
-            if($_SERVER['REQUEST_URI']=='/public/'||$_SERVER['REQUEST_URI']=='/public'){
+        if(isset($_SERVER['REQUEST_URI'])){
+            if($_SERVER['REQUEST_URI']=='/'||$_SERVER['REQUEST_URI']=='/'){
                 $url='/';
             } else {
-                $url = str_replace("/public/", "",filter_var(rtrim($_SERVER['REQUEST_URI'], '/'), FILTER_SANITIZE_URL));
+                $url = filter_var(rtrim($_SERVER['REQUEST_URI'], '/'), FILTER_SANITIZE_URL);
+                $url = substr($url,1,strlen($url));
                 if(strpos($route, '{') !== false){
                     $pos = strpos($route, '{');
                     $end = strpos($route, '}');

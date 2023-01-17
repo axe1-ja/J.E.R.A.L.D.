@@ -26,7 +26,7 @@ class App
     {
         if(isset($_SERVER['REQUEST_URI'])){ 
 
-            $url = str_replace("/public", "",filter_var(rtrim($_SERVER['REQUEST_URI'], '/'), FILTER_SANITIZE_URL));
+            $url = str_replace("", "",filter_var(rtrim($_SERVER['REQUEST_URI'], '/'), FILTER_SANITIZE_URL));
             //print_r($url);
             //$url=array_slice($url,2,count($url));
 

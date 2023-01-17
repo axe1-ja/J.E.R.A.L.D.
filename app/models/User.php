@@ -58,7 +58,7 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result=$result[0];
-        $user = new User($result["User_id"], $result["User_nom"], $result["User_Prenom"], $r['role'], $result["User_phone"], $result["User_email"], '', $result["User_address"]);
+        $user = new User($result["User_id"], $result["User_nom"], $result["User_Prenom"], $result['user_role'], $result["User_phone"], $result["User_email"], '', $result["User_address"]);
 
         return $user;
     }
@@ -83,7 +83,7 @@ class User {
     public static function conversationWith($interlocId) {
         $db = new Database([]);
         $user = User::getUser();
-
+        $messages=[];
         $query = "SELECT * FROM `messages` WHERE (User_Id_send=".$user->id." AND User_Id_receive=".$interlocId.") OR (User_Id_receive=".$user->id." AND User_Id_send=".$interlocId.");";
         $statement = $db->pdo->prepare($query);
         $statement->execute();

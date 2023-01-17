@@ -1,17 +1,17 @@
 <nav class="navbar bg-white w-100" style="z-index:2000">
-    <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
+    <a class="d-inline-block pt-1 ml-2" href="/home"><img id="logo" src="/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul class="d-inline-block navbar-ul m-2">
         <li class="nav-item p-2 f-4">
-            <a class="active" aria-current="page" href="/public/product">Produit</a>
+            <a class="active" aria-current="page" href="/product">Produit</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="active" href="/public/histoire">Histoire</a>
+            <a class="active" href="/histoire">Histoire</a>
         </li>
         <li class="nav-item p-2 f-3">
-            <a class="active" href="/public/contact">Contact</a>
+            <a class="active" href="/contact">Contact</a>
         </li>
         <li class="nav-item p-2 f-3">
-            <a class="active" href="/public/faq">F.A.Q</a>
+            <a class="active" href="/faq">F.A.Q</a>
         </li>
     </ul>   
     
@@ -26,22 +26,22 @@
         </button>
         <ul class="dropdown-content">
             <?php if($_SESSION['loggedin']==0) : ?>
-                <li><a class="dropdown-item" href="/public/login">Login</a></li>
-                <li><a class="dropdown-item" href="/public/register">Register</a></li>
+                <li><a class="dropdown-item" href="/login">Login</a></li>
+                <li><a class="dropdown-item" href="/register">Register</a></li>
             
             <?php endif; ?>
 
             <?php if($_SESSION['loggedin']==1) : ?>
 
                 <?php if($_SESSION['user']->role =='client' || $_SESSION['user']->role =='admin') : ?>
-                    <li><a class="dropdown-item" href="/public/user">User Access</a></li>
+                    <li><a class="dropdown-item" href="/user">User Access</a></li>
                 <?php endif; ?>
 
                 <?php if($_SESSION['user']->role =='admin') : ?>
-                    <li><a class="dropdown-item" href="/public/admin">Admin Access</a></li>
+                    <li><a class="dropdown-item" href="/admin">Admin Access</a></li>
                 <?php endif; ?>
 
-                <li><a class="dropdown-item" href="/public/logout">Logout</a></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
 
             <?php endif; ?>
 
