@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL);
-
-ini_set("display_errors",1);
 //print_r(realpath(dirname(__DIR__,1) .'/app/core/Controller.php'));
 //exit;
 // configurations for routes to work
@@ -28,6 +25,5 @@ if(!array_key_exists('user',$_SESSION)){
     $_SESSION['user_id']=0;
     $_SESSION['loggedin']=0;
 }
-
 require_once realpath(dirname(__DIR__,1) .'/app/routes/web.php');
 
