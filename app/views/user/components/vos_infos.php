@@ -39,6 +39,10 @@
                         <div class="col-4">Poids&nbsp</div>
                         <div class="col-8"><?php echo $data['user']->weight ?? 'NA';?> kg</div>
                     </div>
+                    <div class="row my-2">
+                        <div class="col-4">Identifiant appareil&nbsp</div>
+                        <div class="col-8"><?php echo $data['bracelet']->bracelet_id ?? 'NA';?></div>
+                    </div>
                 </div>
             </div>    
             <div class="row mt-3 text-center">
@@ -53,6 +57,7 @@
 </div>
 <ul>
 </ul>
+<!--
 <div class="mt-4">
     <div class="card center" style="width: 50rem;">
         <div class="card-body px-3">
@@ -80,3 +85,4 @@
         </div>
     </div>
 </div>
+-->

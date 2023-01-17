@@ -48,7 +48,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </h2>
         </div>
     </div>
-    <div class="row">
+    <div class="container">
             <div class="graph">
                 <canvas id="lineChart" style="background:white;"></canvas>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
