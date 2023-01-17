@@ -24,12 +24,12 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </a>
         </div>
     </div>
-    <div class="row">
+    <div class="container">
         <h2 class="text-white square">
             Voici les données environnantes
         </h2>
     </div>
-    <div class="row">
+    <div class="container">
         <h2 class="text-white square">
             graphique
         </h2>

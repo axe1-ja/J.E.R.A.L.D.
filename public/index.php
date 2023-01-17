@@ -1,10 +1,13 @@
 <?php
+error_reporting(E_ALL);
+
+ini_set("display_errors", 1);
 //print_r(realpath(dirname(__DIR__,1) .'/app/core/Controller.php'));
 //exit;
 // configurations for routes to work
 require_once realpath(dirname(__DIR__,1) .'/app/Library/functions.php');
 
-function __autoload($class){
+function autoloader($class){
     if(file_exists(realpath(dirname(__DIR__,1) .'/app/core/'.$class.'.php'))){
         require_once realpath(dirname(__DIR__,1) .'/app/core/'.$class.'.php');
     } elseif (file_exists(realpath(dirname(__DIR__,1) .'/app/controllers/'.$class.'.php'))){
@@ -13,6 +16,8 @@ function __autoload($class){
         require_once realpath(dirname(__DIR__,1) .'/app/models/'.$class.'.php');
     };
 };
+
+spl_autoload_register('autoloader');
 
 //$app = new App;
 session_start();

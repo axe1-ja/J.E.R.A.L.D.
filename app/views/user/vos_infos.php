@@ -57,12 +57,7 @@
 </div>
 <ul>
 </ul>
-<<<<<<< HEAD
 <!--div class="mt-4">
-=======
-<!--
-<div class="mt-4">
->>>>>>> 5cf277240b6514ca7d1989913a5a88f36be02d26
     <div class="card center" style="width: 50rem;">
         <div class="card-body px-3">
             <div class="row">
@@ -88,9 +83,4 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </div-->
-=======
-</div>
--->
->>>>>>> 5cf277240b6514ca7d1989913a5a88f36be02d26

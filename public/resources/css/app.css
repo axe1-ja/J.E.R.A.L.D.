@@ -6,11 +6,11 @@
 @font-face {
     font-family: Buda;
     src: url(../fonts/Buda-Light.ttf);
-}
-@font-face {
-    font-family: Clearlight;
-    src: url(../fonts/clearlight.ttf);
 }*/
+@font-face {
+    font-family: gliker;
+    src: url(../fonts/Gliker-Black.ttf);
+}
 @font-face {
     font-family: Watchword;
     src: url(../fonts/Watchword.otf);
