@@ -45,7 +45,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="row">
         <p class="text-white square"> 
             105 dB(A) : Risques immédiats/ court terme pour l'audition <br>
             85-105 dB(A) : Risques à moyen/long terme pour l'audition si exposition chronique : pertes auditives <br>

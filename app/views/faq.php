@@ -42,14 +42,14 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
             </div>
             <div class="break-col-4-md p-3">
                 <p class="text-primary f-2">Comment recharger la batterie de mon bracelet ?</p>
-                <p>Comme pour votre smartphone ou d'autres appareils éléctronique, vous pouvez charger votre bracelet à l'aide d'un câble fourni avec celui-ci.</p>
+                <p>Comme pour votre smartphone ou d'autres appareils électroniques, vous pouvez charger votre bracelet à l'aide d'un câble fourni avec celui-ci.</p>
             </div>
             <div class="break-col-4-md p-3">
                 <p class="text-primary f-2">Comment suivre mon activité à l'aide du bracelet ?</p>
                 <p>Le suivi du bracelet se fait directement depuis le site dans le tableau de bord de l'utilisateur après vous être login.</p>
             </div>
             <div class="break-col-4-md p-3">
-                <p class="text-primary f-2">Que faire si les données ne s'affiche plus sur le site ?</p>
+                <p class="text-primary f-2">Que faire si les données ne s'affichent plus sur le site ?</p>
                 <p>Si ceci vous arrive allez sur le site internet, descendez en bas de la page et allez dans la rubrique contact afin de nous envoyer un message pour qu'on puisse régler le problème.</p>
             </div>
             <div class="break-col-4-md p-3">

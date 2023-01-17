@@ -72,7 +72,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                             } else {
                         confirm_password.setCustomValidity('');
                             }
-                            var msg; 
+                            var msg;    
                             var str = document.getElementById("exampleInputPassword1").value; 
                             if (str.match( /[0-9]/g) && 
                                     str.match( /[A-Z]/g) && 

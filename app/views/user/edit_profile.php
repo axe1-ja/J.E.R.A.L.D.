@@ -78,10 +78,10 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                         <label for="exampleInputAdress" class="form-label">Poids</label>
                         <input type="text" class="form-control" id="exampleInputAdress" id="validationCustom03" name="weight" placeholder="Valeur en kg" value="<?php echo $data['user']->weight ?? '';?>" required>
                     </div>
-                    <ul>
+                    <br>
                     <div class="mb-3">
                         <label for="exampleInputBracelet" class="form-label">Identifiant Bracelet</label>
-                        <input type="text" class="form-control" id="exampleInputBracelet" id="validationCustom03" name="bracelet" placeholder="987654321" value="<?php echo $data['bracelet'] ?? '';?>" required>
+                        <input type="text" class="form-control" id="exampleInputBracelet" id="validationCustom03" name="bracelet" placeholder="987654321" value="<?php echo $data['bracelet']->bracelet_id ?? '';?>" required>
                     </div>
                     <div class="row">
                         <div class="col-12">

@@ -29,7 +29,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 
     <div class="container my-3">
         <div class="center w-75 text-right">
-            <a href="#bouton"><u class='text-primary'>Poser une qestion aux internautes</u></a>
+            <a href="#bouton"><u class='text-primary'>Poser une question aux internautes</u></a>
         </div>
     </div>
 

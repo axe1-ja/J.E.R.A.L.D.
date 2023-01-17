@@ -47,7 +47,7 @@
             </div>    
             <div class="row mt-3 text-center">
                 <div class="col-12">
-                    <a href="/user/edit/profile" class="card-link"> 
+                    <a href="/public/user/edit/profile" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
                     </a> 
                 </div>
@@ -57,12 +57,7 @@
 </div>
 <ul>
 </ul>
-<<<<<<< HEAD
 <!--div class="mt-4">
-=======
-<!--
-<div class="mt-4">
->>>>>>> 5cf277240b6514ca7d1989913a5a88f36be02d26
     <div class="card center" style="width: 50rem;">
         <div class="card-body px-3">
             <div class="row">
@@ -81,16 +76,11 @@
             </div>    
             <div class="row mt-3 text-center">
                 <div class="col-12">
-                    <a href="/user/edit/profile" class="card-link"> 
+                    <a href="/public/user/edit/profile" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
                     </a> 
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </div-->
-=======
-</div>
--->
->>>>>>> 5cf277240b6514ca7d1989913a5a88f36be02d26

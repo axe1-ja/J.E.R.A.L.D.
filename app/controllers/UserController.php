@@ -61,11 +61,17 @@ class UserController extends Controller
             'user'=>$user,
             'bracelet'=>$bracelet,
         ]);
+
+        //$this->view('user/vos_infos', [
+            //'user'=>$user,
+            //'bracelet'=>$bracelet,
+        //]);
     }
 
     public function edit_proches()
     {
         $this->view('user/edit_proches');
+
     }
 
     public function cardio()

@@ -75,7 +75,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Identifiant appareil :</span>
-                        <span><?php echo $data['user']->bracelet_id ?? 'NA';?></span>
+                        <span><?php echo $data['bracelet']->bracelet_id ?? 'NA';?></span>
                     </div>
                     
                 </div>

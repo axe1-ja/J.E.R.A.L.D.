@@ -14,7 +14,7 @@ class Authentification extends Controller
     public function create_failed()
     {
         $this->view('authentification/create', [
-            'error'=>'An account already exists with that email',
+            'error'=>'Cet email est déjà associé à un compte',
         ]);
     }
     

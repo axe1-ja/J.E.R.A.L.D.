@@ -16,13 +16,14 @@
     
     <div id="nav-dropdown" class="navbar-dropdown dropdown ml-3">
         <button class="btn btn-primary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person"></i> Admin User <i class="bi bi-caret-down"></i>
+            <i class="bi bi-person"></i> Administrateur <i class="bi bi-caret-down"></i>
         </button>
         <ul class="dropdown-content">
-            <li><a class="dropdown-item" href="/home">Home</a></li>
-            <li><a class="dropdown-item" href="/user">User Access</a></li>
-            <li><a class="dropdown-item" href="/admin/inbox">Inbox</a></li>
-            <li><a class="dropdown-item" href="/logout">Log out</a></li>
+            <li><a class="dropdown-item" href="/public/home">Accueil</a></li>
+            <li><a class="dropdown-item" href="/public/user">Accès utilisateur</a></li>
+            <li><a class="dropdown-item" href="/public/admin/inbox">Messagerie</a></li>
+            <li><a class="dropdown-item" href="/public/logout">Déconnexion</a></li>
+
         </ul>
     </div>
 

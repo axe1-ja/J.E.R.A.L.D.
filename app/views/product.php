@@ -40,7 +40,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                     69,96€
                 </p>
                 <p class="f-2 p-2"> 
-                    Plus qu'un bracelet EKAÏ s'adresse à toute une génération et permet à vous, futur possesseur, d'avoir un suivi continu de votre santé ainsi qu'une étude des risques que vous pouvez rencontrer dans la vie de tout les jours.
+                    Plus qu'un bracelet EKAÏ s'adresse à toute une génération et permet à vous, futur possesseur, d'avoir un suivi continu de votre santé ainsi qu'une étude des risques que vous pouvez rencontrer dans la vie de tous les jours.
                 </p>
                 <p class="f-2 p-2"> 
                     Taille unique et réglable.
@@ -56,7 +56,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
         <div class="row">
             <div class="col-12">
-                <p class="f-4 p-2 center"> Ce bracelet propose contient des capteurs de :</p>
+                <p class="f-4 p-2 center"> Ce bracelet contient des capteurs de :</p>
 
                 <br>
 
@@ -64,7 +64,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                     <div class="capteurs col-12">
                         <img src="/resources/storage/Images/chute.png" class="center img-produit box" alt="">
                         <div class='tooltip' id="texte">
-                            Detection de chute : 
+                            Détection de chute : 
                             <br> 
                             Le bracelet EKAÏ est muni d'un accéléromètre qui 
                             <br>
@@ -72,7 +72,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                             <br> 
                             un membre de sa famille ou les autorités afin que l'utilisateur
                             <br>
-                            soit pris en charge le plus rapidement que possible.
+                            soit pris en charge le plus rapidement possible.
                         </div>
                     </div>
                     <div class="capteurs col-12">
@@ -98,13 +98,13 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                             <br>
                             comme la pollution athmosphérique ou encore
                             <br> 
-                            la température à l'endroit où ce situe l'utilisateur.
+                            la température à l'endroit où se situe l'utilisateur.
                             <br>
-                            Une trop forte exposition à une pollution athmosphérique
+                            Une trop forte exposition à une pollution atmosphérique
                             <br>
-                            ou encore à une témpérature extérieure trop élevé
+                            ou encore à une température extérieure trop élevée
                             <br> 
-                            sera suivi d'une alerte.
+                            sera suivie d'une alerte.
                         </div>
                     </div>
 
@@ -170,7 +170,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
                             <td>
                                 <ul class="text-left">
                                     <li>Suivi santé en continu </li>
-                                    <li>Assistance 24h/24 </li>
+                                    <li>Assistance 24/24h </li>
                                     <li>Bracelet léger et confortable </li>
                                     <li>Site simple d'utilisation </li>
                                     <li>Grande autonomie </li>

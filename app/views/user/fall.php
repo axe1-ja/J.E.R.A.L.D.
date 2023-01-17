@@ -25,6 +25,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </a>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col-6">
             <div class="card center" style="width: 25rem;">
