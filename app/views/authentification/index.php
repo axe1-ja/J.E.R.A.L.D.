@@ -32,7 +32,9 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     </div>
                     <p>
                     <span id="info" class="error-info">
-                        <?php echo $data['erreur'];?>
+                        <?php if(isset($data['errur'])):?>
+                            <?php echo $data['erreur']?>
+                        <?php endif;?>
                     </span>
                 </p>
                 </div>
