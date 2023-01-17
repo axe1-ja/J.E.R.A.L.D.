@@ -6,7 +6,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 
 <?php
@@ -17,8 +17,8 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
 
     <div class="row">
         <div class="col-12"> 
-            <a href="/public/home">
-                <img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
+            <a href="/home">
+                <img src="/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
         </div>
     </div>
@@ -32,7 +32,9 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     </div>
                     <p>
                     <span id="info" class="error-info">
-                        <?php echo $data['erreur'];?>
+                        <?php if(isset($data['errur'])):?>
+                            <?php echo $data['erreur']?>
+                        <?php endif;?>
                     </span>
                 </p>
                 </div>
@@ -40,7 +42,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
-            <form action="/public/login-action" class="text-left" method="post" id="formLogin"
+            <form action="/login-action" class="text-left" method="post" id="formLogin"
                 onSubmit="return validate();">
                 <?php
                 if (isset($_SESSION["errorMessage"])) {
@@ -63,7 +65,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                 <div class="row g-0 mt-2">
                     <div class="col-6">
                         <div class="start">
-                            <a class="forgot-btn" href="/public/forgot_password" style="color:black">Mot de passe oublié ?</a>
+                            <a class="forgot-btn" href="/forgot_password" style="color:black">Mot de passe oublié ?</a>
                         </div>
                     </div>
                     <div class="col-6">
@@ -77,7 +79,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
     </div>
     <div class="row pt-2">
         <div class="col-12">
-            <a href="/public/register" class="card-link">
+            <a href="/register" class="card-link">
                 <h4 class="text-white">
                 Vous n'avez pas de compte ? Créez-en un!
                 </h4>

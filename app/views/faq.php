@@ -6,7 +6,7 @@ include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 
 <!-- Content of page -->
 
-<img src="/public/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/ocean2.jpg" class="w-100 background-image" alt="">
 
 <!-- Navbar  of page -->
 <?php
@@ -16,10 +16,10 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 <div class="container p-3">
     <div class="row">
         <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home"> 
             Accueil > 
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/faq"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/faq"> 
             FAQ
             </a>
         </div>

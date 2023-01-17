@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/public/resources/storage/Images/logo.ico">
+    <link rel="icon" type="image/x-icon" href="/resources/storage/Images/logo.ico">
     <title>EKAÏ</title>
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/public/resources/css/app.css">
-    <link rel="stylesheet" href="/public/resources/css/navbar.css">
+    <link rel="stylesheet" href="/resources/css/app.css">
+    <link rel="stylesheet" href="/resources/css/navbar.css">
 
     <!-- LIbrarie d'icones -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -20,9 +20,9 @@
     -->
     
     <!-- jquery -->
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <!-- fichier javascript -->
-    <script rel="text/JavaScript" src="/public/resources/js/app.js"></script>
+    <script rel="text/JavaScript" src="/resources/js/app.js"></script>
 </head>
 <body>

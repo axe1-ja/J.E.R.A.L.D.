@@ -56,7 +56,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                 <div class="col-6 text-right p-2">
                     <?php echo getDateAndTimeDisplay($f->datetime);?>
                     <div class='pt-2'>
-                        <form action="/public/forum/details" method="post">
+                        <form action="/forum/details" method="post">
                             <input type="text" name="forum" value='<?php echo $f->id;?>' class="d-none">
                             <button type='submit' class="btn btn-outline-primary">See forum details <i class="bi bi-caret-right"></i></button>
                         </form>
@@ -73,9 +73,9 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     <div class="col-6">
 
         <ul class="float-left" style='list-style-type:none'>
-            <li class="nav-item d-inline-block"><a class="nav-link" href="/public/user/forum"><i class="bi bi-person"></i> ALL</a></li>
-            <li class="nav-item d-inline-block"><a class="nav-link" href="/public/user/forum1"><i class="bi bi-person"></i> Forum 1</a></li>
-            <li class="nav-item d-inline-block"><a class="nav-link" href="/public/user/forum2"><i class="bi bi-person"></i> Forum 2</a></li>
+            <li class="nav-item d-inline-block"><a class="nav-link" href="/user/forum"><i class="bi bi-person"></i> ALL</a></li>
+            <li class="nav-item d-inline-block"><a class="nav-link" href="/user/forum1"><i class="bi bi-person"></i> Forum 1</a></li>
+            <li class="nav-item d-inline-block"><a class="nav-link" href="/user/forum2"><i class="bi bi-person"></i> Forum 2</a></li>
         </ul>
     </div>
     <div class="col-6 text-right">
@@ -111,9 +111,9 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         <div class="col-12 text-center">
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center ">
-                <li class='page-item'><a class="page-link" href="/public/user/forum">1</a></li>
+                <li class='page-item'><a class="page-link" href="/user/forum">1</a></li>
                 <?php for ($forumpage = 2; $forumpage <= ceil($data['page'][0]/10); $forumpage ++) { ?>
-                    <li class="page-item"><a class="page-link" href="/public/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
+                    <li class="page-item"><a class="page-link" href="/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
                     <?php } ?>
                 </ul>
             </nav>

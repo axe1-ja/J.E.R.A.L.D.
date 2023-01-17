@@ -48,7 +48,7 @@
     <div class="row mt-3 text-center">
         <div class="col-12">
             <h3 class="text-white fw-bold">En cas de chute, nous appellerons vos deux proches ci-dessus.</h3>
-            <a href="/public/user/edit/proches" class="card-link">     
+            <a href="/user/edit/proches" class="card-link">     
                 <button class="btn btn-outline-primary">Modifier</button>
             </a>
         </div>

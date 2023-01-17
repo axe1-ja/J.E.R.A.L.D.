@@ -1,9 +1,11 @@
 <?php
-error_reporting(E_ALL);
-
-ini_set("display_errors", 1);
 //print_r(realpath(dirname(__DIR__,1) .'/app/core/Controller.php'));
 //exit;
+
+error_reporting(E_ALL);
+
+ini_set("display_errors",1);
+
 // configurations for routes to work
 require_once realpath(dirname(__DIR__,1) .'/app/Library/functions.php');
 
@@ -28,6 +30,5 @@ if(!array_key_exists('user',$_SESSION)){
     $_SESSION['user_id']=0;
     $_SESSION['loggedin']=0;
 }
-
 require_once realpath(dirname(__DIR__,1) .'/app/routes/web.php');
 

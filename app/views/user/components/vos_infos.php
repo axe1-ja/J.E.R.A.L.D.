@@ -47,7 +47,7 @@
             </div>    
             <div class="row mt-3 text-center">
                 <div class="col-12">
-                    <a href="/public/user/edit/profile" class="card-link"> 
+                    <a href="/user/edit/profile" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
                     </a> 
                 </div>
@@ -81,7 +81,7 @@
             </div>    
             <div class="row mt-3 text-center">
                 <div class="col-12">
-                    <a href="/public/user/edit/profile" class="card-link"> 
+                    <a href="/user/edit/profile" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
                     </a> 
                 </div>

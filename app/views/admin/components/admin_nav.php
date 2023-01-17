@@ -1,16 +1,16 @@
-<!--<img src="/public/resources/storage/Images/fond.jpg" class="navbarback" alt="">-->
+<!--<img src="/resources/storage/Images/fond.jpg" class="navbarback" alt="">-->
 <nav class="navbar w-100">
-    <a class="d-inline-block pt-1 ml-2" href="/public/home"><img id="logo" src="/public/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
+    <a class="d-inline-block pt-1 ml-2" href="/home"><img id="logo" src="/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul id="nav-ul" class="navbar-ul">
         <li class="nav-item p-2 f-4">
-            <a class="<?php if($data['page']=='dashboard'){echo 'active';}?>" aria-current="page" href="/public/admin">Dashboard</a>
+            <a class="<?php if($data['page']=='dashboard'){echo 'active';}?>" aria-current="page" href="/admin">Dashboard</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="<?php if($data['page']=='datama'){echo 'active';}?>" href="/public/admin/datama">Data Management</a>
+            <a class="<?php if($data['page']=='datama'){echo 'active';}?>" href="/admin/datama">Data Management</a>
         </li>
         <li class="nav-item p-2 f-4">
         
-            <a class="<?php if($data['page']=='notifs'){echo 'active';}?>" href="/public/admin/notifs">Notifications</a>
+            <a class="<?php if($data['page']=='notifs'){echo 'active';}?>" href="/admin/notifs">Notifications</a>
         </li>
     </ul>
     
@@ -23,6 +23,7 @@
             <li><a class="dropdown-item" href="/public/user">Accès utilisateur</a></li>
             <li><a class="dropdown-item" href="/public/admin/inbox">Messagerie</a></li>
             <li><a class="dropdown-item" href="/public/logout">Déconnexion</a></li>
+
         </ul>
     </div>
 

@@ -3,7 +3,7 @@
 include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 ?>
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 <?php
 include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
@@ -12,10 +12,10 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 <div class="w-100 text-center p-3">
     <div class="row">
         <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home"> 
             Accueil > 
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/histoire"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/histoire"> 
             Histoire
             </a>
         </div>
@@ -34,7 +34,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
             </h3>
         </div>
         <div class="col-5 pt-4 d-xxs-none d-md-block text-right"> 
-            <img src="/public/resources/storage/Images/logo.ico" class="logo cadreImg" alt="">
+            <img src="/resources/storage/Images/logo.ico" class="logo cadreImg" alt="">
         </div>
     </div>
 
@@ -44,7 +44,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
     <div class="box1 center">
         <div class="card1">
             <div class="imgBx1">
-                <img src="/public/resources/storage/Images/logo.ico" alt="">
+                <img src="/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
                 <h2>Axel Joseph-Antoine<br><span>Membre 1</span></h2>
@@ -53,7 +53,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
         <div class="card1">
             <div class="imgBx1">
-                <img src="/public/resources/storage/Images/logo.ico" alt="">
+                <img src="/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
                 <h2>Diane Dinh<br><span>Membre 2</span></h2>
@@ -62,7 +62,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
         <div class="card1">
             <div class="imgBx1">
-                <img src="/public/resources/storage/Images/logo.ico" alt="">
+                <img src="/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
                 <h2>Romain Parreira<br><span>Membre 3</span></h2>
@@ -71,7 +71,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
         <div class="card1">
             <div class="imgBx1">
-                <img src="/public/resources/storage/Images/logo.ico" alt="">
+                <img src="/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
                 <h2>Léonard Gendrel<br><span>Membre 4</span></h2>
@@ -80,7 +80,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
         <div class="card1">
             <div class="imgBx1">
-                <img src="/public/resources/storage/Images/logo.ico" alt="">
+                <img src="/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
                 <h2>Elena Charpentier<br><span>Membre 5</span></h2>
@@ -89,7 +89,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
         <div class="card1">
             <div class="imgBx1">
-                <img src="/public/resources/storage/Images/logo.ico" alt="">
+                <img src="/resources/storage/Images/logo.ico" alt="">
             </div>
             <div class="details1">
                 <h2>Hyun Joon Yoo<br><span>Membre 6</span></h2>
@@ -117,7 +117,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
     <div class="row mt-3 px-4">
         <div class="col-4 pt-5 d-xxs-none d-lg-block text-left"> 
-            <img src="/public/resources/storage/Images/logo-app2.png" class="logo-notre-projet center cadreImg mt-4" alt="">
+            <img src="/resources/storage/Images/logo-app2.png" class="logo-notre-projet center cadreImg mt-4" alt="">
         </div>
         <div class="break-col-7-lg">
             <h1 class="titre1"> 

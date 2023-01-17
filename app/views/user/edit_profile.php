@@ -5,7 +5,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 
 <!-- Content of page -->
@@ -16,13 +16,13 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 <div class="text-center p-3">
     <div class="row">
         <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home">
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home">
                 Accueil >
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/profile"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/profile"> 
                 Profil >
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/edit_profile"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/edit_profile"> 
                 Modifier vos informations
             </a>
         </div>
@@ -33,8 +33,8 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     
     <div class="row">
         <div class="col-12"> 
-            <a href="/public/home">
-                <img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
+            <a href="/home">
+                <img src="/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
         </div>
     </div>
@@ -44,7 +44,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             <div class="mb-4 text-center">
                 <h3>Modifier vos informations</h3>
             </div> 
-            <form action="/public/user/update" method="post" class="row text-left">
+            <form action="/user/update" method="post" class="row text-left">
                 <div class="col-12"> 
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Nom</label>
@@ -86,7 +86,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-3 text-center">
-                                <a href="/public/user/profile" class="card-link">
+                                <a href="/user/profile" class="card-link">
                                     <button type="submit" class="btn btn-primary">Confirmer</button>
                                 </a>    
                             </div>

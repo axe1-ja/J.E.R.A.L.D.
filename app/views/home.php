@@ -5,7 +5,7 @@ include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 
 <?php
@@ -21,7 +21,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
     </div>
     <div class="row home-elements">
         <!--<div class="col-6">
-            <a href="/public/user">
+            <a href="/user">
                 <h5 class="access" id="homelink-left" class="text-white" style="font-size: 26px">
                     <i class="bi bi-caret-left"></i>
                     Accès Clients 
@@ -29,7 +29,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
             </a>   
         </div>-->
         <div class="col-12"> 
-            <img src="/public/resources/storage/Images/logo-app2.png" class="logo center" alt="">
+            <img src="/resources/storage/Images/logo-app2.png" class="logo center" alt="">
             <h1 class="titre mt-5">
                 <em>EKAÏ</em>
             </h1>  

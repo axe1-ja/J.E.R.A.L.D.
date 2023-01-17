@@ -4,7 +4,7 @@ include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 ?>
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 <?php
 include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
@@ -60,7 +60,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 <div class="row">
     <div class="col-4"></div>
     <div class="col-4 text-center text-white">
-        <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/public/privacy">politique de confidentialité</a>.</em></p>
+        <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/privacy">politique de confidentialité</a>.</em></p>
     </div>
 </div>
 

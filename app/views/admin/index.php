@@ -117,9 +117,9 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                     
                     <div class="row mt-3">
                         <div class="col-12">
-                            <h5 class="card-text">Users: <a href="/public/admin/datama/users">Manage Users</a></h5>
-                            <h5 class="card-text">Products: <a href="/public/admin/datama/products">Manage Products</a></h5>
-                            <h5 class="card-text">Forums: <a href="/public/admin/datama/forum">Manage Forums</a></h5>
+                            <h5 class="card-text">Users: <a href="/admin/datama/users">Manage Users</a></h5>
+                            <h5 class="card-text">Products: <a href="/admin/datama/products">Manage Products</a></h5>
+                            <h5 class="card-text">Forums: <a href="/admin/datama/forum">Manage Forums</a></h5>
                         </div>
                     </div>
                 </div>

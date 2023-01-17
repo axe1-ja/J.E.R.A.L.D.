@@ -109,7 +109,7 @@ class Forum {
         return $result;
     }
 
-    public function getForum($by, $val) {
+    public static function getForum($by, $val) {
         $db = new Database([]);
         $forums=[];
 

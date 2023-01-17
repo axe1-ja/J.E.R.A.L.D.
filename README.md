@@ -22,10 +22,11 @@ git pull origin main
 
 Ouvrir un terminal dans le folder du projet et lancer la commande:
 ```
+cd public
 php -S localhost:8888
 ```
 
-Puis aller sur 'http://localhost:8888/public/home/index'
+Puis aller sur 'http://localhost:8888/home/index'
 
 
 
@@ -43,7 +44,7 @@ php app/migration.php
 ```
 - ouvrir un nouveau terminal dans le projet (vscode) et ecrire la ligne de code suivante:
 ```
-APP_URL=localhost:8888/public 
+APP_URL=localhost:8888 
 APP_ENV=local 
 APP_NAME="EKAÏ" 
 

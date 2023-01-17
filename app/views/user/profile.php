@@ -5,7 +5,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
 
 <!-- Content of page -->
-<img src="/public/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
+<img src="/resources/storage/Images/fond.jpg" class="w-100 background-image" alt="">
 
 
 <!-- Content of page -->
@@ -16,10 +16,10 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 <div class="text-center p-3">
     <div class="row">
         <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/home">
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home">
                 Accueil >
             </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/public/user/profile"> 
+            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/profile"> 
                 Profil
             </a>
         </div>
@@ -39,7 +39,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     <?php echo $data['user']->prenom[0]."".$data['user']->nom[0]?>
                 </div>
                 <br>    
-                <a href="/public/user/edit/profile" class="card-link "> 
+                <a href="/user/edit/profile" class="card-link "> 
                     <button class="btn btn-outline-primary"><i class="bi bi-pen"></i> Modifier vos informations</button>
                 </a> 
             </div>
@@ -120,7 +120,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         </div>
         <div class="row">
             <div class="col-12 text-center p-2">
-                <a href="/public/user/edit/proches" class="card-link">     
+                <a href="/user/edit/proches" class="card-link">     
                     <button class="btn btn-outline-primary"><i class="bi bi-pencil"></i> Modifier les coordonnnées de vos proches</button>
                 </a>
             </div>

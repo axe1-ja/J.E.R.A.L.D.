@@ -12,10 +12,6 @@ class MessageController extends Controller
         $user = User::getUser();
         $messages = User::getUser()->getUserMessages();
         
-        if(!isset($interlocutorId) || $interlocutorId==null || $interlocutorId==''){
-            $interlocutorId= reset($interlocutors)->id;
-        }
-
         foreach(User::getAllUsers() as $u) {
             if($u->id!=$user->id && $u->id!=$interlocutorId){
                 $allUsers[] = $u;
@@ -36,6 +32,10 @@ class MessageController extends Controller
                     $interlocutors[$message->user_id_send]=User::findUser('User_id',$message->user_id_send);
                 }
             }
+        }
+
+        if(!isset($interlocutorId) || $interlocutorId==null || $interlocutorId==''){
+            $interlocutorId= reset($interlocutors)->id;
         }
 
         
@@ -63,7 +63,7 @@ class MessageController extends Controller
         $statement = $db->pdo->prepare($query);
         $statement->execute();
 
-        header('Location: http://localhost:8888/public/admin/inbox');
+        header('Location: http://localhost:8888/admin/inbox');
     }
 
     public function add() {

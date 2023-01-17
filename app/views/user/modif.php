@@ -19,8 +19,8 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     
     <div class="row">
         <div class="col-12"> 
-            <a href="/public/home">
-                <img src="/public/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
+            <a href="/home">
+                <img src="/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
             </a>
         </div>
     </div>
@@ -54,7 +54,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3 text-center">
-                            <a href="/public/user/profile" class="card-link">
+                            <a href="/user/profile" class="card-link">
                                 <button type="submit" class="btn btn-primary">Confirmer</button>
                             </a>    
                         </div>
