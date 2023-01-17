@@ -39,7 +39,7 @@ Puis aller sur 'http://localhost:8888/public/home/index'
 - dans le projet, créer un fichier '.env' (dans le meme folder que '.gitignore' et 'README.md')
 - mettre le code suivant dedans:
 ```
-php app/migrations.php        
+php app/migration.php        
 ```
 - ouvrir un nouveau terminal dans le projet (vscode) et ecrire la ligne de code suivante:
 ```
