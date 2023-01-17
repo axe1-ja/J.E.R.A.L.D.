@@ -9,7 +9,7 @@
             <a class="active" href="/public/user/profile">Profil</a>
         </li>
         <li class="nav-item p-2 f-4  ">
-            <a class="active" href="/public/user/forum">Forum</a>
+            <a class="active" href="/public/forum">Forum</a>
         </li>
     </ul>   
     
@@ -37,14 +37,14 @@
 <script>
     function showNav() {
         var x = document.getElementById("nav-ul");
-        if (x.style.display === "none") {
+        if (x.style.display === "none" || x.style.display == "") {
             x.style.display = "block";
             x.style.position = "relative";
         } else {
             x.style.display = "none";
         }
         var y = document.getElementById("nav-dropdown");
-        if (y.style.display === "none") {
+        if (y.style.display === "none"  || y.style.display == "") {
             y.style.display = "block";
             y.style.position = "relative";
             y.style.margin = "0px 0px 50px 55px";

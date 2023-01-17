@@ -21,7 +21,6 @@ class UserController extends Controller
 
         $query=$query."UPDATE `users` SET `User_Prenom`='".$_POST['prenom']."',`User_nom`='".$_POST['nom']."',`User_DOB`='".$_POST['dob']."',`User_phone`='".$_POST['phone']."',`User_email`='".$_POST['email']."',`User_address`='".$_POST['adress']."',`User_height`='".$_POST['height']."',`User_Weight`='".$_POST['weight']."' WHERE `User_email`='".$_SESSION["user"]->email."';";
         
-        //Debugger::dd($query);
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $user = User::getUser($_SESSION["user"]->email);
@@ -37,8 +36,11 @@ class UserController extends Controller
     {
         $user = User::getUser($_SESSION["user"]->email);
 
+        $eC = $user->getEmergencyContacts();
+
         $this->view('user/profile', [
             'user'=>$user,
+            'eC'=>$eC,
         ]);
     }
 
@@ -54,6 +56,7 @@ class UserController extends Controller
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
         $bracelet = $result['bracelet_id'];
+
         $this->view('user/edit_profile', [
             'user'=>$user,
             'bracelet'=>$bracelet,
@@ -88,24 +91,27 @@ class UserController extends Controller
     
     public function forum($model='forum')
     {
-        
 
         if($model=='forum'){
             $data = Forum::getforumAll();
+            $data= array_slice($data,0,10);
             $page = [Forum::getforumPageAll()];
-            // Debugger::dd($data);
-            
-        }elseif($model=='forum_p2'){
-            
-        }elseif($model=='forum_p3'){
-
+        
         }elseif($model=='forum1'){
             $data = Forum::getforumType1();
             $page = [Forum::getforumPageType1()];
-        } elseif($model=='forum2'){
+        }elseif($model=='forum2'){
             $data = Forum::getforumType2();
             $page = [Forum::getforumPageType2()];
-        } 
+        }else{
+            $model = substr($model, 7);
+            $data = Forum::getforumAll();
+            $data= array_slice($data,($model-1)*10,($model-1)*10+10);
+            $page = [Forum::getforumPageAll()];
+
+        }
+                    
+    
         $this->view('user/forum', [
             'model'=>$model,
             'data'=>$data,

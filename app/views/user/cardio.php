@@ -106,8 +106,6 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     {title: {display: true, text: 'Evolution de votre temprature cardiaque'}},
                     }
                 };
-                
-
                 const myChart = new Chart(
                 document.getElementById('lineChart'),
                 config

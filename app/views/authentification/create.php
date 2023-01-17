@@ -15,7 +15,6 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
 
 
 <div class="container text-center py-4">
-    
     <div class="row">
         <div class="col-12"> 
             <a href="/public/home">
@@ -25,6 +24,11 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
     </div>
 
     <div class="container center" style="width: 40rem;">
+        <?php if(isset($data['error'])):?>
+            <div class="card bg-red mb-2">
+                <?php echo $data['error'];?>
+            </div>
+        <?php endif;?>
         <div class="card">
             <div class="row">
                 <div class="col-11">

@@ -51,6 +51,7 @@ Route::set('faq',function(){
 if($_SESSION['loggedin']==0) {
     Route::set('login',function(){ (new authentification)->index(); });
     Route::set('register',function(){ (new authentification)->create(); });
+    Route::set('register_failed',function(){ (new authentification)->create_failed(); });
     Route::set('create-user',function(){ (new authentification)->store(); });
     Route::set('login-action',function(){ (new authentification)->loginaction(); });
     Route::set('forgot_password',function(){ (new authentification)->forgot(); });
@@ -85,9 +86,11 @@ if($_SESSION['loggedin']==1) {
         Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
         Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });
         Route::set('admin/datama/roles',function(){ (new admin)->datama('roles'); });
-        Route::set('admin/inbox',function(){ (new MessageController)->inbox('admin'); });
 
-        Route::set('admin/inbox',function(){ (new MessageController)->inbox('admin'); });
+        // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
+        Route::set('admin/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
+        Route::set('admin/inbox',function(){ (new MessageController)->inbox(null); });
+
         // End of Admin routes
         // -------------------
     }
@@ -106,6 +109,11 @@ if($_SESSION['loggedin']==1) {
     Route::set('user/sound',function(){ (new UserController)->sound(); });
     Route::set('user/temperature',function(){ (new UserController)->temperature(); });
     Route::set('user/environment',function(){ (new UserController)->environment(); });
+
+    // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
+    Route::set('forum',function(){ (new ForumController)->index(); });
+    Route::set('forum/details',function(){ (new ForumController)->details(); });
+
     Route::set('user/forum',function(){ (new UserController)->forum('forum'); });
     #Route::set('user/forum/{page}',function(){ (new UserController)->forum('forum',$page); });
     Route::set('user/forum1',function(){ (new UserController)->forum('forum1'); });
