@@ -21,7 +21,7 @@
                     <div class="col-12">
                         <div class="mb-3 text-center">
                             <a href="/public/user/profile" class="card-link">
-                                <button type="submit" class="btn btn-primary">Confirmer</button>
+                                <button type="submit" onclick="location.href='app\views\user\components\modif_proches2.php';" class="btn btn-primary">Confirmer</button>
                             </a>    
                         </div>
                     </div>
