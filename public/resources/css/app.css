@@ -1018,7 +1018,7 @@ h3 {
     outline: rgba(128, 128, 128, 0.8);
 }
 
-.error-info{
+.error-info{    
     color : red ;
     font-weight : bold;
 }
