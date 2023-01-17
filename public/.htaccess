@@ -1,4 +1,3 @@
-Options Indexes MutliViews
 RewriteEngine on
     RewriteBase /public/
     RewriteCond %{REQUEST_FILENAME} !-f
