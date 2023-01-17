@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+
+ini_set("display_errors", 1);
 //print_r(realpath(dirname(__DIR__,1) .'/app/core/Controller.php'));
 //exit;
 // configurations for routes to work
