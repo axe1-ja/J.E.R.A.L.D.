@@ -1,13 +1,11 @@
 <?php
-require_once 'app\core\App.php';
 require_once 'app\core\Database.php';
 
 
-$config = [];
-$e=explode(" ", file_get_contents('.env'));
-foreach($e as $f) {
-    $config[explode('=',$f)[0]]=explode('=',$f)[1];
-}
-$app = new App($config);
+// configurations for routes to work
+require_once realpath(dirname(__DIR__,1) .'/app/Library/functions.php');
 
-$app->db->downAllMigrations();
+
+$db = new Database();
+
+$db->downAllMigrations();

@@ -48,9 +48,9 @@ function callenv() {
         $config['DB_PASSWORD'] = '';
     } else {
         // if on server
-        $config['DB_DSN'] = getenv('DB_DSN'); //should be :  mysql:host=82.64.120.113;port=3306;dbname=jeraldb_master
-        $config['DB_USERNAME'] = getenv('DB_USERNAME'); //  s.b: axel
-        $config['DB_PASSWORD'] = getenv('DB_PASSWORD'); // : ic0d9##n3UZS4jd%
+        $config['DB_DSN'] = getenv('DB_DSN'); //should be :         mysql:host=82.64.120.113;port=3306;dbname=jeraldb_master
+        $config['DB_USERNAME'] = getenv('DB_USERNAME'); //  s.b:    jerald
+        $config['DB_PASSWORD'] = getenv('DB_PASSWORD'); // :        vqt2~sNDbuJpXRZ,
     }
 
     return $config;
