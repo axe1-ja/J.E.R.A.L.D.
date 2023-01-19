@@ -4,7 +4,7 @@ class Admin extends Controller
 {
     public function index()
     {
-        $db = new Database([]);
+        $db = new Database();
 
         $user= $_SESSION['user']->prenom." ".$_SESSION['user']->nom;
         $stats=[];
@@ -35,7 +35,7 @@ class Admin extends Controller
     public function datama($model='users')
     {
         
-        $db = new Database([]);
+        $db = new Database();
 
         if($model=='users'){
 

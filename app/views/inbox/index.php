@@ -15,7 +15,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
                 <form action="/admin/inbox" method="post">
                     <select class="form-control mb-2" name="userChosen" id="userChosen">
                             <option value="" disabled selected>Selectionner un utilisateur</option>
-                        <?php foreach($data['allUsers'] as $u) : ?>
+                        <?php foreach($allUsers as $u) : ?>
                             <option value="<?php echo $u->id; ?>"><?php echo $u->prenom.' '.$u->nom; ?></option>
                         <?php endforeach; ?>
                     </select>
@@ -32,7 +32,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
 <!-- Content of page -->
 <?php
-//if($data['user']->role=='admin'){
+//if($user->role=='admin'){
     include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
 /*} else {
     include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
@@ -45,11 +45,11 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
             <li class="title f-3 p-3 text-center">All Conversations</li>
 
-            <?php foreach($data['interlocutors'] as $interl): ?>
-                <li class="conversationTab <?php if($data['interlocutorId']==$interl->id):?>active<?php endif;?>">
+            <?php foreach($interlocutors as $interl): ?>
+                <li class="conversationTab <?php if($interlocutorId==$interl->id):?>active<?php endif;?>">
                     <a href="/admin/inbox/<?php echo $interl->id?>">
                         <h5><?php echo "".$interl->prenom.' '.$interl->nom;?> <i class="bi bi-caret-right"></i></h5>
-                        <?php $lastmsg = end($data['conv'][$interl->id]) ?>
+                        <?php $lastmsg = end($conv[$interl->id]) ?>
                         <div class="row">
                             <div class="col-6 f-1">
                                 <em>
@@ -83,13 +83,13 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
     <div class="col-8 p-0">
         <div class="conversation_container">
-            <?php 
-            $msgs = $data['conv'][$data['interlocutorId']];
+            <?php
+            $msgs = $conv[$interlocutorId];
             ?>
             <?php foreach($msgs as $msg): ?>
                 <div class="row">
                     <div class="col-12">
-                        <?php if($msg->user_id_receive==$data['interlocutorId']): ?>
+                        <?php if($msg->user_id_receive==$interlocutorId): ?>
                             <div class="messageSender">
                                 <?php echo $msg->message_content;?>
                             </div>
@@ -107,7 +107,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
         <div class="input_container">
             <form action="/inbox/send" method="post">
-                <input type="text" name="interlocutor" value="<?php echo $data['interlocutorId'];?>" class="d-none">
+                <input type="text" name="interlocutor" value="<?php echo $interlocutorId;?>" class="d-none">
                 <input class="dm_input" type="text" placeholder="Type a message..." name="message" id="">
                 <button class="btn btn-outline-primary mr-2 d-inline inbox_sendButton" type="submit">Send</button>
             </form>

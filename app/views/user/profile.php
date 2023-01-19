@@ -36,7 +36,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         <div class="row">
             <div class="p-3 break-col-2-lg text-center">
                 <div class="bg-primary center text-white profile-circle">
-                    <?php echo $data['user']->prenom[0]."".$data['user']->nom[0]?>
+                    <?php echo $user->prenom[0]."".$user->nom[0]?>
                 </div>
                 <br>    
                 <a href="/user/edit/profile" class="card-link "> 
@@ -46,36 +46,36 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             
             <div class="p-3 break-col-10-lg">
                 <h3 class="text-black">
-                    <?php echo $data['user']->prenom." ".$data['user']->nom;?> 
+                    <?php echo $user->prenom." ".$user->nom;?> 
                 </h3>
                 <div class="row">
                     <div class="break-col-4-md py-2">
                         <span class="bold">Adresse e-mail :</span>
-                        <span><?php echo $data['user']->email;?></span>
+                        <span><?php echo $user->email;?></span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Téléphone :</span>
-                        <span><?php echo $data['user']->phone;?></span>
+                        <span><?php echo $user->phone;?></span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Adresse postale :</span>
-                        <span><?php echo $data['user']->adress;?></span>
+                        <span><?php echo $user->adress;?></span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Date de naissance :</span>
-                        <span><?php echo $data['user']->dob ?? 'NA';?></span>
+                        <span><?php echo $user->dob ?? 'NA';?></span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Taille :</span>
-                        <span><?php echo $data['user']->height ?? 'NA';?> cm</span>
+                        <span><?php echo $user->height ?? 'NA';?> cm</span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Poids :</span>
-                        <span><?php echo $data['user']->weight ?? 'NA';?> kg</span>
+                        <span><?php echo $user->weight ?? 'NA';?> kg</span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Identifiant appareil :</span>
-                        <span><?php echo $data['bracelet']->bracelet_id ?? 'NA';?></span>
+                        <span><?php echo $bracelet->bracelet_id ?? 'NA';?></span>
                     </div>
                     
                 </div>
@@ -95,7 +95,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         </div>
         
         <div class="row">
-            <?php foreach($data['eC'] as $e):?>
+            <?php foreach($eC as $e):?>
                 <div class="break-col-4-md p-2">
                     <div class="card card-primary center">
                         <div class="card-body">

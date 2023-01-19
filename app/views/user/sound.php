@@ -29,7 +29,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     <div class="row">
         <div class="col-6">
                 <h2 class="text-white"> 
-                    Bonjour, <?php echo $data['user']->prenom." ".$data['user']->nom;?>
+                    Bonjour, <?php echo $user->prenom." ".$user->nom;?>
                 </h2>
                 <h2 class="text-white"> 
                     Le niveau sonore autour de vous est 

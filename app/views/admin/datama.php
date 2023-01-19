@@ -14,13 +14,13 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
         <h3 class="f-4">Tables</h3>
         <ul class='sidebar'>
             <li class="sidebar-item">
-                <a class="sidebar-link <?php if($data['model']=='users'): ?>active<?php endif; ?>" href="/admin/datama/users"><i class="bi bi-person"></i> Users</a>
+                <a class="sidebar-link <?php if($model=='users'): ?>active<?php endif; ?>" href="/admin/datama/users"><i class="bi bi-person"></i> Users</a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link <?php if($data['model']=='products'): ?>active<?php endif; ?>" href="/admin/datama/products"><i class="bi bi-watch"></i> Products</a>
+                <a class="sidebar-link <?php if($model=='products'): ?>active<?php endif; ?>" href="/admin/datama/products"><i class="bi bi-watch"></i> Products</a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link <?php if($data['model']=='forum'): ?>active<?php endif; ?>" href="/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a>
+                <a class="sidebar-link <?php if($model=='forum'): ?>active<?php endif; ?>" href="/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a>
             </li>
         </ul>
     </div> 
@@ -28,7 +28,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
         <div class="col-12 px-5">
             <div class="row">
                 <div class="col-8">
-                    <h3 class="m-0 f-4 m-0"><?php echo ucfirst($data['model']);?></h3>
+                    <h3 class="m-0 f-4 m-0"><?php echo ucfirst($model);?></h3>
                 </div>
                 <div class="col-4">
                     <form class="d-flex" role="search">
@@ -48,13 +48,13 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                 <table class="table">
                     <thead>
                         <tr>
-                            <?php foreach($data['cols'] as $col): ?>
+                            <?php foreach($cols as $col): ?>
                                 <th><?php echo $col;?></th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>
                         <tbody>
-                            <?php foreach($data['data'] as $el): ?>
+                            <?php foreach($data as $el): ?>
                                 <tr>
                                     <th scope="row"><?php echo $el[0];?></th>
                                     <td><?php echo $el[1];?></td>

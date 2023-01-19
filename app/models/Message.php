@@ -1,24 +1,11 @@
 <?php
 
-class Message {
+class Message extends Model{
     public $id;
     public $user_id_send;
     public $user_id_receive;
     public $message_content;
     public $message_datetime;
-
-
-    
-    public function __construct($id, $user_id_send, $user_id_receive, $message_content, $message_datetime)
-    {
-        $this->id = $id;
-        $this->user_id_send = $user_id_send;
-        $this->user_id_receive = $user_id_receive;
-        $this->message_content = $message_content;
-        $this->message_datetime = $message_datetime;
-        
-        return $this;
-    }
 
 
     

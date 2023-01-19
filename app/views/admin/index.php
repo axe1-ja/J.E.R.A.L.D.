@@ -26,7 +26,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                     </div>
                     <div class="row mt-3">
                         <div class="col-12">
-                            <p class="card-text">Name: : <?php echo $data['user'] ?></p>
+                            <p class="card-text">Name: : <?php echo $user ?></p>
                             <p class="card-text">Company: : EKAÏ</p>
                             <p class="card-text">Company position: Developer</p>
                         </div>
@@ -50,9 +50,9 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                     
                     <div class="row mt-3">
                         <div class="col-12">
-                            <p class="card-text">Users: <?php echo $data['stats']['users'] ?></p>
+                            <p class="card-text">Users: <?php echo $stats['users'] ?></p>
                             <p class="card-text">Visitor growth: <span class="text-success">+21%</span></p>
-                            <p class="card-text">Products sold: <?php echo $data['stats']['products'] ?></p>
+                            <p class="card-text">Products sold: <?php echo $stats['products'] ?></p>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                     <div class="row mt-3">
                         <div class="col-12">
                             <?php $i=0 ?>
-                            <?php foreach($data['notifs'] as $n): ?>
+                            <?php foreach($notifs as $n): ?>
                                 <span class="card-text d-block"><i class="bi bi-exclamation"></i> <?php echo $n;?> <a href="#notif<?php echo $i?>">view</a></span>
                                 <?php $i++ ?>
                             <?php endforeach; ?>

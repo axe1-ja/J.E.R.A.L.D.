@@ -5,17 +5,18 @@ class Database {
 
     public \PDO $pdo;
 
-    public function __construct(array $config)
+    public function __construct()
     {
         try {
             // get the dsn, user and password to be able to connect to the database
             //$dsn = $config['DB_DSN']."=".$config['DB_HOST'].";port=".$config['DB_PORT'].";dbname=".$config['DB_NAME'] ?? '';
             //$user = $config['DB_USER'] ?? '';
             //$password = $config['DB_PASSWORD'] ?? '';
-            $dsn = 'mysql:host=127.0.0.1;port=3306;dbname=jeraldb_master';// pour le mac, host = 127.0.0.1
-            $user = 'root';
-            $password = '';
-            
+            $config = callenv();
+            $dsn = $config['DB_DSN'];// pour le mac, host = 127.0.0.1
+            $user = $config['DB_USERNAME'];
+            $password = $config['DB_PASSWORD'];
+            //dd([$dsn, $user, $password]);
             // create an instance of the PDO (to connect to the database)
             $this->pdo = new \PDO($dsn, $user, $password);
         }

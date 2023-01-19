@@ -1,7 +1,7 @@
 <?php
 
 
-class Forum {
+class Forum extends Model{
     public $id;
     public $object;
     public $content;
@@ -9,21 +9,9 @@ class Forum {
     public $User_id;
 
 
-    public function __construct($id, $object, $content, $datetime, $User_id) 
-    {
-        $this->id = $id;
-        $this->object = $object;
-        $this->content = $content;
-        $this->datetime = $datetime;
-        $this->User_id = $User_id;
-
-        return $this;
-    }
-    
-
     public static function getAllForums() {
         
-        $db = new Database([]);
+        $db = new Database();
         $forums=[];
 
         $query = "SELECT * FROM `forum` ORDER BY `forum`.`forum_datetime` DESC;";
@@ -32,7 +20,13 @@ class Forum {
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
 
         foreach($result as $r) {
-            $forums[]=new Forum($r['forum_id'], $r['forum_object'], $r['forum_content'], $r['forum_datetime'], $r['User_id']);
+            $forums[]=new Forum([
+                'id'=>$r['forum_id'], 
+                'object'=>$r['forum_object'], 
+                'content'=>$r['forum_content'], 
+                'datetime'=>$r['forum_datetime'], 
+                'User_id'=>$r['User_id']
+            ]);
         }
 
         return $forums;
@@ -41,7 +35,7 @@ class Forum {
 
     public static function getforumAll() {
         
-        $db = new Database([]);
+        $db = new Database();
         
         $query = "SELECT * FROM `Forum` ;";
         $statement = $db->pdo->prepare($query);
@@ -54,7 +48,7 @@ class Forum {
 
     public static function getforumType1() {
         
-        $db = new Database([]);
+        $db = new Database();
         
         $query = "SELECT * FROM `Forum` WHERE forum_type = '1';";
         $statement = $db->pdo->prepare($query);
@@ -64,7 +58,7 @@ class Forum {
     }
     public static function getforumType2() {
         
-        $db = new Database([]);
+        $db = new Database();
         
         $query = "SELECT * FROM `Forum` WHERE forum_type = '2';";
         $statement = $db->pdo->prepare($query);
@@ -75,7 +69,7 @@ class Forum {
 
     public static function getforumPageAll() {
         
-        $db = new Database([]);
+        $db = new Database();
         $query = "SELECT count(*) FROM `Forum`;";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
@@ -86,7 +80,7 @@ class Forum {
     }
     public static function getforumPageType1() {
         
-        $db = new Database([]);
+        $db = new Database();
         $query = "SELECT count(*) FROM `Forum` WHERE forum_type = '1';";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
@@ -98,7 +92,7 @@ class Forum {
     }
     public static function getforumPageType2() {
         
-        $db = new Database([]);
+        $db = new Database();
         $query = "SELECT count(*) FROM `Forum` WHERE forum_type = '2';";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
@@ -110,7 +104,7 @@ class Forum {
     }
 
     public static function getForum($by, $val) {
-        $db = new Database([]);
+        $db = new Database();
         $forums=[];
 
         $query = "SELECT * FROM `forum` WHERE ".$by." = '".$val."';";
@@ -118,22 +112,37 @@ class Forum {
         $statement->execute();
         $r=$statement->fetchAll(PDO::FETCH_ASSOC)[0];
 
-        $forum=new Forum($r['forum_id'], $r['forum_object'], $r['forum_content'], $r['forum_datetime'], $r['User_id']);
+        $forum=new Forum([
+            'id'=>$r['forum_id'], 
+            'object'=>$r['forum_object'], 
+            'content'=>$r['forum_content'], 
+            'datetime'=>$r['forum_datetime'], 
+            'User_id'=>$r['User_id']
+        ]);
 
         return $forum;
     }
 
     public function getUser() {
 
-        $db = new Database([]);
+        $db = new Database();
         $query = "SELECT * FROM `users` WHERE User_id = '".$this->User_id."';";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result = $result[0];
         
-        $user = new User($result["User_id"], $result["User_nom"], $result["User_Prenom"], $r['role'], $result["User_phone"], $result["User_email"], '', $result["User_address"]);
-
+        $user = new User([
+            'id'=>$result["User_id"], 
+            'nom'=>$result["User_nom"], 
+            'prenom'=>$result["User_Prenom"], 
+            'role'=>$result["user_role"], 
+            'phone'=>$result["User_phone"], 
+            'email'=>$result["User_email"], 
+            'password'=>'', 
+            'adress'=>$result["User_address"]
+        ]);
+        
         return $user;
     }
 }

@@ -3,14 +3,14 @@
     <a class="d-inline-block pt-1 ml-2" href="/home"><img id="logo" src="/resources/storage/Images/logo-app2.png" alt="" class="logo-navbar d-inline-block"></a>
     <ul id="nav-ul" class="navbar-ul">
         <li class="nav-item p-2 f-4">
-            <a class="<?php if($data['page']=='dashboard'){echo 'active';}?>" aria-current="page" href="/admin">Dashboard</a>
+            <a class="<?php if($page=='dashboard'){echo 'active';}?>" aria-current="page" href="/admin">Dashboard</a>
         </li>
         <li class="nav-item p-2 f-4">
-            <a class="<?php if($data['page']=='datama'){echo 'active';}?>" href="/admin/datama">Data Management</a>
+            <a class="<?php if($page=='datama'){echo 'active';}?>" href="/admin/datama">Data Management</a>
         </li>
         <li class="nav-item p-2 f-4">
         
-            <a class="<?php if($data['page']=='notifs'){echo 'active';}?>" href="/admin/notifs">Notifications</a>
+            <a class="<?php if($page=='notifs'){echo 'active';}?>" href="/admin/notifs">Notifications</a>
         </li>
     </ul>
     
@@ -19,10 +19,10 @@
             <i class="bi bi-person"></i> Administrateur <i class="bi bi-caret-down"></i>
         </button>
         <ul class="dropdown-content">
-            <li><a class="dropdown-item" href="/public/home">Accueil</a></li>
-            <li><a class="dropdown-item" href="/public/user">Accès utilisateur</a></li>
-            <li><a class="dropdown-item" href="/public/admin/inbox">Messagerie</a></li>
-            <li><a class="dropdown-item" href="/public/logout">Déconnexion</a></li>
+            <li><a class="dropdown-item" href="/home">Accueil</a></li>
+            <li><a class="dropdown-item" href="/user">Accès utilisateur</a></li>
+            <li><a class="dropdown-item" href="/admin/inbox">Messagerie</a></li>
+            <li><a class="dropdown-item" href="/logout">Déconnexion</a></li>
 
         </ul>
     </div>

@@ -13,41 +13,41 @@
                 </div>
                 <div class="col-6">
                     <h3 class="text-center" style="text-black">
-                        <?php echo $data['user']->prenom." ".$data['user']->nom;?> 
+                        <?php echo $user->prenom." ".$user->nom;?> 
                     </h3>
                     <div class="row my-2">
                         <div class="col-4">Adresse e-mail&nbsp</div>
-                        <div class="col-8"><?php echo $data['user']->email;?></div>
+                        <div class="col-8"><?php echo $user->email;?></div>
                     </div>
                     <div class="row my-2">
                         <div class="col-4">Téléphone&nbsp</div>
-                        <div class="col-8"><?php echo $data['user']->phone;?></div>
+                        <div class="col-8"><?php echo $user->phone;?></div>
                     </div>
                     <div class="row my-2">
                         <div class="col-4">Adresse postale&nbsp</div>
-                        <div class="col-8"><?php echo $data['user']->adress;?></div>
+                        <div class="col-8"><?php echo $user->adress;?></div>
                     </div>
                     <div class="row my-2">
                         <div class="col-4">Date de naissance&nbsp</div>
-                        <div class="col-8"><?php echo $data['user']->dob ?? 'NA';?></div>
+                        <div class="col-8"><?php echo $user->dob ?? 'NA';?></div>
                     </div>
                     <div class="row my-2">
                         <div class="col-4">Taille&nbsp</div>
-                        <div class="col-8"><?php echo $data['user']->height ?? 'NA';?> cm</div>
+                        <div class="col-8"><?php echo $user->height ?? 'NA';?> cm</div>
                     </div>
                     <div class="row my-2">
                         <div class="col-4">Poids&nbsp</div>
-                        <div class="col-8"><?php echo $data['user']->weight ?? 'NA';?> kg</div>
+                        <div class="col-8"><?php echo $user->weight ?? 'NA';?> kg</div>
                     </div>
                     <div class="row my-2">
                         <div class="col-4">Identifiant appareil&nbsp</div>
-                        <div class="col-8"><?php echo $data['bracelet']->bracelet_id ?? 'NA';?></div>
+                        <div class="col-8"><?php echo $bracelet->bracelet_id ?? 'NA';?></div>
                     </div>
                 </div>
             </div>    
             <div class="row mt-3 text-center">
                 <div class="col-12">
-                    <a href="/public/user/edit/profile" class="card-link"> 
+                    <a href="/user/edit/profile" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
                     </a> 
                 </div>
@@ -66,17 +66,17 @@
                 </div>
                 <div class="col-6"-->
                     <!--h3 class="text-center" style="text-black">
-                        <div class="col-8"><!?php echo $data['bracelet']->bracelet_id;?></div>
+                        <div class="col-8"><!?php echo $bracelet->bracelet_id;?></div>
                     </h3-->
                     <!--div class="row my-2">
                         <div class="col-4">Identifiant appareil&nbsp</div>
-                        <div class="col-8"><?php echo $data['bracelet']->bracelet_id ?? 'NA';?></div>
+                        <div class="col-8"><?php echo $bracelet->bracelet_id ?? 'NA';?></div>
                     </div>
                 </div>
             </div>    
             <div class="row mt-3 text-center">
                 <div class="col-12">
-                    <a href="/public/user/edit/profile" class="card-link"> 
+                    <a href="/user/edit/profile" class="card-link"> 
                         <button class="btn btn-outline-primary">Modifier</button>
                     </a> 
                 </div>
