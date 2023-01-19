@@ -438,39 +438,29 @@ label .form-label { font-size: 35px!important; }
     
 }
 /* sidebar*/
-.sidebar-container {
-    border-radius: 7px;
-    position:fixed;
-    height:100%;
-    max-width:200px;
-    left:20px;
-    top:100px;
-}
-.sidebar-container .sidebar {
-    margin: 0;
-    padding:0;
-    left:0;
-    list-style-type: none;
-}
-.sidebar li a{
+.sidebar-link {
     display: block;
     padding: 10px;
     border-radius: 7px;
     color:var(--black);
 }
-.sidebar li a:hover{
+.sidebar-link:hover{
     background-color: rgba(128, 128, 128, 0.2);
     color:var(--primary);
 }
-.sidebar li a.active {
+.sidebar-link.active {
     background-color: var(--primary);
     color: aliceblue;
 }
 
 /* tables */
+#tableContainer {
+    overflow-x: scroll;
+}
 table {
     border-collapse: collapse;
     width: 100%;
+    min-width: 760px;	
 }
 thead {
     background-color: var(--grey);
