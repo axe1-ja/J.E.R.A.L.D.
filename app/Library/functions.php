@@ -42,7 +42,7 @@ function getUserColor($user) {
 function callenv() {
     $config = [];
     //dd(getenv());
-    if(getenv('DB_DSN')=='' && getenv('DB_USERNAME')=='' && getenv('DB_PASSWORD')=='') {
+    if(getenv('DB_DSN')=='' && getenv('DB_USER')=='' && getenv('DB_PASS')=='') {
         // if not on server, by default (because if only the live server has the env var)
         $config['DB_DSN'] = 'mysql:host=127.0.0.1;port=3306;dbname=jeraldb_master'; // pour le mac, host = 127.0.0.1
         $config['DB_USERNAME'] = 'root';
@@ -50,8 +50,8 @@ function callenv() {
     } else {
         // if on server
         $config['DB_DSN'] = getenv('DB_DSN'); //should be :         mysql:host=82.64.120.113;port=3306;dbname=jeraldb_master
-        $config['DB_USERNAME'] = getenv('DB_USERNAME'); //  s.b:    jerald
-        $config['DB_PASSWORD'] = getenv('DB_PASSWORD'); // :        vqt2~sNDbuJpXRZ,
+        $config['DB_USERNAME'] = getenv('DB_USER'); //  s.b:    jerald
+        $config['DB_PASSWORD'] = getenv('DB_PASS'); // :        vqt2~sNDbuJpXRZ,
     }
 
     return $config;
