@@ -22,7 +22,7 @@
     --primary: /*#191C8C*/ #181C8D;
     --secondary: #BC9F22;
     --grey:#5C636A;
-    --green:#2B6140;
+    --green:#10c053;
     --black:#222222;
     --red:#F44336;
     --purple:#a508cc;
@@ -439,8 +439,12 @@ label .form-label { font-size: 35px!important; }
 }
 /* sidebar*/
 .sidebar-link {
+    background-color: white;
+    border: none;
     display: block;
     padding: 10px;
+    width: 100%;
+    margin: 4px 0;
     border-radius: 7px;
     color:var(--black);
 }

@@ -43,6 +43,13 @@ Route::set('faq',function(){
 // End of Basic routes
 // -------------------
 
+// migrate
+Route::set('migration',function(){
+    Controller::view('database/migrate');
+});
+Route::set('migrate',function(){
+    (new DatabaseController)->migrate();
+});
 
 
 // -----------------------
@@ -82,10 +89,6 @@ if($_SESSION['loggedin']==1) {
         Route::set('admin',function(){ (new admin)->index(); });
         Route::set('admin/datama',function(){ (new admin)->datama(); });
         Route::set('admin/notifs',function(){ (new admin)->notifs(); });
-        Route::set('admin/datama/users',function(){ (new admin)->datama(); });
-        Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
-        Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });
-        Route::set('admin/datama/roles',function(){ (new admin)->datama('roles'); });
 
         // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
         Route::set('admin/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);

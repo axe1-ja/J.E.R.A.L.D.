@@ -14,15 +14,14 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
         <div class="break-col-2-lg p-2">
             <div class="f-4">Tables</div>
             <div class='row'>
-                <div class="break-col-12-lg">
-                    <a class="sidebar-link <?php if($model=='users'): ?>active<?php endif; ?>" href="/admin/datama/users"><i class="bi bi-person"></i> Users</a>
-                </div>
-                <div class="break-col-12-lg">
-                    <a class="sidebar-link <?php if($model=='products'): ?>active<?php endif; ?>" href="/admin/datama/products"><i class="bi bi-watch"></i> Products</a>
-                </div>
-                <div class="break-col-12-lg">
-                    <a class="sidebar-link <?php if($model=='forum'): ?>active<?php endif; ?>" href="/admin/datama/forum"><i class="bi bi-chat-left-text"></i> Forum</a>
-                </div>
+                <?php foreach($modelList as $m): ?>
+                    <div class="break-col-12-lg w-100">
+                        <form action="/admin/datama" method="post">
+                            <input class='d-none' type="text" name='model' value='<?php echo $m;?>' >
+                            <button class="sidebar-link text-left <?php if($model==$m): ?>active<?php endif; ?>" type='submit'><?php echo $m;?></button>
+                        </form>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
         <div class="break-col-10-lg p-2">
@@ -33,13 +32,10 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                             <div class="m-0 f-4 m-0"><?php echo ucfirst($model);?></div>
                         </div>
                         <div class="col-4">
-                            <form class="d-flex" role="search">
-                                <div class="row mt-3">
-                                    <div class="col-8">
+                            <form role="search">
+                                <div class="row">
+                                    <div class="col-12 pt-1">
                                         <input class="form-control w-100" name="searchDb" id="search" type="search" placeholder="Search" aria-label="Search">
-                                    </div>
-                                    <div class="col-4 text-left pl-1">
-                                        <button class="btn btn-outline-primary" id="searchBtn" type="submit">Search</button>
                                     </div>
                                 </div>
                             </form>
@@ -58,12 +54,13 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                                 <tbody>
                                     <?php foreach($data as $el): ?>
                                         <tr>
-                                            <th scope="row"><?php echo $el[0];?></th>
-                                            <td><?php echo $el[1];?></td>
-                                            <td><?php echo $el[2];?></td>
-                                            <td><?php echo $el[3];?></td>
-                                            <td><?php echo $el[4];?></td>
-                                            <td><?php echo $el[5];?></td>
+                                            <?php foreach($el as $k=>$e): ?>
+                                                <?php if($k==0): ?>
+                                                    <th scope="row"><?php echo $e;?></th>
+                                                <?php else: ?>
+                                                    <td><?php echo $e;?></td>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
