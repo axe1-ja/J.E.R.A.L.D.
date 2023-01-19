@@ -63,7 +63,7 @@ class MessageController extends Controller
         $statement = $db->pdo->prepare($query);
         $statement->execute();
 
-        header('Location: http://localhost:8888/admin/inbox');
+        header('Location: /admin/inbox');
     }
 
     public function add() {
