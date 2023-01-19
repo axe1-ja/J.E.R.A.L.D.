@@ -6,7 +6,7 @@ class ContactController extends Controller
     public function report()
     {
         //if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        //    $db = new Database([]);
+        //    $db = new Database();
         //}
         ini_set('SMTP', "localhost");
         ini_set('smtp_port', "25");

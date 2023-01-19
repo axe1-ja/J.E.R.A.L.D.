@@ -33,15 +33,15 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         </div>
     </div>
 
-    <?php foreach($data['forums'] as $f) :?>
+    <?php foreach($forums as $f) :?>
         <div class="card w-75 center">
             <div class="row">
                 <div class="col-6 px-2">
-                    <?php $user = $data['users'][$f->User_id];?>
+                    <?php $user = $users[$f->User_id];?>
                     <div>
                         <div class="d-inline-block">
                             <div class="bg-<?php echo getUserColor($f->User_id)?> text-white forum-circle">
-                                <?php $user= $data['users'][$f->User_id]?>
+                                <?php $user= $users[$f->User_id]?>
                                 <?php echo $user->prenom[0]."".$user->nom[0]?>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </tr>
         </thead>
         <tbody>
-            <?php foreach($data['data'] as $el):   ?>
+            <?php foreach($data as $el):   ?>
 
                 <tr>
                     <th scope="row"><?php echo $el['Forum_id'];?></th>
@@ -112,8 +112,8 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center ">
                 <li class='page-item'><a class="page-link" href="/user/forum">1</a></li>
-                <?php for ($forumpage = 2; $forumpage <= ceil($data['page'][0]/10); $forumpage ++) { ?>
-                    <li class="page-item"><a class="page-link" href="/user/<?php echo $data['model']?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
+                <?php for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) { ?>
+                    <li class="page-item"><a class="page-link" href="/user/<?php echo $model?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
                     <?php } ?>
                 </ul>
             </nav>
@@ -140,7 +140,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                 </div>
             </div>  
             <form class="text-left" action="report" method="post" style="display=none">
-                <input type="text" class="d-none" name="user" value="<?php echo $data['user']->id?>">
+                <input type="text" class="d-none" name="user" value="<?php echo $user->id?>">
                 <div class="mb-3">
                     <div class="form-label">Le sujet de votre forum</div>
                     <input type="Objet" placeholder="Sujet" class="form-control" id="subject">

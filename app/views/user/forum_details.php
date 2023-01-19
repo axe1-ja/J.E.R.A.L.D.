@@ -15,17 +15,17 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         <div class="row">
 
             <div class="col-12 text-center f-3 p-2">
-            <?php echo $data['forum']->object;?>
+            <?php echo $forum->object;?>
             </div>
 
             <div class="col-12 text-left f-1 px-2">
-                <?php echo getDateAndTimeDisplay($data['forum']->datetime);?>
+                <?php echo getDateAndTimeDisplay($forum->datetime);?>
             </div>
 
             <div class="col-12 text-left f-2 p-2">
                 <div class="d-inline-block">
-                    <?php $user= $data['users'][$data['forum']->User_id]?>
-                    <div class="bg-<?php echo getUserColor($data['forum']->User_id)?> text-white forum-circle">
+                    <?php $user= $users[$forum->User_id]?>
+                    <div class="bg-<?php echo getUserColor($forum->User_id)?> text-white forum-circle">
                         <?php echo $user->prenom[0]."".$user->nom[0]?>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 
                 <br>
 
-                <?php echo $data['forum']->content;?>
+                <?php echo $forum->content;?>
             </div>
 
         </div>
@@ -51,7 +51,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 </div>
 
 <div class="container" id="responses">
-    <?php $count=0; foreach($data['forumMessages'] as $f) :?>
+    <?php $count=0; foreach($forumMessages as $f) :?>
         <?php $count++;
         if($count<=10):?>
 
@@ -61,7 +61,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     <div class="col-6">
                         <div class="d-inline-block">
                             <div class="bg-<?php echo getUserColor($f->User_id)?> text-white forum-circle">
-                                <?php $user= $data['users'][$f->User_id]?>
+                                <?php $user= $users[$f->User_id]?>
                                 <?php echo $user->prenom[0]."".$user->nom[0]?>
                             </div>
                         </div>
@@ -96,8 +96,8 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         <div class="card-body text-center">
             <form class="w-75 center" action="report" method="post" style="display=none">
                 <div class="mb-3">
-                    <input type="text" class="d-none" name="user" value="<?php echo $data['user']->id?>">
-                    <input type="text" class="d-none" name="forum" value="<?php echo $data['forum']->id?>">
+                    <input type="text" class="d-none" name="user" value="<?php echo $user->id?>">
+                    <input type="text" class="d-none" name="forum" value="<?php echo $forum->id?>">
                     <div class="my-2">Votre message</div>
                     <textarea class="form-control" rows="1" id="message" name="new_msg" placeholder="Message" required></textarea>
                 </div>

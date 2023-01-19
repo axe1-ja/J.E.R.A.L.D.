@@ -9,6 +9,7 @@ ini_set("display_errors",1);
 // configurations for routes to work
 require_once realpath(dirname(__DIR__,1) .'/app/Library/functions.php');
 
+
 function autoloader($class){
     if(file_exists(realpath(dirname(__DIR__,1) .'/app/core/'.$class.'.php'))){
         require_once realpath(dirname(__DIR__,1) .'/app/core/'.$class.'.php');

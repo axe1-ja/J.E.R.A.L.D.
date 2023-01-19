@@ -124,7 +124,8 @@ if($_SESSION['loggedin']==1) {
 
     Route::set('user/practice',function(){ (new UserController)->practice(); });
 
-    Route::set('user/inbox',function(){ (new MessageController)->inbox('user'); });
+    Route::set('user/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
+    Route::set('user/inbox',function(){ (new MessageController)->inbox(null); });
     // End of User routes
     // ------------------
 

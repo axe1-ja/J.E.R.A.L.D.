@@ -24,9 +24,9 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
     </div>
 
     <div class="container center" style="width: 40rem;">
-        <?php if(isset($data['error'])):?>
+        <?php if(isset($error)):?>
             <div class="card bg-red mb-2">
-                <?php echo $data['error'];?>
+                <?php echo $error;?>
             </div>
         <?php endif;?>
         <div class="card">

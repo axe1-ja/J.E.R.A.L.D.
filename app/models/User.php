@@ -1,7 +1,7 @@
 <?php
 
 
-class User {
+class User extends Model {
     public $id;
     public $nom;
     public $prenom;
@@ -15,18 +15,6 @@ class User {
     public $weight;
     public $devices;
 
-
-    public function __construct($id=0, $nom, $prenom, $role, $phone, $email, $password='', $adress) 
-    {
-        $this->id = $id;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->role = $role;
-        $this->phone = $phone;
-        $this->email = $email;
-        $this->password = $password;
-        $this->adress = $adress;
-    }
     
 
     public static function getUser() {
@@ -35,7 +23,7 @@ class User {
     }
 
     public static function getallUsers() {
-        $db = new Database([]);
+        $db = new Database();
 
         $query = "SELECT * FROM `users`;";
         $users = [];
@@ -43,14 +31,23 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($result as $r) {
-            $users[] = new User($r["User_id"], $r["User_nom"], $r["User_Prenom"], $r['user_role'], $r["User_phone"], $r["User_email"], '', $r["User_address"]);
+            $users[] = new User([
+                'id'=>$r["User_id"], 
+                'nom'=>$r["User_nom"], 
+                'prenom'=>$r["User_Prenom"], 
+                'role'=>$r["user_role"], 
+                'phone'=>$r["User_phone"], 
+                'email'=>$r["User_email"], 
+                'password'=>'', 
+                'adress'=>$r["User_address"]
+            ]);
         }
 
         return $users;
     }
 
     public static function findUser($from,$var) {
-        $db = new Database([]);
+        $db = new Database();
 
         $query = "SELECT * FROM `users` WHERE ".$from."='".$var."';";
 
@@ -58,13 +55,22 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         $result=$result[0];
-        $user = new User($result["User_id"], $result["User_nom"], $result["User_Prenom"], $result['user_role'], $result["User_phone"], $result["User_email"], '', $result["User_address"]);
+        $user = new User([
+            'id'=>$result["User_id"], 
+            'nom'=>$result["User_nom"], 
+            'prenom'=>$result["User_Prenom"], 
+            'role'=>$result["user_role"], 
+            'phone'=>$result["User_phone"], 
+            'email'=>$result["User_email"], 
+            'password'=>'', 
+            'adress'=>$result["User_address"]
+        ]);
 
         return $user;
     }
 
     public function getUserMessages() {
-        $db = new Database([]);
+        $db = new Database();
 
         $query = "SELECT * FROM `messages` WHERE User_Id_send=".$this->id." OR User_Id_receive=".$this->id.";";
 
@@ -72,7 +78,13 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($result as $r){
-            $messages[]=new Message($r['message_id'], $r['User_Id_send'], $r['User_Id_receive'], $r['message_Content'], $r['message_Datetime']);
+            $messages[]=new Message([
+                'id'=>$r['message_id'], 
+                'user_id_send'=>$r['User_Id_send'], 
+                'user_id_receive'=>$r['User_Id_receive'], 
+                'message_content'=>$r['message_Content'], 
+                'message_datetime'=>$r['message_Datetime']
+            ]);
         }
         
         //dd($messages);
@@ -81,7 +93,7 @@ class User {
     }
 
     public static function conversationWith($interlocId) {
-        $db = new Database([]);
+        $db = new Database();
         $user = User::getUser();
         $messages=[];
         $query = "SELECT * FROM `messages` WHERE (User_Id_send=".$user->id." AND User_Id_receive=".$interlocId.") OR (User_Id_receive=".$user->id." AND User_Id_send=".$interlocId.");";
@@ -89,7 +101,13 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($result as $r){
-            $messages[]=new Message($r['message_id'], $r['User_Id_send'], $r['User_Id_receive'], $r['message_Content'], $r['message_Datetime']);
+            $messages[]=new Message([
+                'id'=>$r['message_id'], 
+                'user_id_send'=>$r['User_Id_send'], 
+                'user_id_receive'=>$r['User_Id_receive'], 
+                'message_content'=>$r['message_Content'], 
+                'message_datetime'=>$r['message_Datetime']
+            ]);
         }
 
         return $messages;
@@ -98,7 +116,7 @@ class User {
 
     
     public function getEmergencyContacts() {
-        $db = new Database([]);
+        $db = new Database();
 
         $query = "SELECT * FROM `emergencycontact` WHERE User_id=".$this->id.";";
 
@@ -106,7 +124,11 @@ class User {
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($result as $r){
-            $eC[]=new EmergencyContact($r['Emergency_id'], $r['Emergency_Name'], $r['Emergency_Number']);
+            $eC[]=new EmergencyContact([
+                'id'=>$r['Emergency_id'], 
+                'name'=>$r['Emergency_Name'], 
+                'phone'=>$r['Emergency_Number']
+            ]);
         }
         
         return $eC;

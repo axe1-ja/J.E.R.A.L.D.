@@ -18,6 +18,7 @@ class MessageController extends Controller
             }
         }
 
+
         $conv=[];
         $interlocutors=[]; 
         foreach ($messages as $message) {
@@ -39,7 +40,6 @@ class MessageController extends Controller
         }
 
         
-
         // get the id of the interlocutor in the conv variable
         $this->view('inbox/index', [
             'page'=>'inbox',
@@ -57,7 +57,7 @@ class MessageController extends Controller
         $date = date('y-m-d h:i:s');
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $db = new Database([]);
+            $db = new Database();
         }
         $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ('".$user->id."','".$interlocutor->id."','".$_POST['message']."','".$date."');";
         $statement = $db->pdo->prepare($query);
@@ -72,7 +72,7 @@ class MessageController extends Controller
         $date = date('y-m-d h:i:s');
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $db = new Database([]);
+            $db = new Database();
         }
 
         $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ('".$user->id."','".$interlocutor->id."','".$_POST['msg']."','".$date."');";
