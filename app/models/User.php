@@ -118,7 +118,7 @@ class User extends Model {
     public function getEmergencyContacts() {
         $db = new Database();
 
-        $query = "SELECT * FROM `emergencycontact` WHERE User_id=".$this->id.";";
+        $query = "SELECT * FROM `EmergencyContact` WHERE User_id=".$this->id.";";
 
         $statement = $db->pdo->prepare($query);
         $statement->execute();
