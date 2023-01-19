@@ -1,11 +1,11 @@
 <?php
 //print_r(realpath(dirname(__DIR__,1) .'/app/core/Controller.php'));
 //exit;
-/*
+
 error_reporting(E_ALL);
 
 ini_set("display_errors",1);
-*/
+
 // configurations for routes to work
 require_once realpath(dirname(__DIR__,1) .'/app/Library/functions.php');
 
