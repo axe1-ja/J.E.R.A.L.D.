@@ -44,21 +44,21 @@ Route::set('faq',function(){
 // -------------------
 
 
-// migrate
-Route::set('migration',function(){
+// migrate route (activate only if necessary)
+/*Route::set('migration',function(){
     Controller::view('database/migrate');
 });
 Route::set('migrate',function(){
     (new DatabaseController)->migrate();
-});
+});*/
 
-// import data
-Route::set('importfile',function(){
+// import data route (activate only if necessary)
+/*Route::set('importfile',function(){
     Controller::view('database/import');
 });
 Route::set('import',function(){
     (new DatabaseController)->import();
-});
+});*/
 
 
 // -----------------------
