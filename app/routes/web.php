@@ -43,12 +43,21 @@ Route::set('faq',function(){
 // End of Basic routes
 // -------------------
 
+
 // migrate
 Route::set('migration',function(){
     Controller::view('database/migrate');
 });
 Route::set('migrate',function(){
     (new DatabaseController)->migrate();
+});
+
+// import data
+Route::set('importfile',function(){
+    Controller::view('database/import');
+});
+Route::set('import',function(){
+    (new DatabaseController)->import();
 });
 
 
