@@ -46,7 +46,7 @@ class Database {
         $newMigrations = [];
 
         // get all the files in the migrations directory
-        $files = scandir('app/migrations');
+        $files = scandir('../app/migrations');
         
         $toApplyMigrations = array_diff($files, $appliedMigrations);
 

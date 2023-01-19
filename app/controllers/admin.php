@@ -32,24 +32,32 @@ class Admin extends Controller
 
 
     
-    public function datama($model='users')
+    public function datama()
     {
-        
+        $modelList = ['migrations','users', 'emergencycontact', 'forum', 'forum_messages','bracelet','sensor','messages'];
         $db = new Database();
 
-        if($model=='users'){
-
-            // get all users
-            $cols = ['Id','Name','Last Name', 'Email', 'Address', 'Role'];
-            $query = "SELECT User_id, User_Prenom, User_nom, User_email, User_address, user_role FROM users;";
-            $statement = $db->pdo->prepare($query);
-            $statement->execute();
-            $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-            foreach ($result as $row) { 
-                $data[] = [$row['User_id'],$row['User_Prenom'],$row['User_nom'],$row['User_email'],$row['User_address'],$row['user_role']];
+        if(isset($_POST['model'])) {
+            $model = $_POST['model'];
+        } else {
+            $model = 'migrations';
+        }
+        // get all users
+        $query = "SELECT * FROM ".$model.";";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $cols = array_keys($result[0]);
+        foreach ($result as $row) { 
+            $l = [];
+            foreach ($row as $val) {
+                $l[]=$val;
             }
-
-        } elseif($model=='products'){
+            $data[] = $l;
+            //[$row['User_id'],$row['User_Prenom'],$row['User_nom'],$row['User_email'],$row['User_address'],$row['user_role']];
+        }
+/*
+        if($model=='products'){
             // get all products
             $cols = ['Id','Name','Last Name', 'Phone Number', 'Email', 'Emergency Contact'];
             $data=[
@@ -72,11 +80,12 @@ class Admin extends Controller
             ];
 
         }
-
+        */
         $this->view('admin/datama', [
             'cols'=>$cols,
             'page'=>'datama',
             'model'=>$model,
+            'modelList'=>$modelList,
             'data'=>$data
         ]);
     }
