@@ -56,7 +56,7 @@ class Database {
                 continue;
             } else {
                 // require the migration file in question
-                require_once 'app/migrations/'.$migration;
+                require_once '../app/migrations/'.$migration;
 
                 // get the file name
                 $className = pathinfo($migration, PATHINFO_FILENAME);
@@ -128,7 +128,7 @@ class Database {
         $appliedMigrations = $this->getAppliedMigrations();
         $downedMigrations = [];
         // get all the files in the migrations directory
-        $files = scandir('app/migrations');
+        $files = scandir('../app/migrations');
         $toDownMigrations = array_reverse(array_intersect($files, $appliedMigrations));
         // loop in the files of the migrations folder and DOWN those migrations
         foreach($toDownMigrations as $migration){
@@ -136,7 +136,7 @@ class Database {
                 continue;
             } else {
                 // require the migration file in question
-                require_once 'app/migrations/'.$migration;
+                require_once '../app/migrations/'.$migration;
                 // get the file name
                 $className = pathinfo($migration, PATHINFO_FILENAME);
                 // create an instance of the class of the migration
