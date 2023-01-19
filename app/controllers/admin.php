@@ -34,7 +34,7 @@ class Admin extends Controller
     
     public function datama()
     {
-        $modelList = ['migrations','users', 'emergencycontact', 'forum', 'forum_messages','bracelet','sensor','messages'];
+        $modelList = ['migrations','users', 'EmergencyContact', 'forum', 'forum_messages','bracelet','sensor','messages'];
         $db = new Database();
 
         if(isset($_POST['model'])) {
