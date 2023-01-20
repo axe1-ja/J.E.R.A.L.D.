@@ -59,6 +59,10 @@
 .container {
     width:100%;
 }
+.container1 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 .hide {
     display:none;

@@ -26,9 +26,6 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
 						<h3 class="f-2 p-0 m-0 pt-2">Mot de Passe oublié</h3>
 						<br>
 					</div>
-					<div class="col-1 text-right">
-						<button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
-					</div>	
 					<div class="row text-left">
 						<div class="col-8">
 							<label class="form-label">Email<span class="required error" id="email-info"></span></label>
