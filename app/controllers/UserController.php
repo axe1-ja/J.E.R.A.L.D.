@@ -11,7 +11,7 @@ class UserController extends Controller
     public function update()
     {
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $db = new Database([]);
+            $db = new Database();
         }
         $user_id=4;
         $query='';
@@ -49,7 +49,7 @@ class UserController extends Controller
         $user = User::getUser($_SESSION["user"]->email);
 
         
-        $db = new Database([]);
+        $db = new Database();
         $query = "SELECT * FROM `bracelet` WHERE User_id = '".$_SESSION["user"]->id."';";
         $statement = $db->pdo->prepare($query);
         $statement->execute();

@@ -23,6 +23,46 @@ class ForumController extends Controller
         ]);
     }
 
+    public function addforum() {
+
+        //user
+        $user=User::getUser();
+
+        $date = date('y-m-d h:i:s');
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $db = new Database();
+        }
+
+        $query = "INSERT INTO `Forum` (`Forum_object`, `Forum_content`, `Forum_datetime`, `User_id`) VALUES ('".$_POST['forum_object']."','".$_POST['forum_content']."','".$date."','".$user->id."');";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();  
+
+        header('Location: /forum');
+
+    }
+
+    public function sendMessageforum() {
+
+        //user
+        $user=User::getUser();
+
+        $forum = Forum::getForum('forum_id', $_POST['forum']);
+        $date = date('y-m-d h:i:s');
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $db = new Database();
+        }
+        
+        $query = "INSERT INTO `forum_messages`(`forum_message_content`, `forum_message_datetime`, `User_id`, `forum_id`) VALUES ('".$_POST['new_msg']."','".$date."', '".$_POST['user']."', '".$_POST['forum']."');";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();  
+
+        header('Location: /forum');
+
+    }
+
+
     public function details() {
         // get the forum clicked
         $forum = Forum::getForum('forum_id', $_POST['forum']);
@@ -51,4 +91,6 @@ class ForumController extends Controller
             'user'=>$user
         ]);
     }
+
+
 }

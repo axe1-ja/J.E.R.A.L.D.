@@ -5,17 +5,18 @@ class Database {
 
     public \PDO $pdo;
 
-    public function __construct(array $config)
+    public function __construct()
     {
         try {
             // get the dsn, user and password to be able to connect to the database
             //$dsn = $config['DB_DSN']."=".$config['DB_HOST'].";port=".$config['DB_PORT'].";dbname=".$config['DB_NAME'] ?? '';
             //$user = $config['DB_USER'] ?? '';
             //$password = $config['DB_PASSWORD'] ?? '';
-            $dsn = 'mysql:host=127.0.0.1;port=3306;dbname=jeraldb_master';// pour le mac, host = 127.0.0.1
-            $user = 'root';
-            $password = '';
-            
+            $config = callenv();
+            $dsn = $config['DB_DSN'];// pour le mac, host = 127.0.0.1
+            $user = $config['DB_USERNAME'];
+            $password = $config['DB_PASSWORD'];
+            //dd([$dsn, $user, $password]);
             // create an instance of the PDO (to connect to the database)
             $this->pdo = new \PDO($dsn, $user, $password);
         }
@@ -45,7 +46,7 @@ class Database {
         $newMigrations = [];
 
         // get all the files in the migrations directory
-        $files = scandir('app/migrations');
+        $files = scandir('../app/migrations');
         
         $toApplyMigrations = array_diff($files, $appliedMigrations);
 
@@ -55,7 +56,7 @@ class Database {
                 continue;
             } else {
                 // require the migration file in question
-                require_once 'app/migrations/'.$migration;
+                require_once '../app/migrations/'.$migration;
 
                 // get the file name
                 $className = pathinfo($migration, PATHINFO_FILENAME);
@@ -127,7 +128,7 @@ class Database {
         $appliedMigrations = $this->getAppliedMigrations();
         $downedMigrations = [];
         // get all the files in the migrations directory
-        $files = scandir('app/migrations');
+        $files = scandir('../app/migrations');
         $toDownMigrations = array_reverse(array_intersect($files, $appliedMigrations));
         // loop in the files of the migrations folder and DOWN those migrations
         foreach($toDownMigrations as $migration){
@@ -135,7 +136,7 @@ class Database {
                 continue;
             } else {
                 // require the migration file in question
-                require_once 'app/migrations/'.$migration;
+                require_once '../app/migrations/'.$migration;
                 // get the file name
                 $className = pathinfo($migration, PATHINFO_FILENAME);
                 // create an instance of the class of the migration

@@ -29,7 +29,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($data['notifs'] as $n): ?>
+                    <?php foreach($notifs as $n): ?>
                         <tr>
                             <th scope="row"><?php echo $n[0];?></th>
                             <td><?php echo $n[1];?></td>

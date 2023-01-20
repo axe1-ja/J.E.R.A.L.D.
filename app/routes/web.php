@@ -44,6 +44,22 @@ Route::set('faq',function(){
 // -------------------
 
 
+// migrate route (activate only if necessary)
+/*Route::set('migration',function(){
+    Controller::view('database/migrate');
+});
+Route::set('migrate',function(){
+    (new DatabaseController)->migrate();
+});*/
+
+// import data route (activate only if necessary)
+/*Route::set('importfile',function(){
+    Controller::view('database/import');
+});
+Route::set('import',function(){
+    (new DatabaseController)->import();
+});*/
+
 
 // -----------------------
 // Authentification routes
@@ -82,10 +98,6 @@ if($_SESSION['loggedin']==1) {
         Route::set('admin',function(){ (new admin)->index(); });
         Route::set('admin/datama',function(){ (new admin)->datama(); });
         Route::set('admin/notifs',function(){ (new admin)->notifs(); });
-        Route::set('admin/datama/users',function(){ (new admin)->datama(); });
-        Route::set('admin/datama/products',function(){ (new admin)->datama('products'); });
-        Route::set('admin/datama/forum',function(){ (new admin)->datama('forum'); });
-        Route::set('admin/datama/roles',function(){ (new admin)->datama('roles'); });
 
         // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
         Route::set('admin/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
@@ -113,6 +125,8 @@ if($_SESSION['loggedin']==1) {
     // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
     Route::set('forum',function(){ (new ForumController)->index(); });
     Route::set('forum/details',function(){ (new ForumController)->details(); });
+    Route::set('forum/add',function(){ (new ForumController)->addforum(); });
+    Route::set('forum/details/new',function(){ (new ForumController)->sendMessageforum(); });
 
     Route::set('user/forum',function(){ (new UserController)->forum('forum'); });
     #Route::set('user/forum/{page}',function(){ (new UserController)->forum('forum',$page); });
@@ -124,7 +138,8 @@ if($_SESSION['loggedin']==1) {
 
     Route::set('user/practice',function(){ (new UserController)->practice(); });
 
-    Route::set('user/inbox',function(){ (new MessageController)->inbox('user'); });
+    Route::set('user/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
+    Route::set('user/inbox',function(){ (new MessageController)->inbox(null); });
     // End of User routes
     // ------------------
 
