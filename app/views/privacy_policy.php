@@ -7,15 +7,13 @@ include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 ?>
 
-<div class="container">
+<div class="container" >
     <div style="background-image: url(/resources/storage/Images/fond.jpg);" >
     <h2 class="texte2 text-center" style="color:white;">Politique de Confidentialité</h2>
     </div>
-    <p class="text-muted">dernière mise a jours: le 6 novembre 2022</p>
+    <div class="container1">
+    <p class="text-muted">dernière mise a jour: le 6 novembre 2022</p>
     <p>
-        We are committed to protecting your privacy. We developed this Privacy Policy to provide you with
-        information on how we process your personal data, including when you create a EKAÏ account,
-        interact with our member support team.
         Nous nous engageons a proteger vos donnés personnel. 
         Nous avons élaboré cette politique de confidentialité pour vous fournir
         des informations sur la manière dont nous traitons vos données personnelles, 
@@ -183,7 +181,7 @@ par l'intermédiaire du site EKAÏ et confirmez qu'il a le consentement de la ti
     <p>
     Nous vous informerons si ces changements sont importants et, lorsque la loi applicable l'exige, nous obtiendrons votre consentement.
     </p>
-
+    </div>
 </div>
 
 <!-- Footer of page -->

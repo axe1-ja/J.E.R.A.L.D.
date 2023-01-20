@@ -28,7 +28,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     <div class="container">
         <div class="square">
                 <h2 class="text-white"> 
-                    Bonjour, <?php echo $user->prenom." ".$user->nom;?>
+                    Bonjour, 
                 </h2>
                 <h2 class="text-white"> 
                     Votre temperature corporelle est de ... °C

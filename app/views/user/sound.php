@@ -29,7 +29,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     <div class="row">
         <div class="col-6">
                 <h2 class="text-white"> 
-                    Bonjour, <?php echo $user->prenom." ".$user->nom;?>
+                    Bonjour, 
                 </h2>
                 <h2 class="text-white"> 
                     Le niveau sonore autour de vous est 
@@ -45,7 +45,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="container">
         <p class="text-white square"> 
             105 dB(A) : Risques immédiats/ court terme pour l'audition <br>
             85-105 dB(A) : Risques à moyen/long terme pour l'audition si exposition chronique : pertes auditives <br>

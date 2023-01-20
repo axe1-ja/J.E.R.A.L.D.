@@ -19,7 +19,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                 Santé >
             </a>
             <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/cardio"> 
-            FC
+            RC
             </a>
         </div>
     </div> 
@@ -27,7 +27,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
     <div class="row pt-3">
         <div class="col-6">
             <h2 class="text-white"> 
-                Bonjour, <?php echo $user->prenom." ".$user->nom;?>
+                Bonjour, 
             </h2>
             <h2 class="text-white"> 
                 Votre rythme cardiaque est de ... bpm.
