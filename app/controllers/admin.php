@@ -54,33 +54,8 @@ class Admin extends Controller
                 $l[]=$val;
             }
             $data[] = $l;
-            //[$row['User_id'],$row['User_Prenom'],$row['User_nom'],$row['User_email'],$row['User_address'],$row['user_role']];
         }
-/*
-        if($model=='products'){
-            // get all products
-            $cols = ['Id','Name','Last Name', 'Phone Number', 'Email', 'Emergency Contact'];
-            $data=[
-                ['1','Mark','Otto','06XXXXX','markotto@gmail.com','06XXXXX'],
-                ['2','Jacob','Thornton','06XXXXX','j.thorn@gmail.com','06XXXXX'],
-                ['3','Larry','Byrd','06XXXXX','lbyrdee@gmail.com','06XXXXX'],
-                ['4','Michel','Laroux','06XXXXX','mlaroue015@gmail.com','06XXXXX'],
-            ];
 
-        } elseif($model=='forum'){
-            // get all forums (infos)
-            $cols = ['Id','Name','Last Name', 'Phone Number', 'Email', 'Emergency Contact'];
-            $data=[
-                ['1','Mark','Otto','06XXXXX','markotto@gmail.com','06XXXXX'],
-                ['2','Jacob','Thornton','06XXXXX','j.thorn@gmail.com','06XXXXX'],
-                ['3','Larry','Byrd','06XXXXX','lbyrdee@gmail.com','06XXXXX'],
-                ['4','Michel','Laroux','06XXXXX','mlaroue015@gmail.com','06XXXXX'],
-                ['5','Axel','Ja','06XXXXX','aja@gmail.com','06XXXXX'],
-                ['6','Joon','Yoo','06XXXXX','hyjoon@gmail.com','06XXXXX'],
-            ];
-
-        }
-        */
         $this->view('admin/datama', [
             'cols'=>$cols,
             'page'=>'datama',
@@ -91,6 +66,78 @@ class Admin extends Controller
     }
 
 
+    public function editData()
+    {
+        if(isset($_POST['model']) && isset($_POST['id'])){
+            $model=$_POST['model'];
+            $idCol=$_POST['idCol'];
+            $id=$_POST['id'];
+            
+            $db = new Database();
+            $query = "SELECT * FROM `".$model."` WHERE ".$idCol."=".$id.";";
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+            $result=$statement->fetchAll(PDO::FETCH_ASSOC)[0];
+
+            $this->view('admin/editData',[
+                'data'=>$result,
+                'idCol'=>$idCol,
+                'model'=>$model
+            ]);
+
+        } else {
+
+            header('Location: /admin/datama');
+
+        }
+
+    }
+
+    public function updateData() 
+    { 
+        $model=$_POST['model'];
+        $idCol=$_POST['idCol'];
+        $idVal=$_POST['idVal'];
+
+        $db = new Database();
+        $code = "";
+        $c=0;
+        foreach($_POST as $key=>$p) {
+            if($key!='model' && $key!='idCol' && $key!='idVal' && $c!=0) {
+                $code.=", ".$key."='".$p."' ";
+            } elseif($key!='model' && $key!='idCol' && $key!='idVal' && $c==0) {
+                $code.=$key."='".$p."' ";
+                $c=1;
+            }
+        }
+        $query = "UPDATE `".$model."` SET ".$code." WHERE ".$idCol."=".$idVal.";";
+        //dd($query);
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        
+        $this->datama();
+    }
+
+    public function deleteData()
+    {
+        if(isset($_POST['model']) && isset($_POST['id'])){
+            $model=$_POST['model'];
+            $idCol=$_POST['idCol'];
+            $id=$_POST['id'];
+            
+            $db = new Database();
+            $query = "UPDATE `".$model."` SET user_deleted=1 WHERE ".$idCol."=".$id.";";
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+
+            $this->datama();
+
+        } else {
+
+            header('Location: /admin/datama');
+
+        }
+    }
 
     public function notifs()
     {

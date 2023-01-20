@@ -49,6 +49,8 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                                     <?php foreach($cols as $col): ?>
                                         <th><?php echo $col;?></th>
                                     <?php endforeach; ?>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                                 <tbody>
@@ -61,6 +63,22 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                                                     <td><?php echo $e;?></td>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
+                                            <td>
+                                                <form action="/admin/datama/edit" method="post">
+                                                    <input class="d-none" type="text" name="model" value="<?php echo $model;?>">
+                                                    <input class="d-none" type="text" name="idCol" value="<?php echo $cols[0];?>">
+                                                    <input class="d-none" type="text" name="id" value="<?php echo $el[0];?>">
+                                                    <button type="submit" class="btn btn-outline-green"><i class="bi bi-pen"></i></button>
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <form action="/admin/datama/delete" method="post">
+                                                    <input class="d-none" type="text" name="model" value="<?php echo $model;?>">
+                                                    <input class="d-none" type="text" name="idCol" value="<?php echo $cols[0];?>">
+                                                    <input class="d-none" type="text" name="id" value="<?php echo $el[0];?>">
+                                                    <button type="submit" onclick="return confirm('Voulez vous vraiment supprimer cet utilisateur?')" class="btn btn-outline-red"><i class="bi bi-trash"></i></button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
