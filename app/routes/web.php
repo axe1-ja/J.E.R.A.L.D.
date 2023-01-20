@@ -125,6 +125,8 @@ if($_SESSION['loggedin']==1) {
     // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
     Route::set('forum',function(){ (new ForumController)->index(); });
     Route::set('forum/details',function(){ (new ForumController)->details(); });
+    Route::set('forum/add',function(){ (new ForumController)->addforum(); });
+    Route::set('forum/details/new',function(){ (new ForumController)->sendMessageforum(); });
 
     Route::set('user/forum',function(){ (new UserController)->forum('forum'); });
     #Route::set('user/forum/{page}',function(){ (new UserController)->forum('forum',$page); });

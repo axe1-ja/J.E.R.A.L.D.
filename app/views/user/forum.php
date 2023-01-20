@@ -95,14 +95,14 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </tr>
         </thead>
         <tbody>
-            <?php foreach($data as $el):   ?>
+            <?php// foreach($data as $el):   ?>
 
                 <tr>
-                    <th scope="row"><?php echo $el['Forum_id'];?></th>
-                    <td><?php echo $el['Forum_object'];?></td>
-                    <td><?php echo $el['Forum_datetime'];?></td>
+                    <th scope="row"><?php// echo $el['Forum_id'];?></th>
+                    <td><?php// echo $el['Forum_object'];?></td>
+                    <td><?php// echo $el['Forum_datetime'];?></td>
                 </tr>
-            <?php endforeach; ?>
+            <?php// endforeach; ?>
         </tbody>
     </table>
 </div>
@@ -112,9 +112,8 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center ">
                 <li class='page-item'><a class="page-link" href="/user/forum">1</a></li>
-                <?php for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) { ?>
-                    <li class="page-item"><a class="page-link" href="/user/<?php echo $model?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
-                    <?php } ?>
+                <?php //for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) { ?>
+                    <li class="page-item"><a class="page-link" href="/user/<?php //echo $model?>_p<?php// echo $forumpage?>" ><?php// echo $forumpage; ?></a></li>
                 </ul>
             </nav>
         </div>
@@ -139,15 +138,15 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     </div>
                 </div>
             </div>  
-            <form class="text-left" action="report" method="post" style="display=none">
+            <form class="text-left" action="/forum/add" method="post" style="display=none">
                 <input type="text" class="d-none" name="user" value="<?php echo $user->id?>">
                 <div class="mb-3">
                     <div class="form-label">Le sujet de votre forum</div>
-                    <input type="Objet" placeholder="Sujet" class="form-control" id="subject">
+                    <input type="Objet" name = 'forum_object' placeholder="Sujet" class="form-control" id="subject">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" id="validationCustom03"  placeholder="Message" required></textarea>
+                    <textarea class="form-control" name = 'forum_content' id="exampleFormControlTextarea1" rows="2" id="validationCustom03"  placeholder="Message" required></textarea>
                 </div>
                 <!--<div class="mb-3">
                     <label for="formFileSm" class="form-label">Fichier</label>

@@ -94,7 +94,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 <div class="container">
     <div class="card center w-75">
         <div class="card-body text-center">
-            <form class="w-75 center" action="report" method="post" style="display=none">
+            <form class="w-75 center" action="/forum/details/new" method="post" style="display=none">
                 <div class="mb-3">
                     <input type="text" class="d-none" name="user" value="<?php echo $user->id?>">
                     <input type="text" class="d-none" name="forum" value="<?php echo $forum->id?>">
