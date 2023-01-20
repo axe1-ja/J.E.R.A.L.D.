@@ -45,12 +45,12 @@ Route::set('faq',function(){
 
 
 // migrate route (activate only if necessary)
-/*Route::set('migration',function(){
+Route::set('migration',function(){
     Controller::view('database/migrate');
 });
 Route::set('migrate',function(){
     (new DatabaseController)->migrate();
-});*/
+});
 
 // import data route (activate only if necessary)
 /*Route::set('importfile',function(){
@@ -96,7 +96,12 @@ if($_SESSION['loggedin']==1) {
         // ------------
         // Admin routes
         Route::set('admin',function(){ (new admin)->index(); });
+
         Route::set('admin/datama',function(){ (new admin)->datama(); });
+        Route::set('admin/datama/edit',function(){ (new admin)->editData(); });
+        Route::set('admin/datama/update',function(){ (new admin)->updateData(); });
+        Route::set('admin/datama/delete',function(){ (new admin)->deleteData(); });
+
         Route::set('admin/notifs',function(){ (new admin)->notifs(); });
 
         // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
