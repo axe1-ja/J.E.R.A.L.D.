@@ -95,14 +95,14 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             </tr>
         </thead>
         <tbody>
-            <?php foreach($data as $el):   ?>
+            <?php// foreach($data as $el):   ?>
 
                 <tr>
-                    <th scope="row"><?php echo $el['Forum_id'];?></th>
-                    <td><?php echo $el['Forum_object'];?></td>
-                    <td><?php echo $el['Forum_datetime'];?></td>
+                    <th scope="row"><?php// echo $el['Forum_id'];?></th>
+                    <td><?php// echo $el['Forum_object'];?></td>
+                    <td><?php// echo $el['Forum_datetime'];?></td>
                 </tr>
-            <?php endforeach; ?>
+            <?php// endforeach; ?>
         </tbody>
     </table>
 </div>
@@ -112,9 +112,8 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center ">
                 <li class='page-item'><a class="page-link" href="/user/forum">1</a></li>
-                <?php for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) { ?>
-                    <li class="page-item"><a class="page-link" href="/user/<?php echo $model?>_p<?php echo $forumpage?>" ><?php echo $forumpage; ?></a></li>
-                    <?php } ?>
+                <?php //for ($forumpage = 2; $forumpage <= ceil($page[0]/10); $forumpage ++) { ?>
+                    <li class="page-item"><a class="page-link" href="/user/<?php //echo $model?>_p<?php// echo $forumpage?>" ><?php// echo $forumpage; ?></a></li>
                 </ul>
             </nav>
         </div>
