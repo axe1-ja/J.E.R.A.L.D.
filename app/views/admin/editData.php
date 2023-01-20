@@ -24,7 +24,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
             <input class="d-none" type="text" name="idVal" value="<?php echo $data[$idCol];?>">
             <div class="row center">
                 <?php foreach($data as $key=>$d):?>
-                    <?php if($key!=$idCol):?>
+                    <?php if($key!=$idCol && $key!='User_password'):?>
                         <div class="col-4 p-1">
                             <label for="input"><?php echo $key;?></label>
                             <input type="text" name="<?php echo $key;?>" placeholder="Entrer la nouvelle valeur" value="<?php echo $d;?>">

@@ -103,11 +103,13 @@ class Admin extends Controller
         $code = "";
         $c=0;
         foreach($_POST as $key=>$p) {
-            if($key!='model' && $key!='idCol' && $key!='idVal' && $c!=0) {
-                $code.=", ".$key."='".$p."' ";
-            } elseif($key!='model' && $key!='idCol' && $key!='idVal' && $c==0) {
-                $code.=$key."='".$p."' ";
-                $c=1;
+            if($p!='') {
+                if($key!='model' && $key!='idCol' && $key!='idVal' && $c!=0) {
+                    $code.=", ".$key."='".$p."' ";
+                } elseif($key!='model' && $key!='idCol' && $key!='idVal' && $c==0) {
+                    $code.=$key."='".$p."' ";
+                    $c=1;
+                }
             }
         }
         $query = "UPDATE `".$model."` SET ".$code." WHERE ".$idCol."=".$idVal.";";
