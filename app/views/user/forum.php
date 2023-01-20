@@ -138,15 +138,15 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     </div>
                 </div>
             </div>  
-            <form class="text-left" action="report" method="post" style="display=none">
+            <form class="text-left" action="/forum/add" method="post" style="display=none">
                 <input type="text" class="d-none" name="user" value="<?php echo $user->id?>">
                 <div class="mb-3">
                     <div class="form-label">Le sujet de votre forum</div>
-                    <input type="Objet" placeholder="Sujet" class="form-control" id="subject">
+                    <input type="Objet" name = 'forum_object' placeholder="Sujet" class="form-control" id="subject">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" id="validationCustom03"  placeholder="Message" required></textarea>
+                    <textarea class="form-control" name = 'forum_content' id="exampleFormControlTextarea1" rows="2" id="validationCustom03"  placeholder="Message" required></textarea>
                 </div>
                 <!--<div class="mb-3">
                     <label for="formFileSm" class="form-label">Fichier</label>
