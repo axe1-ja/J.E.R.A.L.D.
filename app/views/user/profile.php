@@ -12,19 +12,6 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 <?php
 include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 ?>
-<!--
-<div class="text-center p-3">
-    <div class="row">
-        <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home">
-                Accueil >
-            </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/profile"> 
-                Profil
-            </a>
-        </div>
-    </div>
-</div>-->
 
 <div class="container p-2">
     <div class="card center">
@@ -63,19 +50,39 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Date de naissance :</span>
-                        <span><?php echo $user->dob ?? 'NA';?></span>
+                        <span>
+                            <?php if($user->dob!=''):?>
+                                <?php echo $user->dob ?? 'NA';?>
+                            <?php else:?>
+                                NA
+                            <?php endif;?>
+                        </span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Taille :</span>
-                        <span><?php echo $user->height ?? 'NA';?> cm</span>
+                        <span>
+                            <?php if($user->height!=''):?>
+                                <?php echo $user->height ?? 'NA';?>
+                            <?php else:?>
+                                NA
+                            <?php endif;?>
+                            cm
+                        </span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Poids :</span>
-                        <span><?php echo $user->weight ?? 'NA';?> kg</span>
+                        <span>
+                            <?php if($user->weight!=''):?>
+                                <?php echo $user->weight ?? 'NA';?>
+                            <?php else:?>
+                                NA
+                            <?php endif;?>
+                            kg
+                        </span>
                     </div>
                     <div class="break-col-4-md py-2">
                         <span class="bold">Identifiant appareil :</span>
-                        <span><?php echo $bracelet->bracelet_id ?? 'NA';?></span>
+                        <span><?php echo $user->bracelet_id ?? 'NA';?></span>
                     </div>
                     
                 </div>
@@ -90,33 +97,40 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         <div class="row">
             <div class="col-12 p-2 text-center ">
                 <div class='f-3 bold'>Contacts d'urgence:</div>
-                <em>En cas de chute, nous appellerons vos deux proches ci-dessus.</em>
+                <em>En cas de chute, nous appellerons vos proches ci-dessus.</em>
             </div>
         </div>
         
         <div class="row">
-            <?php foreach($eC as $e):?>
-                <div class="break-col-4-md p-2">
-                    <div class="card card-primary center">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">Nom</div>
-                                <div class="col-6"><?php echo $e->name?></div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-6">Adresse e-mail</div>
-                                <div class="col-6">....</div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-6">Télephone</div>
-                                <div class="col-6"><?php echo $e->phone?></div>
+            
+            <?php if(count($eC)!=0):?>
+                <?php foreach($eC as $e):?>
+                    <div class="break-col-4-md p-2">
+                        <div class="card card-emergency center">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">Nom</div>
+                                    <div class="col-6"><?php echo $e->name?></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6">Adresse e-mail</div>
+                                    <div class="col-6">....</div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6">Télephone</div>
+                                    <div class="col-6"><?php echo $e->phone?></div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                <?php endforeach;?>
+            <?php else:?>
+                <div class="col-12 f-2 text-center">
+                    Vous n'avez pas de contacts d'urgence enregistrés <a href="/user/edit/proches"><u class="text-primary ">en ajouter maintenant!</u></a>
                 </div>
-            <?php endforeach;?>
+            <?php endif;?>
         </div>
         <div class="row">
             <div class="col-12 text-center p-2">
@@ -127,31 +141,6 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
         </div>
     </div>
 </div>
-
-<!--
-<div class="container">
-    
-    <div class="row text-center">
-        <div class="col-6">
-            <button id="user_profile_tab_1" class="btnLookLikeLink text-white user_profile_tabs active"><h4 class="f-2">Vos informations</h4></button>
-        </div>
-        <div class="col-6">
-            <button id="user_profile_tab_2" class="btnLookLikeLink text-white user_profile_tabs"><h4 class="f-2">Coordonnées de vos proches</h4></button>
-        </div>
-    </div>
-
-    <div id="vosInfos" class="row" style="display:block">
-        <div class="col-12">
-             include realpath(dirname(__DIR__,1) .'/user/components/vos_infos.php');?>
-        </div>
-    </div>
-
-    <div id="proches" class="row" style="display:none">
-        <div class="col-12">
-             include realpath(dirname(__DIR__,1) .'/user/components/coord_proches.php');?>
-        </div>
-    </div>
-</div>-->
 
 <!-- Footer of page -->
 <?php

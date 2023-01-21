@@ -117,10 +117,16 @@ if($_SESSION['loggedin']==1) {
     // -----------
     // User routes
     Route::set('user',function(){ (new UserController)->index(); });
+
     Route::set('user/profile',function(){ (new UserController)->profile(); });
     Route::set('user/edit/profile',function(){ (new UserController)->edit_profile(); });
     Route::set('user/update',function(){ (new UserController)->update(); });
+
     Route::set('user/edit/proches',function(){ (new UserController)->edit_proches(); });
+    Route::set('user/add/proche',function(){ (new UserController)->add_proche(); });
+    Route::set('user/update/proche',function(){ (new UserController)->update_proche(); });
+    Route::set('user/delete/proche',function(){ (new UserController)->delete_proche(); });
+
     Route::set('user/cardio',function(){ (new UserController)->cardio(); });
     Route::set('user/fall',function(){ (new UserController)->fall(); });
     Route::set('user/sound',function(){ (new UserController)->sound(); });

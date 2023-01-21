@@ -25,7 +25,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                         Nous vous avons envoyé un mail de vérification ; merci de vérifer vos mails et de cliquer sur le lien de vérification !
                     </h3>
                     <br>
-                    <a class="btn btn-outline-primary" href="login">Connexion</a>
+                    <a class="btn btn-outline-primary" href="/login">Connexion</a>
                     <p><br></p>
                 </div> 
             </div> 

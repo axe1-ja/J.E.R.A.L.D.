@@ -13,39 +13,14 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 ?>
 
-<div class="text-center p-3">
-    <div class="row">
-        <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home">
-                Accueil >
-            </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/profile"> 
-                Profil >
-            </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/user/edit_profile"> 
-                Modifier vos informations
-            </a>
-        </div>
-    </div>
-</div>
-
-<div class="container text-center py-4">
-    
-    <div class="row">
-        <div class="col-12"> 
-            <a href="/home">
-                <img src="/resources/storage/Images/logo-app2.png" class="logo-navbar center" alt="">
-            </a>
-        </div>
-    </div>
-
-    <div class="card center" style="width: 40rem;">
+<div class="container text-center p-2">
+    <div class="card center">
         <div class="card-body">  
-            <div class="mb-4 text-center">
-                <h3>Modifier vos informations</h3>
+            <div class="mb-4 text-center f-3 pt-3">
+                Modifier vos informations
             </div> 
             <form action="/user/update" method="post" class="row text-left">
-                <div class="col-12"> 
+                <div class="col-12 p-2"> 
                     <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Nom</label>
                         <input type="text" class="form-control" id="exampleInputName" id="validationCustom03" name="nom" value="<?php echo $user->nom;?>" required>
@@ -81,7 +56,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                     <br>
                     <div class="mb-3">
                         <label for="exampleInputBracelet" class="form-label">Identifiant Bracelet</label>
-                        <input type="text" class="form-control" id="exampleInputBracelet" id="validationCustom03" name="bracelet" placeholder="987654321" value="<?php echo $bracelet->bracelet_id ?? '';?>" required>
+                        <input type="text" class="form-control" id="exampleInputBracelet" id="validationCustom03" name="bracelet" placeholder="Numéro d'identifiant de votre bracelet Ekai" value="<?php echo $bracelet->bracelet_id ?? '';?>" required>
                     </div>
                     <div class="row">
                         <div class="col-12">

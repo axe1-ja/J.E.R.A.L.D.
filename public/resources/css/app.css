@@ -22,7 +22,7 @@
     --primary: /*#191C8C*/ #181C8D;
     --secondary: #BC9F22;
     --grey:#5C636A;
-    --green:#10c053;
+    --green:#0d9140;
     --black:#222222;
     --red:#F44336;
     --purple:#a508cc;
@@ -488,11 +488,14 @@ tr:nth-child(even) {background-color: rgba(128, 128, 128, 0.3);}
     background-color: aliceblue;
     padding: 10px;
 }
-.card.card-primary {
+.card.card-emergency {
     background-color: var(--primary)!important;
     color: white;
 }
 
+#authCard {
+    max-width:40rem;
+}
 
 /* css pour un titre (page d'accueil) */
 .titre {

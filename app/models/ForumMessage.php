@@ -53,7 +53,12 @@ class ForumMessage extends Model {
             'phone'=>$result["User_phone"], 
             'email'=>$result["User_email"], 
             'password'=>'', 
-            'adress'=>$result["User_address"]
+            'adress'=>$result["User_address"],
+            'dob'=>$result["User_DOB"] ?? '',
+            'height'=>$result["User_height"] ?? '',
+            'weight'=>$result["User_height"] ?? '',
+            'deleted'=>$result["user_deleted"] ?? '',
+            'deleted'=>$r["user_deleted"]
         ]);
 
         return $user;
