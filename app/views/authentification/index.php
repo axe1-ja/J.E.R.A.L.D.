@@ -62,6 +62,9 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
 
+                <?php if (isset($erreur)):?>
+                <div class="bg-red border-round-1 p-2 text-center my-1"><?php  echo $erreur; ?></div>
+                <?php endif;?>
                 <div class="row g-0 mt-2">
                     <div class="col-6">
                         <div class="start">
@@ -110,27 +113,6 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
         return $valid;
     }
     </script>
-
-<?php
-
-if(isset($_POST['email'], $_POST['password']))
-{
-    $stmt = $db->prepare('SELECT User_password FROM users WHERE User_email = ?');
-    $stmt->execute([$_POST['email']]);
-    $password = $stmt->fetchColumn();
-
-    if(password_verify($_POST['password'], $hashedPassword))
-    {
-        echo "Connexion réussie";
-    }
-    else 
-    {
-        echo "Mot de passe incorrect";
-    }
-    
-}
-
-?>
 
 <!-- Footer of page -->
 <?php

@@ -14,7 +14,7 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
 ?>
 
 <div class="container text-center p-2">
-    <div class="card center">
+    <div class="card center" style="max-width:40rem;">
         <div class="card-body">  
             <div class="mb-4 text-center f-3 pt-3">
                 Modifier vos informations

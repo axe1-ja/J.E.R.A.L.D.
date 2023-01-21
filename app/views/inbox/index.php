@@ -44,33 +44,35 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
         <ul class="conversations-index">
 
             <li class="title f-3 p-3 text-center">All Conversations</li>
-
-            <?php foreach($interlocutors as $interl): ?>
-                <li class="conversationTab <?php if($interlocutorId==$interl->id):?>active<?php endif;?>">
-                    <a href="/admin/inbox/<?php echo $interl->id?>">
-                        <h5><?php echo "".$interl->prenom.' '.$interl->nom;?> <i class="bi bi-caret-right"></i></h5>
-                        <?php $lastmsg = end($conv[$interl->id]) ?>
-                        <div class="row">
-                            <div class="col-6 f-1">
-                                <em>
-                                    <?php if($interl->id==$lastmsg->user_id_send):?>
-                                        <?php echo $interl->prenom?> : <?php echo substr($lastmsg->message_content,0,12); ?>
-                                        <?php if(strlen($lastmsg->message_content)>12):?>...<?php endif;?>
-                                    <?php else:?>
-                                        You : <?php echo substr($lastmsg->message_content,0,12); ?>
-                                        <?php if(strlen($lastmsg->message_content)>12):?>...<?php endif;?>
-                                    <?php endif;?>
-                                </em>
+            
+            <?php if(isset($interlocutors)): ?>
+                <?php foreach($interlocutors as $interl): ?>
+                    <li class="conversationTab <?php if($interlocutorId==$interl->id):?>active<?php endif;?>">
+                        <a href="/admin/inbox/<?php echo $interl->id?>">
+                            <h5><?php echo "".$interl->prenom.' '.$interl->nom;?> <i class="bi bi-caret-right"></i></h5>
+                            <?php $lastmsg = end($conv[$interl->id]) ?>
+                            <div class="row">
+                                <div class="col-6 f-1">
+                                    <em>
+                                        <?php if($interl->id==$lastmsg->user_id_send):?>
+                                            <?php echo $interl->prenom?> : <?php echo substr($lastmsg->message_content,0,12); ?>
+                                            <?php if(strlen($lastmsg->message_content)>12):?>...<?php endif;?>
+                                        <?php else:?>
+                                            You : <?php echo substr($lastmsg->message_content,0,12); ?>
+                                            <?php if(strlen($lastmsg->message_content)>12):?>...<?php endif;?>
+                                        <?php endif;?>
+                                    </em>
+                                </div>
+                                <div class="col-6 f-1 text-right">
+                                    <em>
+                                        <?php echo $lastmsg->message_datetime?>
+                                    </em>
+                                </div>
                             </div>
-                            <div class="col-6 f-1 text-right">
-                                <em>
-                                    <?php echo $lastmsg->message_datetime?>
-                                </em>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            <?php endforeach; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            <?php endif; ?>
 
             <li class="title p-3 text-center"> 
                 <button class="btn btn-outline-primary" onclick="document.getElementById('searchUser').style.display='block';">
@@ -84,23 +86,36 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
     <div class="col-8 p-0">
         <div class="conversation_container">
             <?php
-            $msgs = $conv[$interlocutorId];
+            if($interlocutorId!=false){
+                $msgs = $conv[$interlocutorId];
+            } else {
+                $msgs = false;
+            }
             ?>
-            <?php foreach($msgs as $msg): ?>
+            
+            <?php if($msgs != false): ?>
+                <?php foreach($msgs as $msg): ?>
+                    <div class="row">
+                        <div class="col-12">
+                            <?php if($msg->user_id_receive==$interlocutorId): ?>
+                                <div class="messageSender">
+                                    <?php echo $msg->message_content;?>
+                                </div>
+                            <?php else: ?>
+                                <div class="messageReceiver">
+                                    <?php echo $msg->message_content;?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
                 <div class="row">
                     <div class="col-12">
-                        <?php if($msg->user_id_receive==$interlocutorId): ?>
-                            <div class="messageSender">
-                                <?php echo $msg->message_content;?>
-                            </div>
-                        <?php else: ?>
-                            <div class="messageReceiver">
-                                <?php echo $msg->message_content;?>
-                            </div>
-                        <?php endif; ?>
+                        Vous n'avez pas de messages... <a onclick="document.getElementById('searchUser').style.display='block';"><u class="text-primary">écrire à quelqu'un</u></a>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php endif; ?>
             <p><br><br><br></p>
 
         </div>

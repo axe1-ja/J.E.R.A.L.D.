@@ -83,18 +83,20 @@ class User extends Model {
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-        foreach($result as $r){
-            $messages[]=new Message([
-                'id'=>$r['message_id'], 
-                'user_id_send'=>$r['User_Id_send'], 
-                'user_id_receive'=>$r['User_Id_receive'], 
-                'message_content'=>$r['message_Content'], 
-                'message_datetime'=>$r['message_Datetime']
-            ]);
+        if(count($result)!=0){
+            foreach($result as $r){
+                $messages[]=new Message([
+                    'id'=>$r['message_id'], 
+                    'user_id_send'=>$r['User_Id_send'], 
+                    'user_id_receive'=>$r['User_Id_receive'], 
+                    'message_content'=>$r['message_Content'], 
+                    'message_datetime'=>$r['message_Datetime']
+                ]);
+            }
+            return $messages;
+        } else {
+            return false;
         }
-        
-        //dd($messages);
-        return $messages;
 
     }
 

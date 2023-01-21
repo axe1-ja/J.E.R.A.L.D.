@@ -15,15 +15,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 
 <div class="container   text-center p-3">
     <div class="row">
-        <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home"> 
-            Accueil > 
-            </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/product"> 
-            Produit
-            </a>
-        </div>
-        <div class="col-6">
+        <div class="col-12">
             <h1 class="titre">Notre Produit</h1>
         </div>
     </div>
@@ -146,8 +138,8 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
         <div class='py-2 d-block'>
             <p class="f-4 p-2 center">Détails du produit : </p>
 
-            <div class='center border-1 border-round-1' id="productDetail">
-                <table>
+            <div class='center border-1 border-round-1-label tableContainer' id="productDetail">
+                <table id='featuresTable'>
                     <tbody>
                         <tr>
                             <th>Prix</th>
