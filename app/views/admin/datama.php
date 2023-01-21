@@ -23,6 +23,15 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                     </div>
                 <?php endforeach; ?>
             </div>
+            <br>
+            <div class="row mt-2">
+                <div class="col-12 text-center">
+                    <form action="/admin/datama/add" method="post">
+                        <input class="d-none" type="text" name="model" value='<?php echo $model;?>'>
+                        <button type="submit" class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i> Ajouter une donnée à cette table</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="break-col-10-lg p-2">
             <div class="row">

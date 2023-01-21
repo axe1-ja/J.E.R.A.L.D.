@@ -9,5 +9,19 @@ class Model
             $this->$key=$property;
         }
     }
+
+    public static function getTableCols($model) {
+        $db = new Database();
+
+        $query = "SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = N'".$model."';";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $cols=[];
+        foreach($result as $r) {
+            $cols[]=$r['COLUMN_NAME'];
+        }
+        return $cols;
+    }
     
 }

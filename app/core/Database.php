@@ -159,6 +159,6 @@ class Database {
     // function to get the log
     protected function log($message)
     {
-        echo PHP_EOL.'['.date('Y-m-d H:i:s').'] - '.$message.PHP_EOL;
+        //echo PHP_EOL.'['.date('Y-m-d H:i:s').'] - '.$message.PHP_EOL;
     }
 }
