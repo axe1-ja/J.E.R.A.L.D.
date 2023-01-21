@@ -54,24 +54,71 @@ class UserController extends Controller
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-        $result = $result[0];
-        $bracelet = $result['bracelet_id'];
+        if(isset($result[0])) {
+            $result = $result[0];
+            $bracelet = $result['bracelet_id'];
+            
+            $this->view('user/edit_profile', [
+                'user'=>$user,
+                'bracelet'=>$bracelet,
+            ]);
+        } else {
+            $this->view('user/edit_profile', [
+                'user'=>$user,
+            ]);
+        }
 
-        $this->view('user/edit_profile', [
-            'user'=>$user,
-            'bracelet'=>$bracelet,
-        ]);
-
-        //$this->view('user/vos_infos', [
-            //'user'=>$user,
-            //'bracelet'=>$bracelet,
-        //]);
+        
     }
 
+    //to go to the page to edit/add/remove emergency contact
     public function edit_proches()
     {
-        $this->view('user/edit_proches');
+        $user = User::getUser($_SESSION["user"]->email);
 
+        $eC = $user->getEmergencyContacts();
+        $this->view('user/edit_proches', [
+            'user'=>$user,
+            'eC'=>$eC,
+        ]);
+    }
+    
+    // to add an emergency contact
+    public function add_proche()
+    {
+        $user = $_SESSION["user"];
+        
+        $db = new Database();
+        $query = "INSERT INTO `EmergencyContact` (`Emergency_Name`,`Emergency_Number`,`User_id`) VALUES ('".$_POST['name']."','".$_POST['phone']."','".$user->id."');";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+        
+        $this->profile();
+    }
+    
+    // to edit emergency contact
+    public function update_proche()
+    {
+        $user = $_SESSION["user"];
+        
+        $db = new Database();
+        $query = "UPDATE `EmergencyContact` SET `Emergency_Name`='".$_POST['name']."',`Emergency_Number`='".$_POST['phone']."' WHERE `Emergency_id`=".$_POST['id']." ;";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+
+        $this->profile();
+    }
+
+    // to delete emergency contact
+    public function delete_proche()
+    {
+        $user = $_SESSION["user"];
+        $db = new Database();
+        $query = "DELETE FROM `EmergencyContact` WHERE `Emergency_id`=".$_POST['id']." ;";
+        $statement = $db->pdo->prepare($query);
+        $statement->execute();
+
+        $this->profile();
     }
 
     public function cardio()

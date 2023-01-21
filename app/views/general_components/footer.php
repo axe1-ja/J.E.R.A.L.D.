@@ -23,22 +23,22 @@
     </ul>
     <ul class="menu">
         <li class="menu__item">
-            <a class="menu__link"  href="home">Accueil</a>
+            <a class="menu__link"  href="/home">Accueil</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link"  href="product">Produit</a>
+            <a class="menu__link"  href="/product">Produit</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link"  href="histoire">Histoire</a>
+            <a class="menu__link"  href="/histoire">Histoire</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link"  href="contact">Contact</a>
+            <a class="menu__link"  href="/contact">Contact</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link"  href="login">Connexion</a>
+            <a class="menu__link"  href="/login">Connexion</a>
         </li>
 
     </ul>
 
-    <ul class="copyright" >&copy;2023 JERALD | All Rights Reserved | <a href="conditions" >Conditions d'utilisation</a> | <a href="/privacy" >Politique de confidentialité</a></ul>
+    <ul class="copyright" >&copy;2023 JERALD | All Rights Reserved | <a href="/conditions" >Conditions d'utilisation</a> | <a href="/privacy" >Politique de confidentialité</a></ul>
 </footer>

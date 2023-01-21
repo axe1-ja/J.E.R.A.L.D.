@@ -13,12 +13,13 @@ class User extends Model {
     public $dob;
     public $height;
     public $weight;
-    public $devices;
+    public $deleted;
 
     
 
     public static function getUser() {
         $user=$_SESSION['user'];
+        $user = User::findUser('User_email',$user->email);
         return $user;
     }
 
@@ -39,7 +40,8 @@ class User extends Model {
                 'phone'=>$r["User_phone"], 
                 'email'=>$r["User_email"], 
                 'password'=>'', 
-                'adress'=>$r["User_address"]
+                'adress'=>$r["User_address"],
+                'deleted'=>$r["user_deleted"]
             ]);
         }
 
@@ -63,7 +65,11 @@ class User extends Model {
             'phone'=>$result["User_phone"], 
             'email'=>$result["User_email"], 
             'password'=>'', 
-            'adress'=>$result["User_address"]
+            'adress'=>$result["User_address"],
+            'dob'=>$result["User_DOB"] ?? '',
+            'height'=>$result["User_height"] ?? '',
+            'weight'=>$result["User_height"] ?? '',
+            'deleted'=>$result["user_deleted"] ?? '',
         ]);
 
         return $user;
@@ -123,6 +129,7 @@ class User extends Model {
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+        $eC=[];
         foreach($result as $r){
             $eC[]=new EmergencyContact([
                 'id'=>$r['Emergency_id'], 

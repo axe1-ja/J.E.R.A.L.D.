@@ -23,8 +23,8 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
         </div>
     </div>
 
-    <div class="container center" style="width: 40rem;">
-        <div class="card">
+    <div class="container center p-2">
+        <div class="card center" id="authCard">
             <div class="row">
                 <div class="col-11">
                     <div class="text-center">
@@ -42,7 +42,7 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
-            <form action="/login-action" class="text-left" method="post" id="formLogin"
+            <form action="/login-action" class="text-left p-1" method="post" id="formLogin"
                 onSubmit="return validate();">
                 <?php
                 if (isset($_SESSION["errorMessage"])) {
