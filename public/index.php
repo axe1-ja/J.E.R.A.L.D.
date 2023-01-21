@@ -23,7 +23,6 @@ spl_autoload_register('autoloader');
 
 //$app = new App;
 session_start();
-//print_r($_SESSION);
 //exit;
 if(!array_key_exists('user',$_SESSION)){
     $_SESSION['user']='guest';

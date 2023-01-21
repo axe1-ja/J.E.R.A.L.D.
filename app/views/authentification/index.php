@@ -54,12 +54,12 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                 ?>
                 
                 <label for="exampleInputEmail1" class="form-label">Adresse e-mail</label>
-                <input type="email" class="form-control" name="email" id="email_info" aria-describedby="emailHelp" placeholder="name@example.com" required>
+                <input type="email" class="form-control" name="email" id="email_info" aria-describedby="emailHelp" placeholder="name@example.com" value="<?php if(isset($_COOKIE['user_email'])){echo $_COOKIE['user_email'];}?>" required>
                 
                 <label for="password" class="form-label">Mot de passe</label>
                 <input type="password" class="form-control" name ="password" id="password" required>
                 
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember_me" value="1" <?php if(isset($_COOKIE['user_email'])){echo 'checked';}?>>
                 <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
 
                 <?php if (isset($erreur)):?>

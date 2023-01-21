@@ -120,13 +120,15 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
         </div>
 
-        <div class="input_container">
-            <form action="/inbox/send" method="post">
-                <input type="text" name="interlocutor" value="<?php echo $interlocutorId;?>" class="d-none">
-                <input class="dm_input" type="text" placeholder="Type a message..." name="message" id="">
-                <button class="btn btn-outline-primary mr-2 d-inline inbox_sendButton" type="submit">Send</button>
-            </form>
-        </div>
+        <?php if($msgs != false): ?>
+            <div class="input_container">
+                <form action="/inbox/send" method="post">
+                    <input type="text" name="interlocutor" value="<?php echo $interlocutorId;?>" class="d-none">
+                    <input class="dm_input" type="text" placeholder="Type a message..." name="message" id="">
+                    <button class="btn btn-outline-primary mr-2 d-inline inbox_sendButton" type="submit">Send</button>
+                </form>
+            </div>
+        <?php endif; ?>
             
     </div>
 

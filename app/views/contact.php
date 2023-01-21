@@ -16,8 +16,23 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
             <p class="text-white my-2"><em>Envoyez un ticket pour reporter un problème que vous avez renconté avec notre produit ou pour nous poser une question sur les services que nous proposons.</em></p>
         </div>
     </div>
+
+    <?php if(isset($msg)):?>
+        <div class="bg-green p-2 text-center f-2 border-round-1 center" style="width: 40rem;max-width:90%">
+            <?php echo $msg;?>
+        </div>
+        <br>
+    <?php endif;?>
+    <?php if(isset($error)):?>
+        <div class="bg-red p-2 text-center f-2 border-round-1 center" style="width: 40rem;max-width:90%">
+            <?php echo $error;?>
+        </div>
+        <br>
+    <?php endif;?>
+
 </div>
 
+            
 <div class="container">
     <div class="card center" style="width: 40rem;max-width:90%">
         <div class="card-body">

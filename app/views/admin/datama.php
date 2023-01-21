@@ -85,7 +85,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                                                     <input class="d-none" type="text" name="model" value="<?php echo $model;?>">
                                                     <input class="d-none" type="text" name="idCol" value="<?php echo $cols[0];?>">
                                                     <input class="d-none" type="text" name="id" value="<?php echo $el[0];?>">
-                                                    <button type="submit" onclick="return confirm('Voulez vous vraiment supprimer cet utilisateur?')" class="btn btn-outline-red"><i class="bi bi-trash"></i></button>
+                                                    <button type="submit" onclick="return confirm('Voulez vous vraiment supprimer cette donnée?')" class="btn btn-outline-red"><i class="bi bi-trash"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
