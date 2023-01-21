@@ -37,7 +37,9 @@ Route::set('privacy',function(){
 
 // FAQ
 Route::set('faq',function(){
-    Controller::view('faq');
+    Controller::view('faq', [
+        'faqs'=>Faq::getAllFaqs(),
+    ]);
 });
 
 // End of Basic routes
@@ -98,18 +100,24 @@ if($_SESSION['loggedin']==1) {
     if($_SESSION['user']->role =='admin') {
         // ------------
         // Admin routes
-        Route::set('admin',function(){ (new admin)->index(); });
+        Route::set('admin',function(){ (new admin)->datama(); });
 
         Route::set('admin/datama',function(){ (new admin)->datama(); });
         Route::set('admin/datama/edit',function(){ (new admin)->editData(); });
         Route::set('admin/datama/update',function(){ (new admin)->updateData(); });
         Route::set('admin/datama/delete',function(){ (new admin)->deleteData(); });
+        Route::set('admin/datama/add',function(){ (new admin)->addData(); });
+        Route::set('admin/datama/store',function(){ (new admin)->storeData(); });
 
         Route::set('admin/notifs',function(){ (new admin)->notifs(); });
 
         // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
         Route::set('admin/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
         Route::set('admin/inbox',function(){ (new MessageController)->inbox(null); });
+
+        // migrate route (activate only if necessary)
+        Route::set('admin/database',function(){ (new admin)->database(); });
+        Route::set('admin/database/migrate',function(){(new admin)->migrate();});
 
         // End of Admin routes
         // -------------------

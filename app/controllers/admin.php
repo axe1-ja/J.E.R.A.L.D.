@@ -30,11 +30,22 @@ class Admin extends Controller
         ]);
     }
 
+    public function database()
+    {
+        //$db = new Database();
 
+        $user= User::getUser();
+
+        $this->view('admin/database', [
+            'page'=>'database',
+            'user'=>$user,
+
+        ]);
+    }
     
     public function datama()
     {
-        $modelList = ['migrations','users', 'EmergencyContact', 'forum', 'forum_messages','bracelet','sensor','messages'];
+        $modelList = ['migrations','users', 'EmergencyContact', 'forum', 'forum_messages','bracelet','sensor','messages','faq'];
         $db = new Database();
 
         if(isset($_POST['model'])) {
@@ -47,15 +58,24 @@ class Admin extends Controller
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-        $cols = array_keys($result[0]);
-        foreach ($result as $row) { 
-            $l = [];
-            foreach ($row as $val) {
-                $l[]=$val;
-            }
-            $data[] = $l;
-        }
 
+        if(count($result)==0) {
+
+            $cols=Model::getTableCols($model);
+            $data=[];
+
+        } else {
+
+            $cols = array_keys($result[0]);
+            foreach ($result as $row) { 
+                $l = [];
+                foreach ($row as $val) {
+                    $l[]=$val;
+                }
+                $data[] = $l;
+            }
+
+        }
         $this->view('admin/datama', [
             'cols'=>$cols,
             'page'=>'datama',
@@ -84,6 +104,60 @@ class Admin extends Controller
                 'idCol'=>$idCol,
                 'model'=>$model
             ]);
+
+        } else {
+
+            header('Location: /admin/datama');
+
+        }
+
+    }
+
+    // go to addData view
+    public function addData()
+    {
+        if(isset($_POST['model'])){
+            $model=$_POST['model'];
+            $tableCols=Model::getTableCols($model);
+
+            $this->view('admin/addData',[
+                'model'=>$model,
+                'tableCols'=>$tableCols
+            ]);
+
+        } else {
+
+            header('Location: /admin/datama');
+
+        }
+    }
+
+    //store the added data
+    public function storeData()
+    {
+        if(isset($_POST['model'])){
+            $model=$_POST['model'];
+            $cols = "";
+            $vals = "";
+            $c=0;
+            foreach($_POST as $key=>$p) {
+                if($p!='') {
+                    if($key!='model' && $c!=0) {
+                        $cols.=", `".$key."`";
+                        $vals.=', "'.$p.'"';
+                    } elseif($key!='model' && $c==0) {
+                        $cols.=" `".$key."`";
+                        $vals.=' "'.$p.'"';
+                        $c=1;
+                    }
+                }
+            }
+            $db = new Database();
+            $query = "INSERT INTO `".$model."` (".$cols.") VALUES (".$vals.");";
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+
+            $this->datama();
 
         } else {
 
@@ -140,6 +214,29 @@ class Admin extends Controller
 
         }
     }
+
+
+    public function migrate()
+    {
+        $user= User::getUser();
+        if($user->role=='admin'){
+            $db = new Database();
+            $db->applyMigrations();
+
+            return $this->view('admin/database', [
+                'msg' => "Les migrations ont bien été effectuées!",
+            ]);
+            
+        } else {
+            return $this->view('admin/database', [
+                'error' => "Vous n'avez pas l'autorisation d'effectuer cette manipulation",
+            ]);
+        }
+
+    }
+
+
+
 
     public function notifs()
     {
