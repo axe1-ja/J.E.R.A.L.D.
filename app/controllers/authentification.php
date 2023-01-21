@@ -93,7 +93,6 @@ class Authentification extends Controller
         }
 
         $password = hash('sha1', $_POST["password"]);
-        
         $query = "SELECT * FROM `users` WHERE User_email = '".$_POST["email"]."';";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
@@ -121,7 +120,9 @@ class Authentification extends Controller
                 $_SESSION['user']=$user;
                 $_SESSION['user_id']=$result['User_id'];
                 $_SESSION['loggedin']=1;
-
+                if(isset($_POST['remember_me'])) {
+                    setcookie("user_email", $user->email, time() + 3600*24,'/');
+                }
                 header("Location: /home");
 
             } else {
