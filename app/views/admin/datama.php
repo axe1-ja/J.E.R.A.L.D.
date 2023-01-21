@@ -42,7 +42,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 pt-1 w-100" id="tableContainer">
+                        <div class="col-12 pt-1 w-100 tableContainer">
                         <table class="table">
                             <thead>
                                 <tr>

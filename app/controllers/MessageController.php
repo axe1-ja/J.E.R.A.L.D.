@@ -21,21 +21,28 @@ class MessageController extends Controller
 
         $conv=[];
         $interlocutors=[]; 
-        foreach ($messages as $message) {
-            if($message->user_id_send==$user->id) {
-                $conv[$message->user_id_receive][]=$message;
-                if(!isset($interlocutors[$message->user_id_receive])){
-                    $interlocutors[$message->user_id_receive]=User::findUser('User_id',$message->user_id_receive);
-                }
-            }elseif ($message->user_id_receive==$user->id) {
-                $conv[$message->user_id_send][]=$message;
-                if(!isset($interlocutors[$message->user_id_send])){
-                    $interlocutors[$message->user_id_send]=User::findUser('User_id',$message->user_id_send);
+
+        if($messages !=false){
+            foreach ($messages as $message) {
+                if($message->user_id_send==$user->id) {
+                    $conv[$message->user_id_receive][]=$message;
+                    if(!isset($interlocutors[$message->user_id_receive])){
+                        $interlocutors[$message->user_id_receive]=User::findUser('User_id',$message->user_id_receive);
+                    }
+                }elseif ($message->user_id_receive==$user->id) {
+                    $conv[$message->user_id_send][]=$message;
+                    if(!isset($interlocutors[$message->user_id_send])){
+                        $interlocutors[$message->user_id_send]=User::findUser('User_id',$message->user_id_send);
+                    }
                 }
             }
+        } else {
+            $interlocutors=[];
         }
 
-        if(!isset($interlocutorId) || $interlocutorId==null || $interlocutorId==''){
+        if(count($interlocutors)==0) {
+            $interlocutorId;
+        } elseif(!isset($interlocutorId) || $interlocutorId==null || $interlocutorId==''){
             $interlocutorId= reset($interlocutors)->id;
         }
 

@@ -12,7 +12,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 <div class="container px-3">  
     <div class="row mt-4">
         <div class="col-12 offset-4 text-center my-2">
-            <h2 class="f-4 text-white my-2">Une question? Contactez nous.</h2>
+            <h2 class="f-4 text-white my-2">Une question? Contactez-nous.</h2>
             <p class="text-white my-2"><em>Envoyez un ticket pour reporter un problème que vous avez renconté avec notre produit ou pour nous poser une question sur les services que nous proposons.</em></p>
         </div>
     </div>
@@ -60,7 +60,7 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 <div class="row">
     <div class="col-4"></div>
     <div class="col-4 text-center text-white">
-        <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/privacy">politique de confidentialité</a>.</em></p>
+        <p><em>Vos informations personnelles ne seront ni stockées, ni partagées. Voir notre <a class="text-white text-decoration-underline" href="/privacy"><u class='text-white'> politique de confidentialité</u></a>.</em></p>
     </div>
 </div>
 

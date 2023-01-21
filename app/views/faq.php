@@ -14,16 +14,6 @@ include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 ?>
 
 <div class="container p-3">
-    <div class="row">
-        <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home"> 
-            Accueil > 
-            </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/faq"> 
-            FAQ
-            </a>
-        </div>
-    </div>
 
     <br>
 

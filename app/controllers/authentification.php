@@ -64,40 +64,45 @@ class Authentification extends Controller
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-        $result = $result[0];
-        $hash = $result["User_password"];
-        if ($password == $hash) {
-            if (isset($result["user_role"])) {
-                $role = $result["user_role"];
+        if(isset($result[0])) {
+            $result = $result[0];
+            $hash = $result["User_password"];
+            if ($password == $hash) {
+                if (isset($result["user_role"])) {
+                    $role = $result["user_role"];
+                } else {
+                    $role= "client";
+                }
+                $user = new User([
+                    'id'=>$result["User_id"], 
+                    'nom'=>$result["User_nom"], 
+                    'prenom'=>$result["User_Prenom"], 
+                    'role'=>$role, 
+                    'phone'=>$result["User_phone"], 
+                    'email'=>$result["User_email"], 
+                    'password'=>hash('sha1', $result["User_password"]), 
+                    'adress'=>$result["User_address"]
+                ]);
+                
+                $_SESSION['user']=$user;
+                $_SESSION['user_id']=$result['User_id'];
+                $_SESSION['loggedin']=1;
+
+                header("Location: home");
+
             } else {
-                $role= "client";
+
+                return $this->view('authentification/index', [
+                    'erreur' => "Votre mot de passe est incorrect !",
+                ]);
+                
+
             }
-            $user = new User([
-                'id'=>$result["User_id"], 
-                'nom'=>$result["User_nom"], 
-                'prenom'=>$result["User_Prenom"], 
-                'role'=>$role, 
-                'phone'=>$result["User_phone"], 
-                'email'=>$result["User_email"], 
-                'password'=>hash('sha1', $result["User_password"]), 
-                'adress'=>$result["User_address"]
-            ]);
-            
-            $_SESSION['user']=$user;
-            $_SESSION['user_id']=$result['User_id'];
-            $_SESSION['loggedin']=1;
-
-            header("Location: home");
-
         } else {
-
             return $this->view('authentification/index', [
-                'erreur' => "Votre email ou votre mot de passe est incorrect !",
+                'erreur' => "Votre email est incorrect !",
             ]);
-            
-
         }
-
     }
     
     public function logout()

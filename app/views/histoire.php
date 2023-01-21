@@ -9,21 +9,13 @@ include realpath(dirname(__DIR__,1) .'/views/layouts/header.php');
 include realpath(dirname(__DIR__,1) .'/views/general_components/navbar.php');
 ?>
 
-<div class="w-100 text-center p-3">
-    <div class="row">
-        <div class="col-3 text-left">
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/home"> 
-            Accueil > 
-            </a>
-            <a class="access"  class="text-white" style="color: white; font-size: 18px" href="/histoire"> 
-            Histoire
-            </a>
-        </div>
-    </div>
-</div>
-
 
 <div class="w-75 center text-center">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="titre">Notre Histoire</h1>
+        </div>
+    </div>
     <div class="row px-4">
         <div class="break-col-7-md">
             <h1 class="titre1">

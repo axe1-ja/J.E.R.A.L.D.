@@ -462,13 +462,18 @@ label .form-label { font-size: 35px!important; }
 }
 
 /* tables */
-#tableContainer {
+.tableContainer {
     overflow-x: scroll;
 }
 table {
     border-collapse: collapse;
     width: 100%;
+}
+.table {
     min-width: 760px;	
+}
+#featuresTable {
+    min-width: 450px;	
 }
 thead {
     background-color: var(--grey);
