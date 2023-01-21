@@ -71,6 +71,9 @@ if($_SESSION['loggedin']==0) {
     Route::set('create-user',function(){ (new authentification)->store(); });
     Route::set('login-action',function(){ (new authentification)->loginaction(); });
     Route::set('forgot_password',function(){ (new authentification)->forgot(); });
+    //pour s'inscrire en tant qu'admin
+    Route::set('admin',function(){ (new authentification)->adminLogin(); });
+    Route::set('admin/login',function(){ (new authentification)->adminLoginAction(); });
 } else {
     Route::set('login',function(){ Controller::view('home'); });
     Route::set('register',function(){ Controller::view('home'); });

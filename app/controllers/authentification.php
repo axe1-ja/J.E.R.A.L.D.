@@ -18,9 +18,47 @@ class Authentification extends Controller
         ]);
     }
     
+    //page for admin login
+    public function adminLogin()
+    {
+        $this->view('authentification/admin', []);
+    }
+    //if admin key is correct, the first admin account will be created as an administrator
+    public function adminLoginAction()
+    {
+        if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['adminKey']=='i5am6True7Admin80123_#987jerald%ekai978'){
+            $db = new Database();
+            $user = new User([
+                'id'=>0,
+                'nom'=>$_POST["nom"], 
+                'prenom'=>$_POST["prenom"], 
+                'role'=>"admin", 
+                'phone'=>$_POST["phone"], 
+                'email'=>$_POST["email"], 
+                'password'=>hash('sha1', $_POST["password"]), 
+                'adress'=>$_POST["adress"]
+            ]);
+            $query = "INSERT INTO users (User_nom, User_Prenom, User_email, User_phone, User_address, User_password, User_role) VALUES ('".$user->nom."', '".$user->prenom."', '".$user->email."', '".$user->phone."', '".$user->adress."', '".$user->password."','".$user->role."')";
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+
+            
+            $_SESSION['user']=$user;
+            $_SESSION['user_id']=$result['User_id'];
+            $_SESSION['loggedin']=1;
+
+            header("Location: /home");
+        } else {
+            $this->view('authentification/admin', [
+                'error'=>"Erreur: votre requete n'a pas marché",
+            ]);
+        }
+
+    }
+
+
     public function store()
     {
-
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $db = new Database();
         }
@@ -41,14 +79,10 @@ class Authentification extends Controller
             $statement = $db->pdo->prepare($query);
             $statement->execute();
 
-            header("Location: login");
-
+            header("Location: /login");
         } else {
-
-            header("Location: register_failed");
-
+            header("Location: /register_failed");
         }
-
     }
 
 
@@ -88,7 +122,7 @@ class Authentification extends Controller
                 $_SESSION['user_id']=$result['User_id'];
                 $_SESSION['loggedin']=1;
 
-                header("Location: home");
+                header("Location: /home");
 
             } else {
 
@@ -112,7 +146,7 @@ class Authentification extends Controller
         $_SESSION['user_id']=0;
         $_SESSION['loggedin']=0;
         
-        header("Location: home");
+        header("Location: /home");
 
     }
 
