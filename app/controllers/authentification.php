@@ -116,14 +116,25 @@ class Authentification extends Controller
                     'password'=>hash('sha1', $result["User_password"]), 
                     'adress'=>$result["User_address"]
                 ]);
-                
-                $_SESSION['user']=$user;
-                $_SESSION['user_id']=$result['User_id'];
-                $_SESSION['loggedin']=1;
-                if(isset($_POST['remember_me'])) {
-                    setcookie("user_email", $user->email, time() + 3600*24,'/');
+                if(!User::checkDeleted($user->id) && User::checkVerified($user->id)){
+                    $_SESSION['user']=$user;
+                    $_SESSION['user_id']=$result['User_id'];
+                    $_SESSION['loggedin']=1;
+                    if(isset($_POST['remember_me'])) {
+                        setcookie("user_email", $user->email, time() + 3600*24,'/');
+                    }
+                    header("Location: /home");
+                } elseif(!User::checkVerified($user->id)) {
+                    $msg = VerificationController::sendVerificationEmail($user->id,$user->email,$user->nom.' '.$user->prenom);
+                    return $this->view('authentification/index', [
+                        'msg' => $msg,
+                    ]);
+                } else {
+                    return $this->view('authentification/index', [
+                        'erreur' => "Cet utilisateur n'existe pas",
+                    ]);
                 }
-                header("Location: /home");
+                
 
             } else {
 
@@ -139,7 +150,7 @@ class Authentification extends Controller
             ]);
         }
     }
-    
+
     public function logout()
     {
         

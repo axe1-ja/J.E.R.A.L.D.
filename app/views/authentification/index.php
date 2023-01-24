@@ -42,6 +42,11 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
                 </div>
             </div>
+            
+            <?php if(isset($msg)):?>
+                <div class="bg-green p-1 border-round-1 center"><?php echo $msg?></div>
+            <?php endif;?>
+
             <form action="/login-action" class="text-left p-1" method="post" id="formLogin"
                 onSubmit="return validate();">
                 <?php
