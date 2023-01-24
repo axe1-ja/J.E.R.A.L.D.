@@ -8,21 +8,8 @@ class ContactController extends Controller
 
     public function report()
     {
-        //if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        //    $db = new Database();
-        //}
-        /*ini_set('SMTP', "82.64.120.113");
-        ini_set('smtp_port', "25");
-        ini_set('sendmail_from', "jeraldekai@gmail.com");*/
-
         // @ts-ignore
         $mail = new PHPMailer\PHPMailer\PHPMailer();                // @ignore
-        /*$to = "jeraldekai@gmail.com";
-        $subject = "Requête de : ".$_POST['nomprenom'].", contact: ".$_POST['email'];
-        $message = "
-          <h5>Review Request Reminder</h5>
-          ".$_POST['message']."";
-        $headers = "From:".$_POST['email']."\r\n".'MIME-Version: 1.0'."\r\n".'Content-type: text/html;charset=utf-8';*/
   
         try {
             $mail->SMTPDebug = 0;                                       
@@ -66,14 +53,6 @@ class ContactController extends Controller
                 "error"=>"Message could not be sent. Mailer Error: {$mail->ErrorInfo}",
             ]);
         }
-        /*
-        if(mail($to,$subject,$message,$headers)) {
-            dd('success');
-            return $this->view('home');
-        } else {
-            dd("Email not sent, problem with smtp server");
-            exit;
-        };*/
 
     }
 

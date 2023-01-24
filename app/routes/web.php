@@ -66,6 +66,7 @@ Route::set('import',function(){
 // -----------------------
 // Authentification routes
 
+Route::set('verify/{key}',['controller'=>'VerificationController','method'=>'verify']);
 if($_SESSION['loggedin']==0) {
     Route::set('login',function(){ (new authentification)->index(); });
     Route::set('register',function(){ (new authentification)->create(); });
