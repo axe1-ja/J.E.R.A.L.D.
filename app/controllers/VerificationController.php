@@ -9,10 +9,11 @@ class VerificationController extends Controller
         require realpath(dirname(__DIR__,1).'/../vendor/phpmailer/phpmailer/src/Exception.php');
         require realpath(dirname(__DIR__,1).'/../vendor/phpmailer/phpmailer/src/PHPMailer.php');
         require realpath(dirname(__DIR__,1).'/../vendor/phpmailer/phpmailer/src/SMTP.php');
-        
-        $verifCode1 = 'fgjeiwfjwpfc0493mvtj';
-        $verifCode2 = 'ureigvmje58tu34mv90o';
-        $verifCode = $verifCode1.$verifCode2;
+
+        $verifCode1 = sha1($id.$email.$name);
+        $verifCode2 = md5(date('Y-m-d h:m:i').$id.'confirmkey');
+        $verifCode = str_replace('/', '5', sha1($verifCode2).password_hash(crypt($verifCode1.$verifCode2,'ghjk$dsm2g28d42fdesfjk'.$id.'rlkfg22587efg8'.$name.'confirmkey'.'dvh7d67gf7b6d9fgfd4ds6$'),PASSWORD_DEFAULT).md5('ghjk$dsm2g28d42fdesfjkrlkfg22587efg8dvh7d67gf7b6d9fgfd4ds6$'));
+
         if(!VerificationController::alreadySent($verifCode,$id)){
             VerificationController::store($verifCode,$id);
             

@@ -11,10 +11,6 @@
         <li class="nav-item p-2 f-4">
             <a class="<?php if($page=='database'){echo 'active';}?>" href="/admin/database">Actions sur la base de données</a>
         </li>
-        <li class="nav-item p-2 f-4">
-        
-            <a class="<?php if($page=='notifs'){echo 'active';}?>" href="/admin/notifs">Notifications</a>
-        </li>
     </ul>
     
     <div id="nav-dropdown" class="navbar-dropdown dropdown ml-3">

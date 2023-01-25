@@ -56,23 +56,27 @@ class User extends Model {
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-        $result=$result[0];
-        $user = new User([
-            'id'=>$result["User_id"], 
-            'nom'=>$result["User_nom"], 
-            'prenom'=>$result["User_Prenom"], 
-            'role'=>$result["user_role"], 
-            'phone'=>$result["User_phone"], 
-            'email'=>$result["User_email"], 
-            'password'=>'', 
-            'adress'=>$result["User_address"],
-            'dob'=>$result["User_DOB"] ?? '',
-            'height'=>$result["User_height"] ?? '',
-            'weight'=>$result["User_height"] ?? '',
-            'deleted'=>$result["user_deleted"] ?? '',
-        ]);
+        if(isset($result[0])){
+            $result=$result[0];
+            $user = new User([
+                'id'=>$result["User_id"], 
+                'nom'=>$result["User_nom"], 
+                'prenom'=>$result["User_Prenom"], 
+                'role'=>$result["user_role"], 
+                'phone'=>$result["User_phone"], 
+                'email'=>$result["User_email"], 
+                'password'=>'', 
+                'adress'=>$result["User_address"],
+                'dob'=>$result["User_DOB"] ?? '',
+                'height'=>$result["User_height"] ?? '',
+                'weight'=>$result["User_height"] ?? '',
+                'deleted'=>$result["user_deleted"] ?? '',
+            ]);
 
-        return $user;
+            return $user;
+        } else {
+            return false;
+        }
     }
 
     public function getUserMessages() {

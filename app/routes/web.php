@@ -111,8 +111,6 @@ if($_SESSION['loggedin']==1) {
         Route::set('admin/datama/add',function(){ (new admin)->addData(); });
         Route::set('admin/datama/store',function(){ (new admin)->storeData(); });
 
-        Route::set('admin/notifs',function(){ (new admin)->notifs(); });
-
         // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
         Route::set('admin/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
         Route::set('admin/inbox',function(){ (new MessageController)->inbox(null); });

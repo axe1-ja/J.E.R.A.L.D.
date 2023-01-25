@@ -64,7 +64,7 @@ class Authentification extends Controller
         }
 
         $exsistingUser = User::findUser('User_email',$_POST['email']);
-        if(!isset($exsistingUser->email)){
+        if(!isset($exsistingUser->email)|| $exsistingUser==false){
             $user = new User([
                 'id'=>0,
                 'nom'=>$_POST["nom"], 
@@ -75,11 +75,18 @@ class Authentification extends Controller
                 'password'=>hash('sha1', $_POST["password"]), 
                 'adress'=>$_POST["adress"]
             ]);
+
             $query = "INSERT INTO users (User_nom, User_Prenom, User_email, User_phone, User_address, User_password, User_role) VALUES ('".$user->nom."', '".$user->prenom."', '".$user->email."', '".$user->phone."', '".$user->adress."', '".$user->password."','".$user->role."')";
             $statement = $db->pdo->prepare($query);
             $statement->execute();
 
-            header("Location: /login");
+            // get the new user's id
+            $existingUser = User::findUser('User_email',$_POST['email']);
+            $msg = VerificationController::sendVerificationEmail($exsistingUser->id,$exsistingUser->email,$exsistingUser->nom.' '.$exsistingUser->prenom);
+            return $this->view('authentification/index', [
+                'msg' => $msg,
+            ]);
+
         } else {
             header("Location: /register_failed");
         }
