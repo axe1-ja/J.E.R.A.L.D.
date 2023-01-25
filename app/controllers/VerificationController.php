@@ -1,8 +1,8 @@
 <?php
 
-require realpath(dirname(__DIR__,1) .'../../vendor/phpmailer/phpmailer/src/Exception.php');
-require realpath(dirname(__DIR__,1) .'../../vendor/phpmailer/phpmailer/src/PHPMailer.php');
-require realpath(dirname(__DIR__,1) .'../../vendor/phpmailer/phpmailer/src/SMTP.php');
+require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/Exception.php');
+require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/PHPMailer.php');
+require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/SMTP.php');
 
 class VerificationController extends Controller
 {
