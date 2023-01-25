@@ -5,7 +5,7 @@
 class VerificationController extends Controller
 {
     public static function sendVerificationEmail($id,$email,$name) {
-        dd(realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/Exception.php'));
+        dd(realpath(dirname(__DIR__,1).'/../vendor/phpmailer/phpmailer/src/Exception.php'));
         
         require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/Exception.php');
         require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/PHPMailer.php');
