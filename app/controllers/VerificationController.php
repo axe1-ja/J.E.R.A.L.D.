@@ -1,12 +1,13 @@
 <?php
 
-require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/Exception.php');
-require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/PHPMailer.php');
-require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/SMTP.php');
+
 
 class VerificationController extends Controller
 {
     public static function sendVerificationEmail($id,$email,$name) {
+        require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/Exception.php');
+        require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/PHPMailer.php');
+        require realpath(dirname(__DIR__,1).'../../vendor/phpmailer/phpmailer/src/SMTP.php');
         $verifCode1 = 'fgjeiwfjwpfc0493mvtj';
         $verifCode2 = 'ureigvmje58tu34mv90o';
         $verifCode = $verifCode1.$verifCode2;
