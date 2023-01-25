@@ -147,7 +147,7 @@ class User extends Model {
     public static function checkDeleted($uid) {
         $db = new Database();
 
-        $query = "SELECT * FROM `Users` WHERE User_id=".$uid.";";
+        $query = "SELECT * FROM `users` WHERE User_id=".$uid.";";
 
         $statement = $db->pdo->prepare($query);
         $statement->execute();
@@ -162,7 +162,7 @@ class User extends Model {
     public static function checkVerified($uid) {
         $db = new Database();
 
-        $query = "SELECT * FROM `Users` WHERE User_id=".$uid.";";
+        $query = "SELECT * FROM `users` WHERE User_id=".$uid.";";
 
         $statement = $db->pdo->prepare($query);
         $statement->execute();
