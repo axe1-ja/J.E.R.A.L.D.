@@ -116,7 +116,7 @@ class Authentification extends Controller
                     'password'=>hash('sha1', $result["User_password"]), 
                     'adress'=>$result["User_address"]
                 ]);
-                if(!User::checkDeleted($user->id) && User::checkVerified($user->id)){
+                if(!User::checkDeleted($user->id) /*&& User::checkVerified($user->id)*/){
                     $_SESSION['user']=$user;
                     $_SESSION['user_id']=$result['User_id'];
                     $_SESSION['loggedin']=1;
@@ -125,7 +125,7 @@ class Authentification extends Controller
                     }
                     header("Location: /home");
                 } elseif(!User::checkVerified($user->id)) {
-                    $msg = VerificationController::sendVerificationEmail($user->id,$user->email,$user->nom.' '.$user->prenom);
+                    //$msg = VerificationController::sendVerificationEmail($user->id,$user->email,$user->nom.' '.$user->prenom);
                     return $this->view('authentification/index', [
                         'msg' => $msg,
                     ]);
