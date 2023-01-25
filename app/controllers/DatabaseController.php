@@ -7,6 +7,7 @@ class DatabaseController extends Controller
         //dd($_POST);
         if(isset($_POST['password']) && $_POST['password']=='migration80123_#987jerald%kfed'){
             $db = new Database();
+            dd('aa');
             $db->applyMigrations();
 
             return $this->view('database/migrate', [
