@@ -147,12 +147,12 @@ class User extends Model {
     public static function checkDeleted($uid) {
         $db = new Database();
 
-        $query = "SELECT user_deleted FROM `Users` WHERE User_id=".$uid.";";
+        $query = "SELECT * FROM `Users` WHERE User_id=".$uid.";";
 
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC)[0];
-        if(reset($result)==0 || reset($result)==''){
+        if($result['user_deleted']==0 || $result['user_deleted']==''){
             return false;
         } else {
             return true;
@@ -162,12 +162,12 @@ class User extends Model {
     public static function checkVerified($uid) {
         $db = new Database();
 
-        $query = "SELECT user_verified FROM `Users` WHERE User_id=".$uid.";";
+        $query = "SELECT * FROM `Users` WHERE User_id=".$uid.";";
 
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC)[0];
-        if(reset($result)==0 || reset($result)==''){
+        if($result['user_verified']==0 || $result['user_verified']==''){
             return false;
         } else {
             return true;
