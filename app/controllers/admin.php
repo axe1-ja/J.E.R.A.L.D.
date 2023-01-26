@@ -239,7 +239,7 @@ class Admin extends Controller
                     $query .= " OR ".$c." LIKE '%".$search."%' ";
                 }
             }
-            
+            dd($query);
             $statement = $db->pdo->prepare($query);
             $statement->execute();
             $result=$statement->fetchAll(PDO::FETCH_ASSOC);
