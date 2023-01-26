@@ -15,7 +15,7 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
     <div class="card center" style='max-width:80rem'>
         <div class="row">
             <div class="col-12">
-                <h1>Ajouter une donner à la table <?php echo $model?></h1>
+                <h1>Ajouter une donnée à la table <?php echo $model?></h1>
             </div>
         </div>
         <form action="/admin/datama/store" method="post">

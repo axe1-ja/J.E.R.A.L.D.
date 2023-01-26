@@ -114,11 +114,6 @@ include realpath(dirname(__DIR__,1) .'/user/components/user_nav.php');
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-6">Adresse e-mail</div>
-                                    <div class="col-6">....</div>
-                                </div>
-                                <br>
-                                <div class="row">
                                     <div class="col-6">Télephone</div>
                                     <div class="col-6"><?php echo $e->phone?></div>
                                 </div>
