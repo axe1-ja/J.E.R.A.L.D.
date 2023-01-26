@@ -12,7 +12,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
         <div class="row p-2">
             <div class="col-12">
-                <form action="/admin/inbox" method="post">
+                <form action="/inbox" method="post">
                     <select class="form-control mb-2" name="userChosen" id="userChosen">
                             <option value="" disabled selected>Selectionner un utilisateur</option>
                         <?php foreach($allUsers as $u) : ?>
@@ -48,7 +48,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
             <?php if(isset($interlocutors)): ?>
                 <?php foreach($interlocutors as $interl): ?>
                     <li class="conversationTab <?php if($interlocutorId==$interl->id):?>active<?php endif;?>">
-                        <a href="/admin/inbox/<?php echo $interl->id?>">
+                        <a href="/inbox/<?php echo $interl->id?>">
                             <h5><?php echo "".$interl->prenom.' '.$interl->nom;?> <i class="bi bi-caret-right"></i></h5>
                             <?php $lastmsg = end($conv[$interl->id]) ?>
                             <div class="row">

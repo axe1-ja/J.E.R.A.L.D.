@@ -114,10 +114,6 @@ if($_SESSION['loggedin']==1) {
         Route::set('admin/datama/store',function(){ (new admin)->storeData(); });
         Route::set('admin/datama/search',function(){ (new admin)->searchData(); });
 
-        // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
-        Route::set('admin/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
-        Route::set('admin/inbox',function(){ (new MessageController)->inbox(null); });
-
         // migrate route (activate only if necessary)
         Route::set('admin/database',function(){ (new admin)->database(); });
         Route::set('admin/database/migrate',function(){(new admin)->migrate();});
@@ -164,14 +160,16 @@ if($_SESSION['loggedin']==1) {
 
     Route::set('user/practice',function(){ (new UserController)->practice(); });
 
-    Route::set('user/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
-    Route::set('user/inbox',function(){ (new MessageController)->inbox(null); });
+    
     // End of User routes
     // ------------------
 
     // ------------
     // General Inbox routes
     Route::set('inbox/send',function(){ (new MessageController)->send(); });
+    // 2 routes (1ere: si un utilisateur different de celui de base a ete selectionné , 2eme: si aucun utilisateur n'a ete selectionné)
+    Route::set('inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
+    Route::set('inbox',function(){ (new MessageController)->inbox(null); });
     // End of Inbox routes
     // -------------------
 }

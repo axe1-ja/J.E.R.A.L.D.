@@ -58,19 +58,18 @@ class MessageController extends Controller
         ]);
     }
 
-    public function send($from) {
+    public function send() {
         $user = User::getUser();
         $interlocutor= User::findUser('User_id',$_POST['interlocutor']);
         $date = date('y-m-d h:i:s');
-
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $db = new Database();
         }
-        $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ('".$user->id."','".$interlocutor->id."','".$_POST['subject']."','".$date."');";
+        $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ('".$user->id."','".$interlocutor->id."','".$_POST['message']."','".$date."');";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         
-        header('Location: /'.$from.'/inbox');
+        header('Location: /inbox/'.$interlocutor->id);
     }
 
     public function add() {

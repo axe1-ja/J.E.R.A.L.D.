@@ -23,7 +23,7 @@
                 <li><a class="dropdown-item" href="/admin">Accès Admin</a></li>
             <?php endif; ?>
             <li><a class="dropdown-item" href="/user">Tableau de bord</a></li>
-            <li><a class="dropdown-item" href="/user/inbox">Messagerie</a></li>
+            <li><a class="dropdown-item" href="/inbox">Messagerie</a></li>
             <li><a class="dropdown-item" href="/user/profile">Profil</a></li>
             <li><a class="dropdown-item" href="/logout">Déconnexion</a></li>
         </ul>

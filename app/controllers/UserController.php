@@ -15,7 +15,7 @@ class UserController extends Controller
         }
         $user_id=4;
         $query='';
-        if(isset($_POST['bracelet'])){
+        if( isset($_POST['bracelet']) && !Bracelet::braceletExists('bracelet_id',$_POST['bracelet']) ){
             $query="INSERT INTO `bracelet`(`bracelet_id`, `User_id`) VALUES ('".$_POST['bracelet']."','".$user_id."');";
         }
 
@@ -25,8 +25,11 @@ class UserController extends Controller
         $statement->execute();
         $user = User::getUser($_SESSION["user"]->email);
 
+        $eC = $user->getEmergencyContacts();
+
         $this->view('user/profile', [
             'user'=>$user,
+            'eC'=>$eC, 
         ]);
 
         header("Location: /user/profile");

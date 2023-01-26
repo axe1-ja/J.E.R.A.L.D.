@@ -1,7 +1,7 @@
 <?php
-require realpath(dirname(__DIR__,1) .'/../../vendor/phpmailer/phpmailer/src/Exception.php');
-require realpath(dirname(__DIR__,1) .'/../../vendor/phpmailer/phpmailer/src/PHPMailer.php');
-require realpath(dirname(__DIR__,1) .'/../../vendor/phpmailer/phpmailer/src/SMTP.php');
+require realpath(dirname(__DIR__,1) .'/../vendor/phpmailer/phpmailer/src/Exception.php');
+require realpath(dirname(__DIR__,1) .'/../vendor/phpmailer/phpmailer/src/PHPMailer.php');
+require realpath(dirname(__DIR__,1) .'/../vendor/phpmailer/phpmailer/src/SMTP.php');
         
 class ContactController extends Controller
 {
@@ -17,7 +17,7 @@ class ContactController extends Controller
             $mail->Host       = 'ssl0.ovh.net;';                 
             $mail->SMTPAuth   = true;                             
             $mail->Username   = 'postmaster@captair.paris';               
-            $mail->Password   = '8VHg2$v*25S%Cs3';                        
+            $mail->Password   = 'nw3hkkZPYVQYbG5u';                        
             $mail->SMTPSecure = 'ssl';                               
             $mail->Port       = 465;  
         

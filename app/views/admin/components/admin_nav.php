@@ -20,7 +20,7 @@
         <ul class="dropdown-content">
             <li><a class="dropdown-item" href="/home">Accueil</a></li>
             <li><a class="dropdown-item" href="/user">Accès utilisateur</a></li>
-            <li><a class="dropdown-item" href="/admin/inbox">Messagerie</a></li>
+            <li><a class="dropdown-item" href="/inbox">Messagerie</a></li>
             <li><a class="dropdown-item" href="/logout">Déconnexion</a></li>
 
         </ul>
