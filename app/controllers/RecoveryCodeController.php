@@ -67,7 +67,7 @@ class RecoveryCodeController extends Controller
 
     public static function store($code,$uid) {
         $db = new Database();
-        $query = "INSERT INTO `recoverycode` (recoverycode_code, User_id, RecoveryCode_datetime) VALUES ('".$code."', '".$uid."','".date('Y-m-d h:m:s')."');";
+        $query = "INSERT INTO `RecoveryCode` (recoverycode_code, User_id, RecoveryCode_datetime) VALUES ('".$code."', '".$uid."','".date('Y-m-d h:m:s')."');";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
     }
@@ -75,7 +75,7 @@ class RecoveryCodeController extends Controller
     public static function alreadySent($code,$uid) {
         $db = new Database();
 
-        $query = "SELECT * FROM `recoverycode` WHERE `User_id`='".$uid."';";
+        $query = "SELECT * FROM `RecoveryCode` WHERE `User_id`='".$uid."';";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
@@ -97,7 +97,7 @@ class RecoveryCodeController extends Controller
 
         $db = new Database();
 
-        $query = "SELECT * FROM `recoverycode` WHERE `User_id`='".$uid."';";
+        $query = "SELECT * FROM `RecoveryCode` WHERE `User_id`='".$uid."';";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
