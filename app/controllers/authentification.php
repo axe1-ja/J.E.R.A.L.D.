@@ -78,7 +78,6 @@ class Authentification extends Controller
 
             $query = "INSERT INTO users (User_nom, User_Prenom, User_email, User_phone, User_address, User_password, User_role) VALUES ('".$user->nom."', '".$user->prenom."', '".$user->email."', '".$user->phone."', '".$user->adress."', '".$user->password."','".$user->role."')";
             $statement = $db->pdo->prepare($query);
-            dd($query);
             $statement->execute();
 
             // get the new user's id
