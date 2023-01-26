@@ -201,9 +201,9 @@ class Admin extends Controller
             $db = new Database();
 
             if($model=='users') {
-                $query = "UPDATE `".$model."` SET user_deleted=1 WHERE ".$idCol."=".$id.";";
+                $query = "UPDATE `".$model."` SET user_deleted=1 WHERE '".$idCol."'='".$id."';";
             } else {
-                $query = "DELETE FROM `".$model."` WHERE ".$idCol."=".$id.";";
+                $query = "DELETE FROM `".$model."` WHERE '".$idCol."'='".$id."';";
             }
 
             $statement = $db->pdo->prepare($query);
