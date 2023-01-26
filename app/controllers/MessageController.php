@@ -65,7 +65,7 @@ class MessageController extends Controller
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $db = new Database();
         }
-        $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES (`".$user->id."`,`".$interlocutor->id."`,`".$_POST['message']."`,`".$date."`);";
+        $query = 'INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ("'.$user->id.'","'.$interlocutor->id.'","'.$_POST['message'].'","'.$date.'");';
         $statement = $db->pdo->prepare($query);
         $statement->execute();
         
@@ -75,13 +75,13 @@ class MessageController extends Controller
     public function add() {
         $user = User::getUser();
         $interlocutor= User::findUser('User_id',$_POST['userChosen']);
-        $date = date('y-m-d h:i:s');
+        $date = date('Y-m-d h:i:s');
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $db = new Database();
         }
 
-        $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES (`".$user->id."`,`".$interlocutor->id."`,`".$_POST['msg']."`,`".$date."`);";
+        $query = 'INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ('.$user->id.','.$interlocutor->id.',"'.$_POST['msg'].'","'.$date.'");';
         $statement = $db->pdo->prepare($query);
         $statement->execute();
 
