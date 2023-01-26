@@ -31,12 +31,12 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
                         <h2>Connexion</h2>
                     </div>
                     <p>
-                    <span id="info" class="error-info">
-                        <?php if(isset($errur)):?>
-                            <?php echo $erreur?>
-                        <?php endif;?>
-                    </span>
-                </p>
+                        <span id="info" class="error-info">
+                            <?php if(isset($errur)):?>
+                                <?php echo $erreur?>
+                            <?php endif;?>
+                        </span>
+                    </p>
                 </div>
                 <div class="col-1 text-right">
                     <button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>

@@ -32,7 +32,7 @@ class Authentification extends Controller
                 'id'=>0,
                 'nom'=>$_POST["nom"], 
                 'prenom'=>$_POST["prenom"], 
-                'role'=>"admin", 
+                'role'=>"admin",
                 'phone'=>$_POST["phone"], 
                 'email'=>$_POST["email"], 
                 'password'=>hash('sha1', $_POST["password"]), 
@@ -170,19 +170,67 @@ class Authentification extends Controller
 
     }
 
+    //to go to page of recuperation of password
     public function forgot()
     {
         $this->view('authentification/forgot_password', []);
     }
 
-    public function sendEmail() 
+    // send the recuperation code by email
+    public function getRecupCode()
     {
-        $this->view('authentification/verify', []);
+        $exsistingUser = User::findUser('User_email',$_POST['email']);
+        if(isset($exsistingUser->email) && $exsistingUser!=false){
+            $user = $exsistingUser;
+            $code = substr(md5(microtime()),rand(0,26),5);
+
+            $msg = RecoveryCodeController::sendRecoveryEmail($user->id,$user->email,$user->nom.' '.$user->prenom,$code);
+            return $this->view('authentification/recuperation', [
+                'msg' => $msg,
+            ]);
+
+        } else {
+
+            return $this->view('authentification/forgot_password', [
+                'error' => "Il y a eu une erreur dans l'envoi de l'e-mail",
+            ]);
+        }
     }
 
-    public function reset()
-    {
-        $this->view('authentification/reset_password', []);
-    }
 
+    public function resetPassword()
+    {
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $db = new Database();
+        }
+        
+        $user = User::findUser('User_email',$_POST['email']);
+        if(isset($user->id)){
+            $code = RecoveryCodeController::getRecoveryCode($user->id);
+
+            if($_POST['resetCode']==$code['recoverycode_code'] && $_POST['newPassword']==$_POST['confNewPassword']) {
+
+
+                $query="UPDATE `users` SET User_password='".hash('sha1', $_POST["newPassword"])."' WHERE User_email='".$_POST['email']."';";
+                $statement = $db->pdo->prepare($query);
+                $statement->execute();
+
+                $this->view('authentification/index', [
+                    'msg'=>'Vous avez réinitialisé votre mot de passe!'
+                ]);
+
+            } else {
+
+                return $this->view('authentification/recuperation', [
+                    'msg' => "Le mot de passe n'a pas pu être réinitialisé",
+                ]);
+            }
+        } else {
+
+            return $this->view('authentification/recuperation', [
+                'error' => "Le mot de passe n'a pas pu être réinitialisé",
+            ]);
+        }
+
+    }
 }

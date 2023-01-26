@@ -32,8 +32,6 @@ class Admin extends Controller
 
     public function database()
     {
-        //$db = new Database();
-
         $user= User::getUser();
 
         $this->view('admin/database', [
@@ -200,9 +198,14 @@ class Admin extends Controller
             $model=$_POST['model'];
             $idCol=$_POST['idCol'];
             $id=$_POST['id'];
-            
             $db = new Database();
-            $query = "UPDATE `".$model."` SET user_deleted=1 WHERE ".$idCol."=".$id.";";
+
+            if($model=='users') {
+                $query = "UPDATE `".$model."` SET user_deleted=1 WHERE ".$idCol."=".$id.";";
+            } else {
+                $query = "DELETE FROM `".$model."` WHERE ".$idCol."=".$id.";";
+            }
+
             $statement = $db->pdo->prepare($query);
             $statement->execute();
 

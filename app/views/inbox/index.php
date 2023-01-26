@@ -76,7 +76,7 @@ include realpath(dirname(__DIR__,1) .'/layouts/header.php');
 
             <li class="title p-3 text-center"> 
                 <button class="btn btn-outline-primary" onclick="document.getElementById('searchUser').style.display='block';">
-                    <i class="bi bi-plus-lg"></i> Add conversation 
+                    <i class="bi bi-plus-lg"></i> Ajouter une conversation 
                 </button> 
             </li>
 

@@ -18,13 +18,19 @@ include realpath(dirname(__DIR__,1) .'/general_components/navbar.php');
 	</div>
 	<div class="container center" style="width: 40rem;">
 		<div class="card">
-				<form name="login" action="email_send" method="post">
-					<div class="col-1 text-right">
-						<button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
-					</div>	
-					<div class="col-12 text-center">
-						<h3 class="f-2 p-0 m-0 pt-2">Mot de Passe oublié</h3>
-						<br>
+				<form name="login" action="/login/recuperation" method="post">
+					<div class="row">
+						<div class="col-11">
+							<h2 class="text-center">Mot de Passe oublié</h2>
+						</div>
+						<div class="col-1 text-right">
+							<button type="button" class="btn-close text-grey f-3" aria-label="Close" onclick="javascript:history.back()"><i class="bi bi-x-lg"></i></button>
+						</div>	
+					</div>
+					<div class="row py-2">
+						<div class="col-12 f-1-5 text-grey text-center">
+							<em>Nous allons vous envoyer un e-mail contenant un lien, avec votre code de récupération de mot de passe</em>
+						</div>
 					</div>
 					<div class="row text-left">
 						<div class="col-8">
