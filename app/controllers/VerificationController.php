@@ -82,7 +82,7 @@ class VerificationController extends Controller
         $result=$statement->fetchAll(PDO::FETCH_ASSOC);
         if(isset($result[0])){
             $result = $result[0];
-            dd($result);
+            //dd($result);
             $dateRec = substr($result['verification_datetime'],0,10);
             $date = date('Y-m-d');
             if($date<$dateRec) {
