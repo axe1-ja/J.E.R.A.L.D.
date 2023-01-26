@@ -198,14 +198,14 @@ class Admin extends Controller
             $model=$_POST['model'];
             $idCol=$_POST['idCol'];
             $id=$_POST['id'];
+
             $db = new Database();
 
             if($model=='users') {
                 $query = "UPDATE `".$model."` SET user_deleted=1 WHERE '".$idCol."'=".$id.";";
             } else {
-                $query = "DELETE FROM `".$model."` WHERE '".$idCol."'=".$id.";";
+                $query = "DELETE FROM `".$model."` WHERE ".$idCol."=".$id.";";
             }
-            dd($query);
             $statement = $db->pdo->prepare($query);
             $statement->execute();
 
@@ -218,7 +218,7 @@ class Admin extends Controller
         }
     }
 
-
+    
     public function migrate()
     {
         $user= User::getUser();
