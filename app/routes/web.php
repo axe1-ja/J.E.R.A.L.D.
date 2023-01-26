@@ -120,6 +120,7 @@ if($_SESSION['loggedin']==1) {
         // migrate route (activate only if necessary)
         Route::set('admin/database',function(){ (new admin)->database(); });
         Route::set('admin/database/migrate',function(){(new admin)->migrate();});
+        Route::set('admin/database/import',function(){(new admin)->import();});
 
         // End of Admin routes
         // -------------------

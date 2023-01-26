@@ -205,7 +205,7 @@ class Admin extends Controller
             } else {
                 $query = "DELETE FROM `".$model."` WHERE '".$idCol."'='".$id."';";
             }
-
+            
             $statement = $db->pdo->prepare($query);
             $statement->execute();
 
@@ -236,6 +236,28 @@ class Admin extends Controller
             ]);
         }
 
+    }
+
+    public function import() {
+
+        $db = new Database();
+
+        if($user->role=='admin'){
+            $query = $_POST['sql'];
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+
+            return $this->view('database/import', [
+                'msg' => "Les imports de données ont bien été effectuées!",
+            ]);
+
+        } else {
+
+            return $this->view('admin/database', [
+                'error' => "Vous n'avez pas l'autorisation d'effectuer cette manipulation",
+            ]);
+        }
+        
     }
     
 }
