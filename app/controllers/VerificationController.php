@@ -26,7 +26,7 @@ class VerificationController extends Controller
                 $mail->Host       = 'ssl0.ovh.net;';                 
                 $mail->SMTPAuth   = true;                             
                 $mail->Username   = 'postmaster@captair.paris';               
-                $mail->Password   = '8VHg2$v*25S%Cs3';                        
+                $mail->Password   = 'nw3hkkZPYVQYbG5u';                        
                 $mail->SMTPSecure = 'ssl';                               
                 $mail->Port       = 465;  
             
