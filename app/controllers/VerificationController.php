@@ -68,7 +68,7 @@ class VerificationController extends Controller
 
     public static function store($code,$uid) {
         $db = new Database();
-        $query = "INSERT INTO `verification_codes` (`code`,`User_id`) VALUES ('".$code."','".$uid."');";
+        $query = "INSERT INTO `verification_codes` (`code`,`User_id`,`verification_datetime`) VALUES ('".$code."','".$uid."','".date('Y-m-d h:m:s')."');";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
     }
