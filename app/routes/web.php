@@ -74,7 +74,11 @@ if($_SESSION['loggedin']==0) {
     Route::set('register_failed',function(){ (new authentification)->create_failed(); });
     Route::set('create-user',function(){ (new authentification)->store(); });
     Route::set('login-action',function(){ (new authentification)->loginaction(); });
+    
     Route::set('forgot_password',function(){ (new authentification)->forgot(); });
+    Route::set('login/recuperation',function(){ (new authentification)->getRecupCode(); });
+    Route::set('login/reset',function(){ (new authentification)->resetPassword(); });
+
     //pour s'inscrire en tant qu'admin
     Route::set('admin',function(){ (new authentification)->adminLogin(); });
     Route::set('admin/login',function(){ (new authentification)->adminLoginAction(); });
@@ -85,10 +89,8 @@ if($_SESSION['loggedin']==0) {
     Route::set('login-action',function(){ Controller::view('home'); });
     Route::set('forgot_password',function(){ Controller::view('home'); });
 }
+
 Route::set('logout',function(){ (new authentification)->logout(); });
-Route::set('email_send',function(){ (new authentification)->sendEmail(); });
-Route::set('reset_password',function(){ (new authentification)->reset(); });
-//Route::set('forgot_password',function(){ (new authentification)->password(); });
 
 // End of Auth routes
 // ------------------
@@ -161,7 +163,7 @@ if($_SESSION['loggedin']==1) {
     Route::set('user/practice',function(){ (new UserController)->practice(); });
 
     Route::set('user/inbox/{interlocutorId}',['controller'=>'MessageController','method'=>'inbox']);
-    Route::set('user/inbox',function(){ (new MessageController)->inbox(); });
+    Route::set('user/inbox',function(){ (new MessageController)->inbox(null); });
     // End of User routes
     // ------------------
 

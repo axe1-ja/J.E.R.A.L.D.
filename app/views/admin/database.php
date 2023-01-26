@@ -36,8 +36,25 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
         </div>
         <p><br></p>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12">            
+                <p><br><br></p>
+                <?php if(isset($msg)) :?>
+                    <div class="bg-green f-2 p-2 border-round-1">
+                        <?php echo $msg;?>
+                    </div>
+                <?php endif;?>
+                <?php if(isset($error)) :?>
+                    <div class="bg-red f-2 p-2 border-round-1" style='color:white;'>
+                        <?php echo $error;?>
+                    </div>
+                <?php endif;?>
+                <form action="/import" method='post'>
+                    <input class="my-2" type="password" name='password' placeholder="Ecrire le bon mot de passe pour lancer la migration...">
+                    <textarea class="my-2" type="text" name='sql' placeholder="Insérer le code SQL à executer" rows='3'></textarea>
+                    <button class="my-2 btn btn-outline-primary" type='submit'> Import file! </button>
+                </form>
                 <form action="/admin/database/import" method="post">
+        
                     <button class="btn btn-primary my-1" type="submit">Importer des données</button>
                     <p class="f-2 my-1">Permet d'importer des données à partir d'un document</p>
                 </form>
