@@ -214,6 +214,10 @@ class Authentification extends Controller
                 $statement = $db->pdo->prepare($query);
                 $statement->execute();
 
+                $query="DELETE FROM `RecoveryCode` WHERE User_id='".$user->id."';";
+                $statement = $db->pdo->prepare($query);
+                $statement->execute();
+
                 $this->view('authentification/index', [
                     'msg'=>'Vous avez réinitialisé votre mot de passe!'
                 ]);
