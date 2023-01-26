@@ -41,10 +41,15 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                             <div class="m-0 f-4 m-0"><?php echo ucfirst($model);?></div>
                         </div>
                         <div class="col-4">
-                            <form role="search">
+                            <form action="/admin/datama/search" method="post">
+                                <input class="d-none" type="text" name="model" value="<?php echo $model;?>">
+                                <input class="d-none" type="text" name="idCol" value="<?php echo $cols[0];?>">
                                 <div class="row">
-                                    <div class="col-12 pt-1">
-                                        <input class="form-control w-100" name="searchDb" id="search" type="search" placeholder="Search" aria-label="Search">
+                                    <div class="col-10 p-1">
+                                        <input class="form-control w-100" name="searchTable" id="datamaSearch" type="search" placeholder="Search" aria-label="Search">
+                                    </div>
+                                    <div class="col-2 pt-1 text-right">
+                                        <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
                                     </div>
                                 </div>
                             </form>
@@ -67,9 +72,9 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
                                         <tr>
                                             <?php foreach($el as $k=>$e): ?>
                                                 <?php if($k==0): ?>
-                                                    <th scope="row"><?php echo $e;?></th>
+                                                    <th class='datamaVal' scope="row"><?php echo $e;?></th>
                                                 <?php else: ?>
-                                                    <td><?php echo $e;?></td>
+                                                    <td class='datamaVal'><?php echo $e;?></td>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                             <td>

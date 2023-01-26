@@ -218,6 +218,48 @@ class Admin extends Controller
         }
     }
 
+    public function searchData()
+    {
+        $modelList = ['migrations','users', 'EmergencyContact', 'forum', 'forum_messages','bracelet','sensor','messages','faq','RecoveryCode','verification_codes'];
+
+        if(isset($_POST['model'])){
+            $model=$_POST['model'];
+            $search=$_POST['searchTable'];
+
+            $db = new Database();
+
+            $cols=Model::getTableCols($model);
+            $query="SELECT * FROM `".$model."` WHERE";
+            foreach($cols as $key=>$c) {
+                if($key==count($cols)-1) {
+                    $query .= " OR ".$c." LIKE '%".$search."%';";
+                } elseif($key==0) {
+                    $query .= " ".$c." LIKE '%".$search."%' ";
+                } else {
+                    $query .= " OR ".$c." LIKE '%".$search."%' ";
+                }
+            }
+            
+            $statement = $db->pdo->prepare($query);
+            $statement->execute();
+            $result=$statement->fetchAll(PDO::FETCH_ASSOC);
+            $data=$result;
+            
+            $this->view('admin/datama', [
+                'cols'=>$cols,
+                'page'=>'datama',
+                'model'=>$model,
+                'modelList'=>$modelList,
+                'data'=>$data
+            ]);
+
+        } else {
+
+            header('Location: /admin/datama');
+
+        }
+    }
+
     
     public function migrate()
     {
