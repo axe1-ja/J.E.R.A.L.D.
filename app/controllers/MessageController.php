@@ -81,7 +81,7 @@ class MessageController extends Controller
             $db = new Database();
         }
 
-        $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES ('".$user->id."','".$interlocutor->id."','".$_POST['msg']."','".$date."');";
+        $query = "INSERT INTO `messages` (User_Id_send, User_Id_receive, message_Content, message_Datetime) VALUES (`".$user->id."`,`".$interlocutor->id."`,`".$_POST['msg']."`,`".$date."`);";
         $statement = $db->pdo->prepare($query);
         $statement->execute();
 
