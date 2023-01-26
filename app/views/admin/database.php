@@ -46,7 +46,6 @@ include realpath(dirname(__DIR__,1) .'/admin/components/admin_nav.php');
         </div>
     </div>
 </div>
-
 <p><br><br></p>
 
 <!-- Footer of page -->
