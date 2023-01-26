@@ -64,6 +64,7 @@ class Authentification extends Controller
         }
 
         $exsistingUser = User::findUser('User_email',$_POST['email']);
+        dd($exsistingUser);
         if(!isset($exsistingUser->email)|| $exsistingUser==false){
             $user = new User([
                 'id'=>0,
