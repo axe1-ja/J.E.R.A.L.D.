@@ -205,7 +205,7 @@ class Admin extends Controller
             } else {
                 $query = "DELETE FROM `".$model."` WHERE '".$idCol."'='".$id."';";
             }
-            
+            dd($query);
             $statement = $db->pdo->prepare($query);
             $statement->execute();
 
