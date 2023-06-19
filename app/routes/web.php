@@ -68,6 +68,8 @@ Route::set('import',function(){
 
 Route::set('verify/{key}',['controller'=>'VerificationController','method'=>'verify']);
 
+Route::set('user/api/getCardioVal', function(){ (new ApiController)->userGetCardioVal(); });
+
 if($_SESSION['loggedin']==0) {
     Route::set('login',function(){ (new authentification)->index(); });
     Route::set('register',function(){ (new authentification)->create(); });
@@ -82,6 +84,7 @@ if($_SESSION['loggedin']==0) {
     //pour s'inscrire en tant qu'admin
     Route::set('admin',function(){ (new authentification)->adminLogin(); });
     Route::set('admin/login',function(){ (new authentification)->adminLoginAction(); });
+
 } else {
     Route::set('login',function(){ Controller::view('home'); });
     Route::set('register',function(){ Controller::view('home'); });

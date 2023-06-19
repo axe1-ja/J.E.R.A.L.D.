@@ -251,5 +251,26 @@ window.addEventListener('load',() => {
         }
     }
     
-    
+    $("#getData").on("click", function () {
+        setInterval(function(){getCardioData()}, 5000);
+    })
+
+    function getCardioData() {
+        $.ajax({
+            url: "http://localhost:8888/user/api/getCardioVal",
+            type: "POST",
+            dataType:"json",
+            success: function(response) {
+                $("#userCardioValCurrent").text(response.trameType);
+                $("#co2ValCurrent").text(response.objectNumber);
+                $("#isoValCurrent").text(response.request);
+                $("#sonoValCurrent").text(response.sensorType);
+                $("#humValCurrent").text(response.sensorId);
+                $("#tempValCurrent").text(response.val);
+            },
+            error: function(xhr, status, error) {
+                console.log("Error:", error);
+            }
+        });
+    }
 });
